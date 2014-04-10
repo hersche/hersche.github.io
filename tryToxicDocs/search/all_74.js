@@ -6,5 +6,6 @@ var searchData=
   ['toxmessagehandler',['toxMessageHandler',['../classtoxModels_1_1toxMessageHandler.html',1,'toxModels']]],
   ['toxthread',['toxThread',['../classcontroller_1_1toxThread.html',1,'controller']]],
   ['toxtry',['ToxTry',['../classtryToxic_1_1ToxTry.html',1,'tryToxic']]],
+  ['toxuihandler',['toxUiHandler',['../classtoxUiHandler_1_1toxUiHandler.html',1,'toxUiHandler']]],
   ['toxuser',['toxUser',['../classtoxModels_1_1toxUser.html',1,'toxModels']]]
 ];

@@ -18,6 +18,7 @@ var hierarchy =
     [ "configControll.staticConfigTools", "classconfigControll_1_1staticConfigTools.html", null ],
     [ "toxModels.toxFile", "classtoxModels_1_1toxFile.html", null ],
     [ "toxModels.toxMessage", "classtoxModels_1_1toxMessage.html", null ],
+    [ "toxUiHandler.toxUiHandler", "classtoxUiHandler_1_1toxUiHandler.html", null ],
     [ "toxModels.toxUser", "classtoxModels_1_1toxUser.html", [
       [ "toxModels.toxGroupUser", "classtoxModels_1_1toxGroupUser.html", null ]
     ] ],

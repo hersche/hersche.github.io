@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['generatednsid',['generateDnsId',['../classcontroller_1_1mainController.html#a81222059f0034469879d50f006037a91',1,'controller::mainController']]],
-  ['generatekey',['generateKey',['../classcontroller_1_1mainController.html#a716995b55bdb4e9f6ba8cfb4a1921034',1,'controller::mainController']]],
+  ['generatednsid',['generateDnsId',['../classtoxUiHandler_1_1toxUiHandler.html#a48f3ce9b92e54239ad3fbb6244a8cf2b',1,'toxUiHandler::toxUiHandler']]],
+  ['generatekey',['generateKey',['../classtoxUiHandler_1_1toxUiHandler.html#a44d174b609a6514ae954cbf6908932f0',1,'toxUiHandler::toxUiHandler']]],
   ['getconfigbykey',['getConfigByKey',['../classconfigControll_1_1Config.html#a37d50f28d9c001910b902b0b2362a8a1',1,'configControll::Config']]],
   ['getfilebyid',['getFileById',['../classtoxModels_1_1toxUser.html#a7537961b84b23885d2dbe3647ee44059',1,'toxModels::toxUser']]],
   ['getloggerlevel',['getLoggerLevel',['../classconfigControll_1_1staticConfigTools.html#acfb30442fb9b2e323be04e1d90da289e',1,'configControll::staticConfigTools']]],

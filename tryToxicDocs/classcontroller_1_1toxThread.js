@@ -16,5 +16,6 @@ var classcontroller_1_1toxThread =
     [ "incomingOnlineStatus", "classcontroller_1_1toxThread.html#aa494c87fb6ebecfecdae99583036957f", null ],
     [ "incomingStatusChange", "classcontroller_1_1toxThread.html#adae890b0a8391e356ee5c2f907149745", null ],
     [ "incomingStatusMessageChange", "classcontroller_1_1toxThread.html#a4f311d210f72983cf03e49741acec13e", null ],
+    [ "tryToxic", "classcontroller_1_1toxThread.html#a5a6853b28d168a629089c86831e81a7b", null ],
     [ "updateUiUserList", "classcontroller_1_1toxThread.html#a6fc00e11e7bfe0aac880710102fee3f8", null ]
 ];

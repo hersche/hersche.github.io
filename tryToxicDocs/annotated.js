@@ -22,6 +22,9 @@ var annotated =
       [ "toxGroupUser", "classtoxModels_1_1toxGroupUser.html", "classtoxModels_1_1toxGroupUser" ],
       [ "toxMessageHandler", "classtoxModels_1_1toxMessageHandler.html", "classtoxModels_1_1toxMessageHandler" ]
     ] ],
+    [ "toxUiHandler", null, [
+      [ "toxUiHandler", "classtoxUiHandler_1_1toxUiHandler.html", "classtoxUiHandler_1_1toxUiHandler" ]
+    ] ],
     [ "tryToxic", null, [
       [ "ToxTry", "classtryToxic_1_1ToxTry.html", "classtryToxic_1_1ToxTry" ]
     ] ]
