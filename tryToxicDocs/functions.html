@@ -89,6 +89,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_q"><span>q</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_u"><span>u</span></a></li>
     </ul>
@@ -127,11 +129,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
 <li>__init__()
-: <a class="el" href="classcryptClass_1_1cm.html#a94eb5d1cda63c418652f200a8b3b9407">cryptClass.cm</a>
+: <a class="el" href="classconfigControll_1_1Config.html#a702bcc65f1696f5cb48a66ae792a759f">configControll.Config</a>
 , <a class="el" href="classtryToxic_1_1ToxTry.html#ae41dca0608b3819603b75c0b10a53e90">tryToxic.ToxTry</a>
 , <a class="el" href="classtoxModels_1_1toxMessageHandler.html#a9eac6e53744836f2747d95ffea74b0b4">toxModels.toxMessageHandler</a>
 , <a class="el" href="classtoxModels_1_1toxFile.html#a8734bc3a3c8a370fda3789e1ad81ef65">toxModels.toxFile</a>
 , <a class="el" href="classtoxModels_1_1toxMessage.html#a11036a598a5a51ebf6fb13e8277cd223">toxModels.toxMessage</a>
+, <a class="el" href="classcryptClass_1_1cm.html#a94eb5d1cda63c418652f200a8b3b9407">cryptClass.cm</a>
 </li>
 </ul>
 
@@ -150,12 +153,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>colorchanger()
 : <a class="el" href="classcontroller_1_1mainController.html#a9d7482ea84ff604c872561b770551de7">controller.mainController</a>
 </li>
+<li>createConfig()
+: <a class="el" href="classconfigControll_1_1Config.html#a6985359e89e8664500bc6ff1f9b9c72a">configControll.Config</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>decrypt()
 : <a class="el" href="classcryptClass_1_1cm.html#a8c7c37a5092466c3358661f97fbc0dc1">cryptClass.cm</a>
+</li>
+<li>delete()
+: <a class="el" href="classconfigControll_1_1Config.html#a3de7a2ddf2357b2489782afedcb5e27a">configControll.Config</a>
 </li>
 <li>deleteUserMessages()
 : <a class="el" href="classtoxModels_1_1toxMessageHandler.html#adb02475af1a0efa185938f194f511e18">toxModels.toxMessageHandler</a>
@@ -177,8 +186,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>generateKey()
 : <a class="el" href="classcontroller_1_1mainController.html#a716995b55bdb4e9f6ba8cfb4a1921034">controller.mainController</a>
 </li>
+<li>getConfigByKey()
+: <a class="el" href="classconfigControll_1_1Config.html#a37d50f28d9c001910b902b0b2362a8a1">configControll.Config</a>
+</li>
 <li>getFileById()
 : <a class="el" href="classtoxModels_1_1toxUser.html#a7537961b84b23885d2dbe3647ee44059">toxModels.toxUser</a>
+</li>
+<li>getLoggerLevel()
+: <a class="el" href="classconfigControll_1_1staticConfigTools.html#acfb30442fb9b2e323be04e1d90da289e">configControll.staticConfigTools</a>
 </li>
 <li>getMod()
 : <a class="el" href="classcryptClass_1_1scm.html#af27b5f83d6df229b818e46c5753b1af2">cryptClass.scm</a>
@@ -210,6 +225,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>on_file_control()
+: <a class="el" href="classtryToxic_1_1ToxTry.html#a06320fa33aa7e834686e694be5bcbcb1">tryToxic.ToxTry</a>
+</li>
 <li>onClickToxGroup()
 : <a class="el" href="classcontroller_1_1mainController.html#af029200d8f7477e6c223db56b533c100">controller.mainController</a>
 </li>
@@ -243,7 +261,24 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
+<li>quit()
+: <a class="el" href="classcontroller_1_1toxThread.html#ae9d854f51719228403523985e1a4f7a3">controller.toxThread</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>run()
+: <a class="el" href="classcontroller_1_1toxThread.html#aa274d32462a7a5b0925a5ec60fd05774">controller.toxThread</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>save()
+: <a class="el" href="classconfigControll_1_1Config.html#a709641a5d43918500bdcbcd51a7a1ab5">configControll.Config</a>
+</li>
 <li>saveAllMessages()
 : <a class="el" href="classtoxModels_1_1toxMessageHandler.html#a85a260289d9bcea78c2e2a5d39c21654">toxModels.toxMessageHandler</a>
 </li>
@@ -275,7 +310,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 10 2014 16:37:31 for tryToxic by
+    <li class="footer">Generated on Thu Apr 10 2014 17:12:11 for tryToxic by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

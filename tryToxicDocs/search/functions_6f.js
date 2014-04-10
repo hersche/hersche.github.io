@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['on_5ffile_5fcontrol',['on_file_control',['../classtryToxic_1_1ToxTry.html#a06320fa33aa7e834686e694be5bcbcb1',1,'tryToxic::ToxTry']]],
   ['onclicktoxgroup',['onClickToxGroup',['../classcontroller_1_1mainController.html#af029200d8f7477e6c223db56b533c100',1,'controller::mainController']]],
   ['onclicktoxuser',['onClickToxUser',['../classcontroller_1_1mainController.html#ae3654719bfb9915fb499fb45598c256e',1,'controller::mainController']]],
   ['oncontextgroupinviteclick',['onContextGroupInviteClick',['../classcontroller_1_1mainController.html#a2b0c146590f44e695dafee832b6beefa',1,'controller::mainController']]],

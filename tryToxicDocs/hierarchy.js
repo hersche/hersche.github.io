@@ -16,17 +16,12 @@ var hierarchy =
     ] ],
     [ "cryptClass.scm", "classcryptClass_1_1scm.html", null ],
     [ "configControll.staticConfigTools", "classconfigControll_1_1staticConfigTools.html", null ],
-    [ "staticOutOfThreadTools.staticOutOfThreadTools", "classstaticOutOfThreadTools_1_1staticOutOfThreadTools.html", null ],
     [ "toxModels.toxFile", "classtoxModels_1_1toxFile.html", null ],
     [ "toxModels.toxMessage", "classtoxModels_1_1toxMessage.html", null ],
     [ "toxModels.toxUser", "classtoxModels_1_1toxUser.html", [
       [ "toxModels.toxGroupUser", "classtoxModels_1_1toxGroupUser.html", null ]
     ] ],
     [ "Tox", null, [
-      [ "phone.Phone", "classphone_1_1Phone.html", null ],
       [ "tryToxic.ToxTry", "classtryToxic_1_1ToxTry.html", null ]
-    ] ],
-    [ "ToxAV", null, [
-      [ "phone.AV", "classphone_1_1AV.html", null ]
     ] ]
 ];

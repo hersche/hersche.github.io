@@ -41,7 +41,6 @@ var classcontroller_1_1mainController =
     [ "configlist", "classcontroller_1_1mainController.html#a36d0d7447bfa6c814777ad33dfbf06ab", null ],
     [ "encryptionObject", "classcontroller_1_1mainController.html#ab5991cf4d8425e59e42cf88ba13de480", null ],
     [ "groupMenu", "classcontroller_1_1mainController.html#a8e89035d331ba7d4f4660eb5547377bd", null ],
-    [ "lang", "classcontroller_1_1mainController.html#a931206ccd83a85b058caacecfd58bd19", null ],
     [ "lastMessageColor", "classcontroller_1_1mainController.html#a4700a937789f0453e82e83873a7bd46d", null ],
     [ "lastMessageName", "classcontroller_1_1mainController.html#a856cbcf62e5c89f5d81ce2349410f0f1", null ],
     [ "msgBox", "classcontroller_1_1mainController.html#a93694d193585e2ca0ef27ee003cb4a22", null ],

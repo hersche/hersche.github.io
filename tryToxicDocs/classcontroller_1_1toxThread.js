@@ -1,6 +1,7 @@
 var classcontroller_1_1toxThread =
 [
     [ "__init__", "classcontroller_1_1toxThread.html#a5ff3d701248cd9630e647af4912b7eaa", null ],
+    [ "quit", "classcontroller_1_1toxThread.html#ae9d854f51719228403523985e1a4f7a3", null ],
     [ "run", "classcontroller_1_1toxThread.html#aa274d32462a7a5b0925a5ec60fd05774", null ],
     [ "clickToxFriend", "classcontroller_1_1toxThread.html#aa11a51ea8ee61dedff041dd1f07a89e6", null ],
     [ "connectToDHT", "classcontroller_1_1toxThread.html#ad8f6da065402e943776790eba50a2d84", null ],

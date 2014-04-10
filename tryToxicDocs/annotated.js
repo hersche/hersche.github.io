@@ -15,13 +15,6 @@ var annotated =
     [ "main", null, [
       [ "Ui_MainWindow", "classmain_1_1Ui__MainWindow.html", "classmain_1_1Ui__MainWindow" ]
     ] ],
-    [ "phone", null, [
-      [ "AV", "classphone_1_1AV.html", "classphone_1_1AV" ],
-      [ "Phone", "classphone_1_1Phone.html", "classphone_1_1Phone" ]
-    ] ],
-    [ "staticOutOfThreadTools", null, [
-      [ "staticOutOfThreadTools", "classstaticOutOfThreadTools_1_1staticOutOfThreadTools.html", null ]
-    ] ],
     [ "toxModels", null, [
       [ "toxMessage", "classtoxModels_1_1toxMessage.html", "classtoxModels_1_1toxMessage" ],
       [ "toxFile", "classtoxModels_1_1toxFile.html", "classtoxModels_1_1toxFile" ],
