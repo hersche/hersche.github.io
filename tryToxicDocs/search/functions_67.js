@@ -2,7 +2,7 @@ var searchData=
 [
   ['generatednsid',['generateDnsId',['../classtoxUiHandler_1_1toxUiHandler.html#a48f3ce9b92e54239ad3fbb6244a8cf2b',1,'toxUiHandler::toxUiHandler']]],
   ['generatekey',['generateKey',['../classtoxUiHandler_1_1toxUiHandler.html#a44d174b609a6514ae954cbf6908932f0',1,'toxUiHandler::toxUiHandler']]],
-  ['getconfigbykey',['getConfigByKey',['../classconfigControll_1_1Config.html#a37d50f28d9c001910b902b0b2362a8a1',1,'configControll::Config']]],
+  ['getconfigbykey',['getConfigByKey',['../classconfigControll_1_1staticConfigTools.html#ac2f2c91d9043ccc6c43389a7fd76be70',1,'configControll::staticConfigTools']]],
   ['getfilebyid',['getFileById',['../classtoxModels_1_1toxUser.html#a7537961b84b23885d2dbe3647ee44059',1,'toxModels::toxUser']]],
   ['getloggerlevel',['getLoggerLevel',['../classconfigControll_1_1staticConfigTools.html#acfb30442fb9b2e323be04e1d90da289e',1,'configControll::staticConfigTools']]],
   ['getmod',['getMod',['../classcryptClass_1_1scm.html#af27b5f83d6df229b818e46c5753b1af2',1,'cryptClass::scm']]],

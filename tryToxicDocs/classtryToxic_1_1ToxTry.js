@@ -19,7 +19,6 @@ var classtryToxic_1_1ToxTry =
     [ "saveLocalData", "classtryToxic_1_1ToxTry.html#ad9c7f3237b7090a4ab8e94762a55199e", null ],
     [ "statusResolver", "classtryToxic_1_1ToxTry.html#ad4a033533dcb4bbdda76a6e78e46ba3a", null ],
     [ "updateToxUserObjects", "classtryToxic_1_1ToxTry.html#aecc694af3212824eddf63022f74da2d9", null ],
-    [ "groupNrs", "classtryToxic_1_1ToxTry.html#a4b08ba539be7872d3a9beb9bc900941c", null ],
     [ "name", "classtryToxic_1_1ToxTry.html#a959f6d4735f31b7d4c776f471bbd6edb", null ],
     [ "online", "classtryToxic_1_1ToxTry.html#afd0270bc714b7e7ab49286364a4fe410", null ],
     [ "passPhrase", "classtryToxic_1_1ToxTry.html#a1d19f8c6fc0ea0af6e0741ab31d5576a", null ],

@@ -9,6 +9,7 @@ var hierarchy =
       [ "controller.mainController", "classcontroller_1_1mainController.html", null ]
     ] ],
     [ "QObject", null, [
+      [ "configUiHandler.configUiHandler", "classconfigUiHandler_1_1configUiHandler.html", null ],
       [ "toxModels.toxMessageHandler", "classtoxModels_1_1toxMessageHandler.html", null ]
     ] ],
     [ "QThread", null, [

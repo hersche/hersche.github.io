@@ -32,6 +32,7 @@ var classtoxUiHandler_1_1toxUiHandler =
     [ "addToGroupchat", "classtoxUiHandler_1_1toxUiHandler.html#ad3ccbf756db10070d42b287189a5c81d", null ],
     [ "currentToxUser", "classtoxUiHandler_1_1toxUiHandler.html#afb71406dc388ad1e528d7a65682aea1e", null ],
     [ "groupMenu", "classtoxUiHandler_1_1toxUiHandler.html#ada71b4b742bbecdeb16a5a00b7addb9b", null ],
+    [ "groupNrs", "classtoxUiHandler_1_1toxUiHandler.html#a7b08deb8aa4d58b3158f17e913160e14", null ],
     [ "lastMessageColor", "classtoxUiHandler_1_1toxUiHandler.html#a96b96e2126abb38377dd5eef633df08c", null ],
     [ "lastMessageName", "classtoxUiHandler_1_1toxUiHandler.html#ac8706a7d5efd55d0970a97c5f273ad70", null ],
     [ "msgBox", "classtoxUiHandler_1_1toxUiHandler.html#a8a4583e16f77b5a47a7fa86eddc491c7", null ],

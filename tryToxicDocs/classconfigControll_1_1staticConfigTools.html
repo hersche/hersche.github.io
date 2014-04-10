@@ -103,26 +103,100 @@ $(document).ready(function(){initNavTree('classconfigControll_1_1staticConfigToo
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classconfigControll_1_1staticConfigTools-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">configControll.staticConfigTools Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a98bb04bbe107aa51660d1bf636af600c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigControll_1_1staticConfigTools.html#a98bb04bbe107aa51660d1bf636af600c">updateConfigListData</a></td></tr>
+<tr class="separator:a98bb04bbe107aa51660d1bf636af600c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4078e38b0aa5c83a3e4e371d9b9c745c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigControll_1_1staticConfigTools.html#a4078e38b0aa5c83a3e4e371d9b9c745c">createConfig</a></td></tr>
+<tr class="separator:a4078e38b0aa5c83a3e4e371d9b9c745c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f2c91d9043ccc6c43389a7fd76be70"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigControll_1_1staticConfigTools.html#ac2f2c91d9043ccc6c43389a7fd76be70">getConfigByKey</a></td></tr>
+<tr class="separator:ac2f2c91d9043ccc6c43389a7fd76be70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfb30442fb9b2e323be04e1d90da289e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfigControll_1_1staticConfigTools.html#acfb30442fb9b2e323be04e1d90da289e">getLoggerLevel</a></td></tr>
 <tr class="separator:acfb30442fb9b2e323be04e1d90da289e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">A pool for static config-tools in context to config
 </pre> 
-<p>Definition at line <a class="el" href="#L58">58</a> of file <a class="el" href="">configControll.py</a>.</p>
+<p>Definition at line <a class="el" href="#L38">38</a> of file <a class="el" href="">configControll.py</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4078e38b0aa5c83a3e4e371d9b9c745c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def configControll.staticConfigTools.createConfig </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">create new Config
+</pre> 
+<p>Definition at line <a class="el" href="#L56">56</a> of file <a class="el" href="">configControll.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2f2c91d9043ccc6c43389a7fd76be70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def configControll.staticConfigTools.getConfigByKey </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>key</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">get a config by it's key.
+return Config
+</pre> 
+<p>Definition at line <a class="el" href="#L67">67</a> of file <a class="el" href="">configControll.py</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="acfb30442fb9b2e323be04e1d90da289e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">def configControll.staticConfigTools.getLoggerLevel </td>
@@ -132,11 +206,42 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <pre class="fragment">get the right value for log-levels.
 return int level 
 </pre> 
-<p>Definition at line <a class="el" href="#L63">63</a> of file <a class="el" href="">configControll.py</a>.</p>
+<p>Definition at line <a class="el" href="#L78">78</a> of file <a class="el" href="">configControll.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98bb04bbe107aa51660d1bf636af600c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def configControll.staticConfigTools.updateConfigListData </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">update the list of config-data-objects 
+</pre> 
+<p>Definition at line <a class="el" href="#L43">43</a> of file <a class="el" href="">configControll.py</a>.</p>
 
 </div>
 </div>
@@ -149,7 +254,7 @@ return int level
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>configControll</b></li><li class="navelem"><a class="el" href="classconfigControll_1_1staticConfigTools.html">staticConfigTools</a></li>
-    <li class="footer">Generated on Thu Apr 10 2014 18:28:55 for tryToxic by
+    <li class="footer">Generated on Fri Apr 11 2014 00:03:30 for tryToxic by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

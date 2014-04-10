@@ -4,6 +4,9 @@ var annotated =
       [ "Config", "classconfigControll_1_1Config.html", "classconfigControll_1_1Config" ],
       [ "staticConfigTools", "classconfigControll_1_1staticConfigTools.html", "classconfigControll_1_1staticConfigTools" ]
     ] ],
+    [ "configUiHandler", null, [
+      [ "configUiHandler", "classconfigUiHandler_1_1configUiHandler.html", "classconfigUiHandler_1_1configUiHandler" ]
+    ] ],
     [ "controller", null, [
       [ "toxThread", "classcontroller_1_1toxThread.html", "classcontroller_1_1toxThread" ],
       [ "mainController", "classcontroller_1_1mainController.html", "classcontroller_1_1mainController" ]
