@@ -13,11 +13,42 @@
 
 
     <script type="text/javascript">
-        var lastName = "index"
+        HTTP_GET_VARS = new Array();
+        strGET = document.location.search.substr(1, document.location.search.length);
+        if (strGET != '') {
+            gArr = strGET.split('&');
+            for (i = 0; i < gArr.length; ++i) {
+                v = '';
+                vArr = gArr[i].split('=');
+                if (vArr.length > 1) {
+                    v = vArr[1];
+                }
+                HTTP_GET_VARS[unescape(vArr[0])] = unescape(v);
+            }
+        }
+
+        function GET(v) {
+            if (!HTTP_GET_VARS[v]) {
+                return 'undefined';
+            }
+            return HTTP_GET_VARS[v];
+        }
+        var lastName = ""
+
+            function initSite() {
+                if (GET('site') != 'undefined') {
+                    lastName = GET('site');
+                    document.getElementById(lastName).style.display = "block";
+                    document.getElementById('index').style.display = "none";
+                } else {
+                    lastName = "index";
+                }
+            }
 
             function changeContent(name) {
 
                 if (document.getElementById(name).style.display == "none") {
+                    document.getElementById(name).innerHTML = GET('site');
                     document.getElementById(name).style.display = "block";
                 }
                 if (name != lastName) {
@@ -28,7 +59,7 @@
     </script>
 </head>
 
-<body>
+<body onload="initSite()">
 
     <header>
         <div class="container">
@@ -88,13 +119,13 @@
 
                     <h3>Peta</h3>
                     <p>This PHP-application was based on v5.2 and continues with 5.9 now. Primary goal was one simple application, but it was used as base for many kinds of apps by myself. The name Peta came out of my idea called PHPMeta. This because the goal goes now in a very modular direction. The old name "learncards-web" is death!</p>
-                        <ul>
-                            <li>MVC-arch</li>
-                            <li>Dojo for JS</li>
-                            <li>Smarty for template</li>
-                            <li>Users with profiles and roles</li>
-                        </ul>
-                    
+                    <ul>
+                        <li>MVC-arch</li>
+                        <li>Dojo for JS</li>
+                        <li>Smarty for template</li>
+                        <li>Users with profiles and roles</li>
+                    </ul>
+
                 </section>
                 <section id="tryToxic" style="display:none">
 
@@ -180,7 +211,8 @@
                             <td>
                                 <a href="https://github.com/skamster/Peta/">Github</a>
                             </td>
-                            <td><a href="petaDocs/">Docs</a>
+                            <td>
+                                <a href="petaDocs/">Docs</a>
                             </td>
                             <td>Experimental phase</td>
                         </tr>
