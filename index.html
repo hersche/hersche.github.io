@@ -36,7 +36,7 @@
         var lastName = ""
 
             function initSite() {
-                if (GET('s') != 'undefined') {
+                if (GET('s') != 'undefined' & GET('s') != 'index') {
                     lastName = GET('s');
                     document.getElementById(lastName).style.display = "block";
                     document.getElementById('index').style.display = "none";
@@ -46,7 +46,9 @@
             }
 
             function changeContent(name) {
-
+		if(history.pushState) {
+		    history.pushState({"id":100}, "skamster.github.io::"+name, "index.html?s="+name);
+		}
                 if (document.getElementById(name).style.display == "none") {
                     document.getElementById(name).style.display = "block";
                 }
@@ -54,6 +56,7 @@
                     document.getElementById(lastName).style.display = "none";
                     lastName = name
                 }
+                return false;
             }
     </script>
 </head>
@@ -62,15 +65,16 @@
 
     <header>
         <div class="container">
-            <h1>Welcome to skamster.github.io</h1>
+            <h1>skamster.github.io</h1>
 
             <section id="downloads">
-                <a href="https://github.com/skamster" class="btn btn-github fade">
-                    <span class="icon"></span>View on GitHub</a>
-                <a href="#" onclick="changeContent('index'); return false" class="btn fade">
+                
+                <a href="index.html?s=index" onclick="changeContent('index'); return false" class="btn fade">
                     <span class="icon"></span>Home</a>
-                <a href="#" onclick="changeContent('about'); return false" class="btn fade">
+                <a href="index.html?s=about" onclick="changeContent('about'); return false" class="btn fade">
                     <span class="icon"></span>About me</a>
+                    <a href="https://github.com/skamster" class="btn btn-github fade">
+                    <span class="icon"></span>View on GitHub</a>
             </section>
         </div>
     </header>
@@ -78,6 +82,55 @@
     <div class="container">
         <section id="main_content">
             <div id="content">
+            
+                            <div id="index" style="display:block">
+                    <table>
+                        <tr>
+                            <td>Projectname</td>
+                            <td>Source</td>
+                            <td>Docs</td>
+                            <td>Stability</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="index.html?s=tryToxic" onclick="changeContent('tryToxic'); return false">tryToxic</a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/skamster/tryToxics/">Github</a>
+                            </td>
+                            <td>
+                                <a href="tryToxicDocs/">Docs</a>
+                            </td>
+                            <td>Should basicly work</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="index.html?s=jobmanagement" onclick="changeContent('jobmanagement'); return false">jobManagement</a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/skamster/jobManagement/">Github</a>
+                            </td>
+                            <td>
+                                <a href="jobManagementDocs/index.html">Docs</a>
+                                </a>
+                            </td>
+                            <td>Untested, but basicly stable</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="index.html?s=peta" onclick="changeContent('peta'); return false">Peta</a>
+                            </td>
+                            <td>
+                                <a href="https://github.com/skamster/Peta/">Github</a>
+                            </td>
+                            <td>
+                                <a href="petaDocs/">Docs</a>
+                            </td>
+                            <td>Experimental phase</td>
+                        </tr>
+                    </table>
+
+                </div>
                 <section id="jobmanagement" style="display:none">
                     <h3>jobManagement</h3>For undeprecated information please consult
                     <a href="https://github.com/skamster/jobManagement/">README.md on Github</a>
@@ -117,14 +170,15 @@
                 <section id="peta" style="display:none">
 
                     <h3>Peta</h3>
-                    <p>This PHP-application was based on v5.2 and continues with 5.9 now. Primary goal was one simple application, but it was used as base for many kinds of apps by myself. The name Peta came out of my idea called PHPMeta. This because the goal goes now in a very modular direction. The old name "learncards-web" is death!</p>
+                    <p>This PHP-application was based on v5.2 and continues with 5.5 now. Primary goal was one simple application, but it was used as base for many kinds of apps by myself. The name Peta came out of my idea called PHPMeta. This because the goal goes now in a very modular direction. The old name "learncards-web" is death!</p>
                     <ul>
                         <li>MVC-arch</li>
                         <li>Dojo for JS</li>
-                        <li>Smarty for template</li>
+                        <li>Smarty for templates</li>
                         <li>Users with profiles and roles</li>
+			<li>plugins with roles and rights</li>
                     </ul>
-
+		    Consult the <a href="https://github.com/skamster/Peta/wiki">Wiki</a> for more information and notes.
                 </section>
                 <section id="tryToxic" style="display:none">
 
@@ -170,54 +224,7 @@
                 </section>
 
 
-                <div id="index" style="display:block">
-                    <table>
-                        <tr>
-                            <td>Projectname</td>
-                            <td>Source</td>
-                            <td>Docs</td>
-                            <td>Stability</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="changeContent('tryToxic'); return false">tryToxic</a>
-                            </td>
-                            <td>
-                                <a href="https://github.com/skamster/tryToxics/">Github</a>
-                            </td>
-                            <td>
-                                <a href="tryToxicDocs/">Docs</a>
-                            </td>
-                            <td>Should basicly work</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="changeContent('jobmanagement'); return false">jobManagement</a>
-                            </td>
-                            <td>
-                                <a href="https://github.com/skamster/jobManagement/">Github</a>
-                            </td>
-                            <td>
-                                <a href="jobManagementDocs/index.html">Docs</a>
-                                </a>
-                            </td>
-                            <td>Untested, but basicly stable</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#" onclick="changeContent('peta'); return false">Peta</a>
-                            </td>
-                            <td>
-                                <a href="https://github.com/skamster/Peta/">Github</a>
-                            </td>
-                            <td>
-                                <a href="petaDocs/">Docs</a>
-                            </td>
-                            <td>Experimental phase</td>
-                        </tr>
-                    </table>
 
-                </div>
                 <div id="about" style="display:none">
                     <h3>Little about me</h3>
                     <ul>
