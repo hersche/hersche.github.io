@@ -4,7 +4,8 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
@@ -38,24 +39,38 @@
             function initSite() {
                 if (GET('s') != 'undefined' & GET('s') != 'index') {
                     lastName = GET('s');
-                    document.getElementById(lastName).style.display = "block";
-                    document.getElementById('index').style.display = "none";
                 } else {
                     lastName = "index";
                 }
+                $("#showContent").html($("#" + lastName).html());
+                $("#showContent").fadeIn(4000);
+                $("#menu").fadeIn(4000);
             }
 
+
             function changeContent(name) {
-		if(history.pushState) {
-		    history.pushState({"id":100}, "skamster.github.io::"+name, "index.html?s="+name);
-		}
-                if (document.getElementById(name).style.display == "none") {
-                    document.getElementById(name).style.display = "block";
+                if (history.pushState) {
+                    history.pushState({
+                        "id": 100
+                    }, "skamster.github.io::" + name, "index.html?s=" + name);
                 }
                 if (name != lastName) {
-                    document.getElementById(lastName).style.display = "none";
+                    $("#animationContainer").effect("slide", {
+                        "direction": "left",
+                        "mode": "hide"
+                    }, 400, function() {
+                        $("#showContent").html($("#" + name).html());
+
+                    });
+
+
+                    $("#animationContainer").effect("slide", {
+                        "direction": "right",
+                        "mode": "show"
+                    }, 400);
                     lastName = name
                 }
+
                 return false;
             }
     </script>
@@ -64,185 +79,187 @@
 <body onload="initSite()">
 
     <header>
-        <div class="container">
-            <h1>skamster.github.io</h1>
+        <div class="container" style="display: none;" id="menu">
+            <div id="menucontent">
+                <h1>skamster.github.io</h1>
 
-            <section id="downloads">
-                
-                <a href="index.html?s=index" onclick="changeContent('index'); return false" class="btn fade">
-                    <span class="icon"></span>Home</a>
-                <a href="index.html?s=about" onclick="changeContent('about'); return false" class="btn fade">
-                    <span class="icon"></span>About me</a>
+                <section id="downloads">
+
+                    <a style="margin-left:5px;" href="index.html?s=index" onclick="changeContent('index'); return false" class="btn fade">
+                        <span class="icon"></span>Home</a>
+                    <a href="index.html?s=about" onclick="changeContent('about'); return false" class="btn fade">
+                        <span class="icon"></span>About me</a>
                     <a href="https://github.com/skamster" class="btn btn-github fade">
-                    <span class="icon"></span>View on GitHub</a>
-            </section>
+                        <span class="icon"></span>View on GitHub</a>
+                </section>
+            </div>
         </div>
     </header>
 
     <div class="container">
-        <section id="main_content">
-            <div id="content">
-            
-                            <div id="index" style="display:block">
-                    <table>
-                        <tr>
-                            <td>Projectname</td>
-                            <td>Source</td>
-                            <td>Docs</td>
-                            <td>Stability</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="index.html?s=tryToxic" onclick="changeContent('tryToxic'); return false">tryToxic</a>
-                            </td>
-                            <td>
-                                <a href="https://github.com/skamster/tryToxics/">Github</a>
-                            </td>
-                            <td>
-                                <a href="tryToxicDocs/">Docs</a>
-                            </td>
-                            <td>Should basicly work</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="index.html?s=jobmanagement" onclick="changeContent('jobmanagement'); return false">jobManagement</a>
-                            </td>
-                            <td>
-                                <a href="https://github.com/skamster/jobManagement/">Github</a>
-                            </td>
-                            <td>
-                                <a href="jobManagementDocs/index.html">Docs</a>
-                                </a>
-                            </td>
-                            <td>Untested, but basicly stable</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="index.html?s=peta" onclick="changeContent('peta'); return false">Peta</a>
-                            </td>
-                            <td>
-                                <a href="https://github.com/skamster/Peta/">Github</a>
-                            </td>
-                            <td>
-                                <a href="petaDocs/">Docs</a>
-                            </td>
-                            <td>Experimental phase</td>
-                        </tr>
-                    </table>
-
-                </div>
-                <section id="jobmanagement" style="display:none">
-                    <h3>jobManagement</h3>For undeprecated information please consult
-                    <a href="https://github.com/skamster/jobManagement/">README.md on Github</a>
-                    <hr />
-                    <p>
-                        This is a programm for temporary workers. It's specialiced for diffrent companys, so when u like to switch, it may could help you. The target is to watch the companys and how much money they give you (cause a company isn't trustable). The programm supports:
-                        <ul>
-                            <li>Companys</li>
-                            <li>Jobs</li>
-                            <li>Weekends</li>
-                            <li>Month-over-jobs</li>
-                            <li>Charges</li>
-                            <li>Credits</li>
-                            <li>Diffrent filtering options and Views</li>
-                            <li>Overallview and Detailedview based on Companys</li>
-                            <li>Calendarview</li>
-                            <li>Livesearch [jobname, jobplace, jobleader, jobcomment, companyname]</li>
-                            <li>Encryption by pycrypto</li>
-                        </ul>
-                    </p>
-                    <p>
-                        <a href="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png">
-                            <img src="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png">
+        <div id="animationContainer">
+            <div id="showContent" style="display: none"></div>
+        </div>
+        <span id="index" style="display:none">
+            <table>
+                <tr>
+                    <th>Projectname</th>
+                    <th>Source</th>
+                    <th>Docs</th>
+                    <th>Stability</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="index.html?s=tryToxic" onclick="changeContent('tryToxic'); return false">tryToxic</a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/skamster/tryToxics/" target="_blank">Github</a>
+                    </td>
+                    <td>
+                        <a href="tryToxicDocs/index.html" target="_blank">Docs</a>
+                    </td>
+                    <td>Should basicly work</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="index.html?s=jobmanagement" onclick="changeContent('jobmanagement'); return false">jobManagement</a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/skamster/jobManagement/" target="_blank">Github</a>
+                    </td>
+                    <td>
+                        <a href="jobManagementDocs/index.html" target="_blank">Docs</a>
                         </a>
-                        <p>Init-view in english</p>
-                        <a href="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png">
-                            <img src="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png">
-                        </a>
-                        <p>Chatview in german</p>
-                        <ul>
-                            <li>
-                                <a href="tryToxicDocs/index.html">Docs</a>
-                            </li>
-                        </ul>
-                    </p>
-                </section>
-                <section id="peta" style="display:none">
+                    </td>
+                    <td>Untested, but basicly stable</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="index.html?s=peta" onclick="changeContent('peta'); return false">Peta</a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/skamster/Peta/" target="_blank">Github</a>
+                    </td>
+                    <td>
+                        <a href="petaDocs/index.html" target="_blank">Docs</a>
+                    </td>
+                    <td>Experimental phase</td>
+                </tr>
+            </table>
 
-                    <h3>Peta</h3>
-                    <p>This PHP-application was based on v5.2 and continues with 5.5 now. Primary goal was one simple application, but it was used as base for many kinds of apps by myself. The name Peta came out of my idea called PHPMeta. This because the goal goes now in a very modular direction. The old name "learncards-web" is death!</p>
-                    <ul>
-                        <li>MVC-arch</li>
-                        <li>Dojo for JS</li>
-                        <li>Smarty for templates</li>
-                        <li>Users with profiles and roles</li>
-			<li>plugins with roles and rights</li>
-                    </ul>
-		    Consult the <a href="https://github.com/skamster/Peta/wiki">Wiki</a> for more information and notes.
-                </section>
-                <section id="tryToxic" style="display:none">
+        </span>
+        <span id="jobmanagement" style="display:none">
+            <h3>jobManagement</h3>For undeprecated information please consult
+            <a href="https://github.com/skamster/jobManagement/">README.md on Github</a>
+            <hr />
+            <p>
+                This is a programm for temporary workers. It's specialiced for diffrent companys, so when u like to switch, it may could help you. The target is to watch the companys and how much money they give you (cause a company isn't trustable). The programm supports:
+                <ul>
+                    <li>Companys</li>
+                    <li>Jobs</li>
+                    <li>Weekends</li>
+                    <li>Month-over-jobs</li>
+                    <li>Charges</li>
+                    <li>Credits</li>
+                    <li>Diffrent filtering options and Views</li>
+                    <li>Overallview and Detailedview based on Companys</li>
+                    <li>Calendarview</li>
+                    <li>Livesearch [jobname, jobplace, jobleader, jobcomment, companyname]</li>
+                    <li>Encryption by pycrypto</li>
+                </ul>
+            </p>
+            <p>
+                <a target="_blank" href="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png">
+                    <img src="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png">
+                </a>
+                <p>Init-view in english</p>
+                <a target="_blank" href="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png">
+                    <img src="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png">
+                </a>
+                <p>Chatview in german</p>
+                <ul>
+                    <li>
+                        <a href="tryToxicDocs/index.html">Docs</a>
+                    </li>
+                </ul>
+            </p>
+        </span>
+        <span id="peta" style="display:none">
 
-                    <h3>tryToxic</h3>For undeprecated information please consult
-                    <a href="https://github.com/skamster/tryToxics/">README.md on Github</a>
-                    <hr />
-                    <b>Working!</b>
-                    <ul>
-                        <li>Add and save toxUsers, experimental support for tox-id v2</li>
-                        <li>"Profile"-Signals (status, statusmessage, name)</li>
-                        <li>Save messages/history log (encrypted, look local storages)</li>
-                        <li>Send and reciving messages</li>
-                        <li>Encryption of
-                            <a href="https://github.com/skamster/tryToxics/wiki/LocalStorages">LocalStorages</a>
-                        </li>
-                        <li>Internationalisised (at the moment english + german)</li>
-                        <li>Groupchat is working,including create groups and invite people into them</li>
-                        <li>Set Loglevel for console and file on the flow</li>
-                        <li>Grouped chatview, diffrented by colors and little heading.</li>
-                    </ul>
+            <h3>Peta</h3>
+            <p>This PHP-application was based on v5.2 and continues with 5.5 now. Primary goal was one simple application, but it was used as base for many kinds of apps by myself. The name Peta came out of my idea called PHPMeta. This because the goal goes now in a very modular direction. The old name "learncards-web" is death!</p>
+            <ul>
+                <li>MVC-arch</li>
+                <li>Dojo for JS</li>
+                <li>Smarty for templates</li>
+                <li>Users with profiles and roles</li>
+                <li>plugins with roles and rights</li>
+            </ul>
+            Consult the
+            <a target="wiki" href="https://github.com/skamster/Peta/wiki">Wiki</a>for more information and notes.
+        </span>
+        <span id="tryToxic" style="display:none">
 
-                    <b>Not working / known Bugs</b>
-                    <ul>
-                        <li>fileTransfer</li>
-                        <li>friends keys are weirdly shorted - crap for giving to a friend (the own is well)</li>
-                        <li>this stuff i couldn't resolve for moment, but there's enough to improve :)</li>
-                    </ul>
-                    <p>
-                        <a href="http://www.imghack.se/155968">
-                            <img src="http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png">
-                        </a>
-                        <p>Init-view in english</p>
-                        <a href="http://www.imghack.se/155969">
-                            <img src="http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png">
-                        </a>
-                        <p>Chatview in german</p>
-                        <ul>
-                            <li>
-                                <a href="tryToxicDocs/index.html">Docs</a>
-                            </li>
-                        </ul>
-                    </p>
-                </section>
+            <h3>tryToxic</h3>For undeprecated information please consult
+            <a href="https://github.com/skamster/tryToxics/" target="_blank">README.md on Github</a>
+            <hr />
+            <b>Working!</b>
+            <ul>
+                <li>Add and save toxUsers, experimental support for tox-id v2</li>
+                <li>"Profile"-Signals (status, statusmessage, name)</li>
+                <li>Save messages/history log (encrypted, look local storages)</li>
+                <li>Send and reciving messages</li>
+                <li>Encryption of
+                    <a href="https://github.com/skamster/tryToxics/wiki/LocalStorages" target="wiki">LocalStorages</a>
+                </li>
+                <li>Internationalisised (at the moment english + german)</li>
+                <li>Groupchat is working,including create groups and invite people into them</li>
+                <li>Set Loglevel for console and file on the flow</li>
+                <li>Grouped chatview, diffrented by colors and little heading.</li>
+            </ul>
 
-
-
-                <div id="about" style="display:none">
-                    <h3>Little about me</h3>
-                    <ul>
-                        <li>hersche@vmail.me</li>
-                        <li>
-                            <a href="http://diasp.cz/u/skamster">skamster@diasp.cz</a>
-                        </li>
-                        <li>skamster@jabber.ccc.de (unoften used but with otr,pls use!)</li>
-                        <li>Soon a
-                            <a href="http://tox.im">tox</a>-id :)</li>
-
-                    </ul>
-                </div>
+            <b>Not working / known Bugs</b>
+            <ul>
+                <li>fileTransfer</li>
+                <li>friends keys are weirdly shorted - crap for giving to a friend (the own is well)</li>
+                <li>this stuff i couldn't resolve for moment, but there's enough to improve :)</li>
+            </ul>
+            <p>
+                <a href="http://www.imghack.se/155968">
+                    <img src="http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png">
+                </a>
+                <p>Init-view in english</p>
+                <a href="http://www.imghack.se/155969">
+                    <img src="http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png">
+                </a>
+                <p>Chatview in german</p>
+                <ul>
+                    <li>
+                        <a href="tryToxicDocs/index.html">Docs</a>
+                    </li>
+                </ul>
+            </p>
+        </span>
 
 
 
-            </div>
-        </section>
+        <span id="about" style="display:none">
+            <img src="https://avatars2.githubusercontent.com/u/90995?s=460" title="Profilepicture" />
+            <h3>Little about me</h3>
+            <ul>
+                <li>
+                    <a href="mailto:hersche@vmail.me">Mail: hersche@vmail.me</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://diasp.cz/u/skamster">Diaspora: skamster@diasp.cz</a>
+                </li>
+                <li>skamster@jabber.ccc.de (unoften used but with otr,pls use!)</li>
+                <li>Soon a
+                    <a target="_blank" href="http://tox.im">tox</a>-id :)</li>
+
+            </ul>
+        </span>
+
     </div>
 
 
