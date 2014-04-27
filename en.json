@@ -1,0 +1,114 @@
+{
+    "index": {
+        "title": "Home",
+        "description": "This is the startpage and also a little link-collection. It is using your webstorage to provide this site also offline when supported by your browser. Out of this, there's a 'Refresh'-button.",
+        "content": {
+            "tryToxic": {
+                "pLink": "index.html?s=tryToxic",
+                "sLink": "https://github.com/skamster/tryToxics/",
+                "dLink": "tryToxicDocs/index.html",
+                "stable": "Basicly ready"
+            },
+            "jobManagement": {
+                "pLink": "index.html?s=jobManagement",
+                "sLink": "https://github.com/skamster/jobManagement/",
+                "dLink": "jobManagementDocs/index.html",
+                "stable": "Basicly ready"
+            },
+            "peta": {
+                "pLink": "index.html?s=peta",
+                "sLink": "https://github.com/skamster/Peta/",
+                "dLink": "petaDocs/index.html",
+                "stable": "Basicly ready"
+            }
+
+        }
+    },
+    "tryToxic": {
+        "title": "tryToxic",
+        "preword": "tryToxic is just another tox-api-client, written in python 3 and pyQt",
+        "description": "a further description",
+        "features": {
+            "Local encryption": "Store messages and idendity encrypted on harddisk",
+            "Groupchats": "Invite and create groupchats",
+            "Set Loglevel": "Change in working app",
+            "I18N": "It's prepared for every language!"
+        },
+        "bugs": {
+            "Filetransfer": "Sending fails",
+            "...": "etcetc"
+        },
+        "pictures": {
+            "initview": {
+                "desc": "Initview",
+                "src": "http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png",
+                "link": "http://www.imghack.se/155968"
+            },
+            "detailcompanyview": {
+                "desc": "Chatview in german",
+                "src": "http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png",
+                "link": "http://www.imghack.se/155969"
+            }
+        }
+    },
+    "jobManagement": {
+        "title": "jobManagement",
+        "preword": "jobManagement is a financeapplication for temporary workers written in python 3 and pyQt",
+        "description": "a further description",
+        "features": {
+            "Local encryption": "Store messages and idendity encrypted on harddisk",
+            "Diffrent companys": "When you work for diffrent companys"
+        },
+        "bugs": {
+            "Filetransfer": "Sending fails",
+            "...": "etcetc"
+        },
+        "pictures": {
+            "initview": {
+                "desc": "Initview",
+                "src": "http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png",
+                "link": "http://www.imghack.se/155968"
+            },
+            "detailcompanyview": {
+                "desc": "Chatview in german",
+                "src": "http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png",
+                "link": "http://www.imghack.se/155969"
+            }
+        }
+    },
+    "peta": {
+        "title": "peta",
+        "preword": "Peta stands for PhpMeta and is written in Php 5 and dojo",
+        "description": "a further description",
+        "features": {
+            "Local encryption": "Store messages and idendity encrypted on harddisk",
+            "Groupchats": "Invite and create groupchats"
+        },
+        "bugs": {
+            "Filetransfer": "Sending fails",
+            "...": "etcetc"
+        },
+        "pictures": {
+            "initview": {
+                "desc": "Initview",
+                "src": "http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png",
+                "link": "http://www.imghack.se/155968"
+            },
+            "detailcompanyview": {
+                "desc": "Chatview in german",
+                "src": "http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png",
+                "link": "http://www.imghack.se/155969"
+            }
+        }
+    },
+
+    "about": {
+        "description": "Hello, i am jad (just another developer), playing with json right now.",
+        "picture": "https://avatars2.githubusercontent.com/u/90995?s=460",
+        "contact": {
+            "Xampp": "skamster@jabber.ccc.de",
+            "E-Mail": "hersche@vmail.me",
+            "Diaspora": "skamster@diasp.cz"
+        }
+    }
+}

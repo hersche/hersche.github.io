@@ -3,8 +3,9 @@
 
 <head>
     <meta charset='utf-8'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
@@ -24,25 +25,120 @@
             }
         }
 
+        function updateContent() {
+            $.getJSON("en.json")
+                .done(function(data) {
+                    jData = jQuery.parseJSON(JSON.stringify(data));
+                    if (typeof(Storage) !== "undefined") {
+                        localStorage.removeItem("jData");
+                        localStorage.jData = JSON.stringify(data);
+                    }
+                    $("#showContent").html(processHtml(jData, lastName));
+
+                })
+                .fail(function(jqxhr, textStatus, error) {
+                    alert("Request failed: " + error);
+                    console.log("Request Failed: " + error);
+                });
+
+
+        }
+
         function GET(v) {
             if (!HTTP_GET_VARS[v]) {
                 return 'undefined';
             }
             return HTTP_GET_VARS[v];
         }
-        var lastName = ""
 
+        function processHtml(jDataIn, name) {
+            var displayHtml = "";
+            $.each(jDataIn, function(key, val) {
+                var site = jQuery.parseJSON(JSON.stringify(val));
+                if (name == key) {
+                    if (key == "index") {
+                        displayHtml += "<h1>" + val.title + "</h1><p>" + val.description + "</p><table><tr><th>Projectname</th><th>Source</th>";
+                        displayHtml += "<th>Docs</th><th>Stability</th></tr>";
+                        $.each(val.content, function(cKey, cVal) {
+                            displayHtml += '<tr><td><a href="index.html?s=' + cKey + '" onclick="changeContent(\'' + cKey + '\'); return false;" >' + cKey + '</a></td><td><a href="' + cVal.pLink + '" >Project</a></td><td><a href="' + cVal.sLink + '">Src</a></td>';
+                            displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
+                        });
+                    } else if (key == "about") {
+                        displayHtml += '<p><img src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
+                        $.each(val.contact, function(cKey, cVal) {
+                            displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
+                        });
+                        displayHtml += '</ul>';
+                    } else {
+                        displayHtml += "<h1>" + key + "</h1><p>" + val.preword + "</p>";
+                        displayHtml += "<h3>Features</h3><ul>";
+                        $.each(val.features, function(fKey, fVal) {
+                            displayHtml += "<li>" + fKey + ": " + fVal + "</li>";
+                        });
+                        displayHtml += "</ul><h3>Pictures</h3><ul>";
+                        $.each(val.pictures, function(pKey, pVal) {
+                            displayHtml += "<li>" + pVal.desc+":<br /> <a href='"+pVal.link+"'><img src='" + pVal.src + "' /></a></li>";
+                        });
+                                                displayHtml += "</ul><h3>Bugs</h3><ul>";
+                        $.each(val.bugs, function(bKey, bVal) {
+                            displayHtml += "<li>" + bKey+": " + bVal + "</li>";
+                        });
+                        displayHtml += "</ul><p>" + val.description + "</p>";
+                    }
+                }
+            });
+            return displayHtml;
+        }
+
+        var lastName = "";
+        var jData;
         $(document).ready(function() {
             if (GET('s') != 'undefined' & GET('s') != 'index') {
                 lastName = GET('s');
             } else {
                 lastName = "index";
             }
-            $("#showContent").html($("#" + lastName).html());
+
+            var items = [];
+            if (typeof(Storage) !== "undefined") {
+                // Code for localStorage/sessionStorage.
+                if (localStorage.jData) {
+                    jData = jQuery.parseJSON(localStorage.jData);
+                    $("#showContent").html(processHtml(jData, lastName));
+                } else {
+                    //retrive
+
+                    $.getJSON("en.json")
+                        .done(function(data) {
+                            localStorage.jData = JSON.stringify(data);
+                            jData = data;
+                            $("#showContent").html(processHtml(jData, lastName));
+                        })
+                        .fail(function(jqxhr, textStatus, error) {
+                            alert("(with webstorage) Request failed: " + error);
+                            console.log("Request Failed: " + error);
+                        });
+                }
+            } else {
+                // Sorry! No Web Storage support..
+                $.getJSON("en.json")
+                    .done(function(data) {
+                        jData = jQuery.parseJSON(JSON.stringify(data));
+                        $("#showContent").html(processHtml(jData, lastName));
+                    })
+                    .fail(function(jqxhr, textStatus, error) {
+                        alert("(withouth webstorage) Request failed: " + error);
+                        console.log("Request Failed: " + error);
+                    });
+
+            }
+            //alert(JSON.stringify(jData));
+            //alert(displayHtml);
+
             $("#showContent").fadeIn(1000);
             $("#menu").fadeIn(1000);
-        });
 
+        });
 
         function changeContent(name) {
             if (history.pushState) {
@@ -55,16 +151,15 @@
                     "direction": "left",
                     "mode": "hide"
                 }, 400, function() {
-                    $("#showContent").html($("#" + name).html());
+                    $("#showContent").html(processHtml(jData, name));
 
                 });
-
 
                 $("#animationContainer").effect("slide", {
                     "direction": "right",
                     "mode": "show"
                 }, 400);
-                lastName = name
+                lastName = name;
             }
 
             return false;
@@ -78,175 +173,19 @@
             <div id="menucontent">
                 <h1>skamster.github.io</h1>
                 <section id="downloads">
-                    <a style="margin-left:5px;" href="index.html?s=index" onclick="changeContent('index'); return false" class="btn fade">
-                        <span class="icon"></span>Home</a>
-                    <a href="index.html?s=about" onclick="changeContent('about'); return false" class="btn fade">
-                        <span class="icon"></span>About me</a>
+                    <a style="margin-left:5px;" href="index.html?s=index" onclick="changeContent('index'); return false" class="btn fade">Home</a>
+                    <a href="index.html?s=about" onclick="changeContent('about'); return false" class="btn fade">About me</a>
+                    <a href="#" onclick="updateContent(); return false" class="btn fade">Refresh</a>
                     <a target="_blank" href="https://github.com/skamster" class="btn btn-github fade">
                         <span class="icon"></span>View on GitHub</a>
                 </section>
             </div>
         </div>
     </header>
-
     <div id="animationContainer">
         <div id="showContent" style="display: none"></div>
     </div>
-    <div id="index" style="display:none">
-        <table>
-            <tr>
-                <th>Projectname</th>
-                <th>Source</th>
-                <th>Docs</th>
-                <th>Stability</th>
-            </tr>
-            <tr>
-                <td>
-                    <a href="index.html?s=tryToxic" onclick="changeContent('tryToxic'); return false">tryToxic</a>
-                </td>
-                <td>
-                    <a href="https://github.com/skamster/tryToxics/" target="_blank">Github</a>
-                </td>
-                <td>
-                    <a href="tryToxicDocs/index.html" target="_blank">Docs</a>
-                </td>
-                <td>Should basicly work</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="index.html?s=jobmanagement" onclick="changeContent('jobmanagement'); return false">jobManagement</a>
-                </td>
-                <td>
-                    <a href="https://github.com/skamster/jobManagement/" target="_blank">Github</a>
-                </td>
-                <td>
-                    <a href="jobManagementDocs/index.html" target="_blank">Docs</a>
-                </td>
-                <td>Untested, but basicly stable</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="index.html?s=peta" onclick="changeContent('peta'); return false">Peta</a>
-                </td>
-                <td>
-                    <a href="https://github.com/skamster/Peta/" target="_blank">Github</a>
-                </td>
-                <td>
-                    <a href="petaDocs/index.html" target="_blank">Docs</a>
-                </td>
-                <td>Experimental phase</td>
-            </tr>
-        </table>
 
-    </div>
-    <div id="jobmanagement" style="display:none">
-        <h3>jobManagement</h3>For undeprecated information please consult
-        <a href="https://github.com/skamster/jobManagement/">README.md on Github</a>
-        <hr />
-        <p>
-            This is a programm for temporary workers. It's specialiced for diffrent companys, so when u like to switch, it may could help you. The target is to watch the companys and how much money they give you (cause a company isn't trustable). The programm supports: </p>
-            <ul>
-                <li>Companys</li>
-                <li>Jobs</li>
-                <li>Weekends</li>
-                <li>Month-over-jobs</li>
-                <li>Charges</li>
-                <li>Credits</li>
-                <li>Diffrent filtering options and Views</li>
-                <li>Overallview and Detailedview based on Companys</li>
-                <li>Calendarview</li>
-                <li>Livesearch [jobname, jobplace, jobleader, jobcomment, companyname]</li>
-                <li>Encryption by pycrypto</li>
-            </ul>
-       
-            <a target="_blank" href="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png">
-                <img src="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png" alt="jobManagement init view">
-            </a>
-            <p>Init-view in english</p>
-            <a target="_blank" href="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png">
-                <img src="https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png" alt="jobmanagement detailview">
-            </a>
-            <p>Chatview in german</p>
-            <ul>
-                <li>
-                    <a href="tryToxicDocs/index.html">Docs</a>
-                </li>
-            </ul>
-    </div>
-    <div id="peta" style="display:none">
-
-        <h3>Peta</h3>
-        <p>This PHP-application was based on v5.2 and continues with 5.5 now. Primary goal was one simple application, but it was used as base for many kinds of apps by myself. The name Peta came out of my idea called PHPMeta. This because the goal goes now in a very modular direction. The old name "learncards-web" is death!</p>
-        <ul>
-            <li>MVC-arch</li>
-            <li>Dojo for JS</li>
-            <li>Smarty for templates</li>
-            <li>Users with profiles and roles</li>
-            <li>plugins with roles and rights</li>
-        </ul>
-        Consult the
-        <a target="wiki" href="https://github.com/skamster/Peta/wiki">Wiki</a>for more information and notes.
-    </div>
-    <div id="tryToxic" style="display:none">
-
-        <h3>tryToxic</h3>For undeprecated information please consult
-        <a href="https://github.com/skamster/tryToxics/" target="_blank">README.md on Github</a>
-        <hr />
-        <b>Working!</b>
-        <ul>
-            <li>Add and save toxUsers, experimental support for tox-id v2</li>
-            <li>"Profile"-Signals (status, statusmessage, name)</li>
-            <li>Save messages/history log (encrypted, look local storages)</li>
-            <li>Send and reciving messages</li>
-            <li>Encryption of
-                <a href="https://github.com/skamster/tryToxics/wiki/LocalStorages" target="wiki">LocalStorages</a>
-            </li>
-            <li>Internationalisised (at the moment english + german)</li>
-            <li>Groupchat is working,including create groups and invite people into them</li>
-            <li>Set Loglevel for console and file on the flow</li>
-            <li>Grouped chatview, diffrented by colors and little heading.</li>
-        </ul>
-
-        <b>Not working / known Bugs</b>
-        <ul>
-            <li>fileTransfer</li>
-            <li>friends keys are weirdly shorted - crap for giving to a friend (the own is well)</li>
-            <li>this stuff i couldn't resolve for moment, but there's enough to improve :)</li>
-        </ul>
-        <p>
-            <a href="http://www.imghack.se/155968">
-                <img src="http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png" alt="Initview trytoxic">
-            </a>
-            <p>Init-view in english</p>
-            <a href="http://www.imghack.se/155969">
-                <img src="http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png" alt="chatview in german">
-            </a>
-            <p>Chatview in german</p>
-            <ul>
-                <li>
-                    <a href="tryToxicDocs/index.html">Docs</a>
-                </li>
-            </ul>
-    </div>
-
-
-
-    <div id="about" style="display:none">
-        <img src="https://avatars2.githubusercontent.com/u/90995?s=460" alt="Profilepicture" />
-        <h3>Little about me</h3>
-        <ul>
-            <li>
-                <a href="mailto:hersche@vmail.me">Mail: hersche@vmail.me</a>
-            </li>
-            <li>
-                <a target="_blank" href="http://diasp.cz/u/skamster">Diaspora: skamster@diasp.cz</a>
-            </li>
-            <li>skamster@jabber.ccc.de (unoften used but with otr,pls use!)</li>
-            <li>Soon a
-                <a target="_blank" href="http://tox.im">tox</a>-id :)</li>
-
-        </ul>
-    </div>
 </body>
 
 </html>
