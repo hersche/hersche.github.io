@@ -59,7 +59,7 @@
                         displayHtml += "<h1>" + val.title + "</h1><p>" + val.description + "</p><table><tr><th>Projectname</th><th>Source</th>";
                         displayHtml += "<th>Docs</th><th>Stability</th></tr>";
                         $.each(val.content, function(cKey, cVal) {
-                            displayHtml += '<tr><td><a href="index.html?s=' + cKey + '" onclick="changeContent(\'' + cKey + '\'); return false;" >' + cKey + '</a></td><td><a href="' + cVal.pLink + '" >Project</a></td><td><a href="' + cVal.sLink + '">Src</a></td>';
+                            displayHtml += '<tr><td><a href="index.html?s=' + cKey + '" onclick="changeContent(\'' + cKey + '\'); return false;" >' + cKey + '</a></td><td><a href="' + cVal.sLink + '">Src</a></td>';
                             displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                         });
                     } else if (key == "about") {
