@@ -71,7 +71,7 @@
             if (lang == "de" & GET('lang') == 'undefined') {
                 jsonFile = "de.json";
             }
-            if (GET('lang') != 'undefined' & GET('lang') != jsonFile.substr(0, 2)) {
+            if (GET('lang') != 'undefined') {
                 if (GET('lang') == "de" | GET('lang') == "en") {
                     jsonFile = GET('lang') + ".json";
                     updateContent();
