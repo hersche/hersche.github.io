@@ -37,26 +37,36 @@ function processHtml(jDataIn, name) {
 }
 
 function updateContent() {
-    $.getJSON(jsonFile)
-        .done(function (data) {
-            jData = jQuery.parseJSON(JSON.stringify(data));
-            if (typeof (Storage) !== "undefined") {
-                localStorage.removeItem("jData");
-                localStorage.jData = JSON.stringify(data);
-            }
-            $("#showContent").html(processHtml(jData, lastName));
-
-        })
-        .fail(function (jqxhr, textStatus, error) {
-            alert("Request failed: " + error+textStatus+jqxhr);
-            console.log("Request Failed: " + error+textStatus+jqxhr);
-        });
-
-
+    var jqxhr = $.getJSON(jsonFile, function () {
+        console.log("success one, do nothing.");
+    });
+    jqxhr.complete(function (data) {
+        jData = jQuery.parseJSON(data.responseText.replace("\n",""));
+        if (typeof (Storage) !== "undefined") {
+            localStorage.removeItem("jData");
+            localStorage.jData = data.responseText.replace("\n","");
+        }
+        $("#showContent").html(processHtml(jData, lastName));
+    });
 }
+//    $.getJSON(jsonFile)
+//        .done(function (data) {
+//            jData = jQuery.parseJSON(JSON.stringify(data));
+//            if (typeof (Storage) !== "undefined") {
+//                localStorage.removeItem("jData");
+//                localStorage.jData = JSON.stringify(data);
+//            }
+//            $("#showContent").html(processHtml(jData, lastName));
+//
+//        })
+//        .fail(function (jqxhr, textStatus, error) {
+//            alert("Request failed: " + error+textStatus+jqxhr);
+//            console.log("Request Failed: " + error+textStatus+jqxhr);
+//        });
+
 
 function GET(v) {
-    if(!HTTP_GET_VARS[v]) {
+    if (!HTTP_GET_VARS[v]) {
         return 'undefined';
     }
     return HTTP_GET_VARS[v];
