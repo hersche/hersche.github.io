@@ -41,12 +41,12 @@
         "pictures": {
             "initview": {
                 "desc": "Initview",
-                "src": "http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png",
+                "src": "images/tryToxicInit.png",
                 "link": "http://www.imghack.se/155968"
             },
             "detailcompanyview": {
                 "desc": "Chatview in german",
-                "src": "http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png",
+                "src": "images/tryToxicChat.png",
                 "link": "http://www.imghack.se/155969"
             }
         }
@@ -66,12 +66,12 @@
         "pictures": {
             "initview": {
                 "desc": "Initview",
-                "src": "http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png",
+                "src": "images/tryToxicInit.png",
                 "link": "http://www.imghack.se/155968"
             },
             "detailcompanyview": {
                 "desc": "Chatview in german",
-                "src": "http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png",
+                "src": "images/tryToxicChat.png",
                 "link": "http://www.imghack.se/155969"
             }
         }
@@ -91,12 +91,12 @@
         "pictures": {
             "initview": {
                 "desc": "Initview",
-                "src": "http://cdn.imghack.se/medium/822051227a0695537fed240f5e0cb0a6.png",
+                "src": "images/tryToxicInit.png",
                 "link": "http://www.imghack.se/155968"
             },
             "detailcompanyview": {
                 "desc": "Chatview in german",
-                "src": "http://cdn.imghack.se/medium/c25832b8327d5e812718505a0defc2a3.png",
+                "src": "images/tryToxicChat.png",
                 "link": "http://www.imghack.se/155969"
             }
         }
