@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="skamstergithubio.appcache">
 
 <head>
     <meta charset='utf-8'>
@@ -8,7 +8,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <title>skamster.github.io</title>
     <script type="text/javascript">
         HTTP_GET_VARS = new Array();
@@ -26,7 +25,7 @@
         }
 
         function updateContent() {
-            $.getJSON("en.json")
+            $.getJSON(jsonFile)
                 .done(function(data) {
                     jData = jQuery.parseJSON(JSON.stringify(data));
                     if (typeof(Storage) !== "undefined") {
@@ -77,11 +76,11 @@
                         });
                         displayHtml += "</ul><h3>Pictures</h3><ul>";
                         $.each(val.pictures, function(pKey, pVal) {
-                            displayHtml += "<li>" + pVal.desc+":<br /> <a href='"+pVal.link+"'><img src='" + pVal.src + "' /></a></li>";
+                            displayHtml += "<li>" + pVal.desc + ":<br /> <a href='" + pVal.link + "'><img src='" + pVal.src + "' /></a></li>";
                         });
-                                                displayHtml += "</ul><h3>Bugs</h3><ul>";
+                        displayHtml += "</ul><h3>Bugs</h3><ul>";
                         $.each(val.bugs, function(bKey, bVal) {
-                            displayHtml += "<li>" + bKey+": " + bVal + "</li>";
+                            displayHtml += "<li>" + bKey + ": " + bVal + "</li>";
                         });
                         displayHtml += "</ul><p>" + val.description + "</p>";
                     }
@@ -92,11 +91,27 @@
 
         var lastName = "";
         var jData;
+        var lang = window.navigator.userLanguage || window.navigator.language;
+        if (lang.length == 5) {
+            lang = lang.substr(0, 2);
+
+        }
+        var jsonFile = "en.json";
+
         $(document).ready(function() {
             if (GET('s') != 'undefined' & GET('s') != 'index') {
                 lastName = GET('s');
             } else {
                 lastName = "index";
+            }
+            if (lang == "de" & GET('lang') == 'undefined') {
+                jsonFile = "de.json";
+            }
+            if (GET('lang') != 'undefined' & GET('lang') != jsonFile.substr(0, 2)) {
+                if (GET('lang') == "de" | GET('lang') == "en") {
+                    jsonFile = GET('lang') + ".json";
+                    updateContent();
+                }
             }
 
             var items = [];
@@ -108,7 +123,7 @@
                 } else {
                     //retrive
 
-                    $.getJSON("en.json")
+                    $.getJSON(jsonFile)
                         .done(function(data) {
                             localStorage.jData = JSON.stringify(data);
                             jData = data;
@@ -121,7 +136,7 @@
                 }
             } else {
                 // Sorry! No Web Storage support..
-                $.getJSON("en.json")
+                $.getJSON(jsonFile)
                     .done(function(data) {
                         jData = jQuery.parseJSON(JSON.stringify(data));
                         $("#showContent").html(processHtml(jData, lastName));
@@ -175,9 +190,11 @@
                 <section id="downloads">
                     <a style="margin-left:5px;" href="index.html?s=index" onclick="changeContent('index'); return false" class="btn fade">Home</a>
                     <a href="index.html?s=about" onclick="changeContent('about'); return false" class="btn fade">About me</a>
-                    <a href="#" onclick="updateContent(); return false" class="btn fade">Refresh</a>
                     <a target="_blank" href="https://github.com/skamster" class="btn btn-github fade">
                         <span class="icon"></span>View on GitHub</a>
+                    <a style="float:right;" href="#" onclick="updateContent(); return false" class="btn fade">Refresh</a>
+                    <a style="float:right;" href="index.html?lang=de" class="btn fade">DE</a>
+                    <a style="float:right;" href="index.html?lang=en" class="btn fade">ENG</a>
                 </section>
             </div>
         </div>
