@@ -25,31 +25,7 @@
             }
         }
 
-        function updateContent() {
-            $.getJSON(jsonFile)
-                .done(function(data) {
-                    jData = jQuery.parseJSON(JSON.stringify(data));
-                    if (typeof(Storage) !== "undefined") {
-                        localStorage.removeItem("jData");
-                        localStorage.jData = JSON.stringify(data);
-                    }
-                    $("#showContent").html(processHtml(jData, lastName));
 
-                })
-                .fail(function(jqxhr, textStatus, error) {
-                    alert("Request failed: " + error);
-                    console.log("Request Failed: " + error);
-                });
-
-
-        }
-
-        function GET(v) {
-            if (!HTTP_GET_VARS[v]) {
-                return 'undefined';
-            }
-            return HTTP_GET_VARS[v];
-        }
 
 
 
@@ -77,8 +53,6 @@
                     updateContent();
                 }
             }
-
-            var items = [];
             if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
                 if (localStorage.jData) {
@@ -86,7 +60,6 @@
                     $("#showContent").html(processHtml(jData, lastName));
                 } else {
                     //retrive
-
                     $.getJSON(jsonFile)
                         .done(function(data) {
                             localStorage.jData = JSON.stringify(data);
@@ -94,8 +67,8 @@
                             $("#showContent").html(processHtml(jData, lastName));
                         })
                         .fail(function(jqxhr, textStatus, error) {
-                            alert("(with webstorage) Request failed: " + error);
-                            console.log("Request Failed: " + error);
+                            alert("(with webstorage) Request failed: " + error+textStatus+jqxhr);
+                            console.log("Request Failed: " + error+textStatus+jqxhr);
                         });
                 }
             } else {
@@ -106,17 +79,13 @@
                         $("#showContent").html(processHtml(jData, lastName));
                     })
                     .fail(function(jqxhr, textStatus, error) {
-                        alert("(withouth webstorage) Request failed: " + error);
-                        console.log("Request Failed: " + error);
+                        alert("(withouth webstorage) Request failed: " + error+textStatus+jqxhr);
+                        console.log("Request Failed: " + error+textStatus+jqxhr);
                     });
 
             }
-            //alert(JSON.stringify(jData));
-            //alert(displayHtml);
-
             $("#showContent").fadeIn(1000);
             $("#menu").fadeIn(1000);
-
         });
 
         function changeContent(name) {
