@@ -86,7 +86,7 @@
             "Flexible pluginsystem": "Every plugin could have one to n instances",
             "Flexible accesssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
             "MVC-Structure": "It's easy to learn the code or write a plugin",
-            "Livedemo":"<a href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
+            "Livedemo": "<a href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
             "Update accessrights": "Set ar fails on update, so rm ant touch!",
@@ -103,11 +103,40 @@
 
     "about": {
         "description": "Hello, i am jad (just another developer), playing with json right now.",
-        "picture": "profile.png",
+        "picture": "profile.jpg",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
             "E-Mail": "hersche@vmail.me",
             "Diaspora": "skamster@diasp.cz"
+        },
+        "languages": {
+            "PHP": {
+                "desc": "Use this for a long time now. Since Oop is default with PHP5, it's beatiful to use.",
+                "frameworks": {
+                    "Smarty": "Templateframework, allow a clean separation between 'controller' and 'view'"
+                }
+            },
+            "Python": {
+                "desc": "Python is a little more fresh language i've learned, but it's make addicted really fast. Perfect possibilitys of sequentell, Oop and modulare code.",
+                "frameworks": {
+                    "PyQt": "Qt is a very modular ui-library - it's easy to use and works very stable",
+                    "PyTox": "PyTox is a interface to the tox-core-project. For further information visit http://tox.im",
+                    "PyCrypto": "PyCrypto supports many kinds of hashing, symmetric and asymmetric encryptions. I basicly use it to encrypt the local storage"
+                }
+            },
+                "Java": {
+                    "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Since Android was growing very much last years and dalvik seems to be very optimized, i may go back to this language once.",
+                    "frameworks": {
+                        "None": "Nearly all integrated/bloated"
+                    }
+                },
+                "Javascript": {
+                    "desc": "In past, this language was a example why you should do it static for me. So much incompatibility between browsers! Today, it's changed, a lot of stuff is default, there are mighty js-frameworks and there came html5. Look the source of this page ;)",
+                    "frameworks": {
+                        "jQuery": "jQuery is a js default",
+                        "Dojo": "Dojo's another default"
+                    }
+                }
+            }
         }
     }
-}

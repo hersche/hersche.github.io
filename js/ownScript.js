@@ -13,11 +13,20 @@ function processHtml(jDataIn, name) {
             } else if (key === "about") {
                 displayHtml += '<p><img id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
-                    if (cKey == "E-Mail" | cKey == "Xampp") {
-                        displayHtml += '<li><b>' + cKey + '</b>:<a href="mailto:'+cVal+'"> ' + cVal + '</a></li>';
+                    if (cKey === "E-Mail" || cKey === "Xampp") {
+                        displayHtml += '<li><b>' + cKey + '</b>:<a href="mailto:' + cVal + '"> ' + cVal + '</a></li>';
                     } else {
                         displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
                     }
+                });
+                displayHtml += '</ul><h3>Languages</h3><ul>';
+                console.log("lang 1");
+                $.each(val.languages, function (lKey, lVal) {
+                    displayHtml += '<li><b>' + lKey + '</b>: ' + lVal.desc + '<ul style="margin-bottom:10px;">';
+                    $.each(lVal.frameworks, function (fKey, fVal) {
+                        displayHtml += '<li style="margin-bottom:5px;">' + fKey + ': ' + fVal + '</li>';
+                    });
+                    displayHtml += '</ul></li>';
                 });
                 displayHtml += '</ul>';
             } else {
@@ -41,34 +50,21 @@ function processHtml(jDataIn, name) {
     return displayHtml;
 }
 
+
 function updateContent() {
     "use strict";
     var jqxhr = $.getJSON(jsonFile, function () {
         console.log("success one, do nothing.");
     });
     jqxhr.complete(function (data) {
+        console.log("do workls.");
         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
         if (typeof (Storage) !== "undefined") {
             localStorage.removeItem("jData");
             localStorage.jData = data.responseText.replace("\n", "");
         }
-        $("#showContent").html(processHtml(jData, lastName));
     });
 }
-//    $.getJSON(jsonFile)
-//        .done(function (data) {
-//            jData = jQuery.parseJSON(JSON.stringify(data));
-//            if (typeof (Storage) !== "undefined") {
-//                localStorage.removeItem("jData");
-//                localStorage.jData = JSON.stringify(data);
-//            }
-//            $("#showContent").html(processHtml(jData, lastName));
-//
-//        })
-//        .fail(function (jqxhr, textStatus, error) {
-//            alert("Request failed: " + error+textStatus+jqxhr);
-//            console.log("Request Failed: " + error+textStatus+jqxhr);
-//        });
 
 
 function GET(v) {

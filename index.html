@@ -29,6 +29,7 @@
 
         var lastName = "";
         var jData;
+        var aboutImgBig = false;
         var lang = window.navigator.userLanguage || window.navigator.language;
         if (lang.length == 5) {
             lang = lang.substr(0, 2);
@@ -42,16 +43,17 @@
             } else {
                 lastName = "index";
             }
-            if (lang == "de" & GET('lang') == 'undefined') {
+            if (lang == "de" && GET('lang') == 'undefined') {
                 jsonFile = "de.json";
             }
             if (GET('lang') != 'undefined') {
-                if (GET('lang') == "de" | GET('lang') == "en") {
+                if (GET('lang') === "de" || GET('lang') === "en") {
                     jsonFile = GET('lang') + ".json";
-                    updateContent();
+                   // updateContent();
+                    //$("#showContent").html(processHtml(jData, lastName));
                 }
             }
-            if (typeof(Storage) !== "undefined") {
+            if (typeof(Storage) !== "undefined" && GET('lang') === 'undefined') {
                 // Code for localStorage/sessionStorage.
                 if (localStorage.jData) {
                     jData = jQuery.parseJSON(localStorage.jData);
@@ -83,12 +85,12 @@
             $("#showContent").fadeIn(1000);
             $("#menu").fadeIn(1000);
 
-            var aboutImgBig = false;
+            
             $("#aboutImg").click(function() {
                 if (aboutImgBig) {
                     $("#aboutImg").animate({
-                            width: '192px',
-                            height: '192px',
+                            width: '213px',
+                            height: '160px',
                         }, 500,
                         function() {
                             aboutImgBig = false;
@@ -96,8 +98,8 @@
 
                 } else {
                     $("#aboutImg").animate({
-                            width: '360px',
-                            height: '360px'
+                            width: '430px',
+                            height: '320px'
                         }, 500,
                         function() {
                             aboutImgBig = true;
@@ -108,6 +110,7 @@
 
 
         });
+    
     </script>
 </head>
 
@@ -119,11 +122,10 @@
                 <section id="downloads">
                     <a style="margin-left:5px;" href="index.html?s=index" onclick="changeContent('index'); return false" class="btn fade">Home</a>
                     <a href="index.html?s=about" onclick="changeContent('about'); return false" class="btn fade">About me</a>
-                    <a target="_blank" href="https://github.com/skamster" class="btn btn-github fade">
-                        <span class="icon"></span>My GitHub</a>
-                    <a style="float:right;" href="#" onclick="updateContent(); return false" class="btn fade">Refresh</a>
-                    <a style="float:right;" href="index.html?lang=de" class="btn fade">DE</a>
-                    <a style="float:right;" href="index.html?lang=en" class="btn fade">ENG</a>
+                    <a target="_blank" href="https://github.com/skamster" class="btn btn-github fade">My GitHub</a>
+                    <a style="float:right; margin-right: 5px;" href="#" onclick="updateContent(); location.reload(); return false" class="btn fade">Refresh</a>
+                    <a style="float:right; margin-right: 5px;" href="index.html?lang=de" class="btn fade">DE</a>
+                    <a style="float:right; margin-right: 5px;" href="index.html?lang=en" class="btn fade">ENG</a>
                 </section>
             </div>
         </div>
