@@ -51,7 +51,7 @@ function processHtml(jDataIn, name) {
 }
 
 
-function updateContent() {
+function updateContent(reload=false) {
     "use strict";
     var jqxhr = $.getJSON(jsonFile, function () {
         console.log("success one, do nothing.");
@@ -62,6 +62,9 @@ function updateContent() {
         if (typeof (Storage) !== "undefined") {
             localStorage.removeItem("jData");
             localStorage.jData = data.responseText.replace("\n", "");
+            if(reload){
+                location.reload();   
+            }
         }
     });
 }
