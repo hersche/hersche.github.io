@@ -7,7 +7,7 @@ CACHE:
 /profile.png
 /js/jquery-1.11.0.min.js
 /js/jquery-migrate-1.2.1.min.js
-/js/jquery-ui.min.js
+/js/jquery-ui-1.10.4.custom.min.js
 /js/ownScript.js
 /images/tryToxicChat.png
 /images/tryToxicInit.png

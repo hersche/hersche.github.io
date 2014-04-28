@@ -1,4 +1,7 @@
+
+
 function processHtml(jDataIn, name) {
+    "use strict";
     var displayHtml = "";
     $.each(jDataIn, function (key, val) {
         if (name === key) {
@@ -10,7 +13,7 @@ function processHtml(jDataIn, name) {
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
             } else if (key === "about") {
-                displayHtml += '<p id="about"><img src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
+                displayHtml += '<p><img id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
                     displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
                 });
@@ -37,14 +40,15 @@ function processHtml(jDataIn, name) {
 }
 
 function updateContent() {
+    "use strict";
     var jqxhr = $.getJSON(jsonFile, function () {
         console.log("success one, do nothing.");
     });
     jqxhr.complete(function (data) {
-        jData = jQuery.parseJSON(data.responseText.replace("\n",""));
+        jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
         if (typeof (Storage) !== "undefined") {
             localStorage.removeItem("jData");
-            localStorage.jData = data.responseText.replace("\n","");
+            localStorage.jData = data.responseText.replace("\n", "");
         }
         $("#showContent").html(processHtml(jData, lastName));
     });
@@ -66,8 +70,35 @@ function updateContent() {
 
 
 function GET(v) {
+    "use strict";
     if (!HTTP_GET_VARS[v]) {
         return 'undefined';
     }
     return HTTP_GET_VARS[v];
+}
+
+function changeContent(name) {
+    "use strict";
+    if (history.pushState) {
+        history.pushState({
+            "id": 100
+        }, "skamster.github.io::" + name, "index.html?s=" + name);
+    }
+    if (name != lastName) {
+        $("#animationContainer").effect("slide", {
+            "direction": "left",
+            "mode": "hide"
+        }, 400, function () {
+            $("#showContent").html(processHtml(jData, name));
+
+        });
+
+        $("#animationContainer").effect("slide", {
+            "direction": "right",
+            "mode": "show"
+        }, 400);
+        lastName = name;
+    }
+
+    return false;
 }
