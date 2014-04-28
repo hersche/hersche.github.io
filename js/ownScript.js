@@ -84,9 +84,9 @@ function changeContent(name) {
     }
     if (name != lastName) {
         $("#animationContainer").effect("slide", {
-            "direction": "left",
+            "direction": "right",
             "mode": "hide"
-        }, 400, function () {
+        }, 500, function () {
             $("#showContent").html(processHtml(jData, name));
 
         });
@@ -94,7 +94,7 @@ function changeContent(name) {
         $("#animationContainer").effect("slide", {
             "direction": "right",
             "mode": "show"
-        }, 400);
+        }, 500);
         lastName = name;
     }
 
