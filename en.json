@@ -32,7 +32,7 @@
             "Local encryption": "Store messages and idendity encrypted on harddisk",
             "Groupchats": "Invite and create groupchats",
             "Set Loglevel": "Change in working app",
-            "I18N": "It's prepared for every language!"
+            "i18n": "It's prepared for every language!"
         },
         "bugs": {
             "Filetransfer": "Sending fails",
@@ -53,14 +53,16 @@
     },
     "jobManagement": {
         "title": "jobManagement",
-        "preword": "jobManagement is a financeapplication for temporary workers written in python 3 and pyQt",
+        "preword": "Semantic job-overview when you work diffrent companys (freelance/temporary worker). Written in python3 using pyQt and pyCrypto.",
         "description": "a further description",
         "features": {
             "Local encryption": "Store messages and idendity encrypted on harddisk",
-            "Diffrent companys": "When you work for diffrent companys"
+            "Diffrent companys": "When you work for diffrent companys",
+            "Set Loglevel": "Change in working app",
+            "i18n": "It's prepared for every language!"
         },
         "bugs": {
-            "Filetransfer": "Sending fails",
+            "Generating charts": "They're very unflexible",
             "...": "etcetc"
         },
         "pictures": {
@@ -78,14 +80,15 @@
     },
     "peta": {
         "title": "peta",
-        "preword": "Peta stands for PhpMeta and is written in Php 5 and dojo",
+        "preword": "The name Peta came out of PHPMeta. It’s basicly written in PHP with the use of smarty (template/.tpl-files) and dojo (Javascript). The idea behind this project is to avoid redundant rewrites. A maingoal is a good structure, where the administrator of a system could change things as he need. It's target is a base for everything.",
         "description": "a further description",
         "features": {
-            "Local encryption": "Store messages and idendity encrypted on harddisk",
-            "Groupchats": "Invite and create groupchats"
+            "Flexible pluginsystem": "Every plugin could have one to n instances",
+            "Flexible accesssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
+            "MVC-Structure": "It's easy to learn the code or write a plugin"
         },
         "bugs": {
-            "Filetransfer": "Sending fails",
+            "Update accessrights": "Set ar fails on update, so rm ant touch!",
             "...": "etcetc"
         },
         "pictures": {
@@ -93,11 +96,6 @@
                 "desc": "Initview",
                 "src": "images/tryToxicInit.png",
                 "link": "http://www.imghack.se/155968"
-            },
-            "detailcompanyview": {
-                "desc": "Chatview in german",
-                "src": "images/tryToxicChat.png",
-                "link": "http://www.imghack.se/155969"
             }
         }
     },

@@ -78,14 +78,15 @@
     },
     "peta": {
         "title": "peta",
-        "preword": "Peta stands for PhpMeta and is written in Php 5 and dojo",
+        "preword": "Der Name Peta kommt von PhpmETA. Es ist vor allem in PHP 5.5 geschrieben und bedient sich smarty (template/.tpl-files) und dojo (Javascript). Die Idee hinter diesem Projekt ist, redundantes schreiben von Code zu verhinden. Ein Hauptziel ist eine gute Struktur, in dem ein Administrator schnell und unkompliziert arbeiten kann.. Das letztendliche Ziel ist eine Basis für alles.",
         "description": "a further description",
         "features": {
-            "Local encryption": "Store messages and idendity encrypted on harddisk",
-            "Groupchats": "Invite and create groupchats"
+            "Flexibles Pluginsystem": "Every plugin could have one to n instances",
+            "Flexibles Zugriffssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
+            "MVC-Struktur": "It's easy to learn the code or write a plugin"
         },
         "bugs": {
-            "Filetransfer": "Sending fails",
+            "Update accessrights": "Set ar fails on update, so rm ant touch!",
             "...": "etcetc"
         },
         "pictures": {
@@ -93,11 +94,6 @@
                 "desc": "Initview",
                 "src": "images/tryToxicInit.png",
                 "link": "http://www.imghack.se/155968"
-            },
-            "detailcompanyview": {
-                "desc": "Chatview in german",
-                "src": "images/tryToxicChat.png",
-                "link": "http://www.imghack.se/155969"
             }
         }
     },

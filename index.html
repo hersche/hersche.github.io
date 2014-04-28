@@ -89,31 +89,6 @@
                 $(this).animate($(this).css("filter", "grayscale('0'%)"), 3000);
             }
         );
-
-        function changeContent(name) {
-            if (history.pushState) {
-                history.pushState({
-                    "id": 100
-                }, "skamster.github.io::" + name, "index.html?s=" + name);
-            }
-            if (name != lastName) {
-                $("#animationContainer").effect("slide", {
-                    "direction": "left",
-                    "mode": "hide"
-                }, 400, function() {
-                    $("#showContent").html(processHtml(jData, name));
-
-                });
-
-                $("#animationContainer").effect("slide", {
-                    "direction": "right",
-                    "mode": "show"
-                }, 400);
-                lastName = name;
-            }
-
-            return false;
-        }
     </script>
 </head>
 
@@ -126,8 +101,7 @@
                     <a style="margin-left:5px;" href="index.html?s=index" onclick="changeContent('index'); return false" class="btn fade">Home</a>
                     <a href="index.html?s=about" onclick="changeContent('about'); return false" class="btn fade">About me</a>
                     <a target="_blank" href="https://github.com/skamster" class="btn btn-github fade">
-                        <span class="icon"></span>View on GitHub</a>
-                    <a href="#" style="float:right;" onclick="updateContent(); return false"  class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+                        <span class="icon"></span>My GitHub</a>
                     <a style="float:right;" href="#" onclick="updateContent(); return false" class="btn fade">Refresh</a>
                     <a style="float:right;" href="index.html?lang=de" class="btn fade">DE</a>
                     <a style="float:right;" href="index.html?lang=en" class="btn fade">ENG</a>
