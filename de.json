@@ -30,9 +30,9 @@
         "description": "a further description",
         "features": {
             "Local encryption": "Store messages and idendity encrypted on harddisk",
-            "Groupchats": "Invite and create groupchats",
-            "Set Loglevel": "Change in working app",
-            "I18N": "It's prepared for every language!"
+            "Gruppenchates": "Lade leute in welche ein oder kreire selbst welche",
+            "Loglevel einstellen": "Verändere das Loglevel im laufenden Betrieb.",
+            "I18N": "Es ist für alle Sprachen vorbereitet"
         },
         "bugs": {
             "Filetransfer": "Sending fails",
@@ -53,11 +53,13 @@
     },
     "jobManagement": {
         "title": "jobManagement",
-        "preword": "jobManagement is a financeapplication for temporary workers written in python 3 and pyQt",
+        "preword": "Semantische Job-übersicht wenn du für verschiedene Firmen arbeitest (z.B freelancer oder temporär).Geschrieben in python3 mit pyQt und pyCrypto.",
         "description": "a further description",
         "features": {
-            "Local encryption": "Store messages and idendity encrypted on harddisk",
-            "Diffrent companys": "When you work for diffrent companys"
+            "Lokale Verschlüsselung": "Alle Daten können lokal verschlüsselt werden",
+            "Verschiedene Firmen": "When you work for diffrent companys",
+            "Loglevel einstellen": "Verändere das Loglevel im laufenden Betrieb.",
+            "I18N": "Es ist für alle Sprachen vorbereitet"
         },
         "bugs": {
             "Filetransfer": "Sending fails",
@@ -65,14 +67,14 @@
         },
         "pictures": {
             "initview": {
-                "desc": "Initview",
-                "src": "images/tryToxicInit.png",
-                "link": "http://www.imghack.se/155968"
+                "desc": "Initialansicht",
+                "src": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png",
+                "link": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png"
             },
             "detailcompanyview": {
-                "desc": "Chatview in german",
-                "src": "images/tryToxicChat.png",
-                "link": "http://www.imghack.se/155969"
+                "desc": "Firmenansicht",
+                "src": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png",
+                "link": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png"
             }
         }
     },
@@ -81,19 +83,20 @@
         "preword": "Der Name Peta kommt von PhpmETA. Es ist vor allem in PHP 5.5 geschrieben und bedient sich smarty (template/.tpl-files) und dojo (Javascript). Die Idee hinter diesem Projekt ist, redundantes schreiben von Code zu verhinden. Ein Hauptziel ist eine gute Struktur, in dem ein Administrator schnell und unkompliziert arbeiten kann.. Das letztendliche Ziel ist eine Basis für alles.",
         "description": "a further description",
         "features": {
-            "Flexibles Pluginsystem": "Every plugin could have one to n instances",
-            "Flexibles Zugriffssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
-            "MVC-Struktur": "It's easy to learn the code or write a plugin"
+            "Flexibles Pluginsystem": "Jedes Plugin kann eine bis n Instanzen erstellen",
+            "Flexibles Zugriffssystem": "Jeder Benutzer hat eine bis n Rollen. Jedes instanzierte Plugin hat eine bis n Rollen mit einem r/rw/admin-recht.",
+            "MVC-Struktur": "Es sollte einfach sein, sich den Code anzueignen oder ein Plugin zu schreiben.",
+            "Livedemo":"<a href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
             "Update accessrights": "Set ar fails on update, so rm ant touch!",
             "...": "etcetc"
         },
         "pictures": {
-            "initview": {
-                "desc": "Initview",
-                "src": "images/tryToxicInit.png",
-                "link": "http://www.imghack.se/155968"
+            "php": {
+                "desc": "Powered by PHP",
+                "src": "http://www.php.net/images/logos/php-power-black.gif",
+                "link": "http://www.php.net/"
             }
         }
     },

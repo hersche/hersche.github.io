@@ -83,12 +83,31 @@
             $("#showContent").fadeIn(1000);
             $("#menu").fadeIn(1000);
 
+            var aboutImgBig = false;
+            $("#aboutImg").click(function() {
+                if (aboutImgBig) {
+                    $("#aboutImg").animate({
+                            width: '192px',
+                            height: '192px',
+                        }, 500,
+                        function() {
+                            aboutImgBig = false;
+                        });
+
+                } else {
+                    $("#aboutImg").animate({
+                            width: '360px',
+                            height: '360px'
+                        }, 500,
+                        function() {
+                            aboutImgBig = true;
+                        });
+                }
+                // alert("Handler for .click() called.");
+            });
+
+
         });
-        $("#aboutImg").hover(
-            function() {
-                $(this).animate($(this).css("filter", "grayscale('0'%)"), 3000);
-            }
-        );
     </script>
 </head>
 

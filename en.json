@@ -68,13 +68,13 @@
         "pictures": {
             "initview": {
                 "desc": "Initview",
-                "src": "images/tryToxicInit.png",
-                "link": "http://www.imghack.se/155968"
+                "src": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png",
+                "link": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png"
             },
             "detailcompanyview": {
-                "desc": "Chatview in german",
-                "src": "images/tryToxicChat.png",
-                "link": "http://www.imghack.se/155969"
+                "desc": "Companyview",
+                "src": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png",
+                "link": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png"
             }
         }
     },
@@ -85,17 +85,18 @@
         "features": {
             "Flexible pluginsystem": "Every plugin could have one to n instances",
             "Flexible accesssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
-            "MVC-Structure": "It's easy to learn the code or write a plugin"
+            "MVC-Structure": "It's easy to learn the code or write a plugin",
+            "Livedemo":"<a href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
             "Update accessrights": "Set ar fails on update, so rm ant touch!",
             "...": "etcetc"
         },
         "pictures": {
-            "initview": {
-                "desc": "Initview",
-                "src": "images/tryToxicInit.png",
-                "link": "http://www.imghack.se/155968"
+            "php": {
+                "desc": "Powered by PHP",
+                "src": "http://www.php.net/images/logos/php-power-black.gif",
+                "link": "http://www.php.net/"
             }
         }
     },

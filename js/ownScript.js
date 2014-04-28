@@ -1,5 +1,3 @@
-
-
 function processHtml(jDataIn, name) {
     "use strict";
     var displayHtml = "";
@@ -15,7 +13,11 @@ function processHtml(jDataIn, name) {
             } else if (key === "about") {
                 displayHtml += '<p><img id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
-                    displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
+                    if (cKey == "E-Mail" | cKey == "Xampp") {
+                        displayHtml += '<li><b>' + cKey + '</b>:<a href="mailto:'+cVal+'"> ' + cVal + '</a></li>';
+                    } else {
+                        displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
+                    }
                 });
                 displayHtml += '</ul>';
             } else {
