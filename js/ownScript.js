@@ -10,7 +10,7 @@ function processHtml(jDataIn, name) {
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
             } else if (key === "about") {
-                displayHtml += '<p><img src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
+                displayHtml += '<p id="about"><img src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
                     displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
                 });
