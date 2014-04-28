@@ -14,7 +14,7 @@ function processHtml(jDataIn, name) {
                 displayHtml += '<p><img id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
                     if (cKey === "E-Mail" || cKey === "Xampp") {
-                        displayHtml += '<li><b>' + cKey + '</b>:<a href="mailto:' + cVal + '"> ' + cVal + '</a></li>';
+                        displayHtml += '<li><b>' + cKey + '</b>: <a href="mailto:' + cVal + '">' + cVal + '</a></li>';
                     } else {
                         displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
                     }
