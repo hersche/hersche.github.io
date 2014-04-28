@@ -4,6 +4,12 @@ CACHE:
 /stylesheets/stylesheet.css
 /stylesheets/pygment_trac.css
 /index.html
+#enable reloading on subsites
+/index.html?s=about
+/index.html?s=tryToxic
+/index.html?s=jobManagement
+/index.html?s=peta
+/index.html?s=index
 /profile.png
 /js/jquery-1.11.0.min.js
 /js/jquery-migrate-1.2.1.min.js
