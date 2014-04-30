@@ -86,7 +86,7 @@
             $("#menu").fadeIn(1000);
 
             
-            $("#aboutImg").click(function() {
+            $(document).on('click', '#aboutImg', function(e) {
                 if (aboutImgBig) {
                     $("#aboutImg").animate({
                             width: '213px',
