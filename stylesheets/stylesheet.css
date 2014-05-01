@@ -23,6 +23,9 @@ body {
     width: 100%;
 }
 #menu {
+    -moz-box-shadow: 0 0 5px 5px  #ADFF2F;
+    -webkit-box-shadow: 0 0 5px 5px  #ADFF2F;
+    box-shadow: 0 0 5px 5px #ADFF2F;
     width: auto;
     max-width: 60%;
     margin-left: 20%;
@@ -30,7 +33,8 @@ body {
     padding-right: 30px;
     padding-top: 8px;
     padding-bottom: 2px;
-    border: 2px solid;
+    text-shadow: 1px 1px 1px #FF0000;
+    border: 1px thin;
     border-radius: 30px;
     border-color: transparent;
     background: -moz-linear-gradient(-45deg, rgba(39, 140, 0, 0.55) 15%, rgba(33, 130, 0, 0.55) 27%, rgba(20, 109, 0, 0.57) 52%, rgba(179, 56, 41, 0.59) 69%, rgba(188, 53, 43, 0.59) 70%, rgba(0, 36, 0, 0.59) 86%);
@@ -57,14 +61,15 @@ body {
 #aboutImg {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     /* Firefox 10+, Firefox on Android */
-    -webkit-filter: sepia(100%);
-    -moz-filter: sepia(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     filter: grayscale(100%);
-    filter: gray;
     /* IE 6-9 */
     width: 213px;
     height: 160px;
+    transition:width 2s, height 2s, transform 2s, effect 4s;
+    
 }
 #aboutImg:hover {
     -webkit-filter: none;
@@ -72,6 +77,16 @@ body {
     -ms-filter: none;
     filter: none;
     cursor: pointer;
+    animation: bounceImage 6s infinite;
+}
+
+@keyframes bounceImage
+{
+0%   {initial;}
+    25%   {transform:rotate(10deg);}
+    50%   {initial;}
+75%  {transform:rotate(-10deg);}
+        
 }
 #menucontent {} section {
     display: block;
@@ -87,9 +102,7 @@ li {
 */
 
 header {
-    background: rgba(0, 0, 0, 0.1);
     width: 100%;
-    border-bottom: 1px dashed #b5e853;
     padding: 20px 0;
     margin: 0 0 40px 0;
 }
@@ -252,10 +265,6 @@ hr {
     margin: 1px 8px 0 0;
     float: left;
 }
-.btn-github .icon {
-    opacity: 0.6;
-    background: url("../images/blacktocat.png") 0 0 no-repeat;
-}
 /* Links
    a, a:hover, a:visited
 */
@@ -277,3 +286,40 @@ a {
 .cf {
     zoom: 1;
 }
+
+
+
+
+
+
+# individual tooltips
+
+a.tooltip{
+  position: relative;
+  display: inline;
+
+}
+a.tooltip:after{
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  opacity: 0;
+  content: attr(data-tool); /* might also use attr(title) */
+  height: auto;
+  min-width: 100px;
+  padding: 5px 8px;
+  z-index: 999;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: : 60px;
+  background: rgba(0,0,0,0.85);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  transition: 3s slide;
+}
+a.tooltip:hover:after{ visibility: visible; opacity: 1; top: 140px; }
+a.tooltip:hover:before{ visibility: visible; opacity: 1; top: 54px; }

@@ -1,25 +1,25 @@
 {
     "index": {
         "title": "Home",
-        "description": "This is the startpage and also a little link-collection. It is using your webstorage to provide this site also offline when supported by your browser. Out of this, there's a 'Refresh'-button.",
+        "description": "TEXT IS UNDER CONSTRUCTION! This is the startpage and also a little link-collection. It is using your webstorage to provide this site also offline when supported by your browser. Out of this, there's a 'Refresh'-button.",
         "content": {
             "tryToxic": {
                 "pLink": "index.html?s=tryToxic",
                 "sLink": "https://github.com/skamster/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
-                "stable": "Basicly ready"
+                "stable": "Unshure (API changes very fast, since heavy development in core)"
             },
             "jobManagement": {
                 "pLink": "index.html?s=jobManagement",
                 "sLink": "https://github.com/skamster/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
-                "stable": "Basicly ready"
+                "stable": "Basicly stable, paused"
             },
             "peta": {
                 "pLink": "index.html?s=peta",
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Basicly ready"
+                "stable": "Heavy development, but basicly stable"
             }
 
         }
@@ -29,14 +29,14 @@
         "preword": "tryToxic is just another tox-api-client, written in python 3 and pyQt",
         "description": "a further description",
         "features": {
-            "Local encryption": "Store messages and idendity encrypted on harddisk",
+            "Local encryption": "Store every personal related information encrypted on harddisk",
             "Groupchats": "Invite and create groupchats",
-            "Set Loglevel": "Change in working app",
+            "Set Loglevel": "Change the level in runtime",
             "i18n": "It's prepared for every language!"
         },
         "bugs": {
-            "Filetransfer": "Sending fails",
-            "...": "etcetc"
+            "Filetransfer": "Sending fails, while recive is working",
+            "Others": "undetected"
         },
         "pictures": {
             "initview": {
@@ -63,7 +63,7 @@
         },
         "bugs": {
             "Generating charts": "They're very unflexible",
-            "...": "etcetc"
+            "Others": "undetected"
         },
         "pictures": {
             "initview": {
@@ -78,19 +78,19 @@
             }
         }
     },
-    "peta": {
-        "title": "peta",
+    "Peta": {
+        "title": "Peta",
         "preword": "The name Peta came out of PHPMeta. It’s basicly written in PHP with the use of smarty (template/.tpl-files) and dojo (Javascript). The idea behind this project is to avoid redundant rewrites. A maingoal is a good structure, where the administrator of a system could change things as he need. It's target is a base for everything.",
         "description": "a further description",
         "features": {
             "Flexible pluginsystem": "Every plugin could have one to n instances",
             "Flexible accesssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
-            "MVC-Structure": "It's easy to learn the code or write a plugin",
+            "MVC-Structure": "It's easy to learn the code or write a plugin, since there's a separation between model, view and controller.",
             "Livedemo": "<a href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
-            "Update accessrights": "Set ar fails on update, so rm ant touch!",
-            "...": "etcetc"
+            "Update accessrights": "Set ar fails on update, so rm and touch the role again!",
+            "Others": "undetected"
         },
         "pictures": {
             "php": {
@@ -102,7 +102,7 @@
     },
 
     "about": {
-        "description": "Hello, i am jad (just another developer), playing with json right now.",
+        "description": "Hello <br /> Right now i've no idea for a good description about me - TEXT IS IN DEVELOPMENT!",
         "picture": "profile.jpg",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
@@ -111,30 +111,32 @@
         },
         "languages": {
             "PHP": {
-                "desc": "Use this for a long time now. Since Oop is default with PHP5, it's beatiful to use.",
+                "desc": "Use this for 10 years. Since Oop is default with PHP5, it's beatiful to use. Before it was horrible, but not for me (i didn't know oop in the beginn)",
                 "frameworks": {
-                    "Smarty": "Templateframework, allow a clean separation between 'controller' and 'view'"
+                    "Smarty": "A templateframework, allow a clean separation between 'controller' and 'view'. Smarty make <a href='https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller'>MVC</a> really easy!"
                 }
             },
             "Python": {
-                "desc": "Python is a little more fresh language i've learned, but it's make addicted really fast. Perfect possibilitys of sequentell, Oop and modulare code.",
+                "desc": "I know python since 5 years and it addict me really fast. Perfect possibilitys of sequentell, Oop and modulare code. It also don't use { }, but forces you to format your code proper. Top!",
                 "frameworks": {
-                    "PyQt": "Qt is a very modular ui-library - it's easy to use and works very stable",
-                    "PyTox": "PyTox is a interface to the tox-core-project. For further information visit http://tox.im",
-                    "PyCrypto": "PyCrypto supports many kinds of hashing, symmetric and asymmetric encryptions. I basicly use it to encrypt the local storage"
+                    "Urllib2":"This is a nice framwork to 'speak' with websites, which doesn't get a daemon. Just go to a field, put input in and submit - in python, not in browser. That way you could do a lot automatic, unimportant the hoster like it or not",
+                    "PyQt || PyKde": "Qt is a very modular ui-library - it's easy to use and works very stable. This is one of the first frameworks i used.",
+                    "PyTox": "PyTox is a interface to the tox-core-project. The whole project is in heavy development. For further information visit <a href='http://tox.im'>tox.im</a>.",
+                    "PyCrypto": "PyCrypto supports many kinds of hashing, symmetric and asymmetric encryptions. My focus is on symmetric encryptions. I use it to encrypt local data"
                 }
             },
                 "Java": {
-                    "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Since Android was growing very much last years and dalvik seems to be very optimized, i may go back to this language once.",
+                    "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Because android is growing very much and dalvik gets to be very optimized, it looking attractive again.",
                     "frameworks": {
-                        "None": "Nearly all integrated/bloated"
+                        "Groovy & grails": "Similiar to ruby and rails. Groovy is a more simple language and grails is a great framework! Both are based on Java"
                     }
                 },
                 "Javascript": {
-                    "desc": "In past, this language was a example why you should do it static for me. So much incompatibility between browsers! Today, it's changed, a lot of stuff is default, there are mighty js-frameworks and there came html5. Look the source of this page ;)",
+                    "desc": "In past (10-12 years), this language was a example why you should do mostly pure html (maybe good for detecting the user's language, but nothing like ajax or forms out of js) sites. So much incompatibility between browsers and security-issues! Today, this changed, a lot of stuff is default, there are mighty js-frameworks and there came html5 which use js in combination. Look the source of this page ;)",
                     "frameworks": {
-                        "jQuery": "jQuery is a js default",
-                        "Dojo": "Dojo's another default"
+                        "jQuery": "jQuery is very famous library. Today it's nearly a defacto-default.",
+                        "Dojo": "Dojo's is a very large framework with support for many many things, such as ui, parsing, processing, ajax, etc. 12mb of very advanced stuff!",
+                        "Letleaf":"This library is very new for me. It is perfect for google-like maps (at least zoom and mark pois), but based on the openstreetmap-project. I really preferr the tiles from osm, cause they're free and often more detailed."
                     }
                 }
             }

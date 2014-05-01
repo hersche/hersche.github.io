@@ -19,18 +19,22 @@ function processHtml(jDataIn, name) {
                         displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
                     }
                 });
+                var langs = "";
+                var langToc =""
                 displayHtml += '</ul><h3>Languages</h3><ul>';
-                console.log("lang 1");
                 $.each(val.languages, function (lKey, lVal) {
-                    displayHtml += '<li><b>' + lKey + '</b>: ' + lVal.desc + '<ul style="margin-bottom:10px;">';
+                    langToc += '<li><a href="#'+lKey+'">'+lKey+'</a></li>';
+                    langs += '<li><a name="'+lKey+'" /><b>' + lKey + '</b>: ' + lVal.desc + '<ul style="margin-bottom:10px;">';
                     $.each(lVal.frameworks, function (fKey, fVal) {
-                        displayHtml += '<li style="margin-bottom:5px;">' + fKey + ': ' + fVal + '</li>';
+                        langs += '<li style="margin-bottom:5px;">' + fKey + ': ' + fVal + '</li>';
                     });
-                    displayHtml += '</ul></li>';
+                    langs += '</ul></li>';
                 });
-                displayHtml += '</ul>';
+                displayHtml += langToc+"</ul><ul>";
+                displayHtml += langs + '</ul>';
             } else {
-                displayHtml += "<h1>" + key + "</h1><p>" + val.preword + "</p>";
+                displayHtml += "<h1>" + key + '</h1><p>' + val.preword + "</p>";
+                displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>'
                 displayHtml += "<h3>Features</h3><ul>";
                 $.each(val.features, function (fKey, fVal) {
                     displayHtml += "<li>" + fKey + ": " + fVal + "</li>";
@@ -54,7 +58,6 @@ function processHtml(jDataIn, name) {
 function updateContent(reload=false) {
     "use strict";
     var jqxhr = $.getJSON(jsonFile, function () {
-        console.log("success one, do nothing.");
     });
     jqxhr.complete(function (data) {
         console.log("do workls.");
