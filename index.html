@@ -49,8 +49,6 @@
             if (GET('lang') != 'undefined') {
                 if (GET('lang') === "de" || GET('lang') === "en") {
                     jsonFile = GET('lang') + ".json";
-                   // updateContent();
-                    //$("#showContent").html(processHtml(jData, lastName));
                 }
             }
             if (typeof(Storage) !== "undefined" && GET('lang') === 'undefined') {
@@ -84,8 +82,6 @@
             }
             $("#showContent").fadeIn(1000);
             $("#menu").fadeIn(1000);
-
-            
             $(document).on('click', '#aboutImg', function(e) {
                 if (aboutImgBig) {
                     $("#aboutImg").animate({
@@ -105,7 +101,6 @@
                             aboutImgBig = true;
                         });
                 }
-                // alert("Handler for .click() called.");
             });
 
 

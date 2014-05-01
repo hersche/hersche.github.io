@@ -60,11 +60,8 @@ function updateContent(reload=false) {
     var jqxhr = $.getJSON(jsonFile, function () {
     });
     jqxhr.complete(function (data) {
-        console.log("do workls.");
-        jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
         if (typeof (Storage) !== "undefined") {
             localStorage.removeItem("jData");
-            localStorage.jData = data.responseText.replace("\n", "");
             if(reload){
                 location.reload();   
             }
