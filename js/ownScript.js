@@ -20,7 +20,7 @@ function processHtml(jDataIn, name) {
                     }
                 });
                 var langs = "";
-                var langToc =""
+                var langToc ="";
                 displayHtml += '</ul><h3>Languages</h3><ul>';
                 $.each(val.languages, function (lKey, lVal) {
                     langToc += '<li><a href="#'+lKey+'">'+lKey+'</a></li>';
@@ -34,7 +34,7 @@ function processHtml(jDataIn, name) {
                 displayHtml += langs + '</ul>';
             } else {
                 displayHtml += "<h1>" + key + '</h1><p>' + val.preword + "</p>";
-                displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>'
+                displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>';
                 displayHtml += "<h3>Features</h3><ul>";
                 $.each(val.features, function (fKey, fVal) {
                     displayHtml += "<li>" + fKey + ": " + fVal + "</li>";
@@ -55,16 +55,14 @@ function processHtml(jDataIn, name) {
 }
 
 
-function updateContent(reload=false) {
+function updateContent() {
     "use strict";
     var jqxhr = $.getJSON(jsonFile, function () {
     });
     jqxhr.complete(function (data) {
         if (typeof (Storage) !== "undefined") {
             localStorage.removeItem("jData");
-            if(reload){
                 location.reload();   
-            }
         }
     });
 }
