@@ -1,7 +1,9 @@
 {
     "index": {
-        "title": "Home",
-        "description": "TEXT IS UNDER CONSTRUCTION! This is the startpage and also a little link-collection. It is using your webstorage to provide this site also offline when supported by your browser. Out of this, there's a 'Refresh'-button.",
+        "title": "Linklist + about site and projects",
+		"preword":"This is the linklist, or alternative home. Sitemap would may be a good name, but it contains 'external' links too. <br /> It contains also a description about the website and my in context to my projects.",
+        "description": "TEXT IS UNDER CONSTRUCTION! This is a little link-collection.<br /> It is using your webstorage to provide this site also offline when supported by your browser. <br />This site is very current and i will update it and try to learn something about this relative new HTML5-Stuff. Also javascript is really new to me, but it's a funny world. Not a 'secure' language or so, but funny and sometimes usefull (see map-plugin in Peta). <br />On the other site i like some more serious and mostly OOP and MVC-Structred Code. On this site you could became a overview of the projects, which exists out of this. I see a important point in security for my applications, so 2 of the Projects got encryption too. The last is written in PHP and is not encrypted in db yet - but this will follow, as i find time. It will look similiar implemented to the other projects. <br /> The last part is about me. I like to have some money too and have done a education as applicationdeveloper. After education i worked by body, cause 4 years 8 hours a day computer was too much! Now i broke my feet, and wanted to do something - i never really ended programming (just reduced a lot!), but since April, as you could see on github, i'm really active again! I dont want donations, this should be a example, in which direction i could develop.<br /> You could use them freely and i'm happy when someone fork or contribute it  <br />Also Bugreportings are nice (then i see work's not unused :))" 
+        ,
         "content": {
             "tryToxic": {
                 "pLink": "index.html?s=tryToxic",
@@ -102,6 +104,7 @@
     },
 
     "about": {
+	"title":"About me",
         "description": "Hello <br /> Right now i've no idea for a good description about me - TEXT IS IN DEVELOPMENT!",
         "picture": "profile.jpg",
         "contact": {

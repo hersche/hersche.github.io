@@ -55,6 +55,7 @@
                 // Code for localStorage/sessionStorage.
                 if (localStorage.jData) {
                     jData = jQuery.parseJSON(localStorage.jData);
+                    $("#menucontent").html(processMenuHtml(jData));
                     $("#showContent").html(processHtml(jData, lastName));
                 } else {
                     //retrive
@@ -65,8 +66,10 @@
                         console.log("success2, worktime! heyho lets go..");
                         localStorage.jData = data.responseText.replace("\n", "");
                         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
+                        $("#menucontent").html(processMenuHtml(jData));
                         $("#showContent").html(processHtml(jData, lastName));
-
+                        //the link is a note '<a href"index.html"  onclick="changeContent(\'index\'); return false">&lt;&lt;</a>'+
+			
                     });
                 }
             } else {
@@ -77,7 +80,9 @@
                 jqxhr.complete(function(data) {
                     console.log("success2, worktime! heyho lets go..");
                     jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
+                    $("#menucontent").html(processMenuHtml(jData));
                     $("#showContent").html(processHtml(jData, lastName));
+                    
                 });
             }
             $("#showContent").fadeIn(1000);
@@ -114,14 +119,18 @@
     <header>
             <div style="display: none;" id="menu">
                 <span style="display: inline; vertical-align: top;"><h1 style="display: inline; vertical-align: top;">skamster.github.io</h1><p style="display: inline; vertical-align: top;"> docs, projects and personal infos</p></span>
-                <section id="downloads">
-                    <a style="margin-left:5px;" href="index.html" onclick="changeContent('index'); return false" class="btn fade">Home</a>
-                    <a href="index.html?s=about" data-tool="Some informations about me and my expirience" onclick="changeContent('about'); return false" class="btn tooltip fade">About me</a>
-                    <a target="_blank" data-tool="Go to my personal github-account" href="https://github.com/skamster" class="btn tooltip fade">My GitHub</a>
-                    <a style="float:right; margin-right: 5px;" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(reload=true); return false" class="btn fade tooltip ">Refresh</a>
-                    <a style="float:right; margin-right: 5px;" data-tool="Wechsle zu deutschem Inhalt" href="index.html?lang=de" class="btn fade tooltip">DE</a>
-                    <a style="float:right; margin-right: 5px;" data-tool="Change to english content" href="index.html?lang=en" class="btn fade tooltip">EN</a>
-                </section>
+                <span style="display:inline-block;">
+                <span id="menucontent" style="display:inline-block;">
+
+                </span>
+                <span style="display:inline-block;">
+                                    <a target="_blank" data-tool="Go to my personal github-account" href="https://github.com/skamster" class="btn tooltip fade">My GitHub</a>
+                
+                                    <a style="float:right; margin-right: 2px;" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a>
+                    <a style="float:right; margin-right: 2px;" data-tool="Wechsle zu deutschem Inhalt" href="index.html?lang=de" class="btn fade tooltip">DE</a>
+                    <a style="float:right; margin-right: 2px;" data-tool="Change to english content" href="index.html?lang=en" class="btn fade tooltip">EN</a>
+                    </span>
+                    </span>
         </div>
     </header>
     <div id="animationContainer">

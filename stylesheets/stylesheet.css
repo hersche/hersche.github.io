@@ -58,6 +58,64 @@ body {
     border-color: transparent;
     max-width: 50%;
 }
+
+.submenu {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 80px;
+  width: auto;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+transition-property:display;
+transition-duration:5s;
+transition-delay:2s;
+}
+
+.submenu li {
+  display: block; 
+  margin-top: 1px;
+  color: #fff;
+  z-index:1001;
+  text-shadow: 0 -1px 0 #000;
+
+}
+
+.dropdowncontainer {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  position: relative;
+  padding: 15px 50px;
+  cursor: pointer;
+transition-property:display;
+transition-duration:5s;
+transition-delay:2s;
+}
+
+.dropdowncontainer:hover > .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+.dropdowncontainer:before{
+  content:"";
+    display: inline-block;
+        margin-left: -2px;
+    margin-right: 2px;
+    line-height: 16px;
+}
+
+.dropdowncontainer:hover > .submenu li:before {
+  opacity: 1;
+  content:"";
+}
+
 #aboutImg {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     /* Firefox 10+, Firefox on Android */
@@ -77,7 +135,7 @@ body {
     -ms-filter: none;
     filter: none;
     cursor: pointer;
-    animation: bounceImage 6s infinite;
+    animation: bounceImage 6s infinite linear;
 }
 
 @keyframes bounceImage
@@ -189,6 +247,15 @@ ul li:before {
     margin-right: 21px;
     line-height: 16px;
 }
+
+.arrowStyle {
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    font-size: 13px;
+    color: #b5e853;
+    margin-left: -37px;
+    margin-right: 21px;
+    line-height: 16px;
+}
 blockquote {
     color: #aaa;
     padding-left: 10px;
@@ -249,13 +316,15 @@ hr {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 .btn:hover {
-    background: -moz-linear-gradient(-45deg, rgba(234, 185, 45, 0.36) 0%, rgba(176, 169, 40, 0.36) 6%, rgba(21, 127, 25, 0.67) 22%, rgba(11, 124, 24, 0.66) 23%, rgba(11, 124, 24, 0.5) 37%, rgba(11, 124, 24, 0.55) 43%, rgba(11, 124, 24, 1) 53%, rgba(11, 124, 24, 0.15) 100%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(234, 185, 45, 0.36)), color-stop(6%, rgba(176, 169, 40, 0.36)), color-stop(22%, rgba(21, 127, 25, 0.67)), color-stop(23%, rgba(11, 124, 24, 0.66)), color-stop(37%, rgba(11, 124, 24, 0.5)), color-stop(43%, rgba(11, 124, 24, 0.55)), color-stop(53%, rgba(11, 124, 24, 1)), color-stop(100%, rgba(11, 124, 24, 0.15)));
-    background: -webkit-linear-gradient(-45deg, rgba(234, 185, 45, 0.36) 0%, rgba(176, 169, 40, 0.36) 6%, rgba(21, 127, 25, 0.67) 22%, rgba(11, 124, 24, 0.66) 23%, rgba(11, 124, 24, 0.5) 37%, rgba(11, 124, 24, 0.55) 43%, rgba(11, 124, 24, 1) 53%, rgba(11, 124, 24, 0.15) 100%);
-    background: -o-linear-gradient(-45deg, rgba(234, 185, 45, 0.36) 0%, rgba(176, 169, 40, 0.36) 6%, rgba(21, 127, 25, 0.67) 22%, rgba(11, 124, 24, 0.66) 23%, rgba(11, 124, 24, 0.5) 37%, rgba(11, 124, 24, 0.55) 43%, rgba(11, 124, 24, 1) 53%, rgba(11, 124, 24, 0.15) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(234, 185, 45, 0.36) 0%, rgba(176, 169, 40, 0.36) 6%, rgba(21, 127, 25, 0.67) 22%, rgba(11, 124, 24, 0.66) 23%, rgba(11, 124, 24, 0.5) 37%, rgba(11, 124, 24, 0.55) 43%, rgba(11, 124, 24, 1) 53%, rgba(11, 124, 24, 0.15) 100%);
-    background: linear-gradient(135deg, rgba(234, 185, 45, 0.36) 0%, rgba(176, 169, 40, 0.36) 6%, rgba(21, 127, 25, 0.67) 22%, rgba(11, 124, 24, 0.66) 23%, rgba(11, 124, 24, 0.5) 37%, rgba(11, 124, 24, 0.55) 43%, rgba(11, 124, 24, 1) 53%, rgba(11, 124, 24, 0.15) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#5ceab92d', endColorstr='#260b7c18', GradientType=1);
+background: #229114;
+background: -moz-linear-gradient(45deg,  #229114 0%, #00c600 17%, #322170 33%, #008a00 67%, #005700 83%, #002400 100%);
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#229114), color-stop(17%,#00c600), color-stop(33%,#322170), color-stop(67%,#008a00), color-stop(83%,#005700), color-stop(100%,#002400));
+background: -webkit-linear-gradient(45deg,  #229114 0%,#00c600 17%,#322170 33%,#008a00 67%,#005700 83%,#002400 100%);
+background: -o-linear-gradient(45deg,  #229114 0%,#00c600 17%,#322170 33%,#008a00 67%,#005700 83%,#002400 100%);
+background: -ms-linear-gradient(45deg,  #229114 0%,#00c600 17%,#322170 33%,#008a00 67%,#005700 83%,#002400 100%);
+background: linear-gradient(45deg,  #229114 0%,#00c600 17%,#322170 33%,#008a00 67%,#005700 83%,#002400 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#229114', endColorstr='#002400',GradientType=1 );
+
     border-color: green;
 }
 .btn .icon {

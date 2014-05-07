@@ -1,15 +1,44 @@
+function processMenuHtml(jDataIn){
+	var menuHtml = '<ul style="display: inline; margin:0; list-style: none;" >';
+	$.each(jDataIn, function(menuName, value){
+	   var parent = "";
+	  if(menuName=="index"){
+	   styleClass='"submenu"';
+	   parent = ' class="dropdowncontainer" ';
+	  }
+	 
+
+
+	  menuHtml += '<li'+parent+' ><a style="margin-left:5px;" href="index.html?s='+menuName+'" data-tool="'+value.preword+'" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">'+value.title+'</a>';
+	  // This is because i know, index is the first.. it have to be!	  
+	  if(menuName!="index"){
+	   menuHtml+='</li>';
+	  }
+	  if(menuName=="index"){
+	   menuHtml += "<ul class="+styleClass+">";
+	   
+	  }
+	  
+	});
+	alert(menuHtml+'</li></ul>');
+	return menuHtml+'</li></ul>';
+	
+	
+}
 function processHtml(jDataIn, name) {
     "use strict";
     var displayHtml = "";
     $.each(jDataIn, function (key, val) {
         if (name === key) {
             if (key === "index") {
-                displayHtml += "<h1>" + val.title + "</h1><p>" + val.description + "</p><table><tr><th>Projectname</th><th>Source</th>";
+                displayHtml += "<h1>" + val.title + "</h1><p>" + val.preword + "</p><table><tr><th>Projectname</th><th>Source</th>";
                 displayHtml += "<th>Docs</th><th>Stability</th></tr>";
                 $.each(val.content, function (cKey, cVal) {
                     displayHtml += '<tr><td><a href="index.html?s=' + cKey + '" onclick="changeContent(\'' + cKey + '\'); return false;" >' + cKey + '</a></td><td><a href="' + cVal.sLink + '">Src</a></td>';
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
+                displayHtml += "</table><p>" + val.description + "</p>";
+                
             } else if (key === "about") {
                 displayHtml += '<p><img id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
