@@ -71,7 +71,7 @@ body {
   display: none;
   opacity: 0;
   visibility: hidden;
-transition-property:display;
+transition-property:visibility;
 transition-duration:5s;
 transition-delay:2s;
 }
@@ -79,8 +79,6 @@ transition-delay:2s;
 .submenu li {
   display: block; 
   margin-top: 1px;
-  color: #fff;
-  z-index:1001;
   text-shadow: 0 -1px 0 #000;
 
 }
@@ -91,6 +89,7 @@ transition-delay:2s;
   position: relative;
   padding: 15px 50px;
   cursor: pointer;
+  z-index: 555;
 transition-property:display;
 transition-duration:5s;
 transition-delay:2s;
@@ -124,6 +123,7 @@ transition-delay:2s;
     -ms-filter: grayscale(100%);
     filter: grayscale(100%);
     /* IE 6-9 */
+    z-index:444;
     width: 213px;
     height: 160px;
     transition:width 2s, height 2s, transform 2s, effect 4s;

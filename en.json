@@ -112,6 +112,15 @@
             "E-Mail": "hersche@vmail.me",
             "Diaspora": "skamster@diasp.cz"
         },
+        "Other expiriences":{
+	    "Support":{
+	    "desc":"I support diffrent people since more than 6 years in assistance with linux, mostly <a href='http://kubuntu.org'>Kubuntu</a>",
+	    "reference":{
+	      "ex-Name":"Usage of person",
+	      "name 2":"another ussage"
+	      }
+	    }
+	}
         "languages": {
             "PHP": {
                 "desc": "Use this for 10 years. Since Oop is default with PHP5, it's beatiful to use. Before it was horrible, but not for me (i didn't know oop in the beginn)",

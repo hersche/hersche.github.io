@@ -1,27 +1,27 @@
 {
     "index": {
         "title": "Linkliste + über die Seite and Projekte",
-		"preword":"This is the linklist, or alternative home. Sitemap would may be a good name, but it contains 'external' links too. <br /> It contains also a description about the website and my in context to my projects.",
-        "description": "TEXT IS UNDER CONSTRUCTION! This is a little link-collection.<br /> It is using your webstorage to provide this site also offline when supported by your browser. <br />This site is very current and i will update it and try to learn something about this relative new HTML5-Stuff. Also javascript is really new to me, but it's a funny world. Not a 'secure' language or so, but funny and sometimes usefull (see map-plugin in Peta). <br />On the other site i like some more serious and mostly OOP and MVC-Structred Code. On this site you could became a overview of the projects, which exists out of this. I see a important point in security for my applications, so 2 of the Projects got encryption too. The last is written in PHP and is not encrypted in db yet - but this will follow, as i find time. It will look similiar implemented to the other projects. <br /> The last part is about me. I like to have some money too and have done a education as applicationdeveloper. After education i worked by body, cause 4 years 8 hours a day computer was too much! Now i broke my feet, and wanted to do something - i never really ended programming (just reduced a lot!), but since April, as you could see on github, i'm really active again! I dont want donations, this should be a example, in which direction i could develop.<br /> You could use them freely and i'm happy when someone fork or contribute it  <br />Also Bugreportings are nice (then i see work's not unused :))" 
+		"preword":"Dies ist die Linkliste, das 'alternative' home oder die Sitemap. Diese Seite enthält jedoch auch externe Links. <br /> Sie enthält auch eine Beschreibung der Website und der aktiven Projekte.",
+        "description": "TEXT IST AM ENSTEHEN - BETAALPHASUPEREXPERIMENTEL!! Dies ist eine kleine Linksammlung.<br />Diese und die ganze Seite nutzen deinen Webstorage, wenn dein Browser dies unterstüzt. <br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch etwas über die relativ neuen HTML 5 Technologien zu lernen. Auch javascript ist recht neu für mich, aber eine lustige Welt. Es ist keine 'sichere' Sprache, aber sie ist lustig und manchmal sogar nützlich (siehe Kartenplugin in Peta). <br />On the other site i like some more serious and mostly OOP and MVC-Structred Code. On this site you could became a overview of the projects, which exists out of this. I see a important point in security for my applications, so 2 of the Projects got encryption too. The last is written in PHP and is not encrypted in db yet - but this will follow, as i find time. It will look similiar implemented to the other projects. <br /> The last part is about me. I like to have some money too and have done a education as applicationdeveloper. After education i worked by body, cause 4 years 8 hours a day computer was too much! Now i broke my feet, and wanted to do something - i never really ended programming (just reduced a lot!), but since April, as you could see on github, i'm really active again! I dont want donations, this should be a example, in which direction i could develop.<br /> You could use them freely and i'm happy when someone fork or contribute it  <br />Also Bugreportings are nice (then i see work's not unused :))" 
         ,
         "content": {
             "tryToxic": {
                 "pLink": "index.html?s=tryToxic",
                 "sLink": "https://github.com/skamster/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
-                "stable": "Basicly ready"
+                "stable": "ein wenig unsicher, da sich die API des Kerns schnell verändern kann"
             },
             "jobManagement": {
                 "pLink": "index.html?s=jobManagement",
                 "sLink": "https://github.com/skamster/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
-                "stable": "Basicly ready"
+                "stable": "sollte funktionieren, derzeit pausiert"
             },
             "peta": {
                 "pLink": "index.html?s=peta",
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Basicly ready"
+                "stable": "Grundsätzlich bereit"
             }
 
         }
@@ -105,7 +105,7 @@
 
     "about": {
 	"title":"Über mich",
-        "description": "Hello, i am jad (just another developer), playing with json right now.",
+        "description": "Hallo, ich bin auch Entwickler ;) <br /> Wie Sie auf dieser Website sehen können, habe ich einige Erfahrungen in computerbezogenen Themen. Hier finden Sie persönlichere Informationen über mich.",
         "picture": "profile.jpg",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
@@ -113,30 +113,31 @@
             "Diaspora": "skamster@diasp.cz"
         },
         "languages": {
-            "PHP": {
-                "desc": "Use this for a long time now. Since Oop is default with PHP5, it's beatiful to use.",
+            "<a href='http://php.net'>PHP</a>": {
+                "desc": "Nutze diese Sprache nun schon sehr lange. Seit mit PHP5 die OOP-Welt Standart in der Sprache ist, ist es schön, diese nutzen zu können.",
                 "frameworks": {
-                    "Smarty": "Templateframework, allow a clean separation between 'controller' and 'view'"
+                    "<a href='http://smarty.net'>Smarty</a>": "Vorlagenframework, erlaubt eine klare Trennung von 'controller' und 'view' (<a href='http://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a>)"
                 }
             },
             "Python": {
                 "desc": "Python is a little more fresh language i've learned, but it's make addicted really fast. Perfect possibilitys of sequentell, Oop and modulare code.",
                 "frameworks": {
                     "PyQt": "Qt is a very modular ui-library - it's easy to use and works very stable",
-                    "PyTox": "PyTox is a interface to the tox-core-project. For further information visit http://tox.im",
+                    "PyTox": "PyTox is a interface to the tox-core-project. For further information visit <a href='http://tox.im'>tox.im</a>",
                     "PyCrypto": "PyCrypto supports many kinds of hashing, symmetric and asymmetric encryptions. I basicly use it to encrypt the local storage"
                 } },
                 "Java": {
                     "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Since Android was growing very much last years and dalvik seems to be very optimized, i may go back to this language once.",
                     "frameworks": {
-                        "None": "Nearly all integrated/bloated"
+                        "Groovy & Grails": "Nearly all integrated/bloated"
                     }
                 },
                 "Javascript": {
                     "desc": "In past, this language was a example why you should do it static for me. So much incompatibility between browsers! Today, it's changed, a lot of stuff is default, there are mighty js-frameworks and there came html5. Look the source of this page ;)",
                     "frameworks": {
-                        "jQuery": "jQuery is a js default",
-                        "Dojo": "Dojo's another default"
+                        "jQuery": "jQuery is very famous library. Today it's nearly a defacto-default.",
+                        "Dojo": "Dojo's is a very large framework with support for many many things, such as ui, parsing, processing, ajax, etc. 12mb of very advanced stuff!",
+                        "Letleaf":"This library is very new for me. It is perfect for google-like maps (at least zoom and mark pois), but based on the openstreetmap-project. I really preferr the tiles from osm, cause they're free and often more detailed."
                     }
                 }
             }

@@ -9,7 +9,7 @@ function processMenuHtml(jDataIn){
 	 
 
 
-	  menuHtml += '<li'+parent+' ><a style="margin-left:5px;" href="index.html?s='+menuName+'" data-tool="'+value.preword+'" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">'+value.title+'</a>';
+	  menuHtml += '<li'+parent+' ><a href="index.html?s='+menuName+'" data-tool="'+value.preword+'" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">'+value.title+'</a>';
 	  // This is because i know, index is the first.. it have to be!	  
 	  if(menuName!="index"){
 	   menuHtml+='</li>';
@@ -20,7 +20,6 @@ function processMenuHtml(jDataIn){
 	  }
 	  
 	});
-	alert(menuHtml+'</li></ul>');
 	return menuHtml+'</li></ul>';
 	
 	
