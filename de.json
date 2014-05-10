@@ -29,25 +29,24 @@
     "tryToxic": {
         "title": "tryToxic",
         "preword": "tryToxic ist einfach ein weiterer tox-api-client. Er ist in python3 und pyQt geschrieben.",
-        "description": "a further description",
+        "description": "Die Geschichte von tryToxic ist eine kurze - es gab ein Binding von tox in Python und mein Interesse war gross genug. Meine ersten Teile flossen in <a href='index.html?s=jobManagement'>jobManagement</a>, genannt toxTry. Es ist nun sauber separiert und hat seinen Namen, da es sowieso nicht ein offizieller Client wird (stattdessen wird dies QtTox, geschrieben in C++).Was gibt es noch zu sagen? Es ist einfach designed, Sie sollten sich schnell einen Überlich verschaffen können..",
         "features": {
-            "Local encryption": "Store messages and idendity encrypted on harddisk",
+            "Lokale Verschlüsselung": "Speichere Nachrichten und Idendität verschlüsselt auf der Festplatte",
             "Gruppenchates": "Lade leute in welche ein oder kreire selbst welche",
             "Loglevel einstellen": "Verändere das Loglevel im laufenden Betrieb.",
             "I18N": "Es ist für alle Sprachen vorbereitet"
         },
         "bugs": {
-            "Filetransfer": "Sending fails",
-            "...": "etcetc"
+            "Dateitransfer": "Senden schlägt fehl"
         },
         "pictures": {
             "initview": {
-                "desc": "Initview",
+                "desc": "Initialansicht",
                 "src": "images/tryToxicInit.png",
                 "link": "http://www.imghack.se/155968"
             },
             "detailcompanyview": {
-                "desc": "Chatview in german",
+                "desc": "Chatansicht in Deutsch",
                 "src": "images/tryToxicChat.png",
                 "link": "http://www.imghack.se/155969"
             }
