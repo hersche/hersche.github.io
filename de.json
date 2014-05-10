@@ -81,9 +81,9 @@
         }
     },
     "peta": {
-        "title": "peta",
+        "title": "Peta",
         "preword": "Der Name Peta kommt von PhpmETA. Es ist vor allem in PHP 5.5 geschrieben und bedient sich smarty (template/.tpl-files) und dojo (Javascript). Die Idee hinter diesem Projekt ist, redundantes schreiben von Code zu verhinden. Ein Hauptziel ist eine gute Struktur, in dem ein Administrator schnell und unkompliziert arbeiten kann.. Das letztendliche Ziel ist eine Basis für alles.",
-        "description": "a further description",
+        "description": "Ich denke, jeder Webmaster kennt das ein wenig - wenn du ein wirklich tolles System brauchen willst, musst du SystemE brauchen (z.B mehrere Wordpresses). Wenn du etwas fixen musst, tust du das in jeder einzelnen Instanz/Installation. Meine idee ist, redundantes (sich wiederholendes) schreiben zu verhindern - grundsätzlich kannst du einen Blog, eine Gallery oder was auch immer, separiert, aber der gleiche Code, erstellen. Für Freunde, Familien und Öffentlich - oder alles zusammen!",
         "features": {
             "Flexibles Pluginsystem": "Jedes Plugin kann eine bis n Instanzen erstellen",
             "Flexibles Zugriffssystem": "Jeder Benutzer hat eine bis n Rollen. Jedes instanzierte Plugin hat eine bis n Rollen mit einem r/rw/admin-recht.",
@@ -122,14 +122,14 @@
             "Python": {
                 "desc": "Python is a little more fresh language i've learned, but it's make addicted really fast. Perfect possibilitys of sequentell, Oop and modulare code.",
                 "frameworks": {
-                    "PyQt": "Qt is a very modular ui-library - it's easy to use and works very stable",
+                    "PyQt": "Qt ist eine sehr modulare UI-Bibliothek. Sie ist einfach zu benutzen und arbeitet sehr stabil.",
                     "PyTox": "PyTox is a interface to the tox-core-project. For further information visit <a href='http://tox.im'>tox.im</a>",
-                    "PyCrypto": "PyCrypto supports many kinds of hashing, symmetric and asymmetric encryptions. I basicly use it to encrypt the local storage"
+                    "PyCrypto": "PyCrypto unterstüzt viele Arten von Hashing, symetrischer und asymetrischer Verschlüsselung. Es wird grundsätzlich zur Verschlüsselung des lokalen Speichers genutzt."
                 } },
                 "Java": {
-                    "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Since Android was growing very much last years and dalvik seems to be very optimized, i may go back to this language once.",
+                    "desc": "Diese Sprache lernte ich vor allem in der Ausbildung. Die JVM war oder ist ziemlich vollgestopft, was mir weniger gefällt. Sie ist strikt objektorientiert, was grossartig zum lernen ist. Seit Android die letzten Jahre zu wachsen begonnen hat und Dalvik sehr optimiert ist, wird die Sprache wieder interessant.",
                     "frameworks": {
-                        "Groovy & Grails": "Nearly all integrated/bloated"
+                        "Groovy & Grails": "Zu vergleichen mit Ruby & Rails, aber in Java. Groovy ist eine eigene Sprache, Grails ein framework um schnell Webapplikationen entwickeln zu können."
                     }
                 },
                 "Javascript": {
