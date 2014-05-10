@@ -12,7 +12,7 @@ var indexSectionsWithContent =
   2: "rs",
   3: "_acdegilnprsuw",
   4: "apv",
-  5: "cfimrtw"
+  5: "cfimtw"
 };
 
 var indexSectionNames =

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readme',['README',['../md_README.html',1,'']]],
   ['rawiopluginmanager',['rawIOPluginManager',['../classrawIOPluginManager.html',1,'']]],
   ['rawplugin',['rawPlugin',['../classrawPlugin.html',1,'']]],
   ['redaxo4',['redaxo4',['../namespaceredaxo4.html',1,'']]],
