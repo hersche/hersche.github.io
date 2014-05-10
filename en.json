@@ -29,7 +29,7 @@
     "tryToxic": {
         "title": "tryToxic",
         "preword": "tryToxic is just another tox-api-client, written in python 3 and pyQt",
-        "description": "a further description",
+        "description": "The history of tryToxic is a short one - there was a binding to tox in python and my interesst was big enough. So first parts where created into <a href='index.html?s=jobManagement'>jobManagement</a>, called toxTry. It's now proper separeted, and got it's name cause it never will be a official client (instead, it's QtTox, written in C++). What to say further? It's easy designed, you should get a overview quick..",
         "features": {
             "Local encryption": "Store every personal related information encrypted on harddisk",
             "Groupchats": "Invite and create groupchats",
@@ -56,7 +56,7 @@
     "jobManagement": {
         "title": "jobManagement",
         "preword": "Semantic job-overview when you work diffrent companys (freelance/temporary worker). Written in python3 using pyQt and pyCrypto.",
-        "description": "a further description",
+        "description": "As i begann to work as stagehand, there was often a untrusty atmosphere to the companys. So i came to the idea to do a finance-system to check my companys payings. I'm not a big finance-head, but it was and still is good useable. It's definently not designed for classic finance management!",
         "features": {
             "Local encryption": "Store messages and idendity encrypted on harddisk",
             "Diffrent companys": "When you work for diffrent companys",
@@ -83,8 +83,9 @@
     "Peta": {
         "title": "Peta",
         "preword": "The name Peta came out of PHPMeta. It’s basicly written in PHP with the use of smarty (template/.tpl-files) and dojo (Javascript). The idea behind this project is to avoid redundant rewrites. A maingoal is a good structure, where the administrator of a system could change things as he need. It's target is a base for everything.",
-        "description": "a further description",
+        "description": "I think every webmaster know this a little bit - when you want to have a really nice system, then you have to use systemS (multiple wordpresses for example). When you have to fix something then, you have to do this on every single instance/installation. My idea is, to avoid those redundant stuff - basicly you could do a blog, gallery or whatelse, separeted, but same code, for family, friends and publics.. or all the same in one time!",
         "features": {
+            "Usermanagement": "A rightsystem, login, etc. One user could have one to n instances",
             "Flexible pluginsystem": "Every plugin could have one to n instances",
             "Flexible accesssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
             "MVC-Structure": "It's easy to learn the code or write a plugin, since there's a separation between model, view and controller.",
@@ -120,7 +121,7 @@
 	      "name 2":"another ussage"
 	      }
 	    }
-	}
+	},
         "languages": {
             "PHP": {
                 "desc": "Use this for 10 years. Since Oop is default with PHP5, it's beatiful to use. Before it was horrible, but not for me (i didn't know oop in the beginn)",

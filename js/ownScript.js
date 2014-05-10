@@ -9,7 +9,7 @@ function processMenuHtml(jDataIn){
 	 
 
 
-	  menuHtml += '<li'+parent+' ><a href="index.html?s='+menuName+'" data-tool="'+value.preword+'" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">'+value.title+'</a>';
+	  menuHtml += '<li'+parent+' ><a href="index.html?s='+menuName+'" data-tool="'+value.preword+'" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade tooltip">'+value.title+'</a>';
 	  // This is because i know, index is the first.. it have to be!	  
 	  if(menuName!="index"){
 	   menuHtml+='</li>';
@@ -62,20 +62,21 @@ function processHtml(jDataIn, name) {
                 displayHtml += langs + '</ul>';
             } else {
                 displayHtml += "<h1>" + key + '</h1><p>' + val.preword + "</p>";
+                displayHtml += '<ul><li><a href="#features">Features</a></li><li><a href="#pictures">Pictures</a></li><li><a href="#bugs">Bugs</a></li><li><a href="#description">Description</a></ul>';
                 displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>';
-                displayHtml += "<h3>Features</h3><ul>";
+                displayHtml += "<h3><a name='features' />Features</h3><ul>";
                 $.each(val.features, function (fKey, fVal) {
                     displayHtml += "<li>" + fKey + ": " + fVal + "</li>";
                 });
-                displayHtml += "</ul><h3>Pictures</h3><ul>";
+                displayHtml += '</ul><h3><a name="pictures" />Pictures</h3><ul>';
                 $.each(val.pictures, function (pKey, pVal) {
                     displayHtml += "<li>" + pVal.desc + ":<br /> <a href='" + pVal.link + "'><img src='" + pVal.src + "' /></a></li>";
                 });
-                displayHtml += "</ul><h3>Bugs</h3><ul>";
+                displayHtml += '</ul><h3 ><a name="bugs" />Bugs</h3><ul>';
                 $.each(val.bugs, function (bKey, bVal) {
                     displayHtml += "<li>" + bKey + ": " + bVal + "</li>";
                 });
-                displayHtml += "</ul><p>" + val.description + "</p>";
+                displayHtml += "</ul><h3><a name='description' />Description</h3><p>" + val.description + "</p>";
             }
         }
     });

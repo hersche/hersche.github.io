@@ -78,7 +78,7 @@ transition-delay:2s;
 
 .submenu li {
   display: block; 
-  margin-top: 1px;
+  margin-top: 2px;
   text-shadow: 0 -1px 0 #000;
 
 }
@@ -87,7 +87,7 @@ transition-delay:2s;
   font: bold 12px/18px sans-serif;
   display: inline-block;
   position: relative;
-  padding: 15px 50px;
+  padding: 5px 50px;
   cursor: pointer;
   z-index: 555;
 transition-property:display;
@@ -99,7 +99,17 @@ transition-delay:2s;
   display: block;
   opacity: 1;
   visibility: visible;
-  animation: bounceit 6s;
+  /* animation: bounceit 1s; */
+  transition: all 2s;
+  transition-delay: 2s;
+  
+}
+
+.submenu:hover > .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  /* animation: bounceit 1s; */
   transition: all 2s;
   transition-delay: 2s;
   
@@ -398,7 +408,8 @@ a.tooltip:after{
   opacity: 0;
   content: attr(data-tool); /* might also use attr(title) */
   height: auto;
-  min-width: 100px;
+  /* min-width: 100px; */
+  max-width: 100%;
   padding: 5px 8px;
   z-index: 999;
   color: #fff;
@@ -411,5 +422,5 @@ a.tooltip:after{
   border-radius: 5px;
   transition: 3s slide;
 }
-a.tooltip:hover:after{ visibility: visible; opacity: 1; top: 140px; }
+a.tooltip:hover:after{ visibility: visible; opacity: 1; top: 150px; }
 a.tooltip:hover:before{ visibility: visible; opacity: 1; top: 54px; }
