@@ -84,6 +84,8 @@ bottom: 3px;
 .submenu li {
   display: block; 
   margin-top: 2px;
+  padding-left: 50px;
+  margin-left:30px;
   text-shadow: 0 -1px 0 #000;
 
 }
@@ -141,8 +143,9 @@ transition-delay:2s;
 .dropdowncontainer:before{
   content:"";
     display: inline-block;
-        margin-left: -2px;
-    margin-right: 2px;
+        margin-left: -25px;
+        padding-left: 20px;
+    padding-right: 2px;
     line-height: 16px;
 }
 
