@@ -68,12 +68,17 @@ body {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  display: none;
-  opacity: 0;
-  visibility: hidden;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 transition-property:visibility;
 transition-duration:5s;
 transition-delay:2s;
+}
+
+#top{
+ position: absolute;
+bottom: 3px;
 }
 
 .submenu li {
@@ -96,9 +101,9 @@ transition-delay:2s;
 }
 
 .dropdowncontainer:hover > .submenu {
-  display: block;
-  opacity: 1;
-  visibility: visible;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
   /* animation: bounceit 1s; */
   transition: all 2s;
   transition-delay: 2s;
@@ -106,9 +111,9 @@ transition-delay:2s;
 }
 
 .submenu:hover > .submenu {
-  display: block;
-  opacity: 1;
-  visibility: visible;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible!important;
   /* animation: bounceit 1s; */
   transition: all 2s;
   transition-delay: 2s;

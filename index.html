@@ -51,6 +51,11 @@
                     jsonFile = GET('lang') + ".json";
                 }
             }
+            var menuYloc = parseInt($("#top").css("top").substring(0,$("#top").css("top").indexOf("px")))
+            $(window).scroll(function () {
+            var offset = menuYloc+$(document).scrollTop()+"px";
+            $("#top").animate({top:offset},{duration:250,queue:false});
+    });
             if (typeof(Storage) !== "undefined" && GET('lang') === 'undefined') {
                 // Code for localStorage/sessionStorage.
                 if (localStorage.jData) {
@@ -118,7 +123,7 @@
 <body>
     <header>
             <div style="display: none;" id="menu">
-                <span style="display: inline; vertical-align: top;"><h1 style="display: inline; vertical-align: top;">skamster.github.io</h1><p style="display: inline; vertical-align: top;"> docs, projects and personal infos<a name="top" /></p></span>
+                <span style="display: inline; vertical-align: top;"><h1 style="display: inline; vertical-align: top;">skamster.github.io</h1><p style="display: inline; vertical-align: top;"> docs, projects and personal infos<a name="onTop" /></p></span>
                 <span style="display:inline-block;">
                 <span id="menucontent" style="display:inline-block;">
                 
@@ -144,7 +149,7 @@
         <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
         <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen: <ul><li><a href="petaDocs/">Peta</a></li><li><a href="tryToxicDocs/">tryToxic</a></li><li><a href="jobManagementDocs/">jobManagement</a></li></ul></p>
     </noscript>
-    <a href="#top">Go onTop!</a>
+    <div id="top"><a href="#onTop">Go onTop!</a></div>
 </body>
 
 </html>
