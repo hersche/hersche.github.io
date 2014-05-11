@@ -69,13 +69,13 @@
         "pictures": {
             "initview": {
                 "desc": "Initialansicht",
-                "src": "images/jobManagementDataInit.jpg",
-                "link": "images/jobManagementDataInit.jpg"
+                "src": "images/jobManagementDataInit.png",
+                "link": "images/jobManagementDataInit.png"
             },
             "detailcompanyview": {
                 "desc": "Firmenansicht",
-                "src": "images/jobManagementDetailComapnyView.jpg",
-                "link": "images/jobManagementDetailComapnyView.jpg"
+                "src": "images/jobManagementDetailComapnyView.png",
+                "link": "images/jobManagementDetailComapnyView.png"
             }
         }
     },
