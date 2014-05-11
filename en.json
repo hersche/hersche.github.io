@@ -70,13 +70,13 @@
         "pictures": {
             "initview": {
                 "desc": "Initview",
-                "src": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png",
-                "link": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/dataInit.png"
+                "src": "images/jobManagementDataInit.jpg",
+                "link": "images/jobManagementDataInit.jpg"
             },
             "detailcompanyview": {
                 "desc": "Companyview",
-                "src": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png",
-                "link": "https://raw.githubusercontent.com/skamster/jobManagement/master/screenshots/detailComapnyView.png"
+                "src": "images/jobManagementDetailComapnyView.jpg",
+                "link": "images/jobManagementDetailComapnyView.jpg"
             }
         }
     },
