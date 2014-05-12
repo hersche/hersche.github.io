@@ -62,12 +62,18 @@ function processHtml(jDataIn, name) {
                 });
                 toc += '</ul></li><li><a href="#mobile">'+val.mobile.trans+'</a><ul>';
                 var mobile ="<ul>";
-                
                 $.each(val.mobile, function (mKey, mVal) {
                     if(mKey!="trans"){
                     toc += '<li><a href="#'+mKey+'">'+mKey+'</a></li>';
                     mobile += '<li><a name="'+mKey+'" /><b>' + mKey + '</b>: ' + mVal + '</li>';
                     }
+                });
+                
+                toc += '</ul></li><li><a href="#support">'+val.support.trans+'</a><ul>';
+                var support ="<ul>";
+                $.each(val.support.reference, function (sKey, sVal) {
+                    toc += '<li><a href="#'+sKey+'">'+sKey+'</a></li>';
+                    support += '<li><a name="'+sKey+'" /><b>' + sKey + '</b>: ' + sVal + '</li>';
                 });
                 toc += "</ul></li>";
                 displayHtml += "</div>"+toc+"</ul>";
@@ -75,6 +81,8 @@ function processHtml(jDataIn, name) {
                 displayHtml += langs + '</ul>';
                 displayHtml += '<h3><a name="mobile" />'+val.mobile.trans+'</h3>';
                 displayHtml += mobile + '</ul></div>';
+                displayHtml += '<h3><a name="support" />'+val.support.trans+'</h3>';
+                displayHtml += val.support.desc + support + '</ul></div>';
             } else {
                 displayHtml += "<h1>" + key + '</h1><p>' + val.preword + "</p>";
                 displayHtml += '<ul><li><a href="#features">Features</a></li><li><a href="#pictures">Pictures</a></li><li><a href="#bugs">Bugs</a></li><li><a href="#description">Description</a></ul>';
