@@ -76,9 +76,13 @@ transition-duration:5s;
 transition-delay:2s;
 }
 
+#onTopImg:hover {
+    animation: bounceit 1s infinite linear;
+}
+
 #top{
  position: absolute;
-bottom: 3px;
+bottom: 20px;
 }
 
 .submenu li {
