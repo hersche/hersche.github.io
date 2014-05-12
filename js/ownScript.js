@@ -39,27 +39,42 @@ function processHtml(jDataIn, name) {
                 displayHtml += "</table><p>" + val.description + "</p>";
                 
             } else if (key === "about") {
-                displayHtml += '<p><img id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
+                displayHtml += '<div class="h-card" <p><img class="u-photo" id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
-                    if (cKey === "E-Mail" || cKey === "Xampp") {
-                        displayHtml += '<li><b>' + cKey + '</b>: <a href="mailto:' + cVal + '">' + cVal + '</a></li>';
+                    if (cKey === "E-Mail") {
+                        displayHtml += '<li><b>' + cKey + '</b>: <a class="u-email" href="mailto:' + cVal + '">' + cVal + '</a></li>';
                     } else {
                         displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
                     }
                 });
                 var langs = "";
-                var langToc ="";
-                displayHtml += '</ul><h3>Languages</h3><ul>';
+                //var toc = "<ul>";
+                var toc ='<ul><li><a href="#languages">'+val.languages.trans+'</a></li><ul>';
                 $.each(val.languages, function (lKey, lVal) {
-                    langToc += '<li><a href="#'+lKey+'">'+lKey+'</a></li>';
+                    if(lKey!="trans"){
+                    toc += '<li><a href="#'+lKey+'">'+lKey+'</a></li>';
                     langs += '<li><a name="'+lKey+'" /><b>' + lKey + '</b>: ' + lVal.desc + '<ul style="margin-bottom:10px;">';
                     $.each(lVal.frameworks, function (fKey, fVal) {
                         langs += '<li style="margin-bottom:5px;">' + fKey + ': ' + fVal + '</li>';
                     });
                     langs += '</ul></li>';
+                    }
                 });
-                displayHtml += langToc+"</ul><ul>";
+                toc += '</ul></li><li><a href="#mobile">'+val.mobile.trans+'</a><ul>';
+                var mobile ="<ul>";
+                
+                $.each(val.mobile, function (mKey, mVal) {
+                    if(mKey!="trans"){
+                    toc += '<li><a href="#'+mKey+'">'+mKey+'</a></li>';
+                    mobile += '<li><a name="'+mKey+'" /><b>' + mKey + '</b>: ' + mVal + '</li>';
+                    }
+                });
+                toc += "</ul></li>";
+                displayHtml += "</div>"+toc+"</ul>";
+                displayHtml += '</ul><h3><a name="languages" />'+val.languages.trans+'</h3><ul>';
                 displayHtml += langs + '</ul>';
+                displayHtml += '<h3><a name="mobile" />'+val.mobile.trans+'</h3>';
+                displayHtml += mobile + '</ul></div>';
             } else {
                 displayHtml += "<h1>" + key + '</h1><p>' + val.preword + "</p>";
                 displayHtml += '<ul><li><a href="#features">Features</a></li><li><a href="#pictures">Pictures</a></li><li><a href="#bugs">Bugs</a></li><li><a href="#description">Description</a></ul>';

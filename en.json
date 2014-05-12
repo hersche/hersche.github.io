@@ -123,6 +123,7 @@
 	    }
 	},
         "languages": {
+            "trans":"Languages",
             "PHP": {
                 "desc": "Use this for 10 years. Since Oop is default with PHP5, it's beatiful to use. Before it was horrible, but not for me (i didn't know oop in the beginn)",
                 "frameworks": {
@@ -152,6 +153,15 @@
                         "Letleaf":"This library is very new for me. It is perfect for google-like maps (at least zoom and mark pois), but based on the openstreetmap-project. I really preferr the tiles from osm, cause they're free and often more detailed."
                     }
                 }
-            }
+            },
+        "mobile": {
+        "trans":"Mobile phones & router",
+        "dd-wrt":"Used on some Siemens and Lynksys-routers",
+        "GTA02/Openmoko": "My first Smartphone. I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, SHR (stable hybrid release) which used the E17-Windowmanager. I wrote my first gtk-python-application there.<br />On the other site, what i used - QtMoko which was really stable and fast (cause it doesn't needed a Xorg-server). Qt is ql! Now the project gets a hardwareupgrade since some years, it's called GTA04 and is continued by another company.",
+            "Sony Xperia":"Because of money (i still would like a GTA04) i buyed a Xperia Active after the GSM-modem was fail for doing it's work. The new one was IP67-'secured' with 600Mhz improved processor (1Ghz Singlecore) - nice! Easy to root, i also did this for some friends. The first expirience with xda. After not a year, i couldn't do a phone anymore - the quality was too bad, no matter which rom.",
+            "Motorola":"After my Xperia i go back to 600Mhz, a cheap Motorola 'outdoor' Phone, X320. This is still rootable by flashing a spain firmware until bootloader is installed (TWRP, i think) and plug out after that step (before install your whished rom). Nice, because recoverable. After the screen gets broken, i get some gifts in short time - two HTC's",
+            "HTC":"I became my two HTC's for free, as a gift from friends. One is a Sensation (Dualcore, 1.2 Ghz), the other a One X (Quadcore, 1.5Ghz). This is a massive performance-improvement for me! The One X is faster than my Laptop (2x1.86Ghz vs. the 4x1.5)! Nice for testing stuff, being up to date but secured. Rooting is still easy.",
+            "Samsung":"Some friends get some Samsung Galaxy S4 and also the mini-version. I was allowed to root the mini, what also works easy in a official way."
+    }
         }
     }
