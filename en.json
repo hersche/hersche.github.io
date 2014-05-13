@@ -132,7 +132,7 @@
                 }
             },
             "Python": {
-                "desc": "I know python since 5 years and it addict me really fast. Perfect possibilitys of sequentell, Oop and modulare code. It also don't use { }, but forces you to format your code proper. Top!",
+                "desc": "I know <a href='https://python.org'>python</a> since 5 years and it addict me really fast. Perfect possibilitys of sequentell, Oop and modulare code. It also don't use { }, but forces you to format your code proper. Top!",
                 "frameworks": {
                     "Urllib2":"This is a nice framwork to 'speak' with websites, which doesn't get a daemon. Just go to a field, put input in and submit - in python, not in browser. That way you could do a lot automatic, unimportant the hoster like it or not",
                     "PyQt || PyKde": "Qt is a very modular ui-library - it's easy to use and works very stable. This is one of the first frameworks i used.",

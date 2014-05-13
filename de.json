@@ -130,7 +130,7 @@
                 }
             },
             "Python": {
-                "desc": "Python ist ein bischen eine neuere Sprache, die ich lernte, aber sie machte sehr schnell süchtig. Perfekte Möglichkeiten für sequentiellen, objektorientierten und modularen Code.",
+                "desc": "<a href='https://python.org'>Python</a> ist ein bischen eine neuere Sprache, die ich lernte, aber sie machte sehr schnell süchtig. Perfekte Möglichkeiten für sequentiellen, objektorientierten und modularen Code.",
                 "frameworks": {
                     "PyQt": "Qt ist eine sehr modulare UI-Bibliothek. Sie ist einfach zu benutzen und arbeitet sehr stabil.",
                     "PyTox": "PyTox ist eine Schnittstelle zum Tox-core-projekt. Für weitere Informationen besuchen Sie <a href='http://tox.im'>tox.im</a>",

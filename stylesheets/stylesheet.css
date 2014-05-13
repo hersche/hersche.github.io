@@ -78,11 +78,14 @@ transition-delay:2s;
 
 #onTopImg:hover {
     animation: bounceit 1s infinite linear;
+    -webkit-filter: brightness(200%);
+    filter: brightness(200%);
 }
 
 #top{
  position: absolute;
 bottom: 20px;
+    left: 2%;
 }
 
 #toc{
@@ -92,6 +95,8 @@ top: 2%;
     list-style-type: none;
     padding:0;
     margin:0;
+    width: auto;
+    max-width: 10%;
 }
 #toc:before{
     content:"";
