@@ -2,6 +2,7 @@ function processMenuHtml(jDataIn){
 	var menuHtml = '<ul style="display: inline; margin:0; list-style: none;" >';
 	$.each(jDataIn, function(menuName, value){
 	   var parent = "";
+        if(menuName!="transl"){
 	  if(menuName=="index"){
 	   styleClass='"submenu"';
 	   parent = ' class="dropdowncontainer" ';
@@ -18,7 +19,7 @@ function processMenuHtml(jDataIn){
 	   menuHtml += "<ul class="+styleClass+">";
 	   
 	  }
-	  
+        }
 	});
 	return menuHtml+'</li></ul>';
 	
