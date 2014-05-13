@@ -55,13 +55,20 @@
             $(window).scroll(function () {
             var offset = menuYloc+$(document).scrollTop()+"px";
             $("#top").animate({top:offset},{duration:250,queue:false});
+           });     
+            var menuYloc2 = parseInt($("#toc").css("top").substring(0,$("#toc").css("top").indexOf("px")))
+            $(window).scroll(function () {
+            var offset2 = menuYloc2+$(document).scrollTop()+"px";
+            $("#toc").animate({top:offset2},{duration:250,queue:false});
     });
             if (typeof(Storage) !== "undefined" && GET('lang') === 'undefined') {
                 // Code for localStorage/sessionStorage.
                 if (localStorage.jData) {
                     jData = jQuery.parseJSON(localStorage.jData);
                     $("#menucontent").html(processMenuHtml(jData));
-                    $("#showContent").html(processHtml(jData, lastName));
+                    var ProcessedHtml = processHtml(jData, lastName);
+                    $("#toc").html(ProcessedHtml[1]);
+                    $("#showContent").html(ProcessedHtml[0]);
                 } else {
                     //retrive
                     var jqxhr = $.getJSON(jsonFile, function() {
@@ -72,7 +79,9 @@
                         localStorage.jData = data.responseText.replace("\n", "");
                         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
                         $("#menucontent").html(processMenuHtml(jData));
-                        $("#showContent").html(processHtml(jData, lastName));
+                    var ProcessedHtml = processHtml(jData, lastName);
+                    $("#toc").html(ProcessedHtml[1]);
+                    $("#showContent").html(ProcessedHtml[0]);
                         //the link is a note '<a href"index.html"  onclick="changeContent(\'index\'); return false">&lt;&lt;</a>'+
 			
                     });
@@ -86,7 +95,9 @@
                     console.log("success2, worktime! heyho lets go..");
                     jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
                     $("#menucontent").html(processMenuHtml(jData));
-                    $("#showContent").html(processHtml(jData, lastName));
+                    var ProcessedHtml = processHtml(jData, lastName);
+                    $("#toc").html(ProcessedHtml[1]);
+                    $("#showContent").html(ProcessedHtml[0]);
                     
                 });
             }
@@ -138,7 +149,7 @@
                     </span>
         </div>
     </header>
-    <div style="float: left; width: 100px;" id="info">Test!</div>
+    <div style="float: left; width: 15%;" id="toc">Test!</div>
     <div id="animationContainer">
         <div id="showContent" style="display: none"></div>
     </div>

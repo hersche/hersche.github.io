@@ -160,8 +160,14 @@
         "GTA02/Openmoko": "<a href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>My first Smartphone</a>. I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, SHR (stable hybrid release) which used the <a href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Windowmanager</a>. I wrote <a href='https://gist.github.com/skamster/10565527'>my first gtk-python-application</a> there.<br />On the other site, what i used - <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> which was really stable and fast (cause it doesn't needed a Xorg-server). <br /><a href='http://qt-project.org/'>Qt</a> is ql! <br />Now the project gets a hardwareupgrade since some years, it's called <a href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> and is continued by another company.",
             "Sony Xperia":"Because of money (i still would like a GTA04) i buyed a <a href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a> after the GSM-modem was fail for doing it's work. The new one was <a href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'secured' with 600Mhz improved processor (1Ghz Singlecore) - nice! Easy to root, i also did this for some friends. The first expirience with <a href='http://www.xda-developers.com/'>xda</a>. After not a year, i couldn't do a phone anymore - the quality was too bad, no matter which rom.",
             "Motorola":"After my Xperia i go back to 600Mhz, a cheap Motorola 'outdoor' Phone, <a href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. This is still <a href='http://forum.xda-developers.com/showthread.php?t=2079202'>rootable</a> by flashing a spain firmware until bootloader is installed (TWRP, i think) and plug out after that step (before install your whished rom). Nice, because recoverable. After the screen gets broken, i get some gifts in short time - two HTC's",
-            "HTC":"I became my two HTC's for free, as a gift from friends. One is a <a href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), the other a <a href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). This is a massive performance-improvement for me! The One X is faster than my Laptop (2x1.86Ghz vs. the 4x1.5)! Nice for testing stuff, being up to date but secured. Rooting is still easy.",
+            "HTC":"I became my two HTC's for free, as a gift from friends. One is a <a href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), the other a <a href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). This is a massive performance-improvement for me! The One X is faster than my Laptop (2x1.86Ghz vs. the 4x1.5)! Nice for testing stuff, being up to date but secured. Rooting is still easy through a official way.",
             "Samsung":"Some friends get some Samsung Galaxy S4 and also the mini-version. I was allowed to root the mini, what also works easy in a official way."
     }
-        }
+        } ,
+        "transl":{
+    "features":"Features",
+    "bugs":"Bugs",
+    "pictures":"Pictures",
+    "description":"Description"
+}
     }

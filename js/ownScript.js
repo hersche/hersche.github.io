@@ -27,6 +27,7 @@ function processMenuHtml(jDataIn){
 function processHtml(jDataIn, name) {
     "use strict";
     var displayHtml = "";
+    var toc = "";
     $.each(jDataIn, function (key, val) {
         if (name === key) {
             if (key === "index") {
@@ -49,11 +50,11 @@ function processHtml(jDataIn, name) {
                 });
                 var langs = "";
                 //var toc = "<ul>";
-                var toc ='<ul><li><a href="#languages">'+val.languages.trans+'</a></li><ul>';
+                toc +='<ul style="list-style-type: none; list-style: none;" ><li><a href="#languages">'+val.languages.trans+'</a></li><ul style="list-style-type: none; list-style: none;">';
                 $.each(val.languages, function (lKey, lVal) {
                     if(lKey!="trans"){
                     toc += '<li><a href="#'+lKey+'">'+lKey+'</a></li>';
-                    langs += '<li><a name="'+lKey+'" /><b>' + lKey + '</b>: ' + lVal.desc + '<ul style="margin-bottom:10px;">';
+                    langs += '<li><a name="'+lKey+'" /><b>' + lKey + '</b>: ' + lVal.desc + '<ul style="margin-bottom:10px; list-style-type: none; list-style: none;">';
                     $.each(lVal.frameworks, function (fKey, fVal) {
                         langs += '<li style="margin-bottom:5px;">' + fKey + ': ' + fVal + '</li>';
                     });
@@ -75,35 +76,42 @@ function processHtml(jDataIn, name) {
                     toc += '<li><a href="#'+sKey+'">'+sKey+'</a></li>';
                     support += '<li><a name="'+sKey+'" /><b>' + sKey + '</b>: ' + sVal + '</li>';
                 });
-                toc += "</ul></li>";
-                displayHtml += "</div>"+toc+"</ul>";
+                toc += "</ul></li></ul>";
+                //displayHtml += "</div>"+toc+"</ul>";
                 displayHtml += '</ul><h3><a name="languages" />'+val.languages.trans+'</h3><ul>';
                 displayHtml += langs + '</ul>';
                 displayHtml += '<h3><a name="mobile" />'+val.mobile.trans+'</h3>';
                 displayHtml += mobile + '</ul></div>';
                 displayHtml += '<h3><a name="support" />'+val.support.trans+'</h3>';
                 displayHtml += val.support.desc + support + '</ul></div>';
+                
+                
             } else {
                 displayHtml += "<h1>" + key + '</h1><p>' + val.preword + "</p>";
-                displayHtml += '<ul><li><a href="#features">Features</a></li><li><a href="#pictures">Pictures</a></li><li><a href="#bugs">Bugs</a></li><li><a href="#description">Description</a></ul>';
+                toc += '<ul><li><a href="#features">'+jDataIn.transl.features+'</a></li><li><a href="#pictures">'+jDataIn.transl.pictures+'</a></li><li><a href="#bugs">'+jDataIn.transl.bugs+'</a></li><li><a href="#description">'+jDataIn.transl.description+'</a></li></ul>';
                 displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>';
-                displayHtml += "<h3><a name='features' />Features</h3><ul>";
+                displayHtml += "<h3><a name='features' />"+jDataIn.transl.features+"</h3><ul>";
                 $.each(val.features, function (fKey, fVal) {
                     displayHtml += "<li>" + fKey + ": " + fVal + "</li>";
                 });
-                displayHtml += '</ul><h3><a name="pictures" />Pictures</h3><ul>';
+                displayHtml += '</ul><h3><a name="pictures" />'+jDataIn.transl.pictures+'</h3><ul>';
                 $.each(val.pictures, function (pKey, pVal) {
                     displayHtml += "<li>" + pVal.desc + ":<br /> <a href='" + pVal.link + "'><img src='" + pVal.src + "' /></a></li>";
                 });
-                displayHtml += '</ul><h3 ><a name="bugs" />Bugs</h3><ul>';
+                displayHtml += '</ul><h3 ><a name="bugs" />'+jDataIn.transl.bugs+'</h3><ul>';
                 $.each(val.bugs, function (bKey, bVal) {
                     displayHtml += "<li>" + bKey + ": " + bVal + "</li>";
                 });
-                displayHtml += "</ul><h3><a name='description' />Description</h3><p>" + val.description + "</p>";
+                displayHtml += "</ul><h3><a name='description' />"+jDataIn.transl.description+"</h3><p>" + val.description + "</p>";
             }
         }
     });
-    return displayHtml;
+    //alert(toc);
+    if((toc=="undefined")||(toc=="")){
+        
+      toc="Some loaded foo-replace";   
+    }
+    return [displayHtml, toc];
 }
 
 
@@ -140,7 +148,9 @@ function changeContent(name) {
             "direction": "right",
             "mode": "hide"
         }, 500, function () {
-            $("#showContent").html(processHtml(jData, name));
+            var ProcessedHtml = processHtml(jData, name);
+            $("#showContent").html(ProcessedHtml[0]);
+            $("#toc").html(ProcessedHtml[1]);
 
         });
 

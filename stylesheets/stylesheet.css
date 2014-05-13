@@ -85,6 +85,17 @@ transition-delay:2s;
 bottom: 20px;
 }
 
+#toc{
+ position: absolute;
+top: 2%;
+    list-style: none;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+#toc:before{
+    content:"";
+}
 .submenu li {
   display: block; 
   margin-top: 2px;
