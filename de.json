@@ -22,6 +22,12 @@
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
                 "stable": "Grundsätzlich bereit"
+            },
+            "skamster.github.io": {
+                "pLink": "index.html?s=skamster.github.io",
+                "sLink": "https://github.com/skamster/skamster.github.io/",
+                "dLink": "https://github.com/skamster/skamster.github.io/",
+                "stable": "Wird im Moment stark erweitert"
             }
 
         }
@@ -78,6 +84,22 @@
                 "link": "images/jobManagementDetailComapnyView.png"
             }
         }
+    },
+    "skamster.github.io":{
+     "title":"skamster.github.io",
+    "preword":"Die Website informiert über aktuelle Projekte und meine wenigkeit",
+    "description":"Eine technische Demonstration, Beschreibung, Links und Bilder aller Ideen und Projekten schön gesammelt und dargestellt. Dies ist die Umsetzung dieser Idee. Wenn es eine Kundenwebsite oder eine Projektwebsite wäre, würde ich nie so viele Effekte verwenden. Aber hier kann dies als lustige Umsetzungsspielerei dienen. Die meisten Effekte sind nebenbei CSS 3 zu verdanken.",
+        "features":{
+            "Offlinespeicherung":"Die Seite nutzt Ihren HTML5-Offlinespeicher, so dass Sie die Seite mit einem einigermassen aktuellem Browser auch ohne Internetverbindung neu laden und aufrufen können. Probieren Sie es aus!",
+            "JSON-Datenabfrage":"Alle Daten werden per statischem JSON geladen. Dies dient der Übersetzung.",
+            "jQuery":"jQuery dient als Hauptbibliothek zur Animierung, des Ladens und findens der Klassen" 
+        },
+        "bugs":{
+        "onTop-Knopf in Chrome und Opera":"Der Knopf bewegt sich in Chrome nicht. In Firefox funktioniert dies tadellos"
+    },
+    "pictures":{
+    "":""
+    }
     },
     "peta": {
         "title": "Peta",

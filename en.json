@@ -17,11 +17,17 @@
                 "dLink": "jobManagementDocs/index.html",
                 "stable": "Basicly stable, paused"
             },
-            "peta": {
+            "Peta": {
                 "pLink": "index.html?s=peta",
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
                 "stable": "Heavy development, but basicly stable"
+            },
+            "skamster.github.io": {
+                "pLink": "index.html?s=skamster.github.io",
+                "sLink": "https://github.com/skamster/skamster.github.io/",
+                "dLink": "https://github.com/skamster/skamster.github.io/",
+                "stable": "Get strong extendet at the moment"
             }
 
         }
@@ -103,7 +109,21 @@
             }
         }
     },
-
+    "skamster.github.io":{
+     "title":"skamster.github.io",
+    "preword":"This website informs about current projects and about me.",
+    "description":"A technical demo, descriptions, links and pictures, nice collected and marked up. This is the idea of this website. If this would be a clientwebsite or on a project, i would never use that much effects. But here, it's for playing in use. By the way, the most of this effects is wrote in CSS 3.",
+        "features":{
+            "Offlinestoring":"This site use your HTML5-offlinestorage, so that you can reload this site or also reenter it after closing the browser and dont have a internetconnection. Try it out!",
+            "JSON-Dataquery":"All data gets loaded by static JSON. This is for translation.",
+            "jQuery":"jQuery is for loading stuff, animate and finding of classes" },
+        "bugs":{
+        "onTop-Button in Chrome and Opera":"The button wont move in chrome. Works well in firefox."
+    },
+    "pictures":{
+    "":""
+    }
+    },
     "about": {
 	"title":"About me",
         "preword":"Some information over me",

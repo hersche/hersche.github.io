@@ -51,16 +51,14 @@
                     jsonFile = GET('lang') + ".json";
                 }
             }
-            var menuYloc = parseInt($("#top").css("top").substring(0,$("#top").css("top").indexOf("px")))
+            var menuYloc = parseInt($("#top").css("top").substring(0,$("#top").css("top").indexOf("px")));
+            var menuYloc2 = parseInt($("#toc").css("top").substring(0,$("#toc").css("top").indexOf("px")));
             $(window).scroll(function () {
-            var offset = menuYloc+$(document).scrollTop()+"px";
-            $("#top").animate({top:offset},{duration:250,queue:false});
-           });     
-            var menuYloc2 = parseInt($("#toc").css("top").substring(0,$("#toc").css("top").indexOf("px")))
-            $(window).scroll(function () {
-            var offset2 = menuYloc2+$(document).scrollTop()+"px";
-            $("#toc").animate({top:offset2},{duration:250,queue:false});
-    });
+                var offset = menuYloc+$(document).scrollTop()+"px";
+                $("#top").animate({top:offset},{duration:250,queue:false});
+                var offset2 = menuYloc2+$(document).scrollTop()+"px";
+                $("#toc").animate({top:offset2},{duration:250,queue:false});
+            });
             if (typeof(Storage) !== "undefined" && GET('lang') === 'undefined') {
                 // Code for localStorage/sessionStorage.
                 if (localStorage.jData) {
