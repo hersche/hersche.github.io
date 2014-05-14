@@ -125,7 +125,7 @@ bottom: 20px;
    /* padding:0;
     margin:0;*/
     color: blue;
-    animation: bounceit 6s infinite linear;
+    animation: bounceit 1s infinite linear;
 }
 
 #toc ul li:before{
