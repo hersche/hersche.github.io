@@ -29,14 +29,14 @@ function processHtml(jDataIn, name) {
     $.each(jDataIn, function (key, val) {
         if (name === key) {
             if (key === "index") {
-                displayHtml += "<h1>" + val.title + "</h1><p>" + val.preword + "</p><table><tr><th>Projectname</th><th>Source</th>";
-                displayHtml += "<th>Docs</th><th>Stability</th></tr>";
+                displayHtml += "<h1>" + val.title + "</h1><p>" + val.preword + '</p><a name="TheTable"><a/><table><tr><th>'+jDataIn.transl.projectname+'</th><th>'+jDataIn.transl.source+'</th>';
+                displayHtml += "<th>"+jDataIn.transl.doc+"</th><th>"+jDataIn.transl.stability+"</th></tr>";
                 $.each(val.content, function (cKey, cVal) {
                     displayHtml += '<tr><td><a href="index.html?s=' + cKey + '" onclick="changeContent(\'' + cKey + '\'); return false;" >' + cKey + '</a></td><td><a href="' + cVal.sLink + '">Src</a></td>';
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
-                displayHtml += "</table><p>" + val.description + "</p>";
-                
+                displayHtml += '</table><p><a name="description"></a>' + val.description + '</p>';
+                toc += '<ul><li><a href="#TheTable">'+jDataIn.transl.table+'</a></li><li><a href="#description">'+jDataIn.transl.description+'</a></li></ul>';
             } else if (key === "about") {
                 displayHtml += '<div class="h-card" <p><img class="u-photo" id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {

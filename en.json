@@ -169,6 +169,11 @@
     "features":"Features",
     "bugs":"Bugs",
     "pictures":"Pictures",
-    "description":"Description"
+    "description":"Description",
+    "stability":"Stability",
+    "projectname":"Projectname",
+    "source":"Sourcecode",
+    "doc":"Docs",
+    "table":"Linktable"
 }
     }
