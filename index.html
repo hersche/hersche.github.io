@@ -115,8 +115,8 @@
 
                 } else {
                     $("#aboutImg").animate({
-                            width: '416px',
-                            height: '310px'
+                            width: '500px',
+                            height: '260px'
                         }, 500,
                         function() {
                             aboutImgBig = true;
@@ -134,19 +134,23 @@
 <body>
     <header>
             <div style="display: none;" id="menu">
-                <span style="display: inline; vertical-align: top;"><h1 style="display: inline; vertical-align: top;">skamster.github.io</h1><p style="display: inline; vertical-align: top;"> docs, projects and personal infos<a name="onTop" /></p></span>
-                <span style="display:inline-block;">
-                <span id="menucontent" style="display:inline-block;">
+                <div>
+                <span style="display: inline; vertical-align: top;"><h1 style="display: inline; vertical-align: top;">skamster.github.io</h1><p style="display: inline; vertical-align: top;"> docs, projects and personal infos<a name="onTop" ></a></p></span></div>
+               <div style="width: 100%;"> 
+                <span id="menucontent" style="display:inline-block; float:left;">
                 
                 </span>
-                <span style="display:inline-block;">
-                                    <a target="_blank" style="margin-right:1px;" data-tool="Go to my personal github-account" href="https://github.com/skamster" class="btn tooltip fade">My GitHub</a>
+                <span style="float:left; padding-top: 5px;">
+                <a target="_blank" style="float: left;" data-tool="Go to my personal github-account" href="https://github.com/skamster" class="btn tooltip fade">My GitHub</a>
+                    </span>
+                <span style="display:inline-block; float:right; padding-top: 5px;">
+                                    
                 
-                                    <a style="float:right; margin-right: 1px;" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a>
+                                    <a style="float:right;" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a>
                     <a style="float:right; margin-right: 1px;" data-tool="Wechsle zu deutschem Inhalt" href="index.html?lang=de" class="btn fade tooltip">DE</a>
                     <a style="float:right;" data-tool="Change to english content" href="index.html?lang=en" class="btn fade tooltip">EN</a>
                     </span>
-                    </span>
+                   </div>
         </div>
     </header>
     <div style="float: left; width: 15%;" id="toc">Test!</div>

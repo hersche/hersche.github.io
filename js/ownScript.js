@@ -7,10 +7,7 @@ function processMenuHtml(jDataIn){
 	   styleClass='"submenu"';
 	   parent = ' class="dropdowncontainer" ';
 	  }
-	 
-
-
-	  menuHtml += '<li'+parent+' ><a href="index.html?s='+menuName+'" data-tool="'+value.preword+'" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade tooltip">'+value.title+'</a>';
+	  menuHtml += '<li'+parent+' ><a href="index.html?s='+menuName+'" data-tool="'+value.preword+'" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">'+value.title+'</a>';
 	  // This is because i know, index is the first.. it have to be!	  
 	  if(menuName!="index"){
 	   menuHtml+='</li>';
@@ -62,7 +59,7 @@ function processHtml(jDataIn, name) {
                     langs += '</ul></li>';
                     }
                 });
-                toc += '</ul></li><li><a href="#mobile">'+val.mobile.trans+'</a><ul>';
+                toc += '</ul><li><a href="#mobile">'+val.mobile.trans+'</a></li><ul>';
                 var mobile ="<ul>";
                 $.each(val.mobile, function (mKey, mVal) {
                     if(mKey!="trans"){
@@ -71,13 +68,13 @@ function processHtml(jDataIn, name) {
                     }
                 });
                 
-                toc += '</ul></li><li><a href="#support">'+val.support.trans+'</a><ul>';
+                toc += '</ul><li><a href="#support">'+val.support.trans+'</a></li><ul>';
                 var support ="<ul>";
                 $.each(val.support.reference, function (sKey, sVal) {
                     toc += '<li><a href="#'+sKey+'">'+sKey+'</a></li>';
                     support += '<li><a name="'+sKey+'" /><b>' + sKey + '</b>: ' + sVal + '</li>';
                 });
-                toc += "</ul></li></ul>";
+                toc += "</ul></ul>";
                 //displayHtml += "</div>"+toc+"</ul>";
                 displayHtml += '</ul><h3><a name="languages" />'+val.languages.trans+'</h3><ul>';
                 displayHtml += langs + '</ul>';
