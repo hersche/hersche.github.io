@@ -145,8 +145,8 @@
 	    },
         "languages": {
             "trans":"Programmiersprachen",
-            "<a href='http://php.net'>PHP</a>": {
-                "desc": "Nutze diese Sprache nun schon sehr lange. Seit mit PHP5 die OOP-Welt Standart in der Sprache ist, ist es schön, diese nutzen zu können.",
+            "PHP": {
+                "desc": "Nutze diese Sprache nun schon sehr lange. Seit mit <a href='http://php.net'>PHP5</a> die OOP-Welt Standart in der Sprache ist, ist es schön, diese nutzen zu können.",
                 "frameworks": {
                     "<a href='http://smarty.net'>Smarty</a>": "Vorlagenframework, erlaubt eine klare Trennung von 'controller' und 'view' (<a href='http://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a>)"
                 }
