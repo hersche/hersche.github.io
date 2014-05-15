@@ -51,13 +51,13 @@
                     jsonFile = GET('lang') + ".json";
                 }
             }
-            var menuYloc = parseInt($("#top").css("top").substring(0,$("#top").css("top").indexOf("px")));
-            var menuYloc2 = parseInt($("#toc").css("top").substring(0,$("#toc").css("top").indexOf("px")));
+            var menuYloc = parseInt($("#scroller").css("top").substring(0,$("#scroller").css("top").indexOf("px")));
             $(window).scroll(function () {
+                if(isNaN(menuYloc)){
+                    menuYloc = 0;
+                }
                 var offset = menuYloc+$(document).scrollTop()+"px";
-                $("#top").animate({top:offset},{duration:250,queue:false});
-                var offset2 = menuYloc2+$(document).scrollTop()+"px";
-                $("#toc").animate({top:offset2},{duration:250,queue:false});
+                $("#scroller").animate({top:offset},{duration:250,queue:false});
             });
             if (typeof(Storage) !== "undefined" && GET('lang') === 'undefined') {
                 // Code for localStorage/sessionStorage.
@@ -130,7 +130,12 @@
 </head>
 
 <body>
+        <div id="scroller">
+    	<div id="toc">Test!</div>
+    	<div id="top"><a href="#onTop"><img id="onTopImg" src="images/onTop.png" /></a></div>
+    </div>
     <header>
+
             <div style="display: none;" id="menu">
                 <div>
                 <span style="display: inline; vertical-align: top;"><h1 style="display: inline; vertical-align: top;">skamster.github.io</h1><p style="display: inline; vertical-align: top;"> docs, projects and personal infos<a name="onTop" ></a></p></span></div>
@@ -151,7 +156,7 @@
                    </div>
         </div>
     </header>
-    <div style="float: left; width: 15%;" id="toc">Test!</div>
+
     <div id="animationContainer">
         <div id="showContent" style="display: none"></div>
     </div>
@@ -162,7 +167,7 @@
         <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
         <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen: <ul><li><a href="petaDocs/">Peta</a></li><li><a href="tryToxicDocs/">tryToxic</a></li><li><a href="jobManagementDocs/">jobManagement</a></li></ul></p>
     </noscript>
-    <div id="top"><a href="#onTop"><img id="onTopImg" src="images/onTop.png" /></a></div>
+
 </body>
 
 </html>

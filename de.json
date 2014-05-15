@@ -1,21 +1,21 @@
 {
     "index": {
-        "title": "Linkliste + über die Seite and Projekte",
+        "title": "Linkliste + über die Seite und Projekte",
 		"preword":"Dies ist die Linkliste, das 'alternative' home oder die Sitemap. Diese Seite enthält jedoch auch externe Links. <br /> Sie enthält auch eine Beschreibung der Website und der aktiven Projekte.",
-        "description": "TEXT IST AM ENSTEHEN - BETAALPHASUPEREXPERIMENTEL!! <br />Dies ist eine kleine Linksammlung.<br />Diese und die ganze Seite nutzen deinen Webstorage, wenn dein Browser dies unterstüzt. <br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch etwas über die relativ neuen HTML 5 Technologien zu lernen. Auch javascript ist recht neu für mich, aber eine lustige Welt. Es ist keine 'sichere' Sprache, aber sie ist lustig und manchmal sogar nützlich (siehe Kartenplugin in Peta). <br />Auf der anderen Seite mag ich ernst zu nehmenderen und meistens MVC und objektorientieren Code. Auf dieser Seite bekommen sie eine Übersicht über die Projekte, welche daraus enstanden sind. Ich sehe einen wichtigen Punkt in den Programmen, die ich schreibe. Deshalb haben 2 meiner Projekte bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<br /> Der letzte Teil ist über mich.Ich würde gerne etwas verdienen und habe diese Tätigkeit auch gelernt. Nach der Ausbildung arbeitete ich vor allem körperlich, da 4 Jahre lang, 8 Stunden am Tag Computer zu viel waren. Nun habe ich meinen Fuss gebrochen und wollte etwas tun - ich habe nie wirklich aufgehört zu programmieren (nur viel reduziert), aber seit April bin ich, wie sie auf github sehen können, wieder ziemlich aktiv!Ich will keine Spenden, dies soll als Beispiel dienen, wie ich programmieren kann. Sie können diese Projekte frei benutzen und ich bin glücklich, wenn jemand es forkt oder einen Teil dazu beiträgt.<br />Auch gemeldete Fehler sind super (dann merke ich, dass es benutzt wird :) )" 
+        "description": "TEXT IST AM ENSTEHEN - BETAALPHASUPEREXPERIMENTEL!! <br />Dies ist eine kleine Linksammlung.<br />Diese und die ganze Seite nutzen deinen Webstorage, wenn dein Browser dies unterstüzt. <br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch etwas über die relativ neuen HTML 5 Technologien zu lernen. Auch javascript ist recht neu für mich, aber eine lustige Welt. Es ist keine 'sichere' Sprache, aber sie ist lustig und manchmal sogar nützlich (siehe Kartenplugin in Peta). <br />Auf der anderen Seite mag ich ernst zu nehmenderen und meistens MVC und objektorientieren Code. Auf dieser Seite bekommen sie eine Übersicht über die Projekte, welche daraus enstanden sind. Ich sehe einen wichtigen Punkt in den Programmen, die ich schreibe. Deshalb haben 2 meiner Projekte bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<br /> Der letzte Teil ist über mich. Ich würde gerne etwas verdienen und habe diese Tätigkeit auch gelernt. Nach der Ausbildung arbeitete ich vor allem körperlich, da 4 Jahre lang, 8 Stunden am Tag Computer zu viel waren. Nun habe ich meinen Fuss gebrochen und wollte etwas tun - ich habe nie wirklich aufgehört zu programmieren (nur viel reduziert), aber seit April bin ich, wie sie auf github sehen können, wieder ziemlich aktiv!Ich will keine Spenden, dies soll als Beispiel dienen, wie ich programmieren kann. Sie können diese Projekte frei benutzen und ich bin glücklich, wenn jemand es forkt oder einen Teil dazu beiträgt.<br />Auch gemeldete Fehler sind super (dann merke ich, dass es benutzt wird :) )" 
         ,
         "content": {
             "tryToxic": {
                 "pLink": "index.html?s=tryToxic",
                 "sLink": "https://github.com/skamster/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
-                "stable": "ein wenig unsicher, da sich die API des Kerns schnell verändern kann"
+                "stable": "Ein wenig unsicher, da sich die API des Kerns schnell verändern kann"
             },
             "jobManagement": {
                 "pLink": "index.html?s=jobManagement",
                 "sLink": "https://github.com/skamster/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
-                "stable": "sollte funktionieren, derzeit pausiert"
+                "stable": "Sollte funktionieren, derzeit pausiert"
             },
             "peta": {
                 "pLink": "index.html?s=peta",
