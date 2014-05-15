@@ -94,9 +94,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
     bottom: 20px;
     margin-left: 2%;
     float:bottom;
+    max-height: 17%;
+    overflow: hidden;
 }
 #toc {
     margin-left: 2%;
+    max-height: 75%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #toc ul li a {
     color: green;
