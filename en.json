@@ -50,12 +50,12 @@
             "initview": {
                 "desc": "Initview",
                 "src": "images/tryToxicInit.png",
-                "link": "http://www.imghack.se/155968"
+                "link": "images/tryToxicInit.png"
             },
             "detailcompanyview": {
                 "desc": "Chatview in german",
                 "src": "images/tryToxicChat.png",
-                "link": "http://www.imghack.se/155969"
+                "link": "images/tryToxicChat.png"
             }
         }
     },

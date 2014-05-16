@@ -39,7 +39,7 @@
         "features": {
             "Lokale Verschlüsselung": "Speichere Nachrichten und Idendität verschlüsselt auf der Festplatte",
             "Gruppenchates": "Lade leute in welche ein oder kreire selbst welche",
-            "Loglevel einstellen": "Verändere das Loglevel im laufenden Betrieb.",
+            "Loglevel einstellen": "Verändere das Loglevel im laufenden Betrieb",
             "I18N": "Es ist für alle Sprachen vorbereitet"
         },
         "bugs": {
@@ -49,12 +49,12 @@
             "initview": {
                 "desc": "Initialansicht",
                 "src": "images/tryToxicInit.png",
-                "link": "http://www.imghack.se/155968"
+                "link": "images/tryToxicInit.png"
             },
             "detailcompanyview": {
                 "desc": "Chatansicht in Deutsch",
                 "src": "images/tryToxicChat.png",
-                "link": "http://www.imghack.se/155969"
+                "link": "images/tryToxicChat.png"
             }
         }
     },

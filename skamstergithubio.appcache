@@ -3,6 +3,7 @@ CACHE MANIFEST
 CACHE:
 /stylesheets/stylesheet.css
 /stylesheets/pygment_trac.css
+/stylesheets/lightbox.css
 /index.html
 #enable reloading on subsites
 /index.html?s=about
@@ -15,6 +16,7 @@ CACHE:
 /js/jquery-migrate-1.2.1.min.js
 /js/jquery-ui-1.10.4.custom.min.js
 /js/ownScript.js
+/js/lightbox.js
 /images/tryToxicChat.png
 /images/tryToxicInit.png
 /en.json
