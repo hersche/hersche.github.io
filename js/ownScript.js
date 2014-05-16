@@ -87,7 +87,8 @@ function processHtml(jDataIn, name) {
             } else {
                 displayHtml += "<h2>" + val.title + '</h2><p>' + val.preword + "</p>";
                 toc += '<ul><li><a href="#features">' + jDataIn.transl.features + '</a></li>';
-                if (val.pictures.length > 0) {
+                var pictureCount = Object.keys(val.pictures).length
+                if (pictureCount > 0) {
                     toc += '<li><a href="#pictures">' + jDataIn.transl.pictures + '</a></li>';
                 }
                 toc += '<li><a href="#bugs">' + jDataIn.transl.bugs + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a></li></ul>';
@@ -96,7 +97,8 @@ function processHtml(jDataIn, name) {
                 $.each(val.features, function(fKey, fVal) {
                     displayHtml += "<li>" + fKey + ": " + fVal + "</li>";
                 });
-                if (val.pictures.length > 0) {
+                
+                if (pictureCount > 0) {
                     displayHtml += '</ul><h3><a name="pictures" />' + jDataIn.transl.pictures + '</h3><ul>';
                     $.each(val.pictures, function(pKey, pVal) {
                         displayHtml += "<li>" + pVal.desc + ":<br /> <a href='" + pVal.link + "'><img src='" + pVal.src + "' /></a></li>";
