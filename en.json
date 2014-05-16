@@ -2,7 +2,7 @@
     "index": {
         "title": "Linklist + about site and projects",
 		"preword":"This is the linklist, or alternative home. Sitemap would may be a good name, but it contains 'external' links too. <br /> It contains also a description about the website and my in context to my projects.",
-        "description": "TEXT IS UNDER CONSTRUCTION! This is a little link-collection.<br /> It is using your webstorage to provide this site also offline when supported by your browser. <br />This site is very current and i will update it and try to learn something about this relative new HTML5-Stuff. Also javascript is really new to me, but it's a funny world. Not a 'secure' language or so, but funny and sometimes usefull (see map-plugin in Peta). <br />On the other site i like some more serious and mostly OOP and MVC-Structred Code. On this site you could became a overview of the projects, which exists out of this. I see a important point in security for my applications, so 2 of the Projects got encryption too. The last is written in PHP and is not encrypted in db yet - but this will follow, as i find time. It will look similiar implemented to the other projects. <br /> The last part is about me. I like to have some money too and have done a education as applicationdeveloper. After education i worked by body, cause 4 years 8 hours a day computer was too much! Now i broke my feet, and wanted to do something - i never really ended programming (just reduced a lot!), but since April, as you could see on github, i'm really active again! I dont want donations, this should be a example, in which direction i could develop.<br /> You could use them freely and i'm happy when someone fork or contribute it  <br />Also Bugreportings are nice (then i see work's not unused :))" 
+        "description": "TEXT IS UNDER CONSTRUCTION! This is a little link-collection.<br /> It is using your webstorage to provide this site also offline when supported by your browser. <br />This site is very current and i will update it and try to learn something about this relative new HTML5-Stuff. Also javascript is really new to me, but it's a funny world. Not a 'secure' language or so, but funny and sometimes usefull (see <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>map-plugin in Peta</a>). <br />On the other site i like some more serious and mostly OOP and MVC-Structred Code. On this site you could became a overview of the projects, which exists out of this. I see a important point in security for my applications, so 2 of the Projects got encryption too. The last is written in PHP and is not encrypted in db yet - but this will follow, as i find time. It will look similiar implemented to the other projects. <br /> The last part is about me. I like to have some money too and have done a education as applicationdeveloper. After education i worked by body, cause 4 years 8 hours a day computer was too much! Now i broke my feet, and wanted to do something - i never really ended programming (just reduced a lot!), but since April, as you could see on github, i'm really active again! I dont want donations, this should be a example, in which direction i could develop.<br /> You could use them freely and i'm happy when someone fork or contribute it  <br />Also Bugreportings are nice (then i see work's not unused :))" 
         ,
         "content": {
             "tryToxic": {
@@ -17,7 +17,7 @@
                 "dLink": "jobManagementDocs/index.html",
                 "stable": "Basicly stable, paused"
             },
-            "Peta": {
+            "peta": {
                 "pLink": "index.html?s=peta",
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
@@ -86,15 +86,16 @@
             }
         }
     },
-    "Peta": {
+    "peta": {
         "title": "Peta",
-        "preword": "The name Peta came out of PHPMeta. It’s basicly written in PHP with the use of smarty (template/.tpl-files) and dojo (Javascript). The idea behind this project is to avoid redundant rewrites. A maingoal is a good structure, where the administrator of a system could change things as he need. It's target is a base for everything.",
-        "description": "I think every webmaster know this a little bit - when you want to have a really nice system, then you have to use systemS (multiple wordpresses for example). When you have to fix something then, you have to do this on every single instance/installation. My idea is, to avoid those redundant stuff - basicly you could do a blog, gallery or whatelse, separeted, but same code, for family, friends and publics.. or all the same in one time!",
+        "description": "The name Peta came out of PHPMeta. It’s basicly written in PHP with the use of smarty (template/.tpl-files) and dojo (Javascript). The idea behind this project is to avoid redundant rewrites. A maingoal is a good structure, where the administrator of a system could change things as he need. It's target is a base for everything.",
+        "preword": "I think every webmaster know this a little bit - when you want to have a really nice system, then you have to use systemS (multiple wordpresses for example). When you have to fix something then, you have to do this on every single instance/installation. My idea is, to avoid those redundant stuff - basicly you could do a blog, gallery or whatelse, separeted, but same code, for family, friends and publics.. or all the same in one time!",
         "features": {
             "Usermanagement": "A rightsystem, login, etc. One user could have one to n instances",
             "Flexible pluginsystem": "Every plugin could have one to n instances",
             "Flexible accesssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
             "MVC-Structure": "It's easy to learn the code or write a plugin, since there's a separation between model, view and controller.",
+            "Plugins":"<ul><li><a href='https://github.com/skamster/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a>|<a href='http://www.openstreetmap.org'>openstreetmap</a>'s with POI-support</li><li><a href='https://github.com/skamster/Peta/tree/master/plugins/markdownSite'>mdSite</a>|<a href='https://en.wikipedia.org/wiki/Markdown'>markDown-Websites</a></li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/site/site.php'>site</a>|html-Websites</li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/forum/forum.php'>forum</a>|Tree-like forum</li><li>Some simple examples..</li></ul>",
             "Livedemo": "<a href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
@@ -102,11 +103,6 @@
             "Others": "undetected"
         },
         "pictures": {
-            "php": {
-                "desc": "Powered by PHP",
-                "src": "http://www.php.net/images/logos/php-power-black.gif",
-                "link": "http://www.php.net/"
-            }
         }
     },
     "skamster.github.io":{
@@ -118,10 +114,10 @@
             "JSON-Dataquery":"All data gets loaded by static JSON. This is for translation.",
             "jQuery":"jQuery is for loading stuff, animate and finding of classes" },
         "bugs":{
-        "onTop-Button in Chrome and Opera":"The button wont move in chrome. Works well in firefox."
+        "onTop-Button in Chrome and Opera":"The button wont move in chrome. Works well in firefox.",
+        "Individual tooltips":"On the language- and refreshbutton, the tooltip is the first 0.3s wrong placed. Looks funny, comes with 'woble'-effect."
     },
     "pictures":{
-    "":""
     }
     },
     "about": {

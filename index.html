@@ -101,6 +101,7 @@
             }
             $("#showContent").fadeIn(1000);
             $("#menu").fadeIn(1000);
+            $("#scroller").fadeIn(2000);
             $(document).on('click', '#aboutImg', function(e) {
                 if (aboutImgBig) {
                     $("#aboutImg").animate({
@@ -130,8 +131,8 @@
 </head>
 
 <body>
-        <div id="scroller">
-    	<div id="toc">Test!</div>
+        <div id="scroller" style="display:none">
+    	<div id="toc"></div>
     	<div id="top"><a href="#onTop"><img id="onTopImg" src="images/onTop.png" /></a></div>
     </div>
     <header>
