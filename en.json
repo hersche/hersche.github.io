@@ -6,22 +6,28 @@
         ,
         "content": {
             "tryToxic": {
-                "pLink": "index.html?s=tryToxic",
+                "pLink": "tryToxic",
                 "sLink": "https://github.com/skamster/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
                 "stable": "Unshure (API changes very fast, since heavy development in core)"
             },
             "jobManagement": {
-                "pLink": "index.html?s=jobManagement",
+                "pLink": "jobManagement",
                 "sLink": "https://github.com/skamster/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
                 "stable": "Basicly stable, paused"
             },
-            "peta": {
-                "pLink": "index.html?s=peta",
+            "Peta": {
+                "pLink": "peta",
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
                 "stable": "Heavy development, but basicly stable"
+            },
+            "MultiSms": {
+                "pLink": "multisms",
+                "sLink": "https://github.com/skamster/MultiSms/",
+                "dLink": "petaDocs/index.html",
+                "stable": "Doesn't work atm"
             },
             "skamster.github.io": {
                 "pLink": "index.html?s=skamster.github.io",
@@ -86,6 +92,19 @@
             }
         }
     },
+        "multisms": {
+        "title": "MultiSms",
+        "description": "The name MultiSms is taken from it's originalname, Multimobile(widget). The idea is, to send sms over diffrent providers. The script automate steps the users has to do on the website. It also checks for success (depend on plugin).",
+        "preword": "The Project is very old (29.11.2008) and was my second pythonapplication. It use pyKde4 and python2.",
+        "features": {
+            "Pluginsystem": "The application is able to load several providers via it's pluginsystem.",
+            "Widget": "The project offers a widget for the KDE-Interface."
+        },
+        "bugs": {
+            "Everything!": "Need a complete rewrite to python3"
+        },
+        "pictures":{}
+        },
     "peta": {
         "title": "Peta",
         "description": "The name Peta came out of PHPMeta. It’s basicly written in PHP with the use of smarty (template/.tpl-files) and dojo (Javascript). The idea behind this project is to avoid redundant rewrites. A maingoal is a good structure, where the administrator of a system could change things as he need. It's target is a base for everything.",

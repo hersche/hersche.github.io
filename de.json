@@ -6,25 +6,31 @@
         ,
         "content": {
             "tryToxic": {
-                "pLink": "index.html?s=tryToxic",
+                "pLink": "tryToxic",
                 "sLink": "https://github.com/skamster/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
                 "stable": "Ein wenig unsicher, da sich die API des Kerns schnell verändern kann"
             },
             "jobManagement": {
-                "pLink": "index.html?s=jobManagement",
+                "pLink": "jobManagement",
                 "sLink": "https://github.com/skamster/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
                 "stable": "Sollte funktionieren, derzeit pausiert"
             },
-            "peta": {
-                "pLink": "index.html?s=peta",
+            "Peta": {
+                "pLink": "peta",
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
                 "stable": "Grundsätzlich bereit"
             },
+            "MultiSms": {
+                "pLink": "multisms",
+                "sLink": "https://github.com/skamster/MultiSms/",
+                "dLink": "petaDocs/index.html",
+                "stable": "Funktioniert derzeit nicht"
+            },
             "skamster.github.io": {
-                "pLink": "index.html?s=skamster.github.io",
+                "pLink": "skamster.github.io",
                 "sLink": "https://github.com/skamster/skamster.github.io/",
                 "dLink": "https://github.com/skamster/skamster.github.io/",
                 "stable": "Wird im Moment stark erweitert"
@@ -85,7 +91,19 @@
             }
         }
     },
-
+        "multisms": {
+        "title": "MultiSms",
+        "description": "Der Name MultiSms ist an den ursprünlichen Namen Multimobile(widget) angelehnt. Die Idee war und ist, Sms auf einfache weise über verschiedene Anbieter senden zu können. Das Script macht die Abläufe, welche der Benutzer auf der Website machen müsste, automatisch.",
+        "preword": "Das Projekt ist schon sehr alt (29.11.2008) und war mein zweites Pythonprogramm. Es nutzt pyKde4 und python2.",
+        "features": {
+            "Pluginsystem": "Das Programm kann mehrere Anbieter via pluginsystem laden.",
+            "Widget": "Das Projekt bietet ein Widget für die KDE-Oberfläche."
+        },
+        "bugs": {
+            "Alles!":"Benötigt ein komplettes Umschreiben auf python3"
+        },
+        "pictures":{}
+        },
     "peta": {
         "title": "Peta",
         "description": "Der Name Peta kommt von PhpmETA. Es ist vor allem in PHP 5.5 geschrieben und bedient sich smarty (template/.tpl-files) und dojo (Javascript). Die Idee hinter diesem Projekt ist, redundantes schreiben von Code zu verhinden. Ein Hauptziel ist eine gute Struktur, in dem ein Administrator schnell und unkompliziert arbeiten kann.. Das letztendliche Ziel ist eine Basis für alles.",
