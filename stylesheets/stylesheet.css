@@ -66,7 +66,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
     padding: 0;
     position: absolute;
     top: 48px;
-    left: 80px;
+    left: 3%;
     width: auto;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -212,9 +212,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
     filter: grayscale(100%);
     /* IE 6-9 */
     z-index: 444;
-    width: 213px;
+    width: 155px;
     max-width: 800px;
-    height: 160px;
+    height: 220px;
     transition: width 2s, height 2s, transform 2s, effect 4s;
 }
 #aboutImg:hover {
