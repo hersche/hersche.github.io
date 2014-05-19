@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0;
 background: rgb(58,7,57);
-background: -moz-linear-gradient(left,  rgba(58,7,57,1) 8%, rgba(24,107,0,1) 39%, rgba(52,109,0,1) 77%, rgba(0,158,7,1) 100%);
-background: -webkit-gradient(linear, left top, right top, color-stop(8%,rgba(58,7,57,1)), color-stop(39%,rgba(24,107,0,1)), color-stop(77%,rgba(52,109,0,1)), color-stop(100%,rgba(0,158,7,1)));
-background: -webkit-linear-gradient(left,  rgba(58,7,57,1) 8%,rgba(24,107,0,1) 39%,rgba(52,109,0,1) 77%,rgba(0,158,7,1) 100%);
-background: -o-linear-gradient(left,  rgba(58,7,57,1) 8%,rgba(24,107,0,1) 39%,rgba(52,109,0,1) 77%,rgba(0,158,7,1) 100%);
-background: -ms-linear-gradient(left,  rgba(58,7,57,1) 8%,rgba(24,107,0,1) 39%,rgba(52,109,0,1) 77%,rgba(0,158,7,1) 100%);
-background: linear-gradient(to right,  rgba(58,7,57,1) 8%,rgba(24,107,0,1) 39%,rgba(52,109,0,1) 77%,rgba(0,158,7,1) 100%);
+background: -moz-linear-gradient(left,  rgba(58,7,57,1) 20%, rgba(24,107,0,1) 24%, rgba(52,109,0,1) 77%, rgba(0,158,7,1) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(20%,rgba(58,7,57,1)), color-stop(24%,rgba(24,107,0,1)), color-stop(77%,rgba(52,109,0,1)), color-stop(100%,rgba(0,158,7,1)));
+background: -webkit-linear-gradient(left,  rgba(58,7,57,1) 20%,rgba(24,107,0,1) 24%,rgba(52,109,0,1) 77%,rgba(0,158,7,1) 100%);
+background: -o-linear-gradient(left,  rgba(58,7,57,1) 20%,rgba(24,107,0,1) 24%,rgba(52,109,0,1) 77%,rgba(0,158,7,1) 100%);
+background: -ms-linear-gradient(left,  rgba(58,7,57,1) 20%,rgba(24,107,0,1) 24%,rgba(52,109,0,1) 77%,rgba(0,158,7,1) 100%);
+background: linear-gradient(to right,  rgba(58,7,57,1) 20%,rgba(24,107,0,1) 24%,rgba(52,109,0,1) 77%,rgba(0,158,7,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a0739', endColorstr='#009e07',GradientType=1 );
 
 
@@ -30,7 +30,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a0739', end
     box-shadow: 0 0 5px 5px #ADFF2F;
     width: auto;
     max-width: 60%;
-    margin-left: 20%;
+    margin-left: 25%;
     height: 85px;
     padding-left: 30px;
     padding-right: 30px;
@@ -53,7 +53,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
     width: auto;
     /* max-width: 600px; 
   margin: 0 auto;  */
-    padding-left: 25%;
+    padding-left: 30%;
     max-width: 50%;
 }
 #showContent img {
@@ -93,7 +93,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
 #top {
     position: absolute;
     bottom: 20px;
-    margin-left: 2%;
+    margin-left: 12%;
     float:bottom;
     max-height: 17%;
     overflow: hidden;
