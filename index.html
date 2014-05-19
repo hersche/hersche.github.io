@@ -54,13 +54,18 @@
                     jsonFile = GET('lang') + ".json";
                 }
             }
-            var menuYloc = parseInt($("#scroller").css("top").substring(0,$("#scroller").css("top").indexOf("px")));
-            $(window).scroll(function () {
-                if(isNaN(menuYloc)){
+            var menuYloc = parseInt($("#scroller").css("top").substring(0, $("#scroller").css("top").indexOf("px")));
+            $(window).scroll(function() {
+                if (isNaN(menuYloc)) {
                     menuYloc = 0;
                 }
-                var offset = menuYloc+$(document).scrollTop()+"px";
-                $("#scroller").animate({top:offset},{duration:250,queue:false});
+                var offset = menuYloc + $(document).scrollTop() + "px";
+                $("#scroller").animate({
+                    top: offset
+                }, {
+                    duration: 250,
+                    queue: false
+                });
             });
             if (typeof(Storage) !== "undefined" && GET('lang') === 'undefined') {
                 // Code for localStorage/sessionStorage.
@@ -80,11 +85,11 @@
                         localStorage.jData = data.responseText.replace("\n", "");
                         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
                         $("#menucontent").html(processMenuHtml(jData));
-                    var ProcessedHtml = processHtml(jData, lastName);
-                    $("#toc").html(ProcessedHtml[1]);
-                    $("#showContent").html(ProcessedHtml[0]);
+                        var ProcessedHtml = processHtml(jData, lastName);
+                        $("#toc").html(ProcessedHtml[1]);
+                        $("#showContent").html(ProcessedHtml[0]);
                         //the link is a note '<a href"index.html"  onclick="changeContent(\'index\'); return false">&lt;&lt;</a>'+
-			
+
                     });
                 }
             } else {
@@ -99,16 +104,16 @@
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
-                    
+
                 });
             }
             $("#showContent").fadeIn(2500);
             $("#menu").fadeIn(1000);
             $("#scroller").fadeIn(1500);
             $(document).on('click', '#aboutImg', function(e) {
-                
+
                 if (aboutImgBig) {
-                    
+
                     $("#aboutImg").animate({
                             width: '185px',
                             'height': '200px'
@@ -118,56 +123,62 @@
                         });
 
                 } else {
-                    
-                    $("#aboutImg").animate({
-                            width: '400px',
-                            height: '369px',
 
-                        
+                    $("#aboutImg").animate({
+                            width: '369px',
+                            height: '400px',
+
+
                         }, 500,
                         function() {
                             aboutImgBig = true;
                         });
                 }
             });
-            
-                        $(document).on('mouseover', '#aboutImg', function(e) {
-                    $("#aboutImg").addClass("aboutonhover");
+
+            $(document).on('mouseover', '#aboutImg', function(e) {
+                $("#aboutImg").addClass("aboutonhover");
 
             });
 
 
         });
-        
-    
     </script>
 </head>
 
 <body>
-        <div id="scroller" style="display:none">
-    	<div id="toc"></div>
-    	<div id="top"><a href="#onTop"><img id="onTopImg" src="images/onTop.png" /></a></div>
+    <div id="scroller" style="display:none">
+        <div id="toc"></div>
+        <div id="top">
+            <a href="#onTop">
+                <img id="onTopImg" src="images/onTop.png" />
+            </a>
+        </div>
     </div>
     <header>
 
-            <div style="display: none;" id="menu">
-                <div>
-                <span style="display: inline; vertical-align: top;"><h1 style="display: inline; vertical-align: top;">skamster.github.io</h1><p style="display: inline; vertical-align: top;"> docs, projects and personal infos<a name="onTop" ></a></p></span></div>
-               <div style="width: 100%;"> 
-                <span id="menucontent" style="display:inline-block; float:left;">
+        <div style="display: none;" id="menu">
+            <div style="display:block;">
+                <h1 style="display: inline;">skamster.github.io</h1>
+                <p style="display: inline; vertical-align: top;">docs, projects and personal infos
+                    <a name="onTop"></a>
+                </p>
+            </div>
+            <div style="display:flex;">
+                <span id="menucontent" style="float:left;">
                 
                 </span>
                 <span style="float:left; padding-top: 5px;">
                 <a target="_blank" style="float: left;" data-tool="Go to my personal github-account" href="https://github.com/skamster" class="btn tooltip fade">My GitHub</a>
                     </span>
-                <span style="display:inline-block; float:right; padding-top: 5px;">
+                <span style="float:right; padding-top: 5px;">
                                     
                 
                                     <a style="float:right;" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a>
-                    <a style="float:right; margin-right: 1px;" data-tool="Wechsle zu deutschem Inhalt" href="index.html?lang=de" class="btn fade tooltip">DE</a>
-                    <a style="float:right;" data-tool="Change to english content" href="index.html?lang=en" class="btn fade tooltip">EN</a>
+                    <a style="float:right;" data-tool="Wechsle zu deutschem Inhalt" href="index.html?lang=de" class="btn fade tooltip">DE</a>
+                    <a style="float:right; margin-right: 1px;" data-tool="Change to english content" href="index.html?lang=en" class="btn fade tooltip">EN</a>
                     </span>
-                   </div>
+            </div>
         </div>
     </header>
 
@@ -176,10 +187,28 @@
     </div>
     <noscript>
         <h3>This site needs javascript to load it's contents</h3>
-        <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs: <ul><li><a href="petaDocs/">Peta</a></li><li><a href="tryToxicDocs/">tryToxic</a></li><li><a href="jobManagementDocs/">jobManagement</a></li></ul></p>
-    
+        <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:
+            <ul>
+                <li><a href="petaDocs/">Peta</a>
+                </li>
+                <li><a href="tryToxicDocs/">tryToxic</a>
+                </li>
+                <li><a href="jobManagementDocs/">jobManagement</a>
+                </li>
+            </ul>
+        </p>
+
         <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
-        <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen: <ul><li><a href="petaDocs/">Peta</a></li><li><a href="tryToxicDocs/">tryToxic</a></li><li><a href="jobManagementDocs/">jobManagement</a></li></ul></p>
+        <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:
+            <ul>
+                <li><a href="petaDocs/">Peta</a>
+                </li>
+                <li><a href="tryToxicDocs/">tryToxic</a>
+                </li>
+                <li><a href="jobManagementDocs/">jobManagement</a>
+                </li>
+            </ul>
+        </p>
     </noscript>
 
 </body>
