@@ -131,7 +131,8 @@
         "features":{
             "Offlinestoring":"This site use your HTML5-offlinestorage, so that you can reload this site or also reenter it after closing the browser and dont have a internetconnection. Try it out!",
             "JSON-Dataquery":"All data gets loaded by static JSON. This is for translation.",
-            "jQuery":"jQuery is for loading stuff, animate and finding of classes" },
+            "jQuery":"jQuery is for loading stuff, animate and finding of classes",
+            "Diffrent styles":"You could choose a alternative style by view->website-style"},
         "bugs":{
         "onTop-Button in Chrome and Opera":"The button wont move in chrome. Works well in firefox.",
         "Individual tooltips":"On the language- and refreshbutton, the tooltip is the first 0.3s wrong placed. Looks funny, comes with 'woble'-effect."
