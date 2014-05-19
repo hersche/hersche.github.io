@@ -179,13 +179,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
         -webkit-transform: scale(1);
     }
     25% {
-        -webkit-transform: scale(.8);
+        -webkit-transform: scale(.90);
     }
     50% {
         -webkit-transform: scale(1);
     }
     75% {
-        -webkit-transform: scale(.9);
+        -webkit-transform: scale(.95);
     }
     100% {
         -webkit-transform: scale(1);
@@ -195,8 +195,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
     content: "";
     display: inline-block;
     /* margin-left: -25px; */
-    padding-left: 20px;
-    padding-right: 2px;
+    padding-left: 25px;
+    padding-right: 1px;
     /*line-height: 16px; */
 }
 .dropdowncontainer:hover > .submenu li:before {
@@ -212,20 +212,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
     filter: grayscale(100%);
     /* IE 6-9 */
     z-index: 444;
-    width: 155px;
+    width: 185px;
     max-width: 800px;
-    height: 220px;
+    height: 200px;
     transition: width 2s, height 2s, transform 2s, effect 4s;
 }
+
+#aboutImg:active {
+    -webkit-animation: spin 3s linear;
+    animation: spin 3s linear;
+    -moz-animation: spin 3s linear;
+}
+
+#aboutImg:not(:active) {
+    -webkit-animation: none;
+    animation: none;
+    -moz-animation: none;
+    
+}
+
+
 #aboutImg:hover {
     -webkit-filter: none;
     -moz-filter: none;
     -ms-filter: none;
     filter: none;
     cursor: pointer;
-    -webkit-animation: bounceImage 6s infinite linear;
-    animation: bounceImage 6s infinite linear;
 }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(720deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(720deg); } }
+@keyframes spin {100% { transform: rotate(720deg);} }
+
 @keyframes bounceImage {
     0% {
         initial;

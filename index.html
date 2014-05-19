@@ -101,28 +101,38 @@
                     
                 });
             }
-            $("#showContent").fadeIn(1000);
+            $("#showContent").fadeIn(2500);
             $("#menu").fadeIn(1000);
-            $("#scroller").fadeIn(2000);
+            $("#scroller").fadeIn(1500);
             $(document).on('click', '#aboutImg', function(e) {
+                
                 if (aboutImgBig) {
+                    
                     $("#aboutImg").animate({
-                            width: '150px',
-                            height: '220px',
+                            width: '185px',
+                            'height': '200px'
                         }, 500,
                         function() {
                             aboutImgBig = false;
                         });
 
                 } else {
+                    
                     $("#aboutImg").animate({
-                            width: '280px',
-                            height: '400px'
+                            width: '400px',
+                            height: '369px',
+
+                        
                         }, 500,
                         function() {
                             aboutImgBig = true;
                         });
                 }
+            });
+            
+                        $(document).on('mouseover', '#aboutImg', function(e) {
+                    $("#aboutImg").addClass("aboutonhover");
+
             });
 
 
