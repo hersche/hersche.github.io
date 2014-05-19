@@ -108,7 +108,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d5b4a', end
     overflow-x:auto;
 }
 #toc ul li a {
-    color: green;
+    color: #ff0000;
     width: auto;
     max-width: 10%;
 }
@@ -131,7 +131,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d5b4a', end
     display: inline-block;
     position: relative;
     /* padding: 5px 50px; */
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     padding-top: 5px;
     cursor: pointer;
     z-index: 555;
@@ -290,7 +290,7 @@ header h1 {
     font-weight: bold;
     margin-left: 5px;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    color: #b5e853;
+    color: white;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
     letter-spacing: -1px;
     -webkit-font-smoothing: antialiased;
@@ -358,13 +358,13 @@ ul li {
     list-style: none;
 }
 ul li:before {
-    content: ">>";
+    content: "=>";
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    font-size: 13px;
-    color: #b5e853;
+    font-size: 20px;
+    color: #black;
     margin-left: -37px;
-    margin-right: 21px;
-    line-height: 16px;
+    margin-right: 16px;
+    line-height: 20px;
 }
 .arrowStyle {
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -428,8 +428,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc8f27', end
 
     padding: 8px 12px;
     margin-left: 6px;
-    border-radius: 50px;
-    border: 2px solid transparent;
+    border-radius: 5px;
+    border: 1px solid transparent;
     color: rgba(255, 255, 255, 0.8);
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
@@ -447,8 +447,8 @@ background: -o-linear-gradient(-45deg,  rgba(206,24,24,1) 39%,rgba(188,143,39,1)
 background: -ms-linear-gradient(-45deg,  rgba(206,24,24,1) 39%,rgba(188,143,39,1) 73%);
 background: linear-gradient(135deg,  rgba(206,24,24,1) 39%,rgba(188,143,39,1) 73%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce1818', endColorstr='#bc8f27',GradientType=1 );
-
-    border-color: green;
+color: #f3fa32; 
+    border-color: red;
 }
 .btn .icon {
     display: inline-block;
@@ -461,7 +461,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce1818', end
    a, a:hover, a:visited
 */
 
+.btn a:hover {
+   
+}
+
 a {
+    color: red;
+    text-shadow: 0 0 5px rgba(104, 90, 255, 0.5);
+}
+
+a:hover {
     color: #202699;
     text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
