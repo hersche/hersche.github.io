@@ -9,9 +9,6 @@ background: -o-linear-gradient(left,  rgba(8,7,10,1) 20%,rgba(209,209,209,1) 22%
 background: -ms-linear-gradient(left,  rgba(8,7,10,1) 20%,rgba(209,209,209,1) 22%,rgba(209,209,209,1) 100%);
 background: linear-gradient(to right,  rgba(8,7,10,1) 20%,rgba(209,209,209,1) 22%,rgba(209,209,209,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08070a', endColorstr='#d1d1d1',GradientType=1 );
-
-
-
     color: black;
     font: 16px;
     line-height: 1.5;
@@ -29,8 +26,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08070a', end
     -moz-box-shadow: 0 0 5px 5px black;
     -webkit-box-shadow: 0 0 5px 5px black;
     box-shadow: 0 0 5px 5px black;
-    width: auto;
-    max-width: 60%;
+    min-width: 55%;
+    max-width: 78%;
     margin-left: 23%;
     padding-left: 1px;
     padding-right: 1px;
@@ -118,8 +115,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d5b4a', end
     color: blue;
 }
 
+
+
 #toc ul li:before {
-    content: "";
+    content: ">";
+    color: red;
 }
 .submenu li {
     display: block;

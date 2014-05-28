@@ -28,8 +28,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a0739', end
     -moz-box-shadow: 0 0 5px 5px #ADFF2F;
     -webkit-box-shadow: 0 0 5px 5px #ADFF2F;
     box-shadow: 0 0 5px 5px #ADFF2F;
-    width: auto;
-    max-width: 60%;
+    width: 60%;
+    max-width: 78%;
     margin-left: 25%;
     padding-left: 2%;
     padding-right: 2%;
@@ -126,7 +126,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
     margin-top: 2px;
     padding-left: 50px;
     margin-left: 30px;
+    
     text-shadow: 0 -1px 0 #000;
+}
+.submenu {
+    background-color: blue;
+    
 }
 .dropdowncontainer {
     font: bold 12px/18px sans-serif;
