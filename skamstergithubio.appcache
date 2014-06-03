@@ -17,7 +17,8 @@ CACHE:
 /js/jquery-migrate-1.2.1.min.js
 /js/jquery-ui-1.10.4.custom.min.js
 /js/ownScript.js
-/js/lightbox.js
+/js/jquery.fancybox.js
+/js/jquery.mousewheel-3.0.6.pack.js
 /images/tryToxicChat.png
 /images/tryToxicInit.png
 /en.json
@@ -25,3 +26,9 @@ CACHE:
 /images/jobManagementDataInit.png
 /images/jobManagementDetailComapnyView.png
 /images/onTop.png
+/images/oldjob1.jpg
+/images/oldjob2.jpg
+/images/oldjob3.jpg
+/images/oldjob4.jpg
+/images/oldjob6.jpg
+
