@@ -38,7 +38,12 @@ function processHtml(jDataIn, name) {
                 });
                 displayHtml += '</table><p><a name="description"></a>' + val.description + '</p>';
                 toc += '<ul><li><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a></li></ul>';
-            } else if (key === "about") {
+            } 
+            
+            
+            
+            
+            else if (key === "about") {
                 displayHtml += '<div class="h-card" <p><img class="u-photo" id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function(cKey, cVal) {
                     if (cKey === "E-Mail") {
@@ -59,22 +64,21 @@ function processHtml(jDataIn, name) {
                         langs += '</ul></li>';
                     }
                 });
-                
+
                 toc += '</ul><li><a href="#sys">' + val.sys.trans + '</a></li><ul>';
                 var syst = "<ul>";
                 $.each(val.sys, function(sKey, sVal) {
-                    if ((sKey != "trans")&&(sKey != "centossub")) {
+                    if ((sKey != "trans") && (sKey != "centossub")) {
                         if (sKey === "CentOS") {
                             toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
                             syst += '<li><a name="' + sKey + '" /><b>' + sKey + '</b>: ' + sVal + '</li><ul>';
-                            $.each(val.sys.centossub, function(subKey,subValue){
+                            $.each(val.sys.centossub, function(subKey, subValue) {
                                 syst += '<li><a name="' + subKey + '" /><b>' + subKey + '</b>: ' + subValue + '</li>';
                             });
                             syst += '</ul>';
-                        }
-                        else{
-                        toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
-                        syst += '<li><a name="' + sKey + '" /><b>' + sKey + '</b>: ' + sVal + '</li>';
+                        } else {
+                            toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
+                            syst += '<li><a name="' + sKey + '" /><b>' + sKey + '</b>: ' + sVal + '</li>';
                         }
                     }
                 });
@@ -93,6 +97,20 @@ function processHtml(jDataIn, name) {
                     toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
                     support += '<li><a name="' + sKey + '" /><b>' + sKey + '</b>: ' + sVal + '</li>';
                 });
+                
+                
+                toc += '</ul><li><a href="#oldjobs">' + val.oldjobs.trans + '</a></li><ul>';
+                var oldjobs = '<p><a name="oldjobs" />' + val.oldjobs.description + '</p';
+                
+                toc += '</ul><li><a href="#hobbys">' + val.hobbys.trans + '</a></li><ul>';
+                var hobbys = "<ul>";
+                $.each(val.hobbys, function(hKey, hVal) {
+                    if (hKey != "trans") {
+                        toc += '<li><a href="#' + hKey + '">' + hKey + '</a></li>';
+                        hobbys += '<li><a name="' + hKey + '" /><b>' + hKey + '</b>: ' + hVal + '</li>';
+                    }
+                });
+                
                 toc += "</ul></ul>";
                 //displayHtml += "</div>"+toc+"</ul>";
                 displayHtml += '</ul><h3><a name="languages" />' + val.languages.trans + '</h3><ul>';
@@ -103,7 +121,10 @@ function processHtml(jDataIn, name) {
                 displayHtml += mobile + '</ul></div>';
                 displayHtml += '<h3><a name="support" />' + val.support.trans + '</h3>';
                 displayHtml += val.support.desc + support + '</ul></div>';
-
+                displayHtml += '<h3><a name="oldjobs" />' + val.oldjobs.trans + '</h3>';
+                displayHtml += oldjobs + '</ul></div>';
+                displayHtml += '<h3><a name="hobbys" />' + val.hobbys.trans + '</h3>';
+                displayHtml += hobbys + '</ul></div>';
 
             } else {
                 displayHtml += "<h2>" + val.title + '</h2><p>' + val.preword + "</p>";
@@ -118,11 +139,11 @@ function processHtml(jDataIn, name) {
                 $.each(val.features, function(fKey, fVal) {
                     displayHtml += "<li>" + fKey + ": " + fVal + "</li>";
                 });
-                
+
                 if (pictureCount > 0) {
                     displayHtml += '</ul><h3><a name="pictures" />' + jDataIn.transl.pictures + '</h3><ul>';
                     $.each(val.pictures, function(pKey, pVal) {
-                        displayHtml += "<li>" + pVal.desc + ":<br /> <a href='" + pVal.link + "' title='" + pVal.desc + "' rel='lightbox'><img src='" + pVal.src + "' /></a></li>";
+                        displayHtml += '<li>' + pVal.desc + ':<br /> <a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img src="' + pVal.src + '" /></a></li>';
                     });
                 }
                 displayHtml += '</ul><h3 ><a name="bugs" />' + jDataIn.transl.bugs + '</h3><ul>';
