@@ -126,7 +126,7 @@
     },
     "skamster.github.io":{
      "title":"skamster.github.io",
-    "preword":"This website informs about current projects and about me.",
+    "preword":"This website informs about current projects and about me. Style isn't my strongest part, but it should looking acceptable.",
     "description":"A technical demo, descriptions, links and pictures, nice collected and marked up. This is the idea of this website. If this would be a clientwebsite or on a project, i would never use that much effects. But here, it's for playing in use. By the way, the most of this effects is wrote in CSS 3.",
         "features":{
             "Offlinestoring":"This site use your HTML5-offlinestorage, so that you can reload this site or also reenter it after closing the browser and dont have a internetconnection. Try it out!",
@@ -134,7 +134,7 @@
             "jQuery":"jQuery is for loading stuff, animate and finding of classes",
             "Diffrent styles":"You could choose a alternative style by View->website-style"},
         "bugs":{
-        "onTop-Button in Chrome and Opera":"The button wont move in chrome. Works well in firefox.",
+        "onTop-Button in Chrome and Opera":"The button wont move in chrome. Works well in firefox."
     },
     "pictures":{
     }
@@ -142,7 +142,7 @@
     "about": {
 	"title":"About me",
         "preword":"Some information over me",
-        "description": "Hello <br /> Right now i've no idea for a good description about me - TEXT IS IN DEVELOPMENT!",
+        "description": "Hello,<br />This part informs you about my expiriences since now. I tried many things and detect my strong parts in programming and also a little in administration/support of systems. On the other site, i wouldn't say i'm a designer or hardware-specialist. <br /> Following you will find a list with my expiriences - the education-passport will be sendet on question.",
         "picture": "profile.png",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
@@ -176,9 +176,9 @@
                 }
             },
                 "Java": {
-                    "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Because android is growing very much and dalvik gets to be very optimized, it looking attractive again.",
+                    "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Because android is growing very much and <a href='https://en.wikipedia.org/wiki/Dalvik_%28software%29'>dalvik</a> gets to be very optimized, it looking attractive again.",
                     "frameworks": {
-                        "Groovy & grails": "Similiar to ruby and rails. Groovy is a more simple language and grails is a great framework! Both are based on Java"
+                        "Groovy & grails": "Similiar to ruby and rails. <a href='https://en.wikipedia.org/wiki/Groovy_%28programming_language%29'>Groovy</a> is a more simple language and <a href='https://en.wikipedia.org/wiki/Grails_%28framework%29'>grails</a> is a great framework! Both are based on Java"
                     }
                 },
                 "Javascript": {
@@ -193,13 +193,36 @@
         "mobile": {
         "trans":"Mobile hacking",
         "dd-wrt":"Used on some Siemens and Lynksys-routers",
-        "GTA02/Openmoko": "<a href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>My first Smartphone</a> (400Mhz). I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, SHR (stable hybrid release) which used the <a href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Windowmanager</a>. I wrote <a href='https://gist.github.com/skamster/10565527'>my first gtk-python-application</a> there.<br />On the other site, what i used - <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> which was really stable and fast (cause it doesn't needed a Xorg-server). <br /><a href='http://qt-project.org/'>Qt</a> is ql! <br />Now the project gets a hardwareupgrade since some years, it's called <a href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> and is continued by another company.",
+        "GTA02/Openmoko": "<a href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>My first Smartphone</a> (400Mhz). I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, <a href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release) which used the <a href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Windowmanager</a>. I wrote <a href='https://gist.github.com/skamster/10565527'>my first gtk-python-application</a> there.<br />On the other site, what i used - <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> which was really stable and fast (cause it doesn't needed a Xorg-server). <br /><a href='http://qt-project.org/'>Qt</a> is ql! <br />Now the project gets a hardwareupgrade since some years, it's called <a href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> and is continued by another company.",
             "Sony Xperia":"Because of money (i still would like a GTA04) i buyed a <a href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a> after the GSM-modem was fail for doing it's work. The new one was <a href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'secured' with 600Mhz improved processor (1Ghz Singlecore) - nice! Easy to root, i also did this for some friends. The first expirience with <a href='http://www.xda-developers.com/'>xda</a>. After not a year, i couldn't do a phone anymore - the quality was too bad, no matter which rom.",
             "Motorola":"After my Xperia i go back to 600Mhz, a cheap Motorola 'outdoor' Phone, <a href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. This is still <a href='http://forum.xda-developers.com/showthread.php?t=2079202'>rootable</a> by flashing a spain firmware until bootloader is installed (TWRP, i think) and plug out after that step (before install your whished rom). Nice, because recoverable. After the screen gets broken, i get some gifts in short time - two HTC's",
             "HTC":"I became my two HTC's for free, as a gift from friends. One is a <a href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), the other a <a href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). This is a massive performance-improvement for me! The One X is faster than my Laptop (2x1.86Ghz vs. the 4x1.5)! Nice for testing stuff, being up to date but secured. Rooting is still easy through a official way.",
             "Samsung":"Some friends get some Samsung Galaxy S4 and also the mini-version. I was allowed to root the mini, what also works easy in a official way.",
             "IPhone":"I did this for a friend's IPhone 4S. Replaced a screen (success), next time a speaker.",
             "Sony PSP (very old 2000-Serie)":"I became this as a gift for the iphone-repairment. Updated (6.60) and flashed with permanently homebrew, like it should be! Very nice for NEOGEO-Games (as a child i loved 'Metal-Slug'!), but it plays PSP-ISO's as usual discs. Nice!"
+    },
+        "sys": {
+        "trans":"Sysadmin-Expiriences",
+        "Windows 3.1":"My first computer with 20Mb-Harddisk and 20 floppys to setup.",
+        "Windows 98-Xp":"My following computers. From my first 4x-Cddrive to my first disc-burner.",
+        "Mandrivia Linux":"This was my first linux i really used. Was a little like kubuntu today.",
+        "OpenSuse":"As this project getting started, it looks interessting (cause of simpleness) - but personaly, i've too much failures there. Today, this may changed, didn't use it again",
+        "Gentoo":"After playing a little with linux, dualboots and that stuff, i tried <a href='https://en.wikipedia.org/wiki/Gentoo_Linux'>gentoo</a>. This was short before my education. In the education, a teacher was a gentoo-user too, and i was allowed to have a gentoo-installation as default (while other didn't pass they're kernel-panics, but they also felt lucky when they where back in Win Xp ;) ). This is my favourite distro!",
+        "Fedora":"In my company, we used basicly fedora. I didn't really liked that, so i've changed to gentoo.",
+        "Kubuntu":"Because of <a href='https://en.wikipedia.org/wiki/Gentoo_Linux'>gentoo</a> was too unstable (mh, with unstable repos and play arounds), i've changed to kubuntu. Kubuntu, because i use <a href='https://en.wikipedia.org/wiki/KDE'>KDE</a> since version 3. With this distro i support a lot of computer users which like to change to linux",
+        "CentOS":"For the servers in our company, we've used CentOS. Basicly i've learned development, but i was able to work some weeks by the Webadmin-dudes. We also got a 'play-around'-server for each worker, which used this system too. Those got 512MB of RAM. My services where: ",
+        "centossub":{
+        "XMPP/Jabber":"<a href='https://en.wikipedia.org/wiki/Openfire'>Openfire</a>, a java-based <a href='https://en.wikipedia.org/wiki/XMPP'>Jabberserver</a>. Because of it's RAM-ussage i've changed to <a href='https://en.wikipedia.org/wiki/Ejabberd'>Ejabberd</a> after a while",
+        "E-Mail":"<a href='https://en.wikipedia.org/wiki/Sendmail'>Sendmail</a> and <a href='https://en.wikipedia.org/wiki/Dovecot_%28software%29>dovecot</a>. As some sys-admins say: Setup sendmail once, and it's nice. Set it up more and you're a crazy.",
+        "Tor-Node":"A simple node in the <a href='https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29'>tor-anonymizing-network</a>",
+        "Apache":"A <a href='https://en.wikipedia.org/wiki/Apache_HTTP_Server'>webserver</a>, configured for ruby & rails and php-support.",
+        "MySQL":"A really default database",
+        "Diaspora":"This is a <a href='https://en.wikipedia.org/wiki/Diaspora_%28software%29'>social-network</a> which works similiar to E-Mail (P2P). It was running over Apache (ruby & rails). Since i have issues with self-signed certificates and not always time, it was still unstable",
+        "Seeks":"A <a href='https://en.wikipedia.org/wiki/Seeks'>P2P-Searchengine</a> for getting results from google, stackoverflow, duckduckgo, wikipedia or whatever else. Today, there's also a fork called <a href='https://github.com/asciimoo/searx'>searx</a>."
+    },
+    "Debian":"I've used <a href='https://en.wikipedia.org/wiki/Debian'>debian</a> for my second server, which i've for about a year. <a href='https://en.wikipedia.org/wiki/Debian'>Debian</a> is also the base for <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> (see Mobile hacks/Openmoko) It's a really often used system and base for a lot of distros. I know apt-get better by using kubuntu than debian.",
+    "Sabayon":"This is my currently favourite-looking distro. It's based on gentoo, but using precompiled packages (which are compiled by gentoo-repos). It default-desktop is KDE and it's rolling-release. Yay!"
+        
     }
         } ,
         "transl":{

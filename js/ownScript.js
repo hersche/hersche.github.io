@@ -59,6 +59,25 @@ function processHtml(jDataIn, name) {
                         langs += '</ul></li>';
                     }
                 });
+                
+                toc += '</ul><li><a href="#sys">' + val.sys.trans + '</a></li><ul>';
+                var syst = "<ul>";
+                $.each(val.sys, function(sKey, sVal) {
+                    if ((sKey != "trans")&&(sKey != "centossub")) {
+                        if (sKey === "CentOS") {
+                            toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
+                            syst += '<li><a name="' + sKey + '" /><b>' + sKey + '</b>: ' + sVal + '</li><ul>';
+                            $.each(val.sys.centossub, function(subKey,subValue){
+                                syst += '<li><a name="' + subKey + '" /><b>' + subKey + '</b>: ' + subValue + '</li>';
+                            });
+                            syst += '</ul>';
+                        }
+                        else{
+                        toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
+                        syst += '<li><a name="' + sKey + '" /><b>' + sKey + '</b>: ' + sVal + '</li>';
+                        }
+                    }
+                });
                 toc += '</ul><li><a href="#mobile">' + val.mobile.trans + '</a></li><ul>';
                 var mobile = "<ul>";
                 $.each(val.mobile, function(mKey, mVal) {
@@ -78,6 +97,8 @@ function processHtml(jDataIn, name) {
                 //displayHtml += "</div>"+toc+"</ul>";
                 displayHtml += '</ul><h3><a name="languages" />' + val.languages.trans + '</h3><ul>';
                 displayHtml += langs + '</ul>';
+                displayHtml += '</ul><h3><a name="sys" />' + val.sys.trans + '</h3><ul>';
+                displayHtml += syst + '</ul>';
                 displayHtml += '<h3><a name="mobile" />' + val.mobile.trans + '</h3>';
                 displayHtml += mobile + '</ul></div>';
                 displayHtml += '<h3><a name="support" />' + val.support.trans + '</h3>';
