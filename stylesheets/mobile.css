@@ -30,9 +30,8 @@ body {
     max-width: 70%;
     margin-left: 23%;
     padding-left: 1px;
-    position: absolute;
     padding-right: 1px;
-    top: 8px;
+    padding-top: 8px;
     padding-bottom: 2px;
     text-shadow: 1px 1px 1px white;
     border: 1px thin;

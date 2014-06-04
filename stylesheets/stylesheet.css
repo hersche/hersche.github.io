@@ -33,6 +33,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a0739', end
     margin-left: 25%;
     padding-left: 2%;
     padding-right: 2%;
+    position: absolute;
     padding-top: 8px;
     padding-bottom: 2px;
     text-shadow: 1px 1px 1px #FF0000;
@@ -130,7 +131,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', end
     text-shadow: 0 -1px 0 #000;
 }
 .submenu {
-    background-color: blue;
+    background: -moz-linear-gradient(-45deg,  rgba(175,95,68,0.23) 0%, rgba(196,113,106,0.2) 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(175,95,68,0.23)), color-stop(100%,rgba(196,113,106,0.2)));
+background: -webkit-linear-gradient(-45deg,  rgba(175,95,68,0.23) 0%,rgba(196,113,106,0.2) 100%);
+background: -o-linear-gradient(-45deg,  rgba(175,95,68,0.23) 0%,rgba(196,113,106,0.2) 100%);
+background: -ms-linear-gradient(-45deg,  rgba(175,95,68,0.23) 0%,rgba(196,113,106,0.2) 100%);
+background: linear-gradient(135deg,  rgba(175,95,68,0.23) 0%,rgba(196,113,106,0.2) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3baf5f44', endColorstr='#33c4716a',GradientType=1 );
+
     
 }
 .dropdowncontainer {

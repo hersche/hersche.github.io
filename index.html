@@ -57,14 +57,25 @@
             }
             
             $('.gallerybox').fancybox();
-            var menuYloc = parseInt($("#scroller").css("top").substring(0, $("#scroller").css("top").indexOf("px")));
+            var menuYloc = parseInt($("#menu").css("top").substring(0, $("#menu").css("top").indexOf("px")));
+            var tocYloc = parseInt($("#scroller").css("top").substring(0, $("#scroller").css("top").indexOf("px")));
             $(window).scroll(function() {
                 if (isNaN(menuYloc)) {
                     menuYloc = 0;
                 }
-                var offset = menuYloc + $(document).scrollTop() + "px";
+                if (isNaN(tocYloc)) {
+                    tocYloc = 0;
+                }
+                var tocoffset = tocYloc + $(document).scrollTop() + "px";
+                var menuoffset = menuYloc + $(document).scrollTop() + "px";
                 $("#scroller").animate({
-                    top: offset
+                    top: tocoffset
+                }, {
+                    duration: 250,
+                    queue: false
+                });
+                $("#menu").animate({
+                    top: menuoffset
                 }, {
                     duration: 250,
                     queue: false
