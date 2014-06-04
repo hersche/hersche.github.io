@@ -56,7 +56,15 @@
                 }
             }
             
-            $('.gallerybox').fancybox();
+            $('.gallerybox').fancybox({
+                padding: 0,
+                radius: "6px",
+                openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150
+            });
             var menuYloc = parseInt($("#menu").css("top").substring(0, $("#menu").css("top").indexOf("px")));
             var tocYloc = parseInt($("#scroller").css("top").substring(0, $("#scroller").css("top").indexOf("px")));
             $(window).scroll(function() {
