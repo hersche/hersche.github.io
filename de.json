@@ -201,7 +201,7 @@
     },
                 "hobbys":{
             "trans":"Andere Interessen",
-            "Longboards":"Ich fahre Longboard nun seit rund 9 Jahren. Es ist mein bester Fahrrad-Ersatz.",
+            "Longboards":"Ich fahre Longboard nun seit rund 9 Jahren. Es ist mein bester Fahrrad-Ersatz.<br /><a style='display: inline;' class='gallerybox' data-fancybox-group='gallery' href='images/board.jpg' title='Boards an der Aare, Bern 2014' ><img src='images/board.jpg' style='display: inline;'/></a>",
             "Fahrrad":"Das Fahrrad ist eine gute Basis für Reisen. Ich mag dies auch im I18N-Stiel (international)",
             "12v-Systeme":"Meine eigene Elektronik basiert vollständig auf 12 Volt und wird von einer Solarzelle gespiesen. Ich brauche keinen Konvertierer auf 230 Volt!",
             "Holz":"Holz ist ein geniales Material, um damit zu arbeiten."
