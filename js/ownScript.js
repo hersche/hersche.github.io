@@ -25,7 +25,7 @@ function processMenuHtml(jDataIn) {
 
 function processHtml(jDataIn, name) {
     "use strict";
-    var displayHtml = "";
+    var displayHtml = '<div style="margin-top:10%;">';
     var toc = "";
     $.each(jDataIn, function(key, val) {
         if (name === key) {
@@ -159,6 +159,7 @@ function processHtml(jDataIn, name) {
 
         toc = "Some loaded foo-replace";
     }
+    displayHtml += "</div>";
     return [displayHtml, toc];
 }
 
