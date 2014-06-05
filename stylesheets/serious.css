@@ -47,6 +47,36 @@ body {
     background: linear-gradient(135deg, rgba(45, 91, 74, 0.8) 15%, rgba(209, 209, 209, 0.8) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#2d5b4a', endColorstr='#d1d1d1', GradientType=1);
 }
+
+
+.gallerytable {
+    padding: 0;
+    margin:0;
+    max-width: 300%;
+}
+.gallerytablediv {
+ max-height: 450px; width: 100%;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+}
+.gallerytable tr {
+    padding: 0; 
+    margin:0;
+    overflow-x: scroll; 
+    height: 400px;
+}
+.gallerytable tr td {
+
+    padding: 0; 
+    margin:0;
+    height: 400px;
+}
+
+.gallerytable tr td a img {
+    max-height: 350px;
+    padding: 0;
+    margin: 0;
+}
 #showContent {
     width: auto;
     /* max-width: 600px; 
@@ -56,11 +86,16 @@ body {
     min-width: 30%;
     z-index: 400;
 }
+
+.projectpic {
+    width: 50%;
+    height: 50%;
+}
 #showContent img {
     border: 2px solid;
     border-radius: 30px;
     border-color: transparent;
-    max-width: 50%;
+    max-width: 100%;
 }
 .submenu {
     padding: 0;
@@ -403,18 +438,7 @@ pre {
     overflow: auto;
     overflow-y: hidden;
 }
-table {
-    width: 100%;
-    margin: 0 0 20px 0;
-}
-th {
-    text-align: left;
-    border-bottom: 1px dashed #b5e853;
-    padding: 5px 10px;
-}
-td {
-    padding: 5px 10px;
-}
+
 hr {
     height: 0;
     border: 0;
