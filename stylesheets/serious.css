@@ -28,6 +28,7 @@ body {
     box-shadow: 0 0 5px 5px black;
     min-width: 50%;
     max-width: 70%;
+    z-index: 998;
     margin-left: 23%;
     padding-left: 1px;
     position: absolute;

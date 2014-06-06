@@ -29,6 +29,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a0739', end
     -webkit-box-shadow: 0 0 5px 5px #ADFF2F;
     box-shadow: 0 0 5px 5px #ADFF2F;
     width: 60%;
+    z-index: 998;
     max-width: 78%;
     margin-left: 25%;
     padding-left: 2%;
