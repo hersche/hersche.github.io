@@ -244,6 +244,10 @@
     "projectname":"Projektname",
     "source":"Quelltext",
     "doc":"Doku",
-    "table":"Linktabelle"
+    "table":"Linktabelle",
+    "refresh":"Erneuern",
+    "nowebstorage":"Sie haben keinen Offlinespeichersupport",
+    "fromstorage":"vom Offlinespeicher",
+    "fromnew":"gerade Erledigt"
 }
 }

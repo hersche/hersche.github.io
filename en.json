@@ -246,6 +246,10 @@
     "projectname":"Projectname",
     "source":"Sourcecode",
     "doc":"Docs",
-    "table":"Linktable"
+    "table":"Linktable",
+    "refresh":"Refresh",
+    "nowebstorage":"You don't have webstoragesupport",
+    "fromstorage":"from Webstorage",
+    "fromnew":"reloaded right now!"
 }
     }

@@ -47,6 +47,7 @@
             } else {
                 lastName = "index";
             }
+            
             if (lang == "de" && GET('lang') == 'undefined') {
                 jsonFile = "de.json";
             }
@@ -55,15 +56,15 @@
                     jsonFile = GET('lang') + ".json";
                 }
             }
-            
+
             $('.gallerybox').fancybox({
                 padding: 0,
                 radius: "6px",
-                openEffect : 'elastic',
-				openSpeed  : 150,
+                openEffect: 'elastic',
+                openSpeed: 150,
 
-				closeEffect : 'elastic',
-				closeSpeed  : 150
+                closeEffect: 'elastic',
+                closeSpeed: 150
             });
             var menuYloc = parseInt($("#menu").css("top").substring(0, $("#menu").css("top").indexOf("px")));
             var tocYloc = parseInt($("#scroller").css("top").substring(0, $("#scroller").css("top").indexOf("px")));
@@ -89,23 +90,36 @@
                     queue: false
                 });
             });
-            if (typeof(Storage) !== "undefined" && GET('lang') === 'undefined') {
+            if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
-                if (localStorage.jData) {
+                if (localStorage.langFile!=jsonFile){
+                    localStorage.langFile = jsonFile;
+                    updateContent();
+                }
+                if ((localStorage.jData) && (localStorage.storeDate)) {
                     jData = jQuery.parseJSON(localStorage.jData);
+                    $("#refresh").html(jData.transl.refresh+" ("+localStorage.storeDate+"/"+jData.transl.fromstorage+")");
                     $("#menucontent").html(processMenuHtml(jData));
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                 } else {
                     //retrive
-                    var jqxhr = $.getJSON(jsonFile, function() {
+                    var d = new Date();
+                    var jqxhr = $.getJSON(localStorage.langFile, function() {
                         console.log("success one, do nothing.");
                     });
                     jqxhr.complete(function(data) {
                         console.log("success2, worktime! heyho lets go..");
                         localStorage.jData = data.responseText.replace("\n", "");
+                        if (lang === "de") {
+                            localStorage.storeDate = d.getDay() +"."+ d.getMonth() +"."+ d.getFullYear();
+                        } else {
+                            localStorage.storeDate = d.getMonth() +"."+ d.getDay() +"."+ d.getFullYear();
+                        }
+                        
                         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
+                        $("#refresh").html(jData.transl.refresh+" ("+localStorage.storeDate+"/"+jData.transl.fromnew+")");
                         $("#menucontent").html(processMenuHtml(jData));
                         var ProcessedHtml = processHtml(jData, lastName);
                         $("#toc").html(ProcessedHtml[1]);
@@ -119,13 +133,14 @@
                 var jqxhr = $.getJSON(jsonFile, function() {
                     console.log("success one, do nothing.");
                 });
-                jqxhr.complete(function(data) {
+                jqxhr.complete(function(data2) {
                     console.log("success2, worktime! heyho lets go..");
-                    jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
+                    jData = jQuery.parseJSON(data2.responseText.replace("\n", ""));
                     $("#menucontent").html(processMenuHtml(jData));
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
+                    $("#refresh").html(jData.transl.refresh+" ("+jData.transl.nowebstorage+")");
 
                 });
             }
@@ -197,7 +212,7 @@
                 <span style="float:right; padding-top: 5px;">
 
 
-                                    <a style="float:right;" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a>
+                                    <a style="float:right;" id="refresh" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a>
                     <a style="float:right;" data-tool="Wechsle zu deutschem Inhalt" href="index.html?lang=de" class="btn fade tooltip">DE</a>
                     <a style="float:right; margin-right: 1px;" data-tool="Change to english content" href="index.html?lang=en" class="btn fade tooltip">EN</a>
                     </span>
