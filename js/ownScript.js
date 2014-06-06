@@ -192,6 +192,7 @@ function changeContent(name) {
         }, "skamster.github.io::" + name, "index.html?s=" + name);
     }
     if (name != lastName) {
+        
         $("#animationContainer").effect("slide", {
             "direction": "right",
             "mode": "hide"
@@ -199,7 +200,7 @@ function changeContent(name) {
             var ProcessedHtml = processHtml(jData, name);
             $("#showContent").html(ProcessedHtml[0]);
             $("#toc").html(ProcessedHtml[1]);
-
+            $("html, body").animate({ scrollTop: 0 }, "slow");
         });
 
         $("#animationContainer").effect("slide", {
