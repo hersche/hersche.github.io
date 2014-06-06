@@ -92,10 +92,6 @@
             });
             if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
-                if (localStorage.langFile!=jsonFile){
-                    localStorage.langFile = jsonFile;
-                    updateContent();
-                }
                 if ((localStorage.jData) && (localStorage.storeDate)) {
                     jData = jQuery.parseJSON(localStorage.jData);
                     $("#refresh").html(jData.transl.refresh+" ("+localStorage.storeDate+"/"+jData.transl.fromstorage+")");
@@ -106,7 +102,7 @@
                 } else {
                     //retrive
                     var d = new Date();
-                    var jqxhr = $.getJSON(localStorage.langFile, function() {
+                    var jqxhr = $.getJSON(jsonFile, function() {
                         console.log("success one, do nothing.");
                     });
                     jqxhr.complete(function(data) {
@@ -213,8 +209,8 @@
 
 
                                     <a style="float:right;" id="refresh" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a>
-                    <a style="float:right;" data-tool="Wechsle zu deutschem Inhalt" href="index.html?lang=de" class="btn fade tooltip">DE</a>
-                    <a style="float:right; margin-right: 1px;" data-tool="Change to english content" href="index.html?lang=en" class="btn fade tooltip">EN</a>
+                    <a style="float:right;" data-tool="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade tooltip">DE</a>
+                    <a style="float:right; margin-right: 1px;" data-tool="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade tooltip">EN</a>
                     </span>
             </div>
         </div>
