@@ -154,6 +154,8 @@ body {
     color: #ff0000;
     width: auto;
     max-width: 10%;
+    font: 16px;
+    line-height: 1.5;
 }
 #toc ul li a:hover {
     color: blue;
