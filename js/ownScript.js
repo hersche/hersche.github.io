@@ -170,6 +170,7 @@ function updateContent() {
     jqxhr.complete(function(data) {
         if (typeof(Storage) !== "undefined") {
             localStorage.removeItem("jData");
+            localStorage.removeItem("storeDate");
             location.reload();
         }
     });

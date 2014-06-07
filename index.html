@@ -54,6 +54,7 @@
             if (GET('lang') != 'undefined') {
                 if (GET('lang') === "de" || GET('lang') === "en") {
                     jsonFile = GET('lang') + ".json";
+                    lang = GET('lang');
                 }
             }
 
@@ -109,9 +110,9 @@
                         console.log("success2, worktime! heyho lets go..");
                         localStorage.jData = data.responseText.replace("\n", "");
                         if (lang === "de") {
-                            localStorage.storeDate = d.getDay() +"."+ d.getMonth() +"."+ d.getFullYear();
+                            localStorage.storeDate = d.getUTCDate() +"."+ d.getUTCMonth() +"."+ d.getUTCFullYear();
                         } else {
-                            localStorage.storeDate = d.getMonth() +"."+ d.getDay() +"."+ d.getFullYear();
+                            localStorage.storeDate = d.getUTCMonth() +"."+ d.getUTCDate() +"."+ d.getUTCFullYear();
                         }
                         
                         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
