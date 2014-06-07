@@ -326,8 +326,8 @@ li {
 */
 
 .anchor {
-    top: -120px;
-    display: block; position: relative;
+    top: -125px;
+    display: inline; position: relative;
 }
 
 header {

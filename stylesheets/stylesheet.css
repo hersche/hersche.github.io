@@ -50,10 +50,9 @@ background: linear-gradient(135deg,  rgba(88,39,96,1) 0%,rgba(88,39,96,0.99) 9%,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#582760', endColorstr='#009e07',GradientType=1 );
 
 }
-
 .anchor {
-    top: -120px;
-    display: block; position: relative;
+    top: -125px;
+    display: inline; position: relative;
 }
 
 .projectpic {
