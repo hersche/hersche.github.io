@@ -325,6 +325,11 @@ li {
    h2       - project description
 */
 
+.anchor {
+    top: -120px;
+    display: block; position: relative;
+}
+
 header {
     width: 100%;
     padding: 20px 0;
