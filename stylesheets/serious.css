@@ -337,8 +337,9 @@ header h1 {
     font-weight: bold;
     margin-left: 5px;
     font-family: Monaco, "New Century Schoolbook", "Times";
-    color: white;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1);
+    color: #EEC169;
+    text-shadow: 2px 1px 1px #FB0C05;
+    /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1); */
     letter-spacing: -1px;
     -webkit-font-smoothing: antialiased;
 }
