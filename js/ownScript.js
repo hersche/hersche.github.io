@@ -131,9 +131,9 @@ function processHtml(jDataIn, name) {
                 toc += '<ul><li><a href="#features">' + jDataIn.transl.features + '</a></li>';
                 var pictureCount = Object.keys(val.pictures).length
                 if (pictureCount > 0) {
-                    toc += '<li><a href="#pictures" class="anchor" >' + jDataIn.transl.pictures + '</a></li>';
+                    toc += '<li><a href="#pictures" >' + jDataIn.transl.pictures + '</a></li>';
                 }
-                toc += '<li><a href="#bugs" class="anchor">' + jDataIn.transl.bugs + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a></li></ul>';
+                toc += '<li><a href="#bugs">' + jDataIn.transl.bugs + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a></li></ul>';
                 displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>';
                 displayHtml += '<h3><a name="features" class="anchor" />' + jDataIn.transl.features + '</h3><ul>';
                 $.each(val.features, function(fKey, fVal) {
