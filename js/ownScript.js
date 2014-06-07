@@ -143,7 +143,7 @@ function processHtml(jDataIn, name) {
                 if (pictureCount > 0) {
                     displayHtml += '</ul><h3><a name="pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul>';
                     $.each(val.pictures, function(pKey, pVal) {
-                        displayHtml += '<li>' + pVal.desc + ': <a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></li>';
+                        displayHtml += '<li>' + pVal.desc + ': <br /><a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></li>';
                     });
                 }
                 displayHtml += '</ul><h3 ><a name="bugs" class="anchor" />' + jDataIn.transl.bugs + '</h3><ul>';
