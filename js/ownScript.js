@@ -57,7 +57,7 @@ function processHtml(jDataIn, name) {
                 $.each(val.languages, function(lKey, lVal) {
                     if (lKey != "trans") {
                         toc += '<li><a href="#' + lKey + '">' + lKey + '</a></li>';
-                        langs += '<li><a name="' + lKey + '" class="anchor" /><b>' + lKey + '</b>: ' + lVal.desc + '<ul style="margin-bottom:10px; list-style-type: none; list-style: none;">';
+                        langs += '<li><b>' + lKey + '</b>: ' + lVal.desc + '<a name="' + lKey + '" class="anchor" /><ul style="margin-bottom:10px; list-style-type: none; list-style: none;">';
                         $.each(lVal.frameworks, function(fKey, fVal) {
                             langs += '<li style="margin-bottom:5px;">' + fKey + ': ' + fVal + '</li>';
                         });
@@ -73,12 +73,12 @@ function processHtml(jDataIn, name) {
                             toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
                             syst += '<li><a name="' + sKey + '" class="anchor" /><b>' + sKey + '</b>: ' + sVal + '</li><ul>';
                             $.each(val.sys.centossub, function(subKey, subValue) {
-                                syst += '<li><a name="' + subKey + '" class="anchor" /><b>' + subKey + '</b>: ' + subValue + '</li>';
+                                syst += '<li><b>' + subKey + '</b>: ' + subValue + '<a name="' + subKey + '" class="anchor" /></li>';
                             });
                             syst += '</ul>';
                         } else {
                             toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
-                            syst += '<li><a name="' + sKey + '" class="anchor" /><b>' + sKey + '</b>: ' + sVal + '</li>';
+                            syst += '<li><b>' + sKey + '</b>: ' + sVal + '<a name="' + sKey + '" class="anchor" /></li>';
                         }
                     }
                 });
@@ -87,7 +87,7 @@ function processHtml(jDataIn, name) {
                 $.each(val.mobile, function(mKey, mVal) {
                     if (mKey != "trans") {
                         toc += '<li><a href="#' + mKey + '">' + mKey + '</a></li>';
-                        mobile += '<li><a name="' + mKey + '" class="anchor" /><b>' + mKey + '</b>: ' + mVal + '</li>';
+                        mobile += '<li><b>' + mKey + '</b>: ' + mVal + '<a name="' + mKey + '" class="anchor" /></li>';
                     }
                 });
 
@@ -95,19 +95,19 @@ function processHtml(jDataIn, name) {
                 var support = "<ul>";
                 $.each(val.support.reference, function(sKey, sVal) {
                     toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
-                    support += '<li><a name="' + sKey + '" class="anchor" /><b>' + sKey + '</b>: ' + sVal + '</li>';
+                    support += '<li><b>' + sKey + '</b>: ' + sVal + '<a name="' + sKey + '" class="anchor" /></li>';
                 });
                 
                 
                 toc += '</ul><li><a href="#oldjobs">' + val.oldjobs.trans + '</a></li><ul>';
-                var oldjobs = '<p><a name="oldjobs" class="anchor" />' + val.oldjobs.description + '</p';
+                var oldjobs = '<p><a name="oldjobs" class="anchor" />' + val.oldjobs.description + '</p>';
                 
                 toc += '</ul><li><a href="#hobbys">' + val.hobbys.trans + '</a></li><ul>';
                 var hobbys = "<ul>";
                 $.each(val.hobbys, function(hKey, hVal) {
                     if (hKey != "trans") {
                         toc += '<li><a href="#' + hKey + '">' + hKey + '</a></li>';
-                        hobbys += '<li><a name="' + hKey + '" class="anchor" /><b>' + hKey + '</b>: ' + hVal + '</li>';
+                        hobbys += '<li><b>' + hKey + '</b>: ' + hVal + '<a name="' + hKey + '" class="anchor" /></li>';
                     }
                 });
                 
@@ -131,9 +131,9 @@ function processHtml(jDataIn, name) {
                 toc += '<ul><li><a href="#features">' + jDataIn.transl.features + '</a></li>';
                 var pictureCount = Object.keys(val.pictures).length
                 if (pictureCount > 0) {
-                    toc += '<li><a href="#pictures" class="anchor" >' + jDataIn.transl.pictures + '</a></li>';
+                    toc += '<li><a href="#pictures">' + jDataIn.transl.pictures + '</a></li>';
                 }
-                toc += '<li><a href="#bugs" class="anchor">' + jDataIn.transl.bugs + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a></li></ul>';
+                toc += '<li><a href="#bugs">' + jDataIn.transl.bugs + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a></li></ul>';
                 displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>';
                 displayHtml += '<h3><a name="features" class="anchor" />' + jDataIn.transl.features + '</h3><ul>';
                 $.each(val.features, function(fKey, fVal) {
@@ -143,7 +143,7 @@ function processHtml(jDataIn, name) {
                 if (pictureCount > 0) {
                     displayHtml += '</ul><h3><a name="pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul>';
                     $.each(val.pictures, function(pKey, pVal) {
-                        displayHtml += '<li>' + pVal.desc + ':<br /> <a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></li>';
+                        displayHtml += '<li>' + pVal.desc + ': <a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></li>';
                     });
                 }
                 displayHtml += '</ul><h3 ><a name="bugs" class="anchor" />' + jDataIn.transl.bugs + '</h3><ul>';
