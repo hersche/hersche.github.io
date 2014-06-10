@@ -1,9 +1,8 @@
 {
     "index": {
         "title": "Linkliste, über die Seite und Projekte",
-		"preword":"Dies ist die Linkliste, das 'alternative' home oder die Sitemap. Diese Seite enthält jedoch auch externe Links. <br /> Sie enthält auch eine Beschreibung der Website und der aktiven Projekte.",
-        "description": "TEXT IST AM ENSTEHEN - BETAALPHASUPEREXPERIMENTEL!! <br /><h4><a name='website'></a>Website</h4>Diese und die ganze Seite nutzen deinen Webstorage, wenn dein Browser dies unterstüzt. Dies bemerken Sie am besten beim Wechsel der Sprachen - Sie müssen nach dem Wechsel der Sprache den 'Erneuern'-Knopf drücken, um die neue Sprachdatei zu laden.<br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch etwas über die relativ neuen HTML 5 Technologien zu lernen. Auch Javascript ist relativ neu für mich (2 Jahre), aber eine lustige Welt. Es ist keine 'sichere' Sprache, aber sie ist oftmals schöner Augenzucker (Eyecandy) und aktuell sogar nützlich (siehe <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Kartenplugin in Peta</a> und auch HTML5). <br />Auf der anderen Seite mag ich 'ernst zu nehmenderen' und meistens <a href='https://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a> und <a href='https://de.wikipedia.org/wiki/Objektorientierte_Programmierung'>objektorientieren Code</a>. Auf dieser Seite bekommen sie eine Übersicht über die Projekte, welche daraus enstanden sind. <span style='color: grey;'><h4><a name='security'></a>Kapitel Sicherheit/Websiten schützen</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Seite 309:<br />'Fragen Sie nach dem Zufallsprinzip nur bestimmte Zeichen des Passwortes ab: mal das erste und dritte Zeichen, mal das sechste und vierte.' Weiter unten: 'Wenn sie diese zusätzlichen Features integrieren, sind sie schon dicht an dem Verfahren das Banken für browserbasiertes Online-Banking verwenden.'</span><hr /> Logisch! Nein, ernsthaft, Sicherheit ist ein wichtiges Thema, auf das man zwei Augen richten sollte. Zwei meiner Projekte haben bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<h4><a name='about'></a>Über mich</h4>Der letzte Teil ist <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>Über mich</a>. Ich würde gerne etwas verdienen und habe diese Tätigkeit auch gelernt. Nach der Ausbildung arbeitete ich vor allem körperlich, da 4 Jahre lang, 8 Stunden am Tag Computer zu viel waren. Nun habe ich meinen Fuss gebrochen und wollte etwas tun - ich habe nie wirklich aufgehört zu programmieren (nur viel reduziert), aber seit April bin ich, wie sie auf github sehen können, wieder ziemlich aktiv!<br />Ich will keine Spenden, dies soll als Beispiel dienen, wie ich programmieren kann. <br />Sie können diese Projekte frei benutzen und ich bin glücklich, wenn jemand es forkt oder Fehler meldet oder es ausprobiert." 
-        ,
+        "preword": "Dies ist die Linkliste, das 'alternative' home oder die Sitemap. Diese Seite enthält jedoch auch externe Links. <br /> Sie enthält auch eine Beschreibung der Website und der aktiven Projekte.",
+        "description": "TEXT IST AM ENSTEHEN - BETAALPHASUPEREXPERIMENTEL!! <br /><h4><a name='website'></a>Website</h4>Diese und die ganze Seite nutzen deinen Webstorage, wenn dein Browser dies unterstüzt. Dies bemerken Sie am besten beim Wechsel der Sprachen - Sie müssen nach dem Wechsel der Sprache den 'Erneuern'-Knopf drücken, um die neue Sprachdatei zu laden.<br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch etwas über die relativ neuen HTML 5 Technologien zu lernen. Auch Javascript ist relativ neu für mich (2 Jahre), aber eine lustige Welt. Es ist keine 'sichere' Sprache, aber sie ist oftmals schöner Augenzucker (Eyecandy) und aktuell sogar nützlich (siehe <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Kartenplugin in Peta</a> und auch HTML5). <br />Auf der anderen Seite mag ich 'ernst zu nehmenderen' und meistens <a href='https://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a> und <a href='https://de.wikipedia.org/wiki/Objektorientierte_Programmierung'>objektorientieren Code</a>. Auf dieser Seite bekommen sie eine Übersicht über die Projekte, welche daraus enstanden sind. <span style='color: grey;'><h4><a name='security'></a>Kapitel Sicherheit/Websiten schützen</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Seite 309:<br />'Fragen Sie nach dem Zufallsprinzip nur bestimmte Zeichen des Passwortes ab: mal das erste und dritte Zeichen, mal das sechste und vierte.' Weiter unten: 'Wenn sie diese zusätzlichen Features integrieren, sind sie schon dicht an dem Verfahren das Banken für browserbasiertes Online-Banking verwenden.'</span><hr /> Logisch! Nein, ernsthaft, Sicherheit ist ein wichtiges Thema, auf das man zwei Augen richten sollte. Zwei meiner Projekte haben bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<h4><a name='about'></a>Über mich</h4>Der letzte Teil ist <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>Über mich</a>. Ich würde gerne etwas verdienen und habe diese Tätigkeit auch gelernt. Nach der Ausbildung arbeitete ich vor allem körperlich, da 4 Jahre lang, 8 Stunden am Tag Computer zu viel waren. Nun habe ich meinen Fuss gebrochen und wollte etwas tun - ich habe nie wirklich aufgehört zu programmieren (nur viel reduziert), aber seit April bin ich, wie sie auf github sehen können, wieder ziemlich aktiv!<br />Ich will keine Spenden, dies soll als Beispiel dienen, wie ich programmieren kann. <br />Sie können diese Projekte frei benutzen und ich bin glücklich, wenn jemand es forkt oder Fehler meldet oder es ausprobiert.",
         "content": {
             "tryToxic": {
                 "pLink": "tryToxic",
@@ -90,7 +89,7 @@
             }
         }
     },
-        "multisms": {
+    "multisms": {
         "title": "MultiSms",
         "description": "Der Name MultiSms ist an den ursprünlichen Namen Multimobile(widget) angelehnt. Die Idee war und ist, Sms auf einfache weise über verschiedene Anbieter senden zu können. Das Script macht die Abläufe, welche der Benutzer auf der Website machen müsste, automatisch.",
         "preword": "Das Projekt ist schon sehr alt (29.11.2008) und war mein zweites Pythonprogramm. Es nutzt pyKde4 und python2, enthält ein KDE-Widget und eine eigene KDE-Oberfläche.",
@@ -99,10 +98,10 @@
             "Widget": "Das Projekt bietet ein Widget für die KDE-Oberfläche."
         },
         "bugs": {
-            "Alles!":"Benötigt ein komplettes Umschreiben auf python3"
+            "Alles!": "Benötigt ein komplettes Umschreiben auf python3"
         },
-        "pictures":{}
-        },
+        "pictures": {}
+    },
     "peta": {
         "title": "Peta",
         "description": "Der Name Peta kommt von PhpmETA. Es ist vor allem in PHP 5.5 geschrieben und bedient sich smarty (template/.tpl-files) und dojo (Javascript). Die Idee hinter diesem Projekt ist, redundantes schreiben von Code zu verhinden. Ein Hauptziel ist eine gute Struktur, in dem ein Administrator schnell und unkompliziert arbeiten kann.. Das letztendliche Ziel ist eine Basis für alles.",
@@ -111,54 +110,52 @@
             "Flexibles Pluginsystem": "Jedes Plugin kann eine bis n Instanzen erstellen",
             "Flexibles Zugriffssystem": "Jeder Benutzer hat eine bis n Rollen. Jedes instanzierte Plugin hat eine bis n Rollen mit einem r/rw/admin-recht.",
             "MVC-Struktur": "Es sollte einfach sein, sich den Code anzueignen oder ein Plugin zu schreiben.",
-            "Plugins":"<ul><li><a href='https://github.com/skamster/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a> | <a href='http://www.openstreetmap.org'>Openstreetmap-Karten</a> mit POI-support</li><li><a href='https://github.com/skamster/Peta/tree/master/plugins/markdownSite'>mdSite</a> | <a href='https://de.wikipedia.org/wiki/Markdown'>markDown</a>-Websites</li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/site/site.php'>site</a> | html-Websites</li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/forum/forum.php'>forum</a> | Baumstrukturiertes Forum</li><li>Einige einfache Beispiele..</li></ul>",
-            
+            "Plugins": "<ul><li><a href='https://github.com/skamster/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a> | <a href='http://www.openstreetmap.org'>Openstreetmap-Karten</a> mit POI-support</li><li><a href='https://github.com/skamster/Peta/tree/master/plugins/markdownSite'>mdSite</a> | <a href='https://de.wikipedia.org/wiki/Markdown'>markDown</a>-Websites</li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/site/site.php'>site</a> | html-Websites</li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/forum/forum.php'>forum</a> | Baumstrukturiertes Forum</li><li>Einige einfache Beispiele..</li></ul>",
+
             "Livedemo": "<a href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
-            "Update accessrights": "Set ar fails on update, so rm ant touch!",
-            "...": "etcetc"
+            "Verändern der Zugriffsrechte bei den Plugins": "Das setzen schlägt fehl. Lösung: Rolle vom Plugin entfernen und mit gewünschten Rechten hinzufügen",
+            "Andere": "Nicht entdeckt"
         },
-        "pictures": {
-        }
+        "pictures": {}
     },
-    "skamster.github.io":{
-     "title":"skamster.github.io",
-    "preword":"Die Website informiert über aktuelle Projekte und meine wenigkeit",
-    "description":"Eine technische Demonstration, Beschreibung, Links und Bilder aller Ideen und Projekten schön gesammelt und dargestellt. Dies ist die Umsetzung dieser Idee. Wenn es eine Kundenwebsite oder eine Projektwebsite wäre, würde ich nie so viele Effekte verwenden. Aber hier kann dies als lustige Umsetzungsspielerei dienen und, wie erwähnt, demonstration meiner Fähigkeiten zugleich dienen. Die meisten Effekte sind nebenbei CSS 3 zu verdanken.",
-        "features":{
-            "Offlinespeicherung":"Die Seite nutzt Ihren HTML5-Offlinespeicher, so dass Sie die Seite mit einem einigermassen aktuellem Browser auch ohne Internetverbindung neu laden und aufrufen können. Probieren Sie es aus!",
-            "JSON-Datenabfrage":"Alle Daten werden per statischem JSON geladen. Dies dient der Übersetzung.",
-            "jQuery":"jQuery dient als Hauptbibliothek zur Animierung, des Ladens und findens der Klassen",
-            "Verschiedene Stile":"Gehen sie zu Ansicht->Websiten-Stil und wählen sie z.B fancy aus"
+    "skamster.github.io": {
+        "title": "skamster.github.io",
+        "preword": "Die Website informiert über aktuelle Projekte und meine wenigkeit",
+        "description": "Eine technische Demonstration, Beschreibung, Links und Bilder aller Ideen und Projekten schön gesammelt und dargestellt. Dies ist die Umsetzung dieser Idee. Wenn es eine Kundenwebsite oder eine Projektwebsite wäre, würde ich nie so viele Effekte verwenden. Aber hier kann dies als lustige Umsetzungsspielerei dienen und, wie erwähnt, demonstration meiner Fähigkeiten zugleich dienen. Die meisten Effekte sind nebenbei CSS 3 zu verdanken.",
+        "features": {
+            "Offlinespeicherung": "Die Seite nutzt Ihren HTML5-Offlinespeicher, so dass Sie die Seite mit einem einigermassen aktuellem Browser auch ohne Internetverbindung neu laden und aufrufen können. Probieren Sie es aus!",
+            "JSON-Datenabfrage": "Alle Daten werden per statischem JSON geladen. Dies dient der Übersetzung.",
+            "jQuery": "jQuery dient als Hauptbibliothek zur Animierung, des Ladens und findens der Klassen",
+            "Verschiedene Stile": "Gehen sie zu Ansicht->Websiten-Stil und wählen sie z.B fancy aus"
         },
-        "bugs":{
-        "<del>onTop-Knopf in Chrome und Opera</del>":"<del>Der Knopf bewegt sich in Chrome nicht. In Firefox funktioniert dies tadellos</del>"
-    },
-    "pictures":{
-    }
+        "bugs": {
+            "<del>onTop-Knopf in Chrome und Opera</del>": "<del>Der Knopf bewegt sich in Chrome nicht. In Firefox funktioniert dies tadellos</del>"
+        },
+        "pictures": {}
     },
     "about": {
-	"title":"Über mich",
-        "preword":"Einige Erfahrungen und Infos über mich",
-        "description": "Guten Tag,<br />Diesen Abschnitt informiert Sie über meine bisherigen Erfahrungen. Ich habe viele Dinge ausprobiert und habe meine Stärken vor allem beim Programmieren, aber auch beim Administrieren/Supporten von Systemen entdeckt. Im gegenzug würde ich mich nicht als Designer oder Hardware-Spezialist ausgeben.<br /> Nachfolgend finden Sie eine Liste meiner Erfahrungen - das Fähigkeitszeugniss verschicke ich auf Anfrage.",
+        "title": "Über mich",
+        "preword": "Einige Erfahrungen und Infos über mich",
+        "description": "Guten Tag,<br />Diesen Abschnitt informiert Sie über meine bisherigen Erfahrungen und Teile meines persönlichen Lebens. Ich habe viele Dinge ausprobiert und habe meine Stärken vor allem beim Programmieren, aber auch beim Administrieren/Supporten von Systemen entdeckt. Im gegenzug würde ich mich nicht als Designer oder Hardware-Spezialist ausgeben.<br /> Nachfolgend finden Sie eine Liste meiner Erfahrungen - das Fähigkeitszeugniss und die Kontaktinformation zu den Referenzen verschicke ich auf Anfrage (Privatsphäre).",
         "picture": "profile.png",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
             "E-Mail": "hersche@vmail.me",
             "Diaspora": "<a href='https://nerdpol.ch/u/hersche'>hersche@nerdpol.ch</a>",
-            "Xing":"<a href='https://www.xing.com/profile/Vinzenz_Hersche'>Vinzenz Hersche</a>"
+            "Xing": "<a href='https://www.xing.com/profile/Vinzenz_Hersche'>Vinzenz Hersche</a>"
         },
-        "support":{
-            "trans":"Suport referenzen",
-	    "desc":"Ich supporte die Computer verschiedener Menschen seit mehr als 6 Jahren mit Hilfe von Linux. Meistens nutze ich <a href='http://kubuntu.org'>Kubuntu</a>, manchmal auch Linux Mint, praktisch immer jedoch <a href='http://kde.org'>KDE</a>",
-	    "reference":{
-	      "Ines":"Aussage einer Person",
-	      "Christian":"eine andere Aussage.."
-	      }
-	    },
+        "support": {
+            "trans": "Suport referenzen",
+            "desc": "Ich supporte die Computer verschiedener Menschen seit mehr als 6 Jahren mit Hilfe von Linux. Meistens nutze ich <a href='http://kubuntu.org'>Kubuntu</a>, manchmal auch Linux Mint, praktisch immer jedoch <a href='http://kde.org'>KDE</a>",
+            "reference": {
+                "Ines": "Aussage einer Person",
+                "Christian": "eine andere Aussage.."
+            }
+        },
         "languages": {
-            "trans":"Programmiersprachen",
+            "trans": "Programmiersprachen",
             "PHP": {
                 "desc": "Nutze diese Sprache nun schon sehr lange. Seit mit <a href='http://php.net'>PHP5</a> die OOP-Welt Standart in der Sprache ist, ist es schön, diese nutzen zu können.",
                 "frameworks": {
@@ -171,82 +168,83 @@
                     "PyQt": "Qt ist eine sehr modulare UI-Bibliothek. Sie ist einfach zu benutzen und arbeitet sehr stabil.",
                     "PyTox": "PyTox ist eine Schnittstelle zum Tox-core-projekt. Für weitere Informationen besuchen Sie <a href='http://tox.im'>tox.im</a>",
                     "PyCrypto": "PyCrypto unterstüzt viele Arten von Hashing, symetrischer und asymetrischer Verschlüsselung. Es wird von mir grundsätzlich zur Verschlüsselung des lokalen Speichers genutzt."
-                } },
-                "Java": {
-                    "desc": "Diese Sprache lernte ich vor allem in der Ausbildung. Die JVM war oder ist ziemlich vollgestopft, was mir weniger gefällt. Sie ist strikt objektorientiert, was grossartig zum lernen ist. Seit Android die letzten Jahre zu wachsen begonnen hat und Dalvik sehr optimiert ist, wird die Sprache wieder interessant.",
-                    "frameworks": {
-                        "Groovy & Grails": "Zu vergleichen mit Ruby & Rails, aber in Java. Groovy ist eine eigene Sprache, Grails ein framework um schnell Webapplikationen entwickeln zu können."
-                    }
-                },
-                "Javascript": {
-                    "desc": "In der Vergangenheit war diese Sprache ein Beispiel dafür, warum man eine Seite lieber statisch macht. So viel inkompatibilität zwischen Browsern! Heute hat dies gewechselt, vieles ist Standart, es gibt mächtige JS-Frameworks und es gibt <a href='http://www.w3schools.com/html/html5_intro.asp'>Html 5</a>. Sehen Sie sich den Code der Seite an ;)",
-                    "frameworks": {
-                        "jQuery": "<a href='http://jquery.com/'>jQuery</a> ist eine sehr berühmte Bibliothek. Sie ist heutzutage schon fast Standart.",
-                        "Dojo": "<a href='http://dojotoolkit.org/'>Dojo</a> is ein sehr grosses Framework mit Unterstüzung für vieles, z.B Ui, Parsen, Verarbeiten, Ajax und so weiter. 12Mb mit sehr erweitertem Zeug!",
-                        "Leaflet":"<a href='http://leafletjs.com/'>Diese Bibliothek</a> ist sehr neu für mich. Sie ist perfekt, um google-ähnliche Karten (zumindest Zoom und Pois) darzustellen, basiert jedoch auf dem Openstreetmapprojekt.Ich bevorzuge dieses Kartenmaterial, da es frei und oftmals detailierter ist."
-                    }
                 }
             },
-        "mobile": {
-        "trans":"Mobil gehacktes",
-        "dd-wrt":"Gebraucht auf einigen Siemens- und Lynksys-Routern",
-        "GTA02/Openmoko": "<a href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>Mein erstes Smartphone</a> (400Mhz). Ich nutzte dieses für 3, relativ unstabile, Jahre. Am Schluss blieben etwa zwei aktive Projekte. Zum einen <a href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release), welches die <a href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Fensterverwaltung</a> nutzte. Ich schrieb <a href='https://gist.github.com/skamster/10565527'>meine erste Gtk-Python-Anwendung</a> auf diesem System (v.A da das SMS-Programm einen Bug hatte und ich meine SMS lesen wollte).<br />Auf der andern Seite nutze ich vor allem <a href='http://qtmoko.sourceforge.net/'>QtMoko</a>, welches sehr stabil und schnell war (da es keinen Xorg-Server brauchte). <br /><a href='http://qt-project.org/'>Qt</a> ist ql! <br />Jetzt gab es beim Projekt seit einigen Jahren eine Hardwareaufrüstung, genannt <a href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> die von einer anderen Firma fortgesetzt wird.",
-            "Sony Xperia":"Des Geldes wegen (ich hätte immer noch gerne ein GTA04) kaufte ich ein <a href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a>, nachdem das GSM-Modem des Openmokos kapput ging. Das neue war <a href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'gesichert' mit um 600Mhz gesteigertem Prozessor (1Ghz Singlecore) - hübsch! Einfach zu rooten, ich habe dies auch für einige Kollegen gemacht. Es war die erste Erfahrung mit <a href='http://www.xda-developers.com/'>xda</a>. Nach nicht einem Jahr konnte ich keinen Anruf mehr tätigen, die Qualität war zu schlecht, egal welche Rom ich verwendete.",
-            "Motorola":"Nach meinem Xperia ging ich zu 600Mhz zurück, ein billiges Motorola 'outdoor' Telefon, <a href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. Dieses ist immer noch rootbar wenn man eine spanische Firmware flasht, nach dem installieren des Bootloaders (ClockworkMod) jedoch abbricht. Hübsch, da das Handy einfach in den wirklichen Werkstand zurückgebracht werden kann (kein Garantieverlust). Kurz nachdem das Display brach, bekamm ich gleich zwei neue HTC's geschenkt.",
-            "HTC":"Ich bekamm meine zwei HTC's gratis, als Geschenk von Freunden. Eines ist ein <a href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), das andere ein <a href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). Dies ist eine massive Geschwindigkeitzunahme für mich! Das One X ist schneller als mein Laptop (2x1.86Ghz vs. the 4x1.5Ghz)! Hübsch, um Sachen zu testen und aktuell zu bleiben. Rooten funktioniert einfach über einen offiziellen Weg.",
-            "Samsung":"Einige Freunde kauften sich ein Samsung Galaxy S4, wie auch die Mini-Version. Es wurde mir erlaubt, das Mini zu rooten. Funktioniert einfach per offiziellem Weg.",
-            "IPhone":"Ich habe dies mit dem IPhone 4S eines Freundes gemacht. Bildschirm ersetzt (absoluter Erfolg), das nächste mal wechseln wir den Lautsprecher.",
-            "Sony PSP (sehr alte 2000er-Serie)":"Ich bekam diese als Geschenk für die IPhone-Reperatur. Ich habe das Gerät geupdated (6.60) und es mit einer permanenten Homebrew-Installation versehen, so, wie es sein sollte! Sehr hübsch, um alte NEOGEO-Spiele wiederzuentdecken (als Kind habe ich 'Metal-Slug' geliebt), aber es spielt auch PSP-Iso's wie gewöhnliche Discs. Ql!"
-    },
-                "hobbys":{
-            "trans":"Andere Interessen",
-            "Longboards":"Ich fahre Longboard nun seit rund 9 Jahren. Es ist mein bester Fahrrad-Ersatz.<br /><a style='display: inline;' class='gallerybox' data-fancybox-group='gallery' href='images/board.jpg' title='Boards an der Aare, Bern 2014' ><img src='images/board.jpg' style='width: 60%;'/></a>",
-            "Fahrrad":"Das Fahrrad ist eine gute Basis für Reisen. Ich mag dies auch im I18N-Stiel (international)",
-            "12v-Systeme":"Meine eigene Elektronik basiert vollständig auf 12 Volt und wird von einer Solarzelle gespiesen. Ich brauche keinen Konvertierer auf 230 Volt!",
-            "Holz":"Holz ist ein geniales Material, um damit zu arbeiten. Es ist ein Thema, in dass ich mich nebenbei vertiefen möchte (eigene Möbel bauen, z.B)."
+            "Java": {
+                "desc": "Diese Sprache lernte ich vor allem in der Ausbildung. Die JVM war oder ist ziemlich vollgestopft, was mir weniger gefällt. Sie ist strikt objektorientiert, was grossartig zum lernen ist. Seit Android die letzten Jahre zu wachsen begonnen hat und Dalvik sehr optimiert ist, wird die Sprache wieder interessant.",
+                "frameworks": {
+                    "Groovy & Grails": "Zu vergleichen mit Ruby & Rails, aber in Java. Groovy ist eine eigene Sprache, Grails ein framework um schnell Webapplikationen entwickeln zu können."
+                }
+            },
+            "Javascript": {
+                "desc": "In der Vergangenheit war diese Sprache ein Beispiel dafür, warum man eine Seite lieber statisch macht. So viel inkompatibilität zwischen Browsern! Heute hat dies gewechselt, vieles ist Standart, es gibt mächtige JS-Frameworks und es gibt <a href='http://www.w3schools.com/html/html5_intro.asp'>Html 5</a>. Sehen Sie sich den Code der Seite an ;)",
+                "frameworks": {
+                    "jQuery": "<a href='http://jquery.com/'>jQuery</a> ist eine sehr berühmte Bibliothek. Sie ist heutzutage schon fast Standart.",
+                    "Dojo": "<a href='http://dojotoolkit.org/'>Dojo</a> is ein sehr grosses Framework mit Unterstüzung für vieles, z.B Ui, Parsen, Verarbeiten, Ajax und so weiter. 12Mb mit sehr erweitertem Zeug!",
+                    "Leaflet": "<a href='http://leafletjs.com/'>Diese Bibliothek</a> ist sehr neu für mich. Sie ist perfekt, um google-ähnliche Karten (zumindest Zoom und Pois) darzustellen, basiert jedoch auf dem Openstreetmapprojekt.Ich bevorzuge dieses Kartenmaterial, da es frei und oftmals detailierter ist."
+                }
+            }
         },
-        "oldjobs":{
-            "trans":"Jobs zwischen der Ausbildung und jetzt",
-            "description":"Als meine Ausbildung fertig war, wollte ich etwas anderes tun, als vor dem Bildschirm zu sitzen. Ich fand Temporärjobs im Bereich Bühnenbau für grosse Openairs und Konzerte. Die erste Firma, für die ich arbeitete, war Nüssli. Diese Firma macht die Bühnen an sich - Gerüsten, Klettern, bis zu 12 Stunden Arbeit am Tag..<br /><div class='gallerytablediv'><table class='gallerytable'><tr><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob1.jpg' title='Aufbau der Hauptbühne des Paléo in Nyon, 2012' ><img src='images/oldjob1.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob2.jpg' title='Aufbgebaute Hauptbühne des Paléo in Nyon, 2012' ><img src='images/oldjob2.jpg' ></img></a></td></tr></table></div><br />Danach arbeitete ich für die Röck n'roll-Crew, wie auch für Epos. Dort verschob sich die Arbeit eher in Richtung Stagehand - Boxen aufstellen, LED-Wände zusammenhängen, Böden verlegen, Lastwagen ein- und ausladen (Robbie Williams: 10 Stück) und vieles mehr. Ich war auf der Bühne mit Nine inch nails, um die LEDs zu verschieben. Ich habe Bühnen für Muse und Bligg mitaufgebaut. Auch wenn ich nicht direkt ein Fan dieser (und einiger anderer) Artisten bin, ist es interessant und erfüllend, auch diese Welt zu sehen.<br /><div class='gallerytablediv'><table class='gallerytable'><tr> <td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob6.jpg' title='Aufbau einer Rampe für das Redbull crushed Ice, 2013 Lausanne' ><img src='images/oldjob6.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob3.jpg' title='Aufbau Muse, Stadte de Suisse Bern, 2013' ><img src='images/oldjob3.jpg' /></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob4.jpg' title='Muse in Aktion (Backstageperspektive), Stadte de suisse, Bern 2013' ><img src='images/oldjob4.jpg' ></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob5.jpg' title='PuBligg-Tour Luzern, 2014' ><img src='images/oldjob5.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob7.jpg' title='Licht und Bühnentest bei den Swiss music awards 2014, Zürich' ><img src='images/oldjob7.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob8.jpg' title='Mobile Bühne an der Streetparade, Zürich 2012' ><img src='images/oldjob8.jpg'></img></a></td></tr></table></div> Bei allen Firmen hätte ich auch gute Arbeitschancen (ich wurde dieses Jahr bereits angefragt), kann jedoch aufgrund meines gebrochenen/in der Heilung befindlichen Fusses (aufgrund dieser Arbeit) nichts annehmen."
-            
+        "mobile": {
+            "trans": "Mobil gehacktes",
+            "dd-wrt": "Gebraucht auf einigen Siemens- und Lynksys-Routern",
+            "GTA02/Openmoko": "<a href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>Mein erstes Smartphone</a> (400Mhz). Ich nutzte dieses für 3, relativ unstabile, Jahre. Am Schluss blieben etwa zwei aktive Projekte. Zum einen <a href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release), welches die <a href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Fensterverwaltung</a> nutzte. Ich schrieb <a href='https://gist.github.com/skamster/10565527'>meine erste Gtk-Python-Anwendung</a> auf diesem System (v.A da das SMS-Programm einen Bug hatte und ich meine SMS lesen wollte).<br />Auf der andern Seite nutze ich vor allem <a href='http://qtmoko.sourceforge.net/'>QtMoko</a>, welches sehr stabil und schnell war (da es keinen Xorg-Server brauchte). <br /><a href='http://qt-project.org/'>Qt</a> ist ql! <br />Jetzt gab es beim Projekt seit einigen Jahren eine Hardwareaufrüstung, genannt <a href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> die von einer anderen Firma fortgesetzt wird.",
+            "Sony Xperia": "Des Geldes wegen (ich hätte immer noch gerne ein GTA04) kaufte ich ein <a href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a>, nachdem das GSM-Modem des Openmokos kapput ging. Das neue war <a href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'gesichert' mit um 600Mhz gesteigertem Prozessor (1Ghz Singlecore) - hübsch! Einfach zu rooten, ich habe dies auch für einige Kollegen gemacht. Es war die erste Erfahrung mit <a href='http://www.xda-developers.com/'>xda</a>. Nach nicht einem Jahr konnte ich keinen Anruf mehr tätigen, die Qualität war zu schlecht, egal welche Rom ich verwendete.",
+            "Motorola": "Nach meinem Xperia ging ich zu 600Mhz zurück, ein billiges Motorola 'outdoor' Telefon, <a href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. Dieses ist immer noch rootbar wenn man eine spanische Firmware flasht, nach dem installieren des Bootloaders (ClockworkMod) jedoch abbricht. Hübsch, da das Handy einfach in den wirklichen Werkstand zurückgebracht werden kann (kein Garantieverlust). Kurz nachdem das Display brach, bekamm ich gleich zwei neue HTC's geschenkt.",
+            "HTC": "Ich bekamm meine zwei HTC's gratis, als Geschenk von Freunden. Eines ist ein <a href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), das andere ein <a href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). Dies ist eine massive Geschwindigkeitzunahme für mich! Das One X ist schneller als mein Laptop (2x1.86Ghz vs. the 4x1.5Ghz)! Hübsch, um Sachen zu testen und aktuell zu bleiben. Rooten funktioniert einfach über einen offiziellen Weg.",
+            "Samsung": "Einige Freunde kauften sich ein Samsung Galaxy S4, wie auch die Mini-Version. Es wurde mir erlaubt, das Mini zu rooten. Funktioniert einfach per offiziellem Weg.",
+            "IPhone": "Ich habe dies mit dem IPhone 4S eines Freundes gemacht. Bildschirm ersetzt (absoluter Erfolg), das nächste mal wechseln wir den Lautsprecher.",
+            "Sony PSP (sehr alte 2000er-Serie)": "Ich bekam diese als Geschenk für die IPhone-Reperatur. Ich habe das Gerät geupdated (6.60) und es mit einer permanenten Homebrew-Installation versehen, so, wie es sein sollte! Sehr hübsch, um alte NEOGEO-Spiele wiederzuentdecken (als Kind habe ich 'Metal-Slug' geliebt), aber es spielt auch PSP-Iso's wie gewöhnliche Discs. Ql!"
+        },
+        "hobbys": {
+            "trans": "Andere Interessen",
+            "Longboards": "Ich fahre Longboard nun seit rund 9 Jahren. Es ist mein bester Fahrrad-Ersatz.<br /><a style='display: inline;' class='gallerybox' data-fancybox-group='gallery' href='images/board.jpg' title='Boards an der Aare, Bern 2014' ><img src='images/board.jpg' style='width: 60%;'/></a>",
+            "Fahrrad": "Das Fahrrad ist eine gute Basis für Reisen. Ich mag dies auch im I18N-Stiel (international)",
+            "12v-Systeme": "Meine eigene Elektronik basiert vollständig auf 12 Volt und wird von einer Solarzelle gespiesen. Ich brauche keinen Konvertierer auf 230 Volt!",
+            "Holz": "Holz ist ein geniales Material, um damit zu arbeiten. Es ist ein Thema, in dass ich mich nebenbei vertiefen möchte (eigene Möbel bauen, z.B)."
+        },
+        "oldjobs": {
+            "trans": "Jobs zwischen der Ausbildung und jetzt",
+            "description": "Als meine Ausbildung fertig war, wollte ich etwas anderes tun, als vor dem Bildschirm zu sitzen. Ich fand Temporärjobs im Bereich Bühnenbau für grosse Openairs und Konzerte. Die erste Firma, für die ich arbeitete, war Nüssli. Diese Firma macht die Bühnen an sich - Gerüsten, Klettern, bis zu 12 Stunden Arbeit am Tag..<br /><div class='gallerytablediv'><table class='gallerytable'><tr><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob1.jpg' title='Aufbau der Hauptbühne des Paléo in Nyon, 2012' ><img src='images/oldjob1.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob2.jpg' title='Aufbgebaute Hauptbühne des Paléo in Nyon, 2012' ><img src='images/oldjob2.jpg' ></img></a></td></tr></table></div><br />Danach arbeitete ich für die Röck n'roll-Crew, wie auch für Epos. Dort verschob sich die Arbeit eher in Richtung Stagehand - Boxen aufstellen, LED-Wände zusammenhängen, Böden verlegen, Lastwagen ein- und ausladen (Robbie Williams: 10 Stück) und vieles mehr. Ich war auf der Bühne mit Nine inch nails, um die LEDs zu verschieben. Ich habe Bühnen für Muse und Bligg mitaufgebaut. Auch wenn ich nicht direkt ein Fan dieser (und einiger anderer) Artisten bin, ist es interessant und erfüllend, auch diese Welt zu sehen.<br /><div class='gallerytablediv'><table class='gallerytable'><tr> <td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob6.jpg' title='Aufbau einer Rampe für das Redbull crushed Ice, 2013 Lausanne' ><img src='images/oldjob6.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob3.jpg' title='Aufbau Muse, Stadte de Suisse Bern, 2013' ><img src='images/oldjob3.jpg' /></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob4.jpg' title='Muse in Aktion (Backstageperspektive), Stadte de suisse, Bern 2013' ><img src='images/oldjob4.jpg' ></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob5.jpg' title='PuBligg-Tour Luzern, 2014' ><img src='images/oldjob5.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob7.jpg' title='Licht und Bühnentest bei den Swiss music awards 2014, Zürich' ><img src='images/oldjob7.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob8.jpg' title='Mobile Bühne an der Streetparade, Zürich 2012' ><img src='images/oldjob8.jpg'></img></a></td></tr></table></div> Bei allen Firmen hätte ich auch gute Arbeitschancen (ich wurde dieses Jahr bereits angefragt), kann jedoch aufgrund meines gebrochenen/in der Heilung befindlichen Fusses (aufgrund dieser Arbeit) nichts annehmen."
+
         },
         "sys": {
-        "trans":"Systemadministrator-Erfahrungen",
-        "Windows 3.1":"Mein erster Computer. Er hatte 486hz und eine Harddisk mit 20Mb. <a href='https://de.wikipedia.org/wiki/Microsoft_Windows_3.1'>Windows 3.1</a> brauchte rund 20 Disketten.",
-        "Windows 98-Xp":"Dies waren meine folgenden Computer. Von meinem ersten 4x-CD-Laufwerk bis zum ersten CD-Brenner.",
-        "Mandrivia Linux":"<a href='https://de.wikipedia.org/wiki/Mandriva_Linux'>Mandrake/Mandrivia</a> war mein erstes, richtig gebrauchtes Linux. Es war ein wenig wie Kubuntu heute.",
-        "OpenSuse":"Als dieses Projekt startete, schien es interessant (aufgrund der Einfachheit) - aber persönlich habe ich zu viele Fehler miterlebt. Heute hat sich dies wahrscheinlich auch geändert, allerdings benutze OpenSuse nicht mehr.",
-        "Gentoo":"Nachdem ich ein wenig mit Linux spielte, Dualboot und solche Dinge hinter mich gebracht habe, versuchte ich <a href='https://de.wikipedia.org/wiki/Gentoo_Linux'>Gentoo</a>.  Das war kurz vor meiner Ausbildung. In der Ausbildung hatten wir einen Lehrer, welcher auch Gentoo-user war. Es war mir deshalb erlaubt, eine <a href='https://de.wikipedia.org/wiki/Gentoo_Linux'>Gentoo</a>-Installation als Standartsystem zu nutzen (während andere nie über einen Kernel-Panic hinaus kamen, aber diese fühlten sich glücklich, als sie zu Windows XP zurückkehren durften ;) ). Dies ist meine Lieblingsdistribution!",
-        "Fedora":"In meiner Ausbildungsfirma brauchten wir grundsätzlich <a href='https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29'>Fedora</a> (Communityfork von <a href='https://de.wikipedia.org/wiki/Red_Hat'>Red Hat</a>). Ich mochte dies nicht besonders (u.a da das rpm-System recht RAM-Hungrig war) und wechselte zu Gentoo.",
-        "Kubuntu":"Da <a href='https://de.wikipedia.org/wiki/Gentoo_Linux'>Gentoo</a> zu unstabiel lief (mh, experimentelle Repos und Spielereien...), wechselte ich zu Kubuntu. Kubuntu, da ich KDE seit der Version 3 nutze. Mit dieser Distribution supporte ich viele Benutzer, die zu Linux wechseln wollen.",
-        "CentOS":"Für die Server in der Ausbildungsfirma wurde CentOS genutzt. Grundsätzlich lernte ich, zu entwickeln, aber es war mir möglich, einige Wochen mit den Sysadmins zu arbeiten. Wir bekamen auch einen 'Spielserver' pro Mitarbeiter zur Verfügung gestellt. Diese hatten 512MB RAM. Meine Dienste waren:",
-        "centossub":{
-        "XMPP/Jabber":"<a href='https://de.wikipedia.org/wiki/Openfire'>Openfire</a>, ein Java-basierter <a href='https://de.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol'>Jabberserver</a>. Wegen der enormen Speicherauslastung wechselte ich später zu <a href='https://de.wikipedia.org/wiki/Ejabberd'>Ejabberd</a>.",
-        "E-Mail":"<a href='https://de.wikipedia.org/wiki/Sendmail'>Sendmail</a> und <a href='https://de.wikipedia.org/wiki/Dovecot'>Dovecot</a>. Wie einige Systemadministratoren sagen: Setze Sendmail einmal auf, und du hast was gelernt. Setze es mehr auf und du bist verrückt!",
-        "Tor-Node":"Ein simpler <a href='https://de.wikipedia.org/wiki/Tor_%28Netzwerk%29'>Tor-Knotenpunkt</a>",
-        "Apache":"Ein <a href='https://de.wikipedia.org/wiki/Apache_HTTP_Server'>Webserver</a> mit Ruby & Rails und PHP-Support.",
-        "MySQL":"Eine ziemliche Standartdatenbank.",
-        "Diaspora":"Dies ist ein <a href='https://de.wikipedia.org/wiki/Diaspora_%28Software%29'>soziales Netzwerk</a>, das quasi wie E-Mail (<a href='https://de.wikipedia.org/wiki/Peer-to-Peer'>P2P</a>) funktioniert. Dies lief über Apache (Ruby & Rails). Da ich Probleme mit meinen selbstsignierten Zertifikaten und nicht immer Zeit hatte, war dies leider Unstabiel.",
-        "Seeks":"Eine <a href='https://en.wikipedia.org/wiki/Seeks'>P2P-Suchmaschine</a>, die Resultate von Google, Stackoverflow, Duckduckgo, Wikipedia oder was auch immer abfragen kann. Heute gibt es einen Fork, genannt <a href='https://github.com/asciimoo/searx'>Searx</a>."
+            "trans": "Systemadministrator-Erfahrungen",
+            "Windows 3.1": "Mein erster Computer. Er hatte 486hz und eine Harddisk mit 20Mb. <a href='https://de.wikipedia.org/wiki/Microsoft_Windows_3.1'>Windows 3.1</a> brauchte rund 20 Disketten.",
+            "Windows 98-Xp": "Dies waren meine folgenden Computer. Von meinem ersten 4x-CD-Laufwerk bis zum ersten CD-Brenner.",
+            "Mandrivia Linux": "<a href='https://de.wikipedia.org/wiki/Mandriva_Linux'>Mandrake/Mandrivia</a> war mein erstes, richtig gebrauchtes Linux. Es war ein wenig wie Kubuntu heute.",
+            "OpenSuse": "Als dieses Projekt startete, schien es interessant (aufgrund der Einfachheit) - aber persönlich habe ich zu viele Fehler miterlebt. Heute hat sich dies wahrscheinlich auch geändert, allerdings benutze OpenSuse nicht mehr.",
+            "Gentoo": "Nachdem ich ein wenig mit Linux spielte, Dualboot und solche Dinge hinter mich gebracht habe, versuchte ich <a href='https://de.wikipedia.org/wiki/Gentoo_Linux'>Gentoo</a>.  Das war kurz vor meiner Ausbildung. In der Ausbildung hatten wir einen Lehrer, welcher auch Gentoo-user war. Es war mir deshalb erlaubt, eine <a href='https://de.wikipedia.org/wiki/Gentoo_Linux'>Gentoo</a>-Installation als Standartsystem zu nutzen (während andere nie über einen Kernel-Panic hinaus kamen, aber diese fühlten sich glücklich, als sie zu Windows XP zurückkehren durften ;) ). Dies ist meine Lieblingsdistribution!",
+            "Fedora": "In meiner Ausbildungsfirma brauchten wir grundsätzlich <a href='https://de.wikipedia.org/wiki/Fedora_%28Linux-Distribution%29'>Fedora</a> (Communityfork von <a href='https://de.wikipedia.org/wiki/Red_Hat'>Red Hat</a>). Ich mochte dies nicht besonders (u.a da das rpm-System recht RAM-Hungrig war) und wechselte zu Gentoo.",
+            "Kubuntu": "Da <a href='https://de.wikipedia.org/wiki/Gentoo_Linux'>Gentoo</a> zu unstabiel lief (mh, experimentelle Repos und Spielereien...), wechselte ich zu Kubuntu. Kubuntu, da ich KDE seit der Version 3 nutze. Mit dieser Distribution supporte ich viele Benutzer, die zu Linux wechseln wollen.",
+            "CentOS": "Für die Server in der Ausbildungsfirma wurde CentOS genutzt. Grundsätzlich lernte ich, zu entwickeln, aber es war mir möglich, einige Wochen mit den Sysadmins zu arbeiten. Wir bekamen auch einen 'Spielserver' pro Mitarbeiter zur Verfügung gestellt. Diese hatten 512MB RAM. Meine Dienste waren:",
+            "centossub": {
+                "XMPP/Jabber": "<a href='https://de.wikipedia.org/wiki/Openfire'>Openfire</a>, ein Java-basierter <a href='https://de.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol'>Jabberserver</a>. Wegen der enormen Speicherauslastung wechselte ich später zu <a href='https://de.wikipedia.org/wiki/Ejabberd'>Ejabberd</a>.",
+                "E-Mail": "<a href='https://de.wikipedia.org/wiki/Sendmail'>Sendmail</a> und <a href='https://de.wikipedia.org/wiki/Dovecot'>Dovecot</a>. Wie einige Systemadministratoren sagen: Setze Sendmail einmal auf, und du hast was gelernt. Setze es mehr auf und du bist verrückt!",
+                "Tor-Node": "Ein simpler <a href='https://de.wikipedia.org/wiki/Tor_%28Netzwerk%29'>Tor-Knotenpunkt</a>",
+                "Apache": "Ein <a href='https://de.wikipedia.org/wiki/Apache_HTTP_Server'>Webserver</a> mit Ruby & Rails und PHP-Support.",
+                "MySQL": "Eine ziemliche Standartdatenbank.",
+                "Diaspora": "Dies ist ein <a href='https://de.wikipedia.org/wiki/Diaspora_%28Software%29'>soziales Netzwerk</a>, das quasi wie E-Mail (<a href='https://de.wikipedia.org/wiki/Peer-to-Peer'>P2P</a>) funktioniert. Dies lief über Apache (Ruby & Rails). Da ich Probleme mit meinen selbstsignierten Zertifikaten und nicht immer Zeit hatte, war dies leider Unstabiel.",
+                "Seeks": "Eine <a href='https://en.wikipedia.org/wiki/Seeks'>P2P-Suchmaschine</a>, die Resultate von Google, Stackoverflow, Duckduckgo, Wikipedia oder was auch immer abfragen kann. Heute gibt es einen Fork, genannt <a href='https://github.com/asciimoo/searx'>Searx</a>."
+            },
+            "Debian": "Ich brauchte Debian auf meinem neueren Server nach der Ausbildung, für etwa ein Jahr. Debian war auch die Basis für <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> (siehe Mobile hacks/Openmoko). Es ist oft gebraucht und eine Basis für viele Distributionen. Ich kenne apt-get fast besser von Kubuntu als Debian selbst. Der Server stellte die gleichen Dienste auf jeden fall Stabiler zur verfügung - Debian ist schlicht besser supportet.",
+            "Sabayon": "Dies ist meine aktuelle, sich favorisierende Distribution. Sie basiert auf Gentoo, braucht aber vorkompilierte Packete (welche von den Gentoo-Repos kompiliert werden). Der Standartdesktop ist KDE und es ist auch Rolling-Release-basierend. Yeah!"
+
+        }
     },
-    "Debian":"Ich brauchte Debian auf meinem neueren Server nach der Ausbildung, für etwa ein Jahr. Debian war auch die Basis für <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> (siehe Mobile hacks/Openmoko). Es ist oft gebraucht und eine Basis für viele Distributionen. Ich kenne apt-get fast besser von Kubuntu als Debian selbst.",
-    "Sabayon":"Dies ist meine aktuelle, sich favorisierende Distribution. Sie basiert auf Gentoo, braucht aber vorkompilierte Packete (welche von den Gentoo-Repos kompiliert werden). Der Standartdesktop ist KDE und es ist auch Rolling-Release-basierend. Yeah!"
-        
+    "transl": {
+        "features": "Fähigkeiten",
+        "bugs": "Fehler",
+        "pictures": "Bilder",
+        "description": "Beschreibung",
+        "stability": "Stabilität",
+        "projectname": "Projektname",
+        "source": "Quelltext",
+        "doc": "Doku",
+        "table": "Linktabelle",
+        "refresh": "Erneuern",
+        "nowebstorage": "Sie haben keinen Offlinespeichersupport",
+        "fromstorage": "vom Offlinespeicher",
+        "fromnew": "gerade Erledigt"
     }
-        } ,
-    "transl":{
-    "features":"Fähigkeiten",
-    "bugs":"Fehler",
-    "pictures":"Bilder",
-    "description":"Beschreibung",
-    "stability":"Stabilität",
-    "projectname":"Projektname",
-    "source":"Quelltext",
-    "doc":"Doku",
-    "table":"Linktabelle",
-    "refresh":"Erneuern",
-    "nowebstorage":"Sie haben keinen Offlinespeichersupport",
-    "fromstorage":"vom Offlinespeicher",
-    "fromnew":"gerade Erledigt"
-}
 }

@@ -1,9 +1,8 @@
 {
     "index": {
         "title": "Linklist + about site and projects",
-		"preword":"This is the linklist, or alternative home. Sitemap would may be a good name, but it contains 'external' links too. <br /> It contains also a description about the website and my in context to my projects.",
-        "description": "TEXT IS UNDER CONSTRUCTION! <br /><h4><a name='website'></a>Website</h4>This and the whole Website is using your Webstorage, if your browser supports this. You will reconize this, when you change the language - you have to refresh via button after, to reload offline-content (which also got the language). This website is really fresh by technics and i like to stay current here, to learn something more about that HTML5-World. Javascript is also a quite new language to me (2 years), but a funny world. It's not a example for a 'secure language', but its often nice eyecandy and sometimes also usefull (see <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my computertime.<span style='color: grey;'><h4><a name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Site 309 (it's a german book, i translate):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, Security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as now. <h4><a name='about'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. I would like to got a job as dev and also learned this kind of job. After my education, i was working by body, cause 8 hrs pc, 5 days a week for 4 years where too much for me. Now I borke my feed and liked to do something - i never really ended in programming (just reduced), but since april, i am active again, how you see in github. <br />I'm basicly not interessted in donations. Those projects could show, how i could develop. <br /> You could use those projects free and i'm happy, if someone try or fork it (or also report bugs)." 
-        ,
+        "preword": "This is the linklist, or alternative home. Sitemap would may be a good name, but it contains 'external' links too. <br /> It contains also a description about the website and my in context to my projects.",
+        "description": "TEXT IS UNDER CONSTRUCTION! <br /><h4><a name='website'></a>Website</h4>This and the whole Website is using your Webstorage, if your browser supports this. You will reconize this, when you change the language - you have to refresh via button after, to reload offline-content (which also got the language). This website is really fresh by technics and i like to stay current here, to learn something more about that HTML5-World. Javascript is also a quite new language to me (2 years), but a funny world. It's not a example for a 'secure language', but its often nice eyecandy and sometimes also usefull (see <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my computertime.<span style='color: grey;'><h4><a name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Site 309 (it's a german book, i translate):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, Security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as now. <h4><a name='about'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. I would like to got a job as dev and also learned this kind of job. After my education, i was working by body, cause 8 hrs pc, 5 days a week for 4 years where too much for me. Now I borke my feed and liked to do something - i never really ended in programming (just reduced), but since april, i am active again, how you see in github. <br />I'm basicly not interessted in donations. Those projects could show, how i could develop. <br /> You could use those projects free and i'm happy, if someone try or fork it (or also report bugs).",
         "content": {
             "tryToxic": {
                 "pLink": "tryToxic",
@@ -92,7 +91,7 @@
             }
         }
     },
-        "multisms": {
+    "multisms": {
         "title": "MultiSms",
         "description": "The name MultiSms is taken from it's originalname, Multimobile(widget). The idea is, to send sms over diffrent providers. The script automate steps the users has to do on the website. It also checks for success (depend on plugin).",
         "preword": "The Project is very old (29.11.2008) and was my second pythonapplication. It use pyKde4 and python2.",
@@ -103,8 +102,8 @@
         "bugs": {
             "Everything!": "Need a complete rewrite to python3"
         },
-        "pictures":{}
-        },
+        "pictures": {}
+    },
     "peta": {
         "title": "Peta",
         "description": "The name Peta came out of PHPMeta. It’s basicly written in PHP with the use of smarty (template/.tpl-files) and dojo (Javascript). The idea behind this project is to avoid redundant rewrites. A maingoal is a good structure, where the administrator of a system could change things as he need. It's target is a base for everything.",
@@ -114,64 +113,63 @@
             "Flexible pluginsystem": "Every plugin could have one to n instances",
             "Flexible accesssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
             "MVC-Structure": "It's easy to learn the code or write a plugin, since there's a separation between model, view and controller.",
-            "Plugins":"<ul><li><a href='https://github.com/skamster/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a>|<a href='http://www.openstreetmap.org'>openstreetmap</a>'s with POI-support</li><li><a href='https://github.com/skamster/Peta/tree/master/plugins/markdownSite'>mdSite</a>|<a href='https://en.wikipedia.org/wiki/Markdown'>markDown-Websites</a></li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/site/site.php'>site</a>|html-Websites</li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/forum/forum.php'>forum</a>|Tree-like forum</li><li>Some simple examples..</li></ul>",
+            "Plugins": "<ul><li><a href='https://github.com/skamster/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a>|<a href='http://www.openstreetmap.org'>openstreetmap</a>'s with POI-support</li><li><a href='https://github.com/skamster/Peta/tree/master/plugins/markdownSite'>mdSite</a>|<a href='https://en.wikipedia.org/wiki/Markdown'>markDown-Websites</a></li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/site/site.php'>site</a>|html-Websites</li><li><a href='https://github.com/skamster/Peta/blob/master/plugins/forum/forum.php'>forum</a>|Tree-like forum</li><li>Some simple examples..</li></ul>",
             "Livedemo": "<a href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
-            "Update accessrights": "Set ar fails on update, so rm and touch the role again!",
+            "Update on Accessrights on Plugins": "The seting fails. Solution: Remove role from plugin and add with whished Rights again.",
             "Others": "undetected"
         },
-        "pictures": {
-        }
+        "pictures": {}
     },
-    "skamster.github.io":{
-     "title":"skamster.github.io",
-    "preword":"This website informs about current projects and about me. Style isn't my strongest part, but it should looking acceptable.",
-    "description":"A technical demo, descriptions, links and pictures, nice collected and marked up. This is the idea of this website. If this would be a clientwebsite or on a project, i would never use that much effects. But here, it's for playing in use. By the way, the most of this effects is wrote in CSS 3.",
-        "features":{
-            "Offlinestoring":"This site use your HTML5-offlinestorage, so that you can reload this site or also reenter it after closing the browser and dont have a internetconnection. Try it out!",
-            "JSON-Dataquery":"All data gets loaded by static JSON. This is for translation.",
-            "jQuery":"jQuery is for loading stuff, animate and finding of classes",
-            "Diffrent styles":"You could choose a alternative style by View->website-style"},
-        "bugs":{
-        "onTop-Button in Chrome and Opera":"The button wont move in chrome. Works well in firefox."
-    },
-    "pictures":{
-    }
+    "skamster.github.io": {
+        "title": "skamster.github.io",
+        "preword": "This website informs about current projects and about me. Style isn't my strongest part, but it should looking acceptable.",
+        "description": "A technical demo, descriptions, links and pictures, nice collected and marked up. This is the idea of this website. If this would be a clientwebsite or on a project, i would never use that much effects. But here, it's for playing in use. By the way, the most of this effects is wrote in CSS 3.",
+        "features": {
+            "Offlinestoring": "This site use your HTML5-offlinestorage, so that you can reload this site or also reenter it after closing the browser and dont have a internetconnection. Try it out!",
+            "JSON-Dataquery": "All data gets loaded by static JSON. This is for translation.",
+            "jQuery": "jQuery is for loading stuff, animate and finding of classes",
+            "Diffrent styles": "You could choose a alternative style by View->website-style"
+        },
+        "bugs": {
+            "onTop-Button in Chrome and Opera": "The button wont move in chrome. Works well in firefox."
+        },
+        "pictures": {}
     },
     "about": {
-	"title":"About me",
-        "preword":"Some information over me",
-        "description": "Hello,<br />This part informs you about my expiriences since now. I tried many things and detect my strong parts in programming and also a little in administration/support of systems. On the other site, i wouldn't say i'm a designer or hardware-specialist. <br /> Following you will find a list with my expiriences - the education-passport will be sendet on question.",
+        "title": "About me",
+        "preword": "Some information over me",
+        "description": "Hello,<br />This part informs you about my expiriences and also a little about my personal life. I tried many things and detect my strong parts in programming and also a little in administration/support of systems. On the other site, i wouldn't say i'm a designer or hardware-specialist. <br /> Following, you will find a list with my expiriences - the education-passport and personal contacts to references will be sendet on question (privacy).",
         "picture": "profile.png",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
             "E-Mail": "hersche@vmail.me",
             "Diaspora": "<a href='https://nerdpol.ch/u/hersche'>hersche@nerdpol.ch</a>",
-            "Xing":"<a href='https://www.xing.com/profile/Vinzenz_Hersche'>Vinzenz Hersche</a>"
+            "Xing": "<a href='https://www.xing.com/profile/Vinzenz_Hersche'>Vinzenz Hersche</a>"
         },
-        "hobbys":{
-            "trans":"Other interessts",
-            "Longboards":"I drive longboards since 9 years now. It's my best bycicle-replacement.<br /><a style='display: inline;' class='gallerybox' data-fancybox-group='gallery' href='images/board.jpg' title='Boards beside the Aare, Berne 2014' ><img src='images/board.jpg' style='width: 60%;'/></a>",
-            "Bycicle":"The bycicle is a great base for traveling. I like to do that international.",
-            "12v-systems":"I have my own electricity full on 12 volt and a solar-panel as power-supplier. I didn't need a converter to 230v at all!",
-            "Wood":"Wood is a nice material for working with. I would like to got by the way deeper into that topic."
+        "hobbys": {
+            "trans": "Other interessts",
+            "Longboards": "I drive longboards since 9 years now. It's my best bycicle-replacement.<br /><a style='display: inline;' class='gallerybox' data-fancybox-group='gallery' href='images/board.jpg' title='Boards beside the Aare, Berne 2014' ><img src='images/board.jpg' style='width: 60%;'/></a>",
+            "Bycicle": "The bycicle is a great base for traveling. I like to do that international.",
+            "12v-systems": "I have my own electricity full on 12 volt and a solar-panel as power-supplier. I didn't need a converter to 230v at all!",
+            "Wood": "Wood is a nice material for working with. I would like to got by the way deeper into that topic."
         },
-        "oldjobs":{
-            "trans":"Jobs between Education and now",
-            "description":"As i ended my education, i wanted to do something else than sitting before a screen. I found jobs in the topic of stage-buildings for huge openairs and concerts.<br /><div class='gallerytablediv'><table class='gallerytable'><tr><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob1.jpg' title='Build up of the mainstage @Paleo, Nyon 2012' ><img src='images/oldjob1.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob2.jpg' title='Builded up Mainstage @Paléo in Nyon, 2012' ><img src='images/oldjob2.jpg' ></img></a></td></tr></table></div><br />I was on the stage with Nine inch nails for moving the LEDs. I was building the Stage for Muse and also Robbie Williams. Also when i'm not a fan of those artists directly, it's interessting to see this world too.<br /><div class='gallerytablediv'><table class='gallerytable'><tr> <td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob6.jpg' title='Build up the Redbull crushed Ice, 2012 Lausanne' ><img src='images/oldjob6.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob3.jpg' title='Build up the stage for Muse, Stadte de Suisse Bern, 2013' ><img src='images/oldjob3.jpg' /></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob4.jpg' title='Muse in action (Backstageview), Stadte de suisse, Bern 2013' ><img src='images/oldjob4.jpg' ></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob5.jpg' title='PuBligg-Tour Luzern, 2014' ><img src='images/oldjob5.jpg'></img></a></td></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob7.jpg' title='Light and Stagetest on swiss music awards 2014, Zürich' ><img src='images/oldjob7.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob8.jpg' title='Mobile stage @streetparade, Zürich 2012' ><img src='images/oldjob8.jpg'></img></a></td></tr></table></div>"
-            
+        "oldjobs": {
+            "trans": "Jobs between Education and now",
+            "description": "As i ended my education, i wanted to do something else than sitting before a screen. I found jobs in the topic of stage-buildings for huge openairs and concerts.<br /><div class='gallerytablediv'><table class='gallerytable'><tr><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob1.jpg' title='Build up of the mainstage @Paleo, Nyon 2012' ><img src='images/oldjob1.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob2.jpg' title='Builded up Mainstage @Paléo in Nyon, 2012' ><img src='images/oldjob2.jpg' ></img></a></td></tr></table></div><br />I was on the stage with Nine inch nails for moving the LEDs. I was building the Stage for Muse and also Robbie Williams. Also when i'm not a fan of those artists directly, it's interessting to see this world too.<br /><div class='gallerytablediv'><table class='gallerytable'><tr> <td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob6.jpg' title='Build up the Redbull crushed Ice, 2012 Lausanne' ><img src='images/oldjob6.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob3.jpg' title='Build up the stage for Muse, Stadte de Suisse Bern, 2013' ><img src='images/oldjob3.jpg' /></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob4.jpg' title='Muse in action (Backstageview), Stadte de suisse, Bern 2013' ><img src='images/oldjob4.jpg' ></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob5.jpg' title='PuBligg-Tour Luzern, 2014' ><img src='images/oldjob5.jpg'></img></a></td></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob7.jpg' title='Light and Stagetest on swiss music awards 2014, Zürich' ><img src='images/oldjob7.jpg'></img></a></td><td><a class='gallerybox' data-fancybox-group='gallery' href='images/oldjob8.jpg' title='Mobile stage @streetparade, Zürich 2012' ><img src='images/oldjob8.jpg'></img></a></td></tr></table></div>"
+
         },
-	    "support":{
-            "trans":"Suport references",
-	    "desc":"I support diffrent people's computers since more than 6 years in assistance with linux. Mostly i use a <a href='http://kubuntu.org'>Kubuntu</a>, sometimes also Linuxmint, but near ever i use <a href='http://kde.org'>KDE</a>",
-	    "reference":{
-	      "ex-Name":"Usage of person",
-	      "name 2":"another ussage"
-	      }
-	    },
+        "support": {
+            "trans": "Suport references",
+            "desc": "I support diffrent people's computers since more than 6 years in assistance with linux. Mostly i use a <a href='http://kubuntu.org'>Kubuntu</a>, sometimes also Linuxmint, but near ever i use <a href='http://kde.org'>KDE</a>",
+            "reference": {
+                "ex-Name": "Usage of person",
+                "name 2": "another ussage"
+            }
+        },
         "languages": {
-            "trans":"Languages",
+            "trans": "Languages",
             "PHP": {
                 "desc": "Use this for 10 years. Since Oop is default with PHP5, it's beatiful to use. Before it was horrible, but not for me (i didn't know oop in the beginn)",
                 "frameworks": {
@@ -181,75 +179,75 @@
             "Python": {
                 "desc": "I know <a href='https://python.org'>python</a> since 5 years and it addict me really fast. Perfect possibilitys of sequentell, Oop and modulare code. It also don't use { }, but forces you to format your code proper. Top!",
                 "frameworks": {
-                    "Urllib2":"This is a nice framwork to 'speak' with websites, which doesn't get a daemon. Just go to a field, put input in and submit - in python, not in browser. That way you could do a lot automatic, unimportant the hoster like it or not",
+                    "Urllib2": "This is a nice framwork to 'speak' with websites, which doesn't get a daemon. Just go to a field, put input in and submit - in python, not in browser. That way you could do a lot automatic, unimportant the hoster like it or not",
                     "PyQt || PyKde": "Qt is a very modular ui-library - it's easy to use and works very stable. This is one of the first frameworks i used.",
                     "PyTox": "PyTox is a interface to the tox-core-project. The whole project is in heavy development. For further information visit <a href='http://tox.im'>tox.im</a>.",
                     "PyCrypto": "PyCrypto supports many kinds of hashing, symmetric and asymmetric encryptions. My focus is on symmetric encryptions. I use it to encrypt local data"
                 }
             },
-                "Java": {
-                    "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Because android is growing very much and <a href='https://en.wikipedia.org/wiki/Dalvik_%28software%29'>dalvik</a> gets to be very optimized, it looking attractive again.",
-                    "frameworks": {
-                        "Groovy & grails": "Similiar to ruby and rails. <a href='https://en.wikipedia.org/wiki/Groovy_%28programming_language%29'>Groovy</a> is a more simple language and <a href='https://en.wikipedia.org/wiki/Grails_%28framework%29'>grails</a> is a great framework! Both are based on Java"
-                    }
-                },
-                "Javascript": {
-                    "desc": "In past (10-12 years), this language was a example why you should do mostly pure html (maybe good for detecting the user's language, but nothing like ajax or forms out of js) sites. So much incompatibility between browsers and security-issues! Today, this changed, a lot of stuff is default, there are mighty js-frameworks and there came <a href='http://www.w3schools.com/html/html5_intro.asp'>Html 5</a> which use js in combination. Look the source of this page ;)",
-                    "frameworks": {
-                        "jQuery": "<a href='http://jquery.com/'>jQuery</a> is very famous library. Today it's nearly a defacto-default.",
-                        "Dojo": "<a href='http://dojotoolkit.org/'>Dojo</a> is a very large framework with support for many many things, such as ui, parsing, processing, ajax, etc. 12mb of very advanced stuff!",
-                        "Leaflet":"<a href='http://leafletjs.com/'>This library</a> is very new for me. It is perfect for google-like maps (at least zoom and mark pois), but based on the openstreetmap-project. I really preferr the tiles from osm, cause they're free and often more detailed."
-                    }
+            "Java": {
+                "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Because android is growing very much and <a href='https://en.wikipedia.org/wiki/Dalvik_%28software%29'>dalvik</a> gets to be very optimized, it looking attractive again.",
+                "frameworks": {
+                    "Groovy & grails": "Similiar to ruby and rails. <a href='https://en.wikipedia.org/wiki/Groovy_%28programming_language%29'>Groovy</a> is a more simple language and <a href='https://en.wikipedia.org/wiki/Grails_%28framework%29'>grails</a> is a great framework! Both are based on Java"
                 }
             },
+            "Javascript": {
+                "desc": "In past (10-12 years), this language was a example why you should do mostly pure html (maybe good for detecting the user's language, but nothing like ajax or forms out of js) sites. So much incompatibility between browsers and security-issues! Today, this changed, a lot of stuff is default, there are mighty js-frameworks and there came <a href='http://www.w3schools.com/html/html5_intro.asp'>Html 5</a> which use js in combination. Look the source of this page ;)",
+                "frameworks": {
+                    "jQuery": "<a href='http://jquery.com/'>jQuery</a> is very famous library. Today it's nearly a defacto-default.",
+                    "Dojo": "<a href='http://dojotoolkit.org/'>Dojo</a> is a very large framework with support for many many things, such as ui, parsing, processing, ajax, etc. 12mb of very advanced stuff!",
+                    "Leaflet": "<a href='http://leafletjs.com/'>This library</a> is very new for me. It is perfect for google-like maps (at least zoom and mark pois), but based on the openstreetmap-project. I really preferr the tiles from osm, cause they're free and often more detailed."
+                }
+            }
+        },
         "mobile": {
-        "trans":"Mobile hacking",
-        "dd-wrt":"Used on some Siemens and Lynksys-routers",
-        "GTA02/Openmoko": "<a href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>My first Smartphone</a> (400Mhz). I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, <a href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release) which used the <a href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Windowmanager</a>. I wrote <a href='https://gist.github.com/skamster/10565527'>my first gtk-python-application</a> there.<br />On the other site, what i used - <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> which was really stable and fast (cause it doesn't needed a Xorg-server). <br /><a href='http://qt-project.org/'>Qt</a> is ql! <br />Now the project gets a hardwareupgrade since some years, it's called <a href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> and is continued by another company.",
-            "Sony Xperia":"Because of money (i still would like a GTA04) i buyed a <a href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a> after the GSM-modem was fail for doing it's work. The new one was <a href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'secured' with 600Mhz improved processor (1Ghz Singlecore) - nice! Easy to root, i also did this for some friends. The first expirience with <a href='http://www.xda-developers.com/'>xda</a>. After not a year, i couldn't do a phone anymore - the quality was too bad, no matter which rom.",
-            "Motorola":"After my Xperia i go back to 600Mhz, a cheap Motorola 'outdoor' Phone, <a href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. This is still <a href='http://forum.xda-developers.com/showthread.php?t=2079202'>rootable</a> by flashing a spain firmware until bootloader is installed (TWRP, i think) and plug out after that step (before install your whished rom). Nice, because recoverable. After the screen gets broken, i get some gifts in short time - two HTC's",
-            "HTC":"I became my two HTC's for free, as a gift from friends. One is a <a href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), the other a <a href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). This is a massive performance-improvement for me! The One X is faster than my Laptop (2x1.86Ghz vs. the 4x1.5)! Nice for testing stuff, being up to date but secured. Rooting is still easy through a official way.",
-            "Samsung":"Some friends get some Samsung Galaxy S4 and also the mini-version. I was allowed to root the mini, what also works easy in a official way.",
-            "IPhone":"I did this for a friend's IPhone 4S. Replaced a screen (success), next time a speaker.",
-            "Sony PSP (very old 2000-Serie)":"I became this as a gift for the iphone-repairment. Updated (6.60) and flashed with permanently homebrew, like it should be! Very nice for NEOGEO-Games (as a child i loved 'Metal-Slug'!), but it plays PSP-ISO's as usual discs. Nice!"
-    },
+            "trans": "Mobile hacking",
+            "dd-wrt": "Used on some Siemens and Lynksys-routers",
+            "GTA02/Openmoko": "<a href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>My first Smartphone</a> (400Mhz). I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, <a href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release) which used the <a href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Windowmanager</a>. I wrote <a href='https://gist.github.com/skamster/10565527'>my first gtk-python-application</a> there.<br />On the other site, what i used - <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> which was really stable and fast (cause it doesn't needed a Xorg-server). <br /><a href='http://qt-project.org/'>Qt</a> is ql! <br />Now the project gets a hardwareupgrade since some years, it's called <a href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> and is continued by another company.",
+            "Sony Xperia": "Because of money (i still would like a GTA04) i buyed a <a href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a> after the GSM-modem was fail for doing it's work. The new one was <a href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'secured' with 600Mhz improved processor (1Ghz Singlecore) - nice! Easy to root, i also did this for some friends. The first expirience with <a href='http://www.xda-developers.com/'>xda</a>. After not a year, i couldn't do a phone anymore - the quality was too bad, no matter which rom.",
+            "Motorola": "After my Xperia i go back to 600Mhz, a cheap Motorola 'outdoor' Phone, <a href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. This is still <a href='http://forum.xda-developers.com/showthread.php?t=2079202'>rootable</a> by flashing a spain firmware until bootloader is installed (TWRP, i think) and plug out after that step (before install your whished rom). Nice, because recoverable. After the screen gets broken, i get some gifts in short time - two HTC's",
+            "HTC": "I became my two HTC's for free, as a gift from friends. One is a <a href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), the other a <a href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). This is a massive performance-improvement for me! The One X is faster than my Laptop (2x1.86Ghz vs. the 4x1.5)! Nice for testing stuff, being up to date but secured. Rooting is still easy through a official way.",
+            "Samsung": "Some friends get some Samsung Galaxy S4 and also the mini-version. I was allowed to root the mini, what also works easy in a official way.",
+            "IPhone": "I did this for a friend's IPhone 4S. Replaced a screen (success), next time a speaker.",
+            "Sony PSP (very old 2000-Serie)": "I became this as a gift for the iphone-repairment. Updated (6.60) and flashed with permanently homebrew, like it should be! Very nice for NEOGEO-Games (as a child i loved 'Metal-Slug'!), but it plays PSP-ISO's as usual discs. Nice!"
+        },
         "sys": {
-        "trans":"Sysadmin-Expiriences",
-        "Windows 3.1":"My first computer with 20Mb-Harddisk and 20 floppys to setup.",
-        "Windows 98-Xp":"My following computers. From my first 4x-Cddrive to my first disc-burner.",
-        "Mandrivia Linux":"This was my first linux i really used. Was a little like kubuntu today.",
-        "OpenSuse":"As this project getting started, it looks interessting (cause of simpleness) - but personaly, i've too much failures there. Today, this may changed, didn't use it again",
-        "Gentoo":"After playing a little with linux, dualboots and that stuff, i tried <a href='https://en.wikipedia.org/wiki/Gentoo_Linux'>gentoo</a>. This was short before my education. In the education, a teacher was a gentoo-user too, and i was allowed to have a gentoo-installation as default (while other didn't pass they're kernel-panics, but they also felt lucky when they where back in Win Xp ;) ). This is my favourite distro!",
-        "Fedora":"In my company, we used basicly fedora. I didn't really liked that, so i've changed to gentoo.",
-        "Kubuntu":"Because of <a href='https://en.wikipedia.org/wiki/Gentoo_Linux'>gentoo</a> was too unstable (mh, with unstable repos and play arounds), i've changed to kubuntu. Kubuntu, because i use <a href='https://en.wikipedia.org/wiki/KDE'>KDE</a> since version 3. With this distro i support a lot of computer users which like to change to linux",
-        "CentOS":"For the servers in our company, we've used CentOS. Basicly i've learned development, but i was able to work some weeks by the Webadmin-dudes. We also got a 'play-around'-server for each worker, which used this system too. Those got 512MB of RAM. My services where: ",
-        "centossub":{
-        "XMPP/Jabber":"<a href='https://en.wikipedia.org/wiki/Openfire'>Openfire</a>, a java-based <a href='https://en.wikipedia.org/wiki/XMPP'>Jabberserver</a>. Because of it's RAM-ussage i've changed to <a href='https://en.wikipedia.org/wiki/Ejabberd'>Ejabberd</a> after a while",
-        "E-Mail":"<a href='https://en.wikipedia.org/wiki/Sendmail'>Sendmail</a> and <a href='https://en.wikipedia.org/wiki/Dovecot_%28software%29>dovecot</a>. As some sys-admins say: Setup sendmail once, and it's nice. Set it up more and you're a crazy.",
-        "Tor-Node":"A simple node in the <a href='https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29'>tor-anonymizing-network</a>",
-        "Apache":"A <a href='https://en.wikipedia.org/wiki/Apache_HTTP_Server'>webserver</a>, configured for ruby & rails and php-support.",
-        "MySQL":"A really default database",
-        "Diaspora":"This is a <a href='https://en.wikipedia.org/wiki/Diaspora_%28software%29'>social-network</a> which works similiar to E-Mail (P2P). It was running over Apache (ruby & rails). Since i have issues with self-signed certificates and not always time, it was still unstable",
-        "Seeks":"A <a href='https://en.wikipedia.org/wiki/Seeks'>P2P-Searchengine</a> for getting results from google, stackoverflow, duckduckgo, wikipedia or whatever else. Today, there's also a fork called <a href='https://github.com/asciimoo/searx'>searx</a>."
+            "trans": "Sysadmin-Expiriences",
+            "Windows 3.1": "My first computer with 20Mb-Harddisk and 20 floppys to setup.",
+            "Windows 98-Xp": "My following computers. From my first 4x-Cddrive to my first disc-burner.",
+            "Mandrivia Linux": "This was my first linux i really used. Was a little like kubuntu today.",
+            "OpenSuse": "As this project getting started, it looks interessting (cause of simpleness) - but personaly, i've too much failures there. Today, this may changed, didn't use it again",
+            "Gentoo": "After playing a little with linux, dualboots and that stuff, i tried <a href='https://en.wikipedia.org/wiki/Gentoo_Linux'>gentoo</a>. This was short before my education. In the education, a teacher was a gentoo-user too, and i was allowed to have a gentoo-installation as default (while other didn't pass they're kernel-panics, but they also felt lucky when they where back in Win Xp ;) ). This is my favourite distro!",
+            "Fedora": "In my company, we used basicly fedora. I didn't really liked that, so i've changed to gentoo.",
+            "Kubuntu": "Because of <a href='https://en.wikipedia.org/wiki/Gentoo_Linux'>gentoo</a> was too unstable (mh, with unstable repos and play arounds), i've changed to kubuntu. Kubuntu, because i use <a href='https://en.wikipedia.org/wiki/KDE'>KDE</a> since version 3. With this distro i support a lot of computer users which like to change to linux",
+            "CentOS": "For the servers in our company, we've used CentOS. Basicly i've learned development, but i was able to work some weeks by the Webadmin-dudes. We also got a 'play-around'-server for each worker, which used this system too. Those got 512MB of RAM. My services where: ",
+            "centossub": {
+                "XMPP/Jabber": "<a href='https://en.wikipedia.org/wiki/Openfire'>Openfire</a>, a java-based <a href='https://en.wikipedia.org/wiki/XMPP'>Jabberserver</a>. Because of it's RAM-ussage i've changed to <a href='https://en.wikipedia.org/wiki/Ejabberd'>Ejabberd</a> after a while",
+                "E-Mail": "<a href='https://en.wikipedia.org/wiki/Sendmail'>Sendmail</a> and <a href='https://en.wikipedia.org/wiki/Dovecot_%28software%29>dovecot</a>. As some sys-admins say: Setup sendmail once, and it's nice. Set it up more and you're a crazy.",
+                "Tor-Node": "A simple node in the <a href='https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29'>tor-anonymizing-network</a>",
+                "Apache": "A <a href='https://en.wikipedia.org/wiki/Apache_HTTP_Server'>webserver</a>, configured for ruby & rails and php-support.",
+                "MySQL": "A really default database",
+                "Diaspora": "This is a <a href='https://en.wikipedia.org/wiki/Diaspora_%28software%29'>social-network</a> which works similiar to E-Mail (P2P). It was running over Apache (ruby & rails). Since i have issues with self-signed certificates and not always time, it was still unstable",
+                "Seeks": "A <a href='https://en.wikipedia.org/wiki/Seeks'>P2P-Searchengine</a> for getting results from google, stackoverflow, duckduckgo, wikipedia or whatever else. Today, there's also a fork called <a href='https://github.com/asciimoo/searx'>searx</a>."
+            },
+            "Debian": "I've used <a href='https://en.wikipedia.org/wiki/Debian'>debian</a> for my second server, which i've for about a year. <a href='https://en.wikipedia.org/wiki/Debian'>Debian</a> is also the base for <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> (see Mobile hacks/Openmoko) It's a really often used system and base for a lot of distros. I know apt-get better by using kubuntu than debian.",
+            "Sabayon": "This is my currently favourite-looking distro. It's based on gentoo, but using precompiled packages (which are compiled by gentoo-repos). It default-desktop is KDE and it's rolling-release. Yay!"
+
+        }
     },
-    "Debian":"I've used <a href='https://en.wikipedia.org/wiki/Debian'>debian</a> for my second server, which i've for about a year. <a href='https://en.wikipedia.org/wiki/Debian'>Debian</a> is also the base for <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> (see Mobile hacks/Openmoko) It's a really often used system and base for a lot of distros. I know apt-get better by using kubuntu than debian.",
-    "Sabayon":"This is my currently favourite-looking distro. It's based on gentoo, but using precompiled packages (which are compiled by gentoo-repos). It default-desktop is KDE and it's rolling-release. Yay!"
-        
+    "transl": {
+        "features": "Features",
+        "bugs": "Bugs",
+        "pictures": "Pictures",
+        "description": "Description",
+        "stability": "Stability",
+        "projectname": "Projectname",
+        "source": "Sourcecode",
+        "doc": "Docs",
+        "table": "Linktable",
+        "refresh": "Refresh",
+        "nowebstorage": "You don't have webstoragesupport",
+        "fromstorage": "from Webstorage",
+        "fromnew": "reloaded right now!"
     }
-        } ,
-        "transl":{
-    "features":"Features",
-    "bugs":"Bugs",
-    "pictures":"Pictures",
-    "description":"Description",
-    "stability":"Stability",
-    "projectname":"Projectname",
-    "source":"Sourcecode",
-    "doc":"Docs",
-    "table":"Linktable",
-    "refresh":"Refresh",
-    "nowebstorage":"You don't have webstoragesupport",
-    "fromstorage":"from Webstorage",
-    "fromnew":"reloaded right now!"
 }
-    }
