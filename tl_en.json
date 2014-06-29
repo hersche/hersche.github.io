@@ -1,0 +1,168 @@
+
+{
+    "timeline":
+    {
+        "headline":"First contact with computers",
+        "type":"default",
+		"text":"PLEASE RESPECT THAT THIS TIMELINE IS NOT FINISHED YET . The first computer which my dad buys - it was interessting from the beginning for me. I was 9 years old.",
+		"startDate":"1997,1,26",
+        "date": [
+                {
+                "startDate":"1997,6,1",
+				"endDate":"1998,6,27",
+                "headline":"First own computer",
+                "text":"<p>Windows 3.1, 20 floppys, 20mb hd..</p>",
+                "asset":
+                {
+                    "media":"http://upload.wikimedia.org/wikipedia/de/6/6c/Wfw.PNG",
+                    "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
+                            {
+                "startDate":"1998,6,29",
+				"endDate":"2005,6,27",
+                "headline":"Windows-phase",
+                "text":"<p>Experiments and tryings with Windows 95-XP</p>",
+                "asset":
+                {
+                    "media":"http://upload.wikimedia.org/wikipedia/de/a/a2/Win98SE_Bildschirmausdruck.png",
+                    "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
+            
+                                        {
+                "startDate":"2004,6,29",
+				"endDate":"2005,6,27",
+                "headline":"First programming expiriences",
+                "text":"<p>The first hello world in perl</p>",
+                "asset":
+                {
+                    "media":"http://developer.asustor.com/uploadIcons/0020_999_1373967199_perl_256.png",
+                    "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
+                                        {
+                "startDate":"2005,6,29",
+				"endDate":"2007,6,27",
+                "headline":"Hello Linuxphase",
+                "text":"<p>Trys with Ubuntu, OpenSUSE and Mandrivia</p>",
+                "asset":
+                {
+                    "media":"http://upload.wikimedia.org/wikipedia/commons/thumb/2/20/KDE35desktop.png/800px-KDE35desktop.png",
+                    "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2007,6,1",
+				"endDate":"2011,6,27",
+                "headline":"Education as developer",
+                "text":"<p>Swiss education as applicationdeveloper at <a href='http://puzzle.ch'>Puzzle</a></p>",
+                "asset":
+                {
+                    "media":"http://www.puzzle.ch/img/logo.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+                         {
+                "startDate":"2007,8,26",
+                "endDate":"2010,8,26",
+                "headline":"Buy Openmoko/GTA02",
+                "text":"<p>First smartphone - and also for hackers</p>",
+                "asset":
+                {
+                    "media":"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Freerunner02.png/170px-Freerunner02.png",
+                    "credit":"Gource/Python",
+                    "caption":""
+                }
+            },
+             {
+                "startDate":"2007,10,26",
+                "headline":"First expirience with python",
+                "text":"<p>My first programm in python, the openmoko-sms-reader, using pyGTK.</p>",
+                "asset":
+                {
+                    "media":"https://www.youtube.com/watch?v=cNBtDstOTmA",
+                    "credit":"Gource/Python",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2008,1,26",
+				"endDate":"2010,1,27",
+                "headline":"First pyKDE/pyQt",
+                "text":"<p>Development of MultiSMS</p>",
+                "asset":
+                {
+                    "media":"http://cdn.staticportent.com/images/2011/07/python-madness.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2009,11,13",
+                "endDate":"2012,2,27",
+                "headline":"Development of Learncards-Web (PHP)",
+                "text":"<p>First development of today's peta</p>",
+                "asset":
+                {
+                    "media":"http://php.baraja.cz/phpslon.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2013,5,25",
+                "endDate":"2014,6,27",
+                "headline":"Development of jobManagement",
+                "text":"<p>Die Entwicklungsphase vom jobManagement</p>",
+                "asset":
+                {
+                    "media":"images/jobManagementDataInit.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+                        {
+                "startDate":"2014,5,29",
+                "endDate":"2014,6,27",
+                "headline":"Development of tryToxic",
+                "text":"<p>Die Entwicklungsphase vom tryToxic</p>",
+                "asset":
+                {
+                    "media":"images/tryToxicInit.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2011,2,26",
+                "endDate":"2011,4,26",
+                "headline":"Start working at röck n'röll-krew",
+                "text":"Work as stagehand",
+                "asset":
+                {
+                    "media":"images/oldjob3.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2012,6,12",
+                "endDate":"2012,10,12",
+                "headline":"Change company to Creative Personal",
+                "text":"Arbeit im Gerüstbau",
+                "asset":
+                {
+                    "media":"./images/oldjob2.jpg",
+                    "credit":"",
+                    "caption":"Writers & Creators: Kyle Humphrey & Graydon Sheppard"
+                }
+            }
+        ]
+    }
+}

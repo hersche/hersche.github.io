@@ -144,7 +144,7 @@
         "picture": "profile.png",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
-            "E-Mail": "hersche@vmail.me",
+            "E-Mail": "hersche@openmailbox.org",
             "Diaspora": "<a href='https://nerdpol.ch/u/hersche'>hersche@nerdpol.ch</a>",
             "Xing": "<a href='https://www.xing.com/profile/Vinzenz_Hersche'>Vinzenz Hersche</a>"
         },
@@ -248,6 +248,8 @@
         "refresh": "Refresh",
         "nowebstorage": "You don't have webstoragesupport",
         "fromstorage": "from Webstorage",
-        "fromnew": "reloaded right now!"
+        "fromnew": "reloaded right now!",
+        "timeline":"Timeline-view",
+        "lang":"en"
     }
 }

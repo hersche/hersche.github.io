@@ -5,6 +5,13 @@ CACHE:
 /stylesheets/serious.css
 /stylesheets/pygment_trac.css
 /stylesheets/lightbox.css
+/stylesheets/timeline.css
+/stylesheets/timeline.png
+/stylesheets/timeline@2x.png
+/stylesheets/jquery.fancybox.css
+/stylesheets/fancybox_sprite.png
+/stylesheets/fancybox_sprite@2x.png
+/stylesheets/loading.gif
 /index.html
 #enable reloading on subsites
 /index.html?s=about
@@ -21,6 +28,8 @@ CACHE:
 /js/ownScript.js
 /js/jquery.fancybox.js
 /js/jquery.mousewheel-3.0.6.pack.js
+/js/timeline.js
+/js/storyjs-embed.js
 /images/tryToxicChat.png
 /images/tryToxicInit.png
 /en.json
