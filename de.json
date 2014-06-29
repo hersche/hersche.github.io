@@ -140,7 +140,7 @@
     "about": {
         "title": "Über mich",
         "preword": "Einige Erfahrungen und Infos über mich",
-        "description": "Guten Tag,<br />Diesen Abschnitt informiert Sie über meine bisherigen Erfahrungen und Teile meines persönlichen Lebens. Ich habe viele Dinge ausprobiert und habe meine Stärken vor allem beim Programmieren, aber auch beim Administrieren/Supporten von Systemen entdeckt. Im gegenzug würde ich mich nicht als Designer oder Hardware-Spezialist ausgeben.<br /> Nachfolgend finden Sie eine Liste meiner Erfahrungen - das Fähigkeitszeugniss und die Kontaktinformation zu den Referenzen verschicke ich auf Anfrage (Privatsphäre).",
+        "description": "Guten Tag,<br />Diesen Abschnitt informiert Sie über meine bisherigen Erfahrungen und Teile meines persönlichen Lebens. Ich habe viele Dinge ausprobiert und habe meine Stärken vor allem beim Programmieren, aber auch beim Administrieren/Supporten von Systemen entdeckt. Im gegenzug würde ich mich nicht als Designer oder Hardware-Spezialist ausgeben.<br /> Nachfolgend finden Sie eine Liste meiner Erfahrungen - das Fähigkeitszeugniss und die Kontaktinformation zu den Referenzen verschicke ich auf Anfrage.",
         "picture": "profile.png",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
@@ -152,6 +152,7 @@
             "trans": "Suport referenzen",
             "desc": "Ich supporte die Computer verschiedener Menschen seit mehr als 6 Jahren mit Hilfe von Linux. Meistens nutze ich <a href='http://kubuntu.org'>Kubuntu</a>, manchmal auch Linux Mint, praktisch immer jedoch <a href='http://kde.org'>KDE</a>",
             "reference": {
+                "Puzzle ITC":"Meine <a href='http://puzzle.ch'>Ausbildungsfirma</a> schrieb über mich: <h4>Fachkompetenz</h4>Dank seiner guten Auffassungsgabe und seinem Wissensdurst konnte sich Herr Hersche schnell in die verschiedenen Themenbereiche einarbeiten und verfügt heute über fundierte Fachkenntnisse. Mit Problemstellungen setzt er sich selbständig auseinander und erarbeitet jeweils eine gute Lösung.<h4>Methodenkompetenz</h4>Herr Hersche arbeitete von Beginn an sehr selbständig und ging geplant vor. Dazu setzte er verschiedene Arbeitstechnicken ein und wählte mit Hilfe seines vernetzes Denken jeweils die effizenteste Vorgehensweise aus.",
                 "Ines": "Aussage einer Person",
                 "Christian": "eine andere Aussage.."
             }
@@ -165,11 +166,12 @@
                 }
             },
             "Python": {
-                "desc": "<a href='https://python.org'>Python</a> lernte ich nach Java, aber sie machte schnell süchtig. Perfekte Möglichkeiten für sequentiellen, objektorientierten und modularen Code - und trozdem muss es mindestens schön dargestellt werden :)",
+                "desc": "<a href='https://python.org'>Python</a> lernte ich nach Java kennen, wurde jedoch sehr schnell süchtig nach dieser Sprache. Perfekte Möglichkeiten für sequentiellen, objektorientierten und modularen Code - und trozdem muss es mindestens schön dargestellt werden :)",
                 "frameworks": {
-                    "PyQt || PyKDE": "Qt ist eine sehr modulare UI-Bibliothek. Sie ist einfach zu benutzen und arbeitet sehr stabil.",
-                    "PyTox": "PyTox ist eine Schnittstelle zum Tox-core-projekt. Für weitere Informationen besuchen Sie <a href='http://tox.im'>tox.im</a>",
-                    "PyCrypto": "PyCrypto unterstüzt viele Arten von Hashing, symetrischer und asymetrischer Verschlüsselung. Es wird von mir grundsätzlich zur Verschlüsselung des lokalen Speichers genutzt."
+                    "Urllib2": "<a href='https://docs.python.org/2/library/urllib2.html'>Dieses</a> nette Framework 'spricht' mit websites, ohne dass es einen daemon braucht. Nur zum feld gehen, input rein und abschicken - in python, nicht im browser. Dadurch lässt sich viel automatisieren, egal ob der Betreiber der Website das wünscht oder nicht.",
+                    "PyQt || PyKDE": "<a href='http://qt-project.org/'>Qt</a> ist eine sehr modulare UI-Bibliothek. Sie ist einfach zu benutzen und arbeitet sehr stabil.",
+                    "PyTox": "<a href='https://github.com/aitjcize/PyTox'>PyTox</a> ist eine Schnittstelle zum Tox-core-projekt. Für weitere Informationen besuchen Sie <a href='http://tox.im'>tox.im</a>",
+                    "PyCrypto": "<a href='https://www.dlitz.net/software/pycrypto/'>PyCrypto</a> unterstüzt viele Arten von Hashing, symetrischer und asymetrischer Verschlüsselung. Es wird von mir grundsätzlich zur Verschlüsselung des lokalen Speichers genutzt."
                 }
             },
             "Java": {
@@ -212,8 +214,8 @@
         },
         "sys": {
             "trans": "Systemadministrator-Erfahrungen",
-            "Windows 3.1": "Mein erster Computer. Er hatte 486hz und eine Harddisk mit 20Mb. <a href='https://de.wikipedia.org/wiki/Microsoft_Windows_3.1'>Windows 3.1</a> brauchte rund 20 Disketten.",
-            "Windows 98-Xp": "Dies waren meine folgenden Computer. Von meinem ersten 4x-CD-Laufwerk bis zum ersten CD-Brenner.",
+            "Windows 3.1": "Mein erster Computer. Er hatte 486hz und eine Harddisk mit 20Mb. <a href='https://de.wikipedia.org/wiki/Microsoft_Windows_3.1'>Windows 3.1</a> brauchte rund 20 Disketten zum Aufsetzen. Dies war auch das erste Gerät, dass ich auseinander nahm und wieder zusammen setzte.",
+            "Windows 98-Xp": "Dies waren meine folgenden Computer. Von meinem ersten 4x-CD-Laufwerk bis zum ersten CD-Brenner. Ich machte viele Erfahrungen, wovon nicht wenige mühsam waren.",
             "Mandrivia Linux": "<a href='https://de.wikipedia.org/wiki/Mandriva_Linux'>Mandrake/Mandrivia</a> war mein erstes, richtig gebrauchtes Linux. Es war ein wenig wie Kubuntu heute.",
             "OpenSuse": "Als dieses Projekt startete, schien es interessant (aufgrund der Einfachheit) - aber persönlich habe ich zu viele Fehler miterlebt. Heute hat sich dies wahrscheinlich auch geändert, allerdings benutze OpenSuse nicht mehr.",
             "Gentoo": "Nachdem ich ein wenig mit Linux spielte, Dualboot und solche Dinge hinter mich gebracht habe, probierte ich <a href='https://de.wikipedia.org/wiki/Gentoo_Linux'>Gentoo</a> aus. Das war kurz vor meiner Ausbildung. In der Ausbildung hatten wir einen Lehrer, welcher auch Gentoo-Benutzer war. Es war mir deshalb erlaubt, eine <a href='https://de.wikipedia.org/wiki/Gentoo_Linux'>Gentoo</a>-Installation als Standartsystem zu nutzen. Ein bischen stolz bin ich schon: Die meisten kamen nie über einen Kernel-Panic hinaus, fühlten sich aber auch glücklich, als sie zu Windows XP zurückkehren durften. Dies ist meine Lieblingsdistribution!",
@@ -225,7 +227,8 @@
                 "E-Mail": "<a href='https://de.wikipedia.org/wiki/Sendmail'>Sendmail</a> und <a href='https://de.wikipedia.org/wiki/Dovecot'>Dovecot</a>. Wie einige Systemadministratoren sagen: Setze Sendmail einmal auf, und du hast was gelernt. Setze es mehr auf und du bist verrückt!",
                 "Tor-Node": "Ein einfacher <a href='https://de.wikipedia.org/wiki/Tor_%28Netzwerk%29'>Tor-Knotenpunkt</a>",
                 "Apache": "Ein <a href='https://de.wikipedia.org/wiki/Apache_HTTP_Server'>Webserver</a> mit Ruby & Rails und PHP-Support.",
-                "MySQL": "Eine ziemliche Standartdatenbank.",
+                "MySQL": "Eine SQL-Datenbank, die sehr verbreitet ist. ",
+                "Squid": "Ein Cache-Proxyserver",
                 "Diaspora": "Dies ist ein <a href='https://de.wikipedia.org/wiki/Diaspora_%28Software%29'>soziales Netzwerk</a>, das quasi wie E-Mail (<a href='https://de.wikipedia.org/wiki/Peer-to-Peer'>P2P</a>) funktioniert. Dies lief über Apache (Ruby & Rails). Da ich Probleme mit meinen selbstsignierten Zertifikaten und nicht immer Zeit zur Pflege hatte, war dieses Projekt leider oft unstabil.",
                 "Seeks": "Eine <a href='https://en.wikipedia.org/wiki/Seeks'>P2P-Suchmaschine</a>, die Resultate von Google, Stackoverflow, Duckduckgo, Wikipedia oder was auch immer abfragen kann. Heute gibt es einen Fork, genannt <a href='https://github.com/asciimoo/searx'>Searx</a>."
             },
@@ -248,7 +251,7 @@
         "nowebstorage": "Sie haben keinen Offlinespeichersupport",
         "fromstorage": "vom Offlinespeicher",
         "fromnew": "gerade Erledigt",
-        "timeline":"Zeitliche Ansicht ('Timeline')",
+        "timeline":"<p>Dies sind meine Erfahrungen, die sie auch als <a id='timeline' href='#my-timeline' onclick='$(\"#my-timeline\").show()'>zeitliche Ansicht (Timeline)</a> ansehen können.</p>",
         "lang":"de"
     }
 }

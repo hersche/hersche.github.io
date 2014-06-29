@@ -33,9 +33,9 @@
             },
             
                                         {
-                "startDate":"2004,6,29",
+                "startDate":"2004,3,15",
 				"endDate":"2005,6,27",
-                "headline":"Erste Programmiererfahrungen",
+                "headline":"Erster Code",
                 "text":"<p>Das erste Hello World, welches ich schrieb, war in Perl.</p>",
                 "asset":
                 {
@@ -45,8 +45,8 @@
                 }
             },
                                         {
-                "startDate":"2005,6,29",
-				"endDate":"2007,6,27",
+                "startDate":"2004,6,29",
+				"endDate":"2006,6,27",
                 "headline":"Linux-kennenlern-phase",
                 "text":"<p>Versuche mit mandrivia, suse, ubuntu. Dualboots und ähnliches war aktuell..</p>",
                 "asset":
@@ -56,14 +56,38 @@
                     "caption":""
                 }
             },
+                                                    {
+                "startDate":"2006,6,29",
+				"endDate":"2014,6,27",
+                "headline":"Gentoo",
+                "text":"<p>Fund meiner Lieblingsdistro..</p>",
+                "asset":
+                {
+                    "media":"http://i-009.mannaz.cc/wp-content/uploads/2010/03/gentoo-transparent.png",
+                    "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
             {
                 "startDate":"2007,6,1",
 				"endDate":"2011,6,27",
-                "headline":"Ausbildung als Informatiker",
+                "headline":"Ausbildung Informatiker",
                 "text":"<p>Eidgenössische lehre als infi bei <a href='http://puzzle.ch'>Puzzle</a></p>",
                 "asset":
                 {
                     "media":"http://www.puzzle.ch/img/logo.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2008,6,1",
+				"endDate":"2011,6,27",
+                "headline":"Java/OOP",
+                "text":"<p>Durch die Firma kam ich zu Java und lernte dadurch, OOP zu denken.</p>",
+                "asset":
+                {
+                    "media":"http://swordrock.files.wordpress.com/2010/10/images.jpg",
                     "credit":"",
                     "caption":""
                 }
@@ -137,6 +161,29 @@
                     "media":"images/tryToxicInit.png",
                     "credit":"",
                     "caption":""
+                }
+            },
+                                     {
+                "startDate":"2014,4,10",
+                "endDate":"2014,6,27",
+                "headline":"skamster.github.io",
+                "text":"<p>Entwicklung der website - 123+ commits!</p>",
+                "asset":
+                {
+                    "media":"http://www.thebubbleindex.com/public/images/content/HTML.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate": "2014,4,12",
+                "endDate": "2014,6,27",
+                "headline": "Peta",
+                "text": "<p>Abwandlung von learncards-web (für Sprachkärtchen) zu PhpMeta (Plugin- und Zugriffssystem)</p>",
+                "asset": {
+                    "media": "http://helloiamchris.com/wp-content/uploads/2012/06/phpCode-640x426.png",
+                    "credit": "",
+                    "caption": ""
                 }
             },
 			{

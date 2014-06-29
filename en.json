@@ -140,7 +140,7 @@
     "about": {
         "title": "About me",
         "preword": "Some information over me",
-        "description": "Hello,<br />This part informs you about my expiriences and also a little about my personal life. I tried many things and detect my strong parts in programming and also a little in administration/support of systems. On the other site, i wouldn't say i'm a designer or hardware-specialist. <br /> Following, you will find a list with my expiriences - the education-passport and personal contacts to references will be sendet on question (privacy).",
+        "description": "Hello,<br />This part informs you about my expiriences and also a little about my personal life. I tried many things and detect my strong parts in programming and also a little in administration/support of systems. On the other site, i wouldn't say i'm a designer or hardware-specialist. <br /> Following, you will find a list with my expiriences - the education-passport and personal contacts to references will be sendet on question.",
         "picture": "profile.png",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
@@ -164,6 +164,7 @@
             "trans": "Suport references",
             "desc": "I support diffrent people's computers since more than 6 years in assistance with linux. Mostly i use a <a href='http://kubuntu.org'>Kubuntu</a>, sometimes also Linuxmint, but near ever i use <a href='http://kde.org'>KDE</a>",
             "reference": {
+                "Puzzle ITC":"My <a href='http://puzzle.ch'>Educationcompany</a> wrote over me (translated): <h4>Expertise</h4>Thanks to his good grasp and thirst of knowledge, mr Hersche was fast able to work in diffrent topics and get today etablished expertise. He handles problems autonomus and does a good solution.<h4>Method expertise</h4>Mr Hersche worked out of beginn very autonomous and planned. To do this, he used diffrent workingtechniques and choose with help of his cross-linked thinking the most efficience method.",
                 "ex-Name": "Usage of person",
                 "name 2": "another ussage"
             }
@@ -173,13 +174,13 @@
             "PHP": {
                 "desc": "Use this for 10 years. Since Oop is default with PHP5, it's beatiful to use. Before it was horrible, but not for me (i didn't know oop in the beginn)",
                 "frameworks": {
-                    "Smarty": "A templateframework, allow a clean separation between 'controller' and 'view'. Smarty make <a href='https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller'>MVC</a> really easy!"
+                    "Smarty": "A templateframework, allow a clean separation between 'controller' and 'view'. <a href='http://smarty.net'>Smarty</a> make <a href='https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller'>MVC</a> really easy!"
                 }
             },
             "Python": {
                 "desc": "I know <a href='https://python.org'>python</a> since 5 years and it addict me really fast. Perfect possibilitys of sequentell, Oop and modulare code. It also don't use { }, but forces you to format your code proper. Top!",
                 "frameworks": {
-                    "Urllib2": "This is a nice framwork to 'speak' with websites, which doesn't get a daemon. Just go to a field, put input in and submit - in python, not in browser. That way you could do a lot automatic, unimportant the hoster like it or not",
+                    "Urllib2": "<a href='https://docs.python.org/2/library/urllib2.html'>This</a> is a nice framwork to 'speak' with websites, which doesn't get a daemon. Just go to a field, put input in and submit - in python, not in browser. That way you could do a lot automatic, unimportant the hoster like it or not",
                     "PyQt || PyKde": "Qt is a very modular ui-library - it's easy to use and works very stable. This is one of the first frameworks i used.",
                     "PyTox": "PyTox is a interface to the tox-core-project. The whole project is in heavy development. For further information visit <a href='http://tox.im'>tox.im</a>.",
                     "PyCrypto": "PyCrypto supports many kinds of hashing, symmetric and asymmetric encryptions. My focus is on symmetric encryptions. I use it to encrypt local data"
@@ -249,7 +250,8 @@
         "nowebstorage": "You don't have webstoragesupport",
         "fromstorage": "from Webstorage",
         "fromnew": "reloaded right now!",
-        "timeline":"Timeline-view",
-        "lang":"en"
+        "timeline":"<p>Dies sind meine Erfahrungen, die sie auch als <a id='timeline' href='#my-timeline' onclick='$(\"#my-timeline\").show()'>zeitliche Ansicht (Timeline)</a> ansehen können.</p>",
+        "lang":"en",
+        "expirience":"Erfahrung"
     }
 }
