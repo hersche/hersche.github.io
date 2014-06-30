@@ -26,10 +26,10 @@ body {
     -moz-box-shadow: 0 0 5px 5px black;
     -webkit-box-shadow: 0 0 5px 5px black;
     box-shadow: 0 0 5px 5px black;
-    min-width: 50%;
-    max-width: 70%;
+    min-width: 70%;
+    max-width: 80%;
     z-index: 998;
-    margin-left: 23%;
+    margin-left: 25%;
     padding-left: 1px;
     position: absolute;
     padding-right: 1px;
@@ -101,10 +101,13 @@ body {
 .submenu {
     padding: 0;
     position: absolute;
-    top: 48px;
+    top: 30px;
     left: 1px;
     right: 1%;
+        padding-left: 20px;
+    margin-left: 30px;
     margin-bottom: 1%;
+    
     width: auto;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -168,10 +171,14 @@ body {
 }
 .submenu li {
     display: block;
-    margin-top: 2px;
-    padding-left: 20px;
-    margin-left: 30px;
+    
+padding-top:4px;
     text-shadow: 0 -1px 0 #000;
+}
+
+.submenu li a {
+    margin-top: 4px;
+    margin-left: 25%;
 }
 .dropdowncontainer {
     display: inline-block;
@@ -179,12 +186,16 @@ body {
     /* padding: 5px 50px; */
     padding-bottom: 15px;
     padding-top: 5px;
+    padding-left: 2px;
     cursor: pointer;
     z-index: 555;
     transition-property: display;
     transition-duration: 5s;
     transition-delay: 2s;
 }
+
+
+
 .dropdowncontainer:hover > .submenu {
     display: block !important;
     opacity: 1 !important;
@@ -230,11 +241,11 @@ body {
     }
 }
 .dropdowncontainer:before {
-    content: "";
-    display: inline-block;
-    /* margin-left: -25px; */
-    padding-left: 25px;
-    padding-right: 1px;
+    content: none;
+    /*line-height: 16px; */
+}
+.dropdowncontainer li:before {
+    content: none;
     /*line-height: 16px; */
 }
 .dropdowncontainer:hover > .submenu li:before {
@@ -316,6 +327,7 @@ body {
     }
 }
 #menucontent {
+    float:left;
     display: inline;
     
 }
@@ -364,17 +376,15 @@ header h2 {
 /* Main Content
 */
 #menuul {
-    display: inline; margin:0; list-style: none;
-}
-#menuul:before {
- content: none;  
-    margin:0;
-    padding:0;
+    display: inline; margin:0px;
+    padding-left: 0px;
 }
 
-#menuul li:before {
+#menuul li {
  content: none;  
 margin:0;
+    outline-style: none;
+     list-style: none; 
     padding:0;
 }
 #main_content {
@@ -540,7 +550,7 @@ a:hover {
 a.tooltip:after {
     visibility: hidden;
     position: absolute;
-    top: 125px;
+    top: 90px;
     left: 25%;
     opacity: 0;
     content: attr(data-tool);

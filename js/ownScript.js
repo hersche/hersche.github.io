@@ -21,7 +21,7 @@ function processMenuHtml(jDataIn) {
                 downSign = " <b>&darr;</b> ";
                 parent = ' class="dropdowncontainer" ';
             }
-            menuHtml += '<li' + parent + ' ><a href="#" data-tool="' + value.preword + '" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">'+downSign + value.title + downSign+'</a>';
+            menuHtml += '<li' + parent + ' ><a href="#" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">'+downSign + value.title + downSign+'</a>';
             // This is because i know, index is the first.. it have to be!	  
             if (menuName != "index") {
                 menuHtml += '</li>';
@@ -32,6 +32,7 @@ function processMenuHtml(jDataIn) {
             }
         }
     });
+   // alert(menuHtml + '</li></ul>');
     return menuHtml + '</li></ul>';
 
 
