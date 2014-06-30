@@ -14,12 +14,14 @@ function processMenuHtml(jDataIn) {
     var menuHtml = '<ul id="menuul" >';
     $.each(jDataIn, function (menuName, value) {
         var parent = "";
+        var downSign = "";
         if (menuName != "transl") {
             if (menuName == "index") {
                 styleClass = '"submenu"';
+                downSign = " <b>&darr;</b> ";
                 parent = ' class="dropdowncontainer" ';
             }
-            menuHtml += '<li' + parent + ' ><a href="#" data-tool="' + value.preword + '" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">' + value.title + '</a>';
+            menuHtml += '<li' + parent + ' ><a href="#" data-tool="' + value.preword + '" onclick="changeContent(\'' + menuName + '\'); return false;" class="btn fade">'+downSign + value.title + downSign+'</a>';
             // This is because i know, index is the first.. it have to be!	  
             if (menuName != "index") {
                 menuHtml += '</li>';
