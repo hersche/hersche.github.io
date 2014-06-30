@@ -102,7 +102,9 @@ body {
     padding: 0;
     position: absolute;
     top: 48px;
-    left: 3%;
+    left: 1%;
+    right: 1%;
+    margin-bottom: 1%;
     width: auto;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -172,7 +174,6 @@ body {
     text-shadow: 0 -1px 0 #000;
 }
 .dropdowncontainer {
-    font: bold 12px/18px sans-serif;
     display: inline-block;
     position: relative;
     /* padding: 5px 50px; */
@@ -314,9 +315,9 @@ body {
         -webkit-transform: rotate(-10deg);
     }
 }
-#menucontent {} section {
-    display: block;
-    margin: 0 0 20px 0;
+#menucontent {
+    display: inline;
+    
 }
 li {
     line-height: 1.4;
@@ -362,7 +363,20 @@ header h2 {
 }
 /* Main Content
 */
+#menuul {
+    display: inline; margin:0; list-style: none;
+}
+#menuul:before {
+ content: none;  
+    margin:0;
+    padding:0;
+}
 
+#menuul li:before {
+ content: none;  
+margin:0;
+    padding:0;
+}
 #main_content {
     width: 100%;
     -webkit-font-smoothing: antialiased;
@@ -467,14 +481,14 @@ hr {
     background: -ms-linear-gradient(-45deg, rgba(188, 143, 39, 1) 0%, rgba(188, 143, 39, 0.93) 15%, rgba(197, 83, 31, 0.71) 58%, rgba(206, 24, 24, 1) 100%);
     background: linear-gradient(135deg, rgba(188, 143, 39, 1) 0%, rgba(188, 143, 39, 0.93) 15%, rgba(197, 83, 31, 0.71) 58%, rgba(206, 24, 24, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#bc8f27', endColorstr='#ce1818', GradientType=1);
-    padding: 8px 12px;
+    padding: 7px 5px;
     margin-left: 6px;
     border-radius: 5px;
     border: 1px solid transparent;
     color: yellow;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 70%;
     text-decoration: none;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -526,7 +540,7 @@ a:hover {
 a.tooltip:after {
     visibility: hidden;
     position: absolute;
-    top: 135px;
+    top: 125px;
     left: 25%;
     opacity: 0;
     content: attr(data-tool);

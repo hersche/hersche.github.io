@@ -11,7 +11,7 @@ function createTimeline(tlD, lang) {
 }
 
 function processMenuHtml(jDataIn) {
-    var menuHtml = '<ul style="display: inline; margin:0; list-style: none;" >';
+    var menuHtml = '<ul id="menuul" >';
     $.each(jDataIn, function (menuName, value) {
         var parent = "";
         if (menuName != "transl") {

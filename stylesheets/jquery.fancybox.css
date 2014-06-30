@@ -184,7 +184,13 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: url('../images/fancy/fancybox_overlay.png');
+	background: -moz-linear-gradient(-45deg, rgba(193,167,17,0.51) 0%, rgba(232,98,20,0.47) 12%, rgba(250,29,22,0.37) 43%, rgba(252,22,22,0.38) 46%, rgba(234,227,21,0.46) 80%, rgba(252,53,53,0.51) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(193,167,17,0.51)), color-stop(12%,rgba(232,98,20,0.47)), color-stop(43%,rgba(250,29,22,0.37)), color-stop(46%,rgba(252,22,22,0.38)), color-stop(80%,rgba(234,227,21,0.46)), color-stop(100%,rgba(252,53,53,0.51))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg, rgba(193,167,17,0.51) 0%,rgba(232,98,20,0.47) 12%,rgba(250,29,22,0.37) 43%,rgba(252,22,22,0.38) 46%,rgba(234,227,21,0.46) 80%,rgba(252,53,53,0.51) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg, rgba(193,167,17,0.51) 0%,rgba(232,98,20,0.47) 12%,rgba(250,29,22,0.37) 43%,rgba(252,22,22,0.38) 46%,rgba(234,227,21,0.46) 80%,rgba(252,53,53,0.51) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg, rgba(193,167,17,0.51) 0%,rgba(232,98,20,0.47) 12%,rgba(250,29,22,0.37) 43%,rgba(252,22,22,0.38) 46%,rgba(234,227,21,0.46) 80%,rgba(252,53,53,0.51) 100%); /* IE10+ */
+background: linear-gradient(135deg, rgba(193,167,17,0.51) 0%,rgba(232,98,20,0.47) 12%,rgba(250,29,22,0.37) 43%,rgba(252,22,22,0.38) 46%,rgba(234,227,21,0.46) 80%,rgba(252,53,53,0.51) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82c1a711', endColorstr='#82fc3535',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .fancybox-overlay-fixed {
