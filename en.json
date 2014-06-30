@@ -1,8 +1,8 @@
 {
     "index": {
-        "title": "Linklist + about site and projects",
-        "preword": "This is the linklist, or alternative home. Sitemap would may be a good name, but it contains 'external' links too. <br /> It contains also a description about the website and my in context to my projects.",
-        "description": "TEXT IS UNDER CONSTRUCTION! <br /><h4><a name='website'></a>Website</h4>This and the whole Website is using your Webstorage, if your browser supports this. You will reconize this, when you change the language - you have to refresh via button after, to reload offline-content (which also got the language). This website is really fresh by technics and i like to stay current here, to learn something more about that HTML5-World. Javascript is also a quite new language to me (2 years), but a funny world. It's not a example for a 'secure language', but its often nice eyecandy and sometimes also usefull (see <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my computertime.<span style='color: grey;'><h4><a name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Site 309 (it's a german book, i translate):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, Security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as now. <h4><a name='about'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. I would like to got a job as dev and also learned this kind of job. After my education, i was working by body, cause 8 hrs pc, 5 days a week for 4 years where too much for me. Now I borke my feed and liked to do something - i never really ended in programming (just reduced), but since april, i am active again, how you see in github. <br />I'm basicly not interessted in donations. Those projects could show, how i could develop. <br /> You could use those projects free and i'm happy, if someone try or fork it (or also report bugs).",
+        "title": "Linklist, about site and projects",
+        "preword": "This is the linklist, or alternative home. Sitemap would may be a good name, but it contains 'external' links too. <br /> It contains also a description about the website and me in context to my projects.",
+        "description": "TEXT IS UNDER CONSTRUCTION! <br /><h4><a name='website'></a>Website</h4>This Website is using your Webstorage, if your browser supports this feature. You will reconize this, when you change the language - you have to refresh via button after, to reload offline-content (which also got the language). This website is really fresh by technics and i like to stay current here, to learn something more about the relative new HTML5-World. Javascript is also a quite new language to me, but a interessting world. It's not a example for a 'secure language', but its was often nice eyecandy and is often also usefull (see <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my computertime.<span style='color: grey;'><h4><a name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg ('the easy entry'), Site 309 (it's a german book, translation by me):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, Security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as now. <h4><a name='about'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. I would like to got a job as dev and also learned this kind of job. After my education, i was working by body, cause 8 hrs pc, 5 days a week for 4 years where too much for me. Now I borke my feed and liked to do something - i never really ended in programming (just reduced), but since april, i am active again, how you see in github. <br />I'm basicly not interessted in donations. Those projects could show, how i could develop. <br /> You could use those projects free and i'm happy, if someone try or fork it (or also report bugs).",
         "content": {
             "tryToxic": {
                 "pLink": "tryToxic",
@@ -20,13 +20,13 @@
                 "pLink": "peta",
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Heavy development, but basicly stable"
+                "stable": "Need some features to finish, but basicly stable"
             },
             "MultiSms": {
                 "pLink": "multisms",
                 "sLink": "https://github.com/skamster/MultiSms/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Doesn't work atm"
+                "stable": "Doesn't work atm, need a rewrite from python 2.7 to 3.x"
             },
             "skamster.github.io": {
                 "pLink": "index.html?s=skamster.github.io",
@@ -214,9 +214,9 @@
         },
         "sys": {
             "trans": "Sysadmin-Expiriences",
-            "Windows 3.1": "My first computer with 20Mb-Harddisk and 20 floppys to setup.",
-            "Windows 98-Xp": "My following computers. From my first 4x-Cddrive to my first disc-burner.",
-            "Mandrivia Linux": "This was my first linux i really used. Was a little like kubuntu today.",
+            "Windows 3.1": "My first computer with 20Mb-Harddisk and 20 floppys to setup windows. It was also the first computer which i do into single parts and to a computer again. This was with nine years.",
+            "Windows 98-Xp": "My following computers. From my first 4x-Cddrive to my first disc-burner. I learned and tried a lot of stuff there, but the expirience wans't always good.",
+            "Mandrivia Linux": "This was my first linux i really used. Was a little like <a href='http://kubuntu.org'>Kubuntu</a> today.",
             "OpenSuse": "As this project getting started, it looks interessting (cause of simpleness) - but personaly, i've too much failures there. Today, this may changed, didn't use it again",
             "Gentoo": "After playing a little with linux, dualboots and that stuff, i tried <a href='https://en.wikipedia.org/wiki/Gentoo_Linux'>gentoo</a>. This was short before my education. In the education, a teacher was a gentoo-user too, and i was allowed to have a gentoo-installation as default (while other didn't pass they're kernel-panics, but they also felt lucky when they where back in Win Xp ;) ). This is my favourite distro!",
             "Fedora": "In my company, we used basicly fedora. I didn't really liked that, so i've changed to gentoo.",
@@ -227,11 +227,12 @@
                 "E-Mail": "<a href='https://en.wikipedia.org/wiki/Sendmail'>Sendmail</a> and <a href='https://en.wikipedia.org/wiki/Dovecot_%28software%29>dovecot</a>. As some sys-admins say: Setup sendmail once, and it's nice. Set it up more and you're a crazy.",
                 "Tor-Node": "A simple node in the <a href='https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29'>tor-anonymizing-network</a>",
                 "Apache": "A <a href='https://en.wikipedia.org/wiki/Apache_HTTP_Server'>webserver</a>, configured for ruby & rails and php-support.",
+                "Squid":"<a href='http://en.wikipedia.org/wiki/Squid'>Squid</a> is a cache-proxy-server",
                 "MySQL": "A really default database",
-                "Diaspora": "This is a <a href='https://en.wikipedia.org/wiki/Diaspora_%28software%29'>social-network</a> which works similiar to E-Mail (P2P). It was running over Apache (ruby & rails). Since i have issues with self-signed certificates and not always time, it was still unstable",
+                "Diaspora": "This is a <a href='https://en.wikipedia.org/wiki/Diaspora_%28software%29'>social-network</a> which works similiar to E-Mail (P2P). It was running over Apache (<a href='http://rubyonrails.org/'>RoR</a>). Since i have issues with self-signed certificates and not always time, it was still unstable",
                 "Seeks": "A <a href='https://en.wikipedia.org/wiki/Seeks'>P2P-Searchengine</a> for getting results from google, stackoverflow, duckduckgo, wikipedia or whatever else. Today, there's also a fork called <a href='https://github.com/asciimoo/searx'>searx</a>."
             },
-            "Debian": "I've used <a href='https://en.wikipedia.org/wiki/Debian'>debian</a> for my second server, which i've for about a year. <a href='https://en.wikipedia.org/wiki/Debian'>Debian</a> is also the base for <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> (see Mobile hacks/Openmoko) It's a really often used system and base for a lot of distros. I know apt-get better by using kubuntu than debian.",
+            "Debian": "I've used <a href='https://en.wikipedia.org/wiki/Debian'>Debian</a> for my second server, which i've for about a year. <a href='https://en.wikipedia.org/wiki/Debian'>Debian</a> is also the base for <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> (see Mobile hacks/Openmoko) It's a really often used system and base for a lot of distros. I know apt-get better by using kubuntu than debian.",
             "Sabayon": "This is my currently favourite-looking distro. It's based on gentoo, but using precompiled packages (which are compiled by gentoo-repos). It default-desktop is KDE and it's rolling-release. Yay!"
 
         }
@@ -250,8 +251,10 @@
         "nowebstorage": "You don't have webstoragesupport",
         "fromstorage": "from Webstorage",
         "fromnew": "reloaded right now!",
-        "timeline":"<p>Dies sind meine Erfahrungen, die sie auch als <a id='timeline' href='#my-timeline' onclick='$(\"#my-timeline\").show()'>zeitliche Ansicht (Timeline)</a> ansehen können.</p>",
+        "timeline":"<p>Those are my expiriences which you also view look as a <a id='timeline' href='#my-timeline' onclick='$(\"#my-timeline\").show()'>timeline</a>.</p>",
         "lang":"en",
-        "expirience":"Erfahrung"
+        "expiriences":"Expiriences",
+        "security":"Security",
+        "about":"About me"
     }
 }

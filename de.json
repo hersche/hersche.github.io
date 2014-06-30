@@ -8,25 +8,25 @@
                 "pLink": "tryToxic",
                 "sLink": "https://github.com/skamster/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
-                "stable": "Der Kern befindet sich in einer experimentellen Phase. Durch Änderungen an der API können Teile 'aufhören zu funktionieren'."
+                "stable": "Der Kern befindet sich in der  Alpha-phase (offen für Veränderungen). Durch Änderungen an der API können Teile 'aufhören zu funktionieren'."
             },
             "jobManagement": {
                 "pLink": "jobManagement",
                 "sLink": "https://github.com/skamster/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
-                "stable": "Soweit bereit."
+                "stable": "Funktioniert stabil"
             },
             "Peta": {
                 "pLink": "peta",
                 "sLink": "https://github.com/skamster/Peta/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Funktioniert gut, allerdings ist noch nicht die komplette Grundfunktionalität vorhanden."
+                "stable": "Funktioniert stabil, benötigt noch ein paar grundlegende Features."
             },
             "MultiSms": {
                 "pLink": "multisms",
                 "sLink": "https://github.com/skamster/MultiSms/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Funktioniert derzeit nicht"
+                "stable": "Funktioniert derzeit nicht, benötigt ein umschreiben von Python 2.7 auf 3.x"
             },
             "skamster.github.io": {
                 "pLink": "skamster.github.io",
@@ -251,7 +251,10 @@
         "nowebstorage": "Sie haben keinen Offlinespeichersupport",
         "fromstorage": "vom Offlinespeicher",
         "fromnew": "gerade Erledigt",
-        "timeline":"<p>Dies sind meine Erfahrungen, die sie auch als <a id='timeline' href='#my-timeline' onclick='$(\"#my-timeline\").show()'>zeitliche Ansicht (Timeline)</a> ansehen können.</p>",
-        "lang":"de"
+        "timeline":"<p>Dies sind meine Erfahrungen, die Sie sich auch als <a id='timeline' href='#my-timeline' onclick='$(\"#my-timeline\").show()'>zeitliche Ansicht (Timeline)</a> ansehen können.</p>",
+        "lang":"de",
+        "expiriences":"Erfahrungen",
+        "security":"Sicherheit",
+        "about":"Über mich"
     }
 }

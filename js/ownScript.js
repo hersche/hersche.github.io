@@ -49,7 +49,7 @@ function processHtml(jDataIn, name) {
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
                 displayHtml += '</table><p><a name="description" class="anchor" ></a>' + val.description + '</p>';
-                toc += '<ul><li><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a><ul><li><a href="#website">Website</a></li><li><a href="#security">Sicherheit</a></li><li><a href="#about">Über mich</a></li></ul></li></ul>';
+                toc += '<ul><li><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a><ul><li><a href="#website">Website</a></li><li><a href="#security">'+jDataIn.transl.security+'</a></li><li><a href="#about">'+jDataIn.transl.about+'</a></li></ul></li></ul>';
             } else if (key === "about") {
                 displayHtml += '<div class="h-card" <p><img class="u-photo" id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
@@ -120,7 +120,7 @@ function processHtml(jDataIn, name) {
 
                 toc += "</ul></ul>";
                 //displayHtml += "</div>"+toc+"</ul>";
-                displayHtml += '</ul><h2>Expiriences</h2>'+jDataIn.transl.timeline;
+                displayHtml += '</ul><h2>'+jDataIn.transl.expiriences+'</h2>'+jDataIn.transl.timeline;
                 displayHtml += '<h3><a name="languages" class="anchor" />' + val.languages.trans + '</h3><ul>';
                 displayHtml += langs + '</ul>';
                 displayHtml += '</ul><h3><a name="sys" class="anchor" />' + val.sys.trans + '</h3><ul>';
