@@ -107,7 +107,6 @@ body {
         padding-left: 20px;
     margin-left: 30px;
     margin-bottom: 1%;
-    
     width: auto;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -115,9 +114,6 @@ body {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
-    transition-property: visibility;
-    transition-duration: 5s;
-    transition-delay: 2s;
     border: 1px thin;
     border-radius: 30px;
     border-color: transparent;
@@ -171,8 +167,7 @@ body {
 }
 .submenu li {
     display: block;
-    
-padding-top:4px;
+    padding-top:4px;
     text-shadow: 0 -1px 0 #000;
 }
 
@@ -188,10 +183,7 @@ padding-top:4px;
     padding-top: 5px;
     padding-left: 2px;
     cursor: pointer;
-    z-index: 555;
-    transition-property: display;
-    transition-duration: 5s;
-    transition-delay: 2s;
+    z-index: 555; 
 }
 
 
@@ -250,7 +242,7 @@ padding-top:4px;
 }
 .dropdowncontainer:hover > .submenu li:before {
     opacity: 1;
-    content: "";
+    content: none;
 }
 #aboutImg {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -282,21 +274,6 @@ padding-top:4px;
     -ms-filter: none;
     filter: none;
     cursor: pointer;
-}
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(720deg);
-    }
-}
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(720deg);
-    }
-}
-@keyframes spin {
-    100% {
-        transform: rotate(720deg);
-    }
 }
 @keyframes bounceImage {
     0% {
