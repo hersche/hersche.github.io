@@ -8,10 +8,10 @@
 		"startDate":"1997,1,26",
         "date": [
                 {
-                "startDate":"1997,6,1",
-				"endDate":"1998,6,27",
+                "startDate":"1998,6,1",
+				"endDate":"1999,6,27",
                 "headline":"Erster Computer",
-                "text":"<p>Windows 3.1, 20 disketten, 20mb hd..</p>",
+                "text":"<p>Windows 3.1, 20 Disketten für das System und eine 20 Mb Festplatte. Bevor ich das Gerät bekam, musste ich es mit meinem älteren Halbbruder voneinander nehmen und wieder zusammensetzen.</p>",
                 "asset":
                 {
                     "media":"http://upload.wikimedia.org/wikipedia/de/6/6c/Wfw.PNG",
@@ -20,10 +20,10 @@
                 }
             },
                             {
-                "startDate":"1998,6,29",
+                "startDate":"1999,6,29",
 				"endDate":"2005,6,27",
                 "headline":"Windows-Phase",
-                "text":"<p>Experimente und ausprobierereien mit Windows 98 bis XP</p>",
+                "text":"<p>ERegedit, cmd, Bluescreens und erste Genuine-Produkte. Windows 95 bis XP war eine interessante Zeit - es gab immer Fehler zu flicken.</p>",
                 "asset":
                 {
                     "media":"http://upload.wikimedia.org/wikipedia/de/a/a2/Win98SE_Bildschirmausdruck.png",
@@ -36,7 +36,7 @@
                 "startDate":"2004,3,15",
 				"endDate":"2005,6,27",
                 "headline":"Erster Code",
-                "text":"<p>Das erste Hello World, welches ich schrieb, war in Perl.</p>",
+                "text":"<p>Das erste Hello World, welches ich schrieb, war in Perl. Ich entwickelte ebenfalls sehr einfache Programme damit. Danach wechselte ich zu PHP, was mir aufgrund der Syntax leicht viel.</p>",
                 "asset":
                 {
                     "media":"http://developer.asustor.com/uploadIcons/0020_999_1373967199_perl_256.png",
@@ -48,7 +48,7 @@
                 "startDate":"2004,6,29",
 				"endDate":"2006,6,27",
                 "headline":"Linux-kennenlern-phase",
-                "text":"<p>Versuche mit mandrivia, suse, ubuntu. Dualboots und ähnliches war aktuell..</p>",
+                "text":"<p>Versuche mit Mandrivia, OpenSuse, Ubuntu. Dualboots, Wine, MBR-Recoverys und vieles mehr.</p>",
                 "asset":
                 {
                     "media":"http://upload.wikimedia.org/wikipedia/commons/thumb/2/20/KDE35desktop.png/800px-KDE35desktop.png",
@@ -60,7 +60,7 @@
                 "startDate":"2006,6,29",
 				"endDate":"2014,6,27",
                 "headline":"Gentoo",
-                "text":"<p>Fund meiner Lieblingsdistro..</p>",
+                "text":"<p>Als ich diese Distribution fand, wurde ich glücklich - man setzt sich mit dem System auseinander und bekommt einen 'massgeschneiderten Anzug', ein sehr performantes System!</p>",
                 "asset":
                 {
                     "media":"http://i-009.mannaz.cc/wp-content/uploads/2010/03/gentoo-transparent.png",
@@ -69,10 +69,10 @@
                 }
             },
             {
-                "startDate":"2007,6,1",
-				"endDate":"2011,6,27",
+                "startDate":"2007,8,13",
+				"endDate":"2011,8,12",
                 "headline":"Ausbildung Informatiker",
-                "text":"<p>Eidgenössische lehre als infi bei <a href='http://puzzle.ch'>Puzzle</a></p>",
+                "text":"<p>Eidgenössische Lehre als Applikationsentwickler bei <a href='http://puzzle.ch'>Puzzle</a></p>",
                 "asset":
                 {
                     "media":"http://www.puzzle.ch/img/logo.png",
@@ -81,10 +81,10 @@
                 }
             },
             {
-                "startDate":"2008,6,1",
-				"endDate":"2011,6,27",
+                "startDate":"2008,8,12",
+				"endDate":"2011,8,12",
                 "headline":"Java/OOP",
-                "text":"<p>Durch die Firma kam ich zu Java und lernte dadurch, OOP zu denken.</p>",
+                "text":"<p>Durch Puzzle kam ich zu Java und lernte dadurch, OOP zu denken.</p>",
                 "asset":
                 {
                     "media":"http://swordrock.files.wordpress.com/2010/10/images.jpg",
@@ -93,21 +93,21 @@
                 }
             },
                          {
-                "startDate":"2007,8,26",
-                "endDate":"2010,8,26",
+                "startDate":"2008,10,26",
+                "endDate":"2012,8,26",
                 "headline":"Kauf des Openmoko/GTA02",
                 "text":"<p>Mein erster Smartphone - und erst noch für Hackerambitionierte</p>",
                 "asset":
                 {
                     "media":"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Freerunner02.png/170px-Freerunner02.png",
-                    "credit":"Gource/Python",
-                    "caption":""
+                    "credit":"",
+                    "caption":"GTA02/Freerunner/Openmoko"
                 }
             },
              {
-                "startDate":"2007,10,26",
+                "startDate":"2009,10,26",
                 "headline":"Erste Begegnung mit Python",
-                "text":"<p>Meine erste Python-Anwendung für das Openmoko nutzte D-Bus und pyGtk</p>",
+                "text":"<p>Meine erste Python-Anwendung für das Openmoko nutzte D-Bus und pyGtk. Sie entstand in einem Tag, da das SMS-Programm sich gerade nicht starten liess und ich meine Nachrichten lesen wollte. Funktionierte!</p>",
                 "asset":
                 {
                     "media":"https://www.youtube.com/watch?v=cNBtDstOTmA",
@@ -116,10 +116,10 @@
                 }
             },
             {
-                "startDate":"2008,1,26",
-				"endDate":"2010,1,27",
-                "headline":"zweites Pythonscript",
-                "text":"<p>Entwicklung von MultiSMS</p>",
+                "startDate":"2010,1,26",
+				"endDate":"2011,5,27",
+                "headline":"Entwicklung MultiSMS",
+                "text":"<p><a href='http://puzzle.ch'>Puzzle</a> gab mir den Auftrag, eine Anwendung für das bestehende WebSMS-System (per Website) der Firma zu schreiben. Aufgrund meines Interesses durfte ich dies in Python mit pyKde umsetzen. Der Code wurde seit dieser Entwicklung aus den Augen gelassen.</p>",
                 "asset":
                 {
                     "media":"http://cdn.staticportent.com/images/2011/07/python-madness.png",
@@ -143,7 +143,7 @@
                 "startDate":"2013,5,25",
                 "endDate":"2014,6,27",
                 "headline":"Entwicklung jobManagement",
-                "text":"<p>Die Entwicklungsphase vom jobManagement</p>",
+                "text":"<p>Dieses Projekt enstand zur Prüfung der Zahlungen von verschiedenen Temporärbüros. Die Entwicklungsphase vom jobManagement geht bis heute.</p>",
                 "asset":
                 {
                     "media":"images/jobManagementDataInit.png",
@@ -155,7 +155,7 @@
                 "startDate":"2014,5,29",
                 "endDate":"2014,6,27",
                 "headline":"Entwicklung tryToxic",
-                "text":"<p>Die Entwicklungsphase vom tryToxic</p>",
+                "text":"<p>tryToxic enstand aus dem jobManagement-Projekt und ist das Resultat meines Interesses an <a href='http://tox.im'>tox/pyTox</a>. Die Entwicklungsphase vom tryToxic geht bis heute.</p>",
                 "asset":
                 {
                     "media":"images/tryToxicInit.png",
@@ -167,7 +167,7 @@
                 "startDate":"2014,4,10",
                 "endDate":"2014,6,27",
                 "headline":"skamster.github.io",
-                "text":"<p>Entwicklung der website - 123+ commits!</p>",
+                "text":"<p>Entwicklung der Website, die Sie gerade sehen - 123+ Commits!</p>",
                 "asset":
                 {
                     "media":"http://www.thebubbleindex.com/public/images/content/HTML.jpg",
@@ -179,7 +179,7 @@
                 "startDate": "2014,4,12",
                 "endDate": "2014,6,27",
                 "headline": "Peta",
-                "text": "<p>Abwandlung von learncards-web (für Sprachkärtchen) zu PhpMeta (Plugin- und Zugriffssystem)</p>",
+                "text": "<p>Fork von learncards-web (für Sprachkärtchen) zu PhpMeta (Plugin- und Zugriffssystem)</p>",
                 "asset": {
                     "media": "http://helloiamchris.com/wp-content/uploads/2012/06/phpCode-640x426.png",
                     "credit": "",
@@ -189,25 +189,25 @@
 			{
                 "startDate":"2011,2,26",
                 "endDate":"2011,4,26",
-                "headline":"Beginn bei der röck n'röll-krew",
-                "text":"Arbeit als Stagehand",
+                "headline":"Röck n'röll-krew",
+                "text":"Arbeit als Stagehand. Boxen verschieben, Teppiche legen, Lichter aufhängen..",
                 "asset":
                 {
                     "media":"images/oldjob3.jpg",
                     "credit":"",
-                    "caption":""
+                    "caption":"Muse, Stadte de Suisse, Bern 2013"
                 }
             },
 			{
                 "startDate":"2012,6,12",
                 "endDate":"2012,10,12",
-                "headline":"Wechsel zu Creative Personal",
-                "text":"Arbeit im Gerüstbau",
+                "headline":"Creative Personal",
+                "text":"Arbeit im Gerüstbau. Klettern und in der Höhe montieren, Stahl verschieben und lange Tage - ein bezahltes Fitnesscenter.",
                 "asset":
                 {
                     "media":"./images/oldjob2.jpg",
                     "credit":"",
-                    "caption":"Writers & Creators: Kyle Humphrey & Graydon Sheppard"
+                    "caption":"Paléo, Nyon 2012"
                 }
             }
         ]

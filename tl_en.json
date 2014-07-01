@@ -6,8 +6,8 @@
         "startDate": "1997,1,26",
         "date": [
             {
-                "startDate": "1997,6,1",
-                "endDate": "1998,6,27",
+                "startDate": "1998,6,1",
+                "endDate": "1999,6,27",
                 "headline": "First own computer",
                 "text": "<p>Windows 3.1, 20 floppys, 20mb hd..</p>",
                 "asset": {
@@ -17,7 +17,7 @@
                 }
             },
             {
-                "startDate": "1998,6,29",
+                "startDate": "1999,6,29",
                 "endDate": "2005,6,27",
                 "headline": "Windows-phase",
                 "text": "<p>Experiments and tryings with Windows 95-XP</p>",
