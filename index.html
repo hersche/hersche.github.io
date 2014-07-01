@@ -3,8 +3,6 @@
 
 <head>
     <meta charset='utf-8'>
-    
-    
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/ownScript.js" type="text/javascript"></script>
@@ -19,6 +17,10 @@
     <title>skamster.github.io</title>
     <script type="text/javascript">
         "use strict";
+        
+        /**
+            This is searching for all GET-variables in URL
+        **/
         var HTTP_GET_VARS = new Array();
         var strGET = document.location.search.substr(1, document.location.search.length);
         if (strGET != '') {
@@ -32,11 +34,14 @@
                 HTTP_GET_VARS[unescape(vArr[0])] = unescape(v);
             }
         }
-
+        
         var lastName = "";
         var jData;
         var tlData;
         var aboutImgBig = false;
+        /**
+            Get language automatic
+        **/
         var lang = window.navigator.userLanguage || window.navigator.language;
         if (lang.length == 5) {
             lang = lang.substr(0, 2);
@@ -44,14 +49,18 @@
         }
         var jsonFile = "en.json";
         var tlFile = "tl_en.json";
-        $(document).ready(function() {
-
+        $(document).ready(function () {
+            /**
+                Get the current site
+            **/
             if (GET('s') != 'undefined' & GET('s') != 'index') {
                 lastName = GET('s');
             } else {
                 lastName = "index";
             }
-            
+            /**
+                Get the current language
+            **/
             if (lang == "de" && GET('lang') == 'undefined') {
                 jsonFile = "de.json";
                 tlFile = "tl_de.json";
@@ -59,31 +68,36 @@
             if (GET('lang') != 'undefined') {
                 if (GET('lang') === "de" || GET('lang') === "en") {
                     jsonFile = GET('lang') + ".json";
-                    tlFile = "tl_"+GET('lang') + ".json";
+                    tlFile = "tl_" + GET('lang') + ".json";
                     lang = GET('lang');
                 }
             }
+            
+            /**
+                Eventhandlers for fancybox - once a gallery, once the timeline
+            **/
             $('.gallerybox').fancybox({
                 padding: 0,
                 radius: "6px",
                 openEffect: 'elastic',
                 openSpeed: 150,
-
                 closeEffect: 'elastic',
                 closeSpeed: 150
             });
             $('#timeline').fancybox({
-        'overlayOpacity': 0.1,
-        'showCloseButton'   : false,
+                'overlayOpacity': 0.1,
+                'showCloseButton': false,
                 openEffect: 'elastic',
                 openSpeed: 150,
-
                 closeEffect: 'elastic',
                 closeSpeed: 150
             });
+            /**
+             This part makes the menu and table-of-content scrolling with you
+            **/
             var menuYloc = parseInt($("#menu").css("top").substring(0, $("#menu").css("top").indexOf("px")));
             var tocYloc = parseInt($("#scroller").css("top").substring(0, $("#scroller").css("top").indexOf("px")));
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 if (isNaN(menuYloc)) {
                     menuYloc = 0;
                 }
@@ -105,13 +119,16 @@
                     queue: false
                 });
             });
-            
-            if (typeof(Storage) !== "undefined") {
+
+            /**
+                This gets the information from json or offline-store and load the content.
+            **/
+            if (typeof (Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
                 if ((localStorage.jData) && (localStorage.storeDate) && (localStorage.tlData)) {
                     jData = jQuery.parseJSON(localStorage.jData);
-                    createTimeline(jQuery.parseJSON(localStorage.tlData),jData.transl.lang);
-                    $("#refresh").html(jData.transl.refresh+" ("+localStorage.storeDate+"/"+jData.transl.fromstorage+")");
+                    createTimeline(jQuery.parseJSON(localStorage.tlData), jData.transl.lang);
+                    $("#refresh").html(jData.transl.refresh + " (" + localStorage.storeDate + "/" + jData.transl.fromstorage + ")");
                     $("#menucontent").html(processMenuHtml(jData));
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
@@ -119,98 +136,89 @@
                 } else {
                     //retrive
                     var d = new Date();
-                    var jqxhr = $.getJSON(jsonFile, function() {
+                    var jqxhr = $.getJSON(jsonFile, function () {
                         console.log("success one, do nothing.");
                     });
-                    var tljqxhr = $.getJSON(tlFile, function() {
+                    var tljqxhr = $.getJSON(tlFile, function () {
                         console.log("success one, do nothing.");
                     });
 
-                    jqxhr.complete(function(data) {
+                    jqxhr.complete(function (data) {
                         console.log("success2, worktime! heyho lets go..");
                         localStorage.jData = data.responseText.replace("\n", "");
                         if (lang === "de") {
-                            localStorage.storeDate = d.getUTCDate() +"."+ d.getUTCMonth() +"."+ d.getUTCFullYear();
+                            localStorage.storeDate = d.getUTCDate() + "." + d.getUTCMonth() + "." + d.getUTCFullYear();
                         } else {
-                            localStorage.storeDate = d.getUTCMonth() +"."+ d.getUTCDate() +"."+ d.getUTCFullYear();
+                            localStorage.storeDate = d.getUTCMonth() + "." + d.getUTCDate() + "." + d.getUTCFullYear();
                         }
-                        
+
                         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
-                        $("#refresh").html(jData.transl.refresh+" ("+localStorage.storeDate+"/"+jData.transl.fromnew+")");
+                        $("#refresh").html(jData.transl.refresh + " (" + localStorage.storeDate + "/" + jData.transl.fromnew + ")");
                         $("#menucontent").html(processMenuHtml(jData));
                         var ProcessedHtml = processHtml(jData, lastName);
                         $("#toc").html(ProcessedHtml[1]);
                         $("#showContent").html(ProcessedHtml[0]);
                         //the link is a note '<a href"index.html"  onclick="changeContent(\'index\'); return false">&lt;&lt;</a>'+
-                                            tljqxhr.complete(function(tldata) {
-                        localStorage.tlData = tldata.responseText.replace("\n", ""); 
-                        createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")),jData.transl.lang);
-                    });
+                        tljqxhr.complete(function (tldata) {
+                            localStorage.tlData = tldata.responseText.replace("\n", "");
+                            createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
+                        });
 
                     });
                 }
             } else {
                 // Sorry! No Web Storage support..
-                var jqxhr = $.getJSON(jsonFile, function() {
+                var jqxhr = $.getJSON(jsonFile, function () {
                     console.log("success one, do nothing.");
                 });
-                jqxhr.complete(function(data2) {
+                jqxhr.complete(function (data2) {
                     console.log("success2, worktime! heyho lets go..");
                     jData = jQuery.parseJSON(data2.responseText.replace("\n", ""));
                     $("#menucontent").html(processMenuHtml(jData));
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
-                    $("#refresh").html(jData.transl.refresh+" ("+jData.transl.nowebstorage+")");
-                                        tljqxhr.complete(function(tldata) {
-                        localStorage.tlData = tldata.responseText.replace("\n", ""); 
-                        createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")),jData.transl.lang);
+                    $("#refresh").html(jData.transl.refresh + " (" + jData.transl.nowebstorage + ")");
+                    tljqxhr.complete(function (tldata) {
+                        localStorage.tlData = tldata.responseText.replace("\n", "");
+                        createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
                     });
 
                 });
-                    var tljqxhr = $.getJSON(tlFile, function() {
-                        console.log("success one, do nothing.");
-                    });
+                var tljqxhr = $.getJSON(tlFile, function () {
+                    console.log("success one, do nothing.");
+                });
 
             }
 
-            
+            /**
+                Fade in loaded contents
+            **/
             $("#showContent").fadeIn(2500);
             $("#menu").fadeIn(1000);
             $("#scroller").fadeIn(1500);
-            
-            $(document).on('click', '#aboutImg', function(e) {
-
+            /**
+                Eventwatcher for onClick on about-me-picture"
+            **/
+            $(document).on('click', '#aboutImg', function (e) {
                 if (aboutImgBig) {
-
                     $("#aboutImg").animate({
                             width: '185px',
                             'height': '200px'
                         }, 500,
-                        function() {
+                        function () {
                             aboutImgBig = false;
                         });
-
                 } else {
-
                     $("#aboutImg").animate({
                             width: '369px',
                             height: '400px',
-
-
                         }, 500,
-                        function() {
+                        function () {
                             aboutImgBig = true;
                         });
                 }
             });
-
-            $(document).on('mouseover', '#aboutImg', function(e) {
-                $("#aboutImg").addClass("aboutonhover");
-
-            });
-            
-           // $("#my-timeline").toggle();
 
         });
     </script>
@@ -231,7 +239,7 @@
         <div style="display: none;" id="menu">
             <div style="display:block;">
                 <h1 style="display: inline;">skamster.github.io</h1>
-                <p style="display: inline; vertical-align: top;">docs, projects and personal infos
+                <p style="display: inline; vertical-align: top;">projects, docs and personal infos
 
                 </p>
             </div>
@@ -255,36 +263,38 @@
     </header>
     <div id="animationContainer">
         <div id="showContent" style="display: none"></div>
-        
+
         <div style="margin-left: 30%">Impressum: Everything here is from myself, everything's <a href="GPLV2.txt">GPL-v2</a>-Licensed.</div>
     </div>
     <noscript>
         <h3>This site needs javascript to load it's contents</h3>
         <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
-            <ul>
-                <li><a href="petaDocs/">Peta</a>
-                </li>
-                <li><a href="tryToxicDocs/">tryToxic</a>
-                </li>
-                <li><a href="jobManagementDocs/">jobManagement</a>
-                </li>
-            </ul>
-        
+        <ul>
+            <li><a href="petaDocs/">Peta</a>
+            </li>
+            <li><a href="tryToxicDocs/">tryToxic</a>
+            </li>
+            <li><a href="jobManagementDocs/">jobManagement</a>
+            </li>
+        </ul>
+
 
         <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
         <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
-            <ul>
-                <li><a href="petaDocs/">Peta</a>
-                </li>
-                <li><a href="tryToxicDocs/">tryToxic</a>
-                </li>
-                <li><a href="jobManagementDocs/">jobManagement</a>
-                </li>
-            </ul>
-        
+        <ul>
+            <li><a href="petaDocs/">Peta</a>
+            </li>
+            <li><a href="tryToxicDocs/">tryToxic</a>
+            </li>
+            <li><a href="jobManagementDocs/">jobManagement</a>
+            </li>
+        </ul>
+
     </noscript>
-    
-        <div style="height:0px; width: 0px; overflow: hidden; "><div id="my-timeline"></div></div>
+
+    <div style="height:0px; width: 0px; overflow: hidden; ">
+        <div id="my-timeline"></div>
+    </div>
 </body>
 
 </html>

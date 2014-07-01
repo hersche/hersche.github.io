@@ -1,3 +1,6 @@
+/**
+    A little wrapper for the createStoryJS-function
+**/
 function createTimeline(tlD, lang) {
         createStoryJS({
         type:       'timeline',
@@ -10,6 +13,9 @@ function createTimeline(tlD, lang) {
     });
 }
 
+/**
+    Generates a menu out of json. This one is for just one entry with a submenu (the first one). Would be possible to improve, but it's not necessary for that case
+**/
 function processMenuHtml(jDataIn) {
     var menuHtml = '<ul id="menuul" >';
     $.each(jDataIn, function (menuName, value) {
@@ -32,12 +38,15 @@ function processMenuHtml(jDataIn) {
             }
         }
     });
-   // alert(menuHtml + '</li></ul>');
     return menuHtml + '</li></ul>';
 
 
 }
 
+
+/**
+    This processes the content out of json. The applications are in the elsepart, the rest is specially used for cases.
+**/
 function processHtml(jDataIn, name) {
     "use strict";
     var displayHtml = '<div style="margin-top:10%;">';
@@ -165,7 +174,6 @@ function processHtml(jDataIn, name) {
             }
         }
     });
-    //alert(toc);
     if ((toc == "undefined") || (toc == "")) {
 
         toc = "No TOC should not be possible. There's a failure!";
@@ -173,8 +181,7 @@ function processHtml(jDataIn, name) {
     displayHtml += "</div>";
     return [displayHtml, toc];
 }
-
-
+// Remove offlinecontent and reload
 function updateContent() {
     "use strict";
     var jqxhr = $.getJSON(jsonFile, function () {});
@@ -188,7 +195,9 @@ function updateContent() {
     });
 }
 
-
+/**
+    Fetch get-variables through this method.
+**/
 function GET(v) {
     "use strict";
     if (!HTTP_GET_VARS[v]) {
@@ -197,6 +206,9 @@ function GET(v) {
     return HTTP_GET_VARS[v];
 }
 
+/**
+    Change from one content to another.
+**/
 function changeContent(name) {
     "use strict";
     if (history.pushState) {
