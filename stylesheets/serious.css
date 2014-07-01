@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0;
     background: rgb(8, 7, 10);
-    background: -moz-linear-gradient(left, rgba(8, 7, 10, 1) 15%, rgba(209, 209, 209, 1) 22%, rgba(209, 209, 209, 1) 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(15%, rgba(8, 7, 10, 1)), color-stop(22%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(209, 209, 209, 1)));
-    background: -webkit-linear-gradient(left, rgba(8, 7, 10, 1) 20%, rgba(209, 209, 209, 1) 22%, rgba(209, 209, 209, 1) 100%);
-    background: -o-linear-gradient(left, rgba(8, 7, 10, 1) 20%, rgba(209, 209, 209, 1) 22%, rgba(209, 209, 209, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(8, 7, 10, 1) 20%, rgba(209, 209, 209, 1) 22%, rgba(209, 209, 209, 1) 100%);
-    background: linear-gradient(to right, rgba(8, 7, 10, 1) 20%, rgba(209, 209, 209, 1) 22%, rgba(209, 209, 209, 1) 100%);
+    background: -moz-linear-gradient(left, rgba(8, 7, 10, 1) 15%, rgba(209, 209, 209, 1) 23%, rgba(209, 209, 209, 1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(15%, rgba(8, 7, 10, 1)), color-stop(23%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(209, 209, 209, 1)));
+    background: -webkit-linear-gradient(left, rgba(8, 7, 10, 1) 20%, rgba(209, 209, 209, 1) 23%, rgba(209, 209, 209, 1) 100%);
+    background: -o-linear-gradient(left, rgba(8, 7, 10, 1) 20%, rgba(209, 209, 209, 1) 23%, rgba(209, 209, 209, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(8, 7, 10, 1) 20%, rgba(209, 209, 209, 1) 23%, rgba(209, 209, 209, 1) 100%);
+    background: linear-gradient(to right, rgba(8, 7, 10, 1) 20%, rgba(209, 209, 209, 1) 23%, rgba(209, 209, 209, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#08070a', endColorstr='#d1d1d1', GradientType=1);
     color: black;
     font: 16px;
@@ -156,18 +156,18 @@ body {
     overflow-x: auto;
 }
 #toc ul li a {
-    color: #ff0000;
+    color: #F87217;
     width: auto;
     max-width: 10%;
     font: 16px;
     line-height: 1.5;
 }
 #toc ul li a:hover {
-    color: blue;
+    color: #FDEEF4;
 }
 #toc ul li:before {
     content: ">";
-    color: red;
+    color: #FF8040;
 }
 .submenu li {
     display: block;
