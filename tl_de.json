@@ -2,9 +2,9 @@
 {
     "timeline":
     {
-        "headline":"Erster Begegnung mit Computern",
+        "headline":"Erste Begegnung mit Computern",
         "type":"default",
-		"text":"BITTE RESPEKTIEREN SIE, DASS DIESE TImELINE NOCH UNFERTIG IST. Den ersten Computer, der mein Vater sich angeschafft hat - hat mich von Anfang an faszinizert. Ich war damals 9 Jahre alt",
+		"text":"BITTE RESPEKTIEREN SIE, DASS DIESE TImELINE NOCH UNFERTIG IST. Den ersten Computer, den mein Vater sich angeschafft hat - hat mich von Anfang an fasziniert. Ich war damals 9 Jahre alt.",
 		"startDate":"1997,1,26",
         "date": [
                 {
@@ -23,7 +23,7 @@
                 "startDate":"1999,6,29",
 				"endDate":"2005,6,27",
                 "headline":"Windows-Phase",
-                "text":"<p>ERegedit, cmd, Bluescreens und erste Genuine-Produkte. Windows 95 bis XP war eine interessante Zeit - es gab immer Fehler zu flicken.</p>",
+                "text":"<p>Regedit, cmd, Bluescreens und erste Genuine-Produkte. Windows 95 bis XP war eine interessante Zeit - es gab immer Fehler zu flicken.</p>",
                 "asset":
                 {
                     "media":"http://upload.wikimedia.org/wikipedia/de/a/a2/Win98SE_Bildschirmausdruck.png",
@@ -84,7 +84,7 @@
                 "startDate":"2008,8,12",
 				"endDate":"2011,8,12",
                 "headline":"Java/OOP",
-                "text":"<p>Durch Puzzle kam ich zu Java und lernte dadurch, OOP zu denken.</p>",
+                "text":"<p>Durch Puzzle kam ich zu Java und lernte dadurch OOP zu denken.</p>",
                 "asset":
                 {
                     "media":"http://swordrock.files.wordpress.com/2010/10/images.jpg",
@@ -96,7 +96,7 @@
                 "startDate":"2008,10,26",
                 "endDate":"2012,8,26",
                 "headline":"Kauf des Openmoko/GTA02",
-                "text":"<p>Mein erster Smartphone - und erst noch für Hackerambitionierte</p>",
+                "text":"<p>Mein erstes Smartphone - und erst noch für Hackerambitionierte</p>",
                 "asset":
                 {
                     "media":"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Freerunner02.png/170px-Freerunner02.png",
@@ -189,13 +189,13 @@
 			{
                 "startDate":"2011,2,26",
                 "endDate":"2011,4,26",
-                "headline":"Röck n'röll-krew",
-                "text":"Arbeit als Stagehand. Boxen verschieben, Teppiche legen, Lichter aufhängen..",
+                "headline":"Röck'n'Röll-Krew",
+                "text":"Arbeit als Stagehand. Boxen verschieben, Teppiche legen, Lichter aufhängen...",
                 "asset":
                 {
                     "media":"images/oldjob3.jpg",
                     "credit":"",
-                    "caption":"Muse, Stadte de Suisse, Bern 2013"
+                    "caption":"Muse, Stade de Suisse, Bern 2013"
                 }
             },
 			{
