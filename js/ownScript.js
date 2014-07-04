@@ -62,8 +62,10 @@ function processHtml(jDataIn, name) {
                 });
                 displayHtml += '</table><p><a name="description" class="anchor" ></a>' + val.description + '</p>';
                 toc += '<ul><li><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a><ul><li><a href="#website">Website</a></li><li><a href="#security">'+jDataIn.transl.security+'</a></li><li><a href="#about">'+jDataIn.transl.about+'</a></li></ul></li></ul>';
+                
+                
             } else if (key === "about") {
-                displayHtml += '<div class="h-card" <p><img class="u-photo" id="aboutImg" src="' + val.picture + '"/><br />' + val.description + '</p><ul>';
+                displayHtml += '<div class="h-card" <p><img class="u-photo" id="aboutImg" src="' + val.picture + '"/>' + val.description + '</p><ul>';
                 $.each(val.contact, function (cKey, cVal) {
                     if (cKey === "E-Mail") {
                         displayHtml += '<li><b>' + cKey + '</b>: <a class="u-email" href="mailto:' + cVal + '">' + cVal + '</a></li>';
