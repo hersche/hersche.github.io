@@ -33,7 +33,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd400', end
     z-index: 998;
     margin-left: 25%;
     padding-left: 1px;
-    position: absolute;
+    position: fixed;
     padding-right: 1px;
     top: 8px;
     padding-bottom: 2px;
