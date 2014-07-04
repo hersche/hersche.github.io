@@ -2,20 +2,68 @@
 {
     "timeline":
     {
-        "headline":"Erste Begegnung mit Computern",
+        "headline":"Einleitung",
         "type":"default",
-		"text":"BITTE RESPEKTIEREN SIE, DASS DIESE TImELINE NOCH UNFERTIG IST. Den ersten Computer, den mein Vater sich angeschafft hat - hat mich von Anfang an fasziniert. Ich war damals 9 Jahre alt.",
-		"startDate":"1997,1,26",
+		"text":"Hier finden Sie meine Erfahrungen in einer zeitlichen Ansicht. Einige Ausbildungen sind zum Vergleich auch eingefügt. Einige Bilder und Videos in der Timeline werden nur mit einer aktiven Internetverbindung dargestellt. <h5>Navigation</h5>Sie können sich im unteren Teil per ziehen mit der Maus \"in der Zeit bewegen\" und sehen die Dauer des Ereignisses als blauen Balken, wenn Sie es auswählen. Auch die Details werden durch das Auswählen sichtbar. Sie können auch mit den Pfeiltasten auf Ihrer Tastatur navigieren. BITTE RESPEKTIEREN SIE, DASS DIESE TImELINE NOCH UNFERTIG IST. ",
+		"startDate":"1995,6,1",
         "date": [
+                                        {
+                "startDate":"1995,6,1",
+				"endDate":"2001,6,27",
+                "headline":"Grundschule Neufeld",
+                "text":"<p>Die 1-6.e Klasse der ganz normalen Schule.</p>",
+                "asset":
                 {
-                "startDate":"1998,6,1",
-				"endDate":"1999,6,27",
-                "headline":"Erster Computer",
-                "text":"<p>Windows 3.1, 20 Disketten für das System und eine 20 Mb Festplatte. Bevor ich das Gerät bekam, musste ich es mit meinem älteren Halbbruder voneinander nehmen und wieder zusammensetzen.</p>",
+                    "media":"http://www.otto-bennemann-schule.de/cms/upload/bilder/404-monster-classrom-450px.png",
+                    "credit":"http://otto-bennemann-schule.de",
+                    "caption":""
+                }
+            },
+                                        {
+                "startDate":"1997,1,1",
+                "headline":"Erste Begegnung mit Computer",
+                "text":"<p>Den ersten Computer, den mein Vater sich angeschafft hat - hat mich von Anfang an fasziniert. Ich war damals 9 Jahre alt.</p>",
                 "asset":
                 {
                     "media":"http://upload.wikimedia.org/wikipedia/de/6/6c/Wfw.PNG",
                     "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
+                {
+                "startDate":"1998,2,16",
+				"endDate":"1999,6,27",
+                "headline":"Erster Computer",
+                "text":"<p>Windows 3.1, 20 Disketten für das System und eine 20 Mb Festplatte. Bevor ich das Gerät bekam, musste ich es mit meinem älteren Halbbruder voneinander nehmen und wieder zusammensetzen. Dies war die Forderung meiner Eltern - dem bin ich dankbar.</p>",
+                "asset":
+                {
+                    "media":"http://www.ohgizmo.com/wp-content/uploads/2007/10/sky_puter5.jpg",
+                    "credit":"http://www.ohgizmo.com/2007/10/18/deconstructed-computer-case-mod",
+                    "caption":""
+                }
+            },
+
+                                        {
+                "startDate":"2001,6,1",
+				"endDate":"2004,6,27",
+                "headline":"Oberstufenschule Strättligen",
+                "text":"<p>Die 7-9.e Klasse der ganz normalen Schule.</p>",
+                "asset":
+                {
+                    "media":"http://freiessuedtirol.files.wordpress.com/2011/11/ak_schule.jpg",
+                    "credit":"http://freiessuedtirol.com",
+                    "caption":""
+                }
+            },
+                                                    {
+                "startDate":"2004,6,1",
+				"endDate":"2005,6,27",
+                "headline":"10.es Schuljahr",
+                "text":"<p>Das 10.e Schuljahr habe ich zusätzlich gemacht.</p>",
+                "asset":
+                {
+                    "media":"http://www.aarauinfo.ch/bilder/02_wohnen_arbeiten/03_bildung_wissenschaft/symbol_schule.jpg",
+                    "credit":"http://www.aarauinfo.ch",
                     "caption":""
                 }
             },
@@ -36,11 +84,11 @@
                 "startDate":"2004,3,15",
 				"endDate":"2005,6,27",
                 "headline":"Erster Code",
-                "text":"<p>Das erste Hello World, welches ich schrieb, war in Perl. Ich entwickelte ebenfalls sehr einfache Programme damit. Danach wechselte ich zu PHP, was mir aufgrund der Syntax leicht viel.</p>",
+                "text":"<p>Das erste \"Hello World\", welches ich schrieb, war in Perl. Ich entwickelte ebenfalls sehr einfache Programme damit. Danach wechselte ich zu PHP, was mir aufgrund der ähnlichen Syntax leicht viel.</p>",
                 "asset":
                 {
                     "media":"http://developer.asustor.com/uploadIcons/0020_999_1373967199_perl_256.png",
-                    "credit":"Wikipedia",
+                    "credit":"http://developer.asustor.com/",
                     "caption":""
                 }
             },
@@ -64,7 +112,19 @@
                 "asset":
                 {
                     "media":"http://i-009.mannaz.cc/wp-content/uploads/2010/03/gentoo-transparent.png",
-                    "credit":"Wikipedia",
+                    "credit":"http://i-009.mannaz.cc",
+                    "caption":""
+                }
+            },
+                                                                {
+                "startDate":"2008,6,29",
+				"endDate":"2014,6,27",
+                "headline":"Kubuntu",
+                "text":"<p>Durch Kubuntu lernte ich apt gut kennen. Das System ist schnell aufgesetzt und läuft stabil - ich evaluirte es als optimales Linux-Newbie-System, dem ich nur noch libdvdcss, Vlc und Firefox u.ä. hinzufügen muss. Es ist leicht zu supporten und mal etwas zickt (wenn ich mit Gentoo gespielt habe oder ein Update nicht fertig wurde oder ...), habe ich auch eine zweite Festplatte mit diesem System zur Hand.</p>",
+                "asset":
+                {
+                    "media":"http://www.userlogos.org/files/logos/ingalls/kubuntu.png",
+                    "credit":"http://www.userlogos.org/node/8425",
                     "caption":""
                 }
             },
@@ -72,11 +132,11 @@
                 "startDate":"2007,8,13",
 				"endDate":"2011,8,12",
                 "headline":"Ausbildung Informatiker",
-                "text":"<p>Eidgenössische Lehre als Applikationsentwickler bei <a href='http://puzzle.ch'>Puzzle</a></p>",
+                "text":"<p>Eidgenössische Lehre als Applikationsentwickler bei <a href='http://puzzle.ch'>Puzzle</a>.</p>",
                 "asset":
                 {
-                    "media":"http://www.puzzle.ch/img/logo.png",
-                    "credit":"",
+                    "media":"http://blog.zhaw.ch/icclab/files/2012/09/puzzle_withslogan_rgb.jpg",
+                    "credit":"http://puzzle.ch",
                     "caption":""
                 }
             },
@@ -88,7 +148,7 @@
                 "asset":
                 {
                     "media":"http://swordrock.files.wordpress.com/2010/10/images.jpg",
-                    "credit":"",
+                    "credit":"http://swordrock.wordpress.com",
                     "caption":""
                 }
             },
@@ -96,11 +156,11 @@
                 "startDate":"2008,10,26",
                 "endDate":"2012,8,26",
                 "headline":"Kauf des Openmoko/GTA02",
-                "text":"<p>Mein erstes Smartphone - und erst noch für Hackerambitionierte</p>",
+                "text":"<p>Mein erstes Smartphone - und erst noch für Hackerambitionierte. Meine ersten Smartphone-Systeme waren nicht Android, sondern Debian mit Xorg, Qt und Gtk. Android 1.5 lief zu unstabil, um es im Alltag zu nutzen.</p>",
                 "asset":
                 {
                     "media":"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Freerunner02.png/170px-Freerunner02.png",
-                    "credit":"",
+                    "credit":"Wikipedia",
                     "caption":"GTA02/Freerunner/Openmoko"
                 }
             },
@@ -111,7 +171,7 @@
                 "asset":
                 {
                     "media":"https://www.youtube.com/watch?v=cNBtDstOTmA",
-                    "credit":"Gource/Python",
+                    "credit":"Gource/Python/Youtube",
                     "caption":"Entwicklung des Python-Intepreters, visualisiert mit Gource"
                 }
             },
@@ -119,23 +179,34 @@
                 "startDate":"2010,1,26",
 				"endDate":"2011,5,27",
                 "headline":"Entwicklung MultiSMS",
-                "text":"<p><a href='http://puzzle.ch'>Puzzle</a> gab mir den Auftrag, eine Anwendung für das bestehende WebSMS-System (per Website) der Firma zu schreiben. Aufgrund meines Interesses durfte ich dies in Python mit pyKde umsetzen. Der Code wurde seit dieser Entwicklung aus den Augen gelassen.</p>",
+                "text":"<p><a href='http://puzzle.ch'>Puzzle</a> gab mir den Auftrag, eine Anwendung für das bestehende WebSMS-System (per Website) der Firma zu schreiben. Aufgrund meines Interesses durfte ich dies in Python mit pyKde umsetzen. Der Code wurde seit dieser Entwicklung aufgrund abwesender Festplatten und persönlichem Interesse aus den Augen gelassen und erst vor kurzem wieder \"ausgegraben\".</p>",
                 "asset":
                 {
                     "media":"http://cdn.staticportent.com/images/2011/07/python-madness.png",
-                    "credit":"",
+                    "credit":"http://staticportent.com/",
                     "caption":""
                 }
             },
             {
                 "startDate":"2009,11,13",
                 "endDate":"2012,2,27",
-                "headline":"Development of Learncards-Web (PHP)",
+                "headline":"Entwicklung von Learncards-Web (PHP)",
                 "text":"<p>Erste Entwicklungsphase des heutigen Peta-Projekts.</p>",
                 "asset":
                 {
                     "media":"http://php.baraja.cz/phpslon.jpg",
-                    "credit":"",
+                    "credit":"http://php.baraja.cz/",
+                    "caption":""
+                }
+            },
+                        {
+                "startDate":"2010,5,7",
+                "headline":"1-Tag-Entwicklung eines Gästebuchs",
+                "text":"<p>An einem Tag in der Berufsschule vergass ich, für die Schule ein <a href='https://github.com/skamster/death-guestbook'>Gästebuch</a> zu schreiben - also nahm ich den Aufbau von Learncards-Web und forkte diesen Code über Mittag. Das Resultat war ein <a href='https://github.com/skamster/death-guestbook'>Gästebuch</a> mit Benutzerverwaltung (mehrere Admins) und der Fähigkeit zu löschen und zu editieren, dies in einer MVC-Struktur. Die Anforderungen waren ein Login (mit statischem Administrator) und die Fähigkeit, Beiträge zu erstellen und als Admin zu löschen. Die Note 5.5 (nach CH-System) war das Resultat.</p>",
+                "asset":
+                {
+                    "media":"http://ryaandavis.files.wordpress.com/2013/06/wpid-shutterstock_86404090.jpg",
+                    "credit":"<a href='http://ryaandavis.wordpress.com/2013/06/11/6-useful-websites-to-learn-coding-as-a-beginner-to-expert/'>http://ryaandavis.wordpress.com</a>",
                     "caption":""
                 }
             },
@@ -182,7 +253,7 @@
                 "text": "<p>Fork von learncards-web (für Sprachkärtchen) zu PhpMeta (Plugin- und Zugriffssystem)</p>",
                 "asset": {
                     "media": "http://helloiamchris.com/wp-content/uploads/2012/06/phpCode-640x426.png",
-                    "credit": "",
+                    "credit": "http://helloiamchris.com",
                     "caption": ""
                 }
             },
