@@ -259,6 +259,7 @@
         "lang":"de",
         "expiriences":"Erfahrungen",
         "security":"Sicherheit",
-        "about":"Über mich"
+        "about":"Über mich",
+        "mobilephonehint":"Ihr Browser scheint auf einem Handy oder Tablet zu laufen - kippen Sie das Gerät in das Querformat/den Landscape-Modus, um die Seite in optimaler Form geniessen zu können."
     }
 }

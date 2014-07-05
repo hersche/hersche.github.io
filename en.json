@@ -255,6 +255,7 @@
         "lang":"en",
         "expiriences":"Expiriences",
         "security":"Security",
-        "about":"About me"
+        "about":"About me",
+        "mobilephonehint":"Your Browser looks to running on a mobile device - rotate your device to the landscape-mode to enjoy the website optimised."
     }
 }
