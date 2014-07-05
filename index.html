@@ -113,7 +113,7 @@
                 This gets the information from json or offline-store and load the content.
             **/
             if (typeof (Storage) !== "undefined") {
-                // Code for localStorage/sessionStorage.
+                // In the first case, we have all the information offline
                 if ((localStorage.jData) && (localStorage.storeDate) && (localStorage.tlData)) {
                     jData = jQuery.parseJSON(localStorage.jData);
                     createTimeline(jQuery.parseJSON(localStorage.tlData), jData.transl.lang);
@@ -123,17 +123,17 @@
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                 } else {
-                    //retrive
+                    //In the second case, we have webstorage-support, but no data yet. So let's recive!
                     var d = new Date();
                     var jqxhr = $.getJSON(jsonFile, function () {
-                        console.log("success one, do nothing.");
+                        console.log("First complete-catch of maincontent");
                     });
                     var tljqxhr = $.getJSON(tlFile, function () {
-                        console.log("success one, do nothing.");
+                        console.log("First complete-catch of timeline");
                     });
 
                     jqxhr.complete(function (data) {
-                        console.log("success2, worktime! heyho lets go..");
+                        console.log("Completemethod2 on maincontent, let's do the work");
                         localStorage.jData = data.responseText.replace("\n", "");
                         if (lang === "de") {
                             localStorage.storeDate = d.getUTCDate() + "." + d.getUTCMonth() + "." + d.getUTCFullYear();
@@ -147,7 +147,6 @@
                         var ProcessedHtml = processHtml(jData, lastName);
                         $("#toc").html(ProcessedHtml[1]);
                         $("#showContent").html(ProcessedHtml[0]);
-                        //the link is a note '<a href"index.html"  onclick="changeContent(\'index\'); return false">&lt;&lt;</a>'+
                         tljqxhr.complete(function (tldata) {
                             localStorage.tlData = tldata.responseText.replace("\n", "");
                             createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
@@ -156,30 +155,28 @@
                     });
                 }
             } else {
-                // Sorry! No Web Storage support..
+                // There is no webstorage-support, so this method will be used on every refresh (argh!)
                 var jqxhr = $.getJSON(jsonFile, function () {
-                    console.log("success one, do nothing.");
+                    console.log("First complete-catch of maincontent");
+                });
+                var tljqxhr = $.getJSON(tlFile, function () {
+                    console.log("First complete-catch of timeline");
                 });
                 jqxhr.complete(function (data2) {
-                    console.log("success2, worktime! heyho lets go..");
+                    console.log("Completemethod2 on maincontent, let's do the work");
                     jData = jQuery.parseJSON(data2.responseText.replace("\n", ""));
                     $("#menucontent").html(processMenuHtml(jData));
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                     $("#refresh").html(jData.transl.refresh + " (" + jData.transl.nowebstorage + ")");
-                    tljqxhr.complete(function (tldata) {
-                        localStorage.tlData = tldata.responseText.replace("\n", "");
-                        createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
-                    });
-
                 });
-                var tljqxhr = $.getJSON(tlFile, function () {
-                    console.log("success one, do nothing.");
+                tljqxhr.complete(function (tldata) {
+                    createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
                 });
 
             }
-            // looks if the client is a mobile device.
+            // Check client for mobile-device using
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                 alert(jData.transl.mobilephonehint);
             }
