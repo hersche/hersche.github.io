@@ -201,6 +201,11 @@
                 }
             }
         },
+                "rlang":{
+            "German":"This is my motherlanguage.",
+            "English":"The translation of this website is completly from me. Through the contact to computers, i learned this language fast.",
+            "French":"I speak this language not really good, but from time to time i'm work on it."
+        },
         "mobile": {
             "trans": "Mobile hacking",
             "dd-wrt": "Used on some Siemens and Lynksys-routers",
@@ -256,6 +261,7 @@
         "expiriences": "Expiriences",
         "security": "Security",
         "about": "About me",
-        "mobilephonehint": "Your Browser looks to running on a mobile device - rotate your device to the landscape-mode to enjoy the website optimised."
+        "mobilephonehint": "Your Browser looks to running on a mobile device - rotate your device to the landscape-mode to enjoy the website optimised.",
+        "reallang":"Real languages"
     }
 }

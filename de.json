@@ -190,6 +190,11 @@
                 }
             }
         },
+        "rlang":{
+            "Deutsch":"Dies ist meine Muttersprache.",
+            "Englisch":"Die englische Übersetzung dieser Website komplett von mir. Durch den Kontakt mit Computern erlernte ich diese Sprache recht rasch.",
+            "Französisch":"Diese Sprache spreche ich mehr schlecht als recht, dennoch arbeite ich zwischendurch daran."
+        },
         "mobile": {
             "trans": "Mobil gehacktes",
             "dd-wrt": "Gebraucht auf einigen Siemens- und Lynksys-Routern",
@@ -260,6 +265,7 @@
         "expiriences":"Erfahrungen",
         "security":"Sicherheit",
         "about":"Über mich",
-        "mobilephonehint":"Ihr Browser scheint auf einem Handy oder Tablet zu laufen - kippen Sie das Gerät in das Querformat/den Landscape-Modus, um die Seite in optimaler Form geniessen zu können."
+        "mobilephonehint":"Ihr Browser scheint auf einem Handy oder Tablet zu laufen - kippen Sie das Gerät in das Querformat/den Landscape-Modus, um die Seite in optimaler Form geniessen zu können.",
+        "reallang":"Reale Sprachen"
     }
 }

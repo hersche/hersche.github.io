@@ -87,7 +87,15 @@ function processHtml(jDataIn, name) {
                         langs += '</ul></li>';
                     }
                 });
-
+                
+                toc += '</ul><li><a href="#rlangs">' + jDataIn.transl.reallang + '</a></li><ul>';
+                var rlangs = "<ul>";
+                $.each(val.rlang, function (sKey, sVal) {
+                            toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
+                            rlangs += '<li><b>' + sKey + '</b><a name="' + sKey + '" class="anchor" />: ' + sVal + '</li>';
+                        }
+                    
+                );
                 toc += '</ul><li><a href="#sys">' + val.sys.trans + '</a></li><ul>';
                 var syst = "<ul>";
                 $.each(val.sys, function (sKey, sVal) {
@@ -139,6 +147,8 @@ function processHtml(jDataIn, name) {
                 displayHtml += '<h2>'+jDataIn.transl.expiriences+'</h2>'+jDataIn.about.timeline;
                 displayHtml += '<h3><a name="languages" class="anchor" />' + val.languages.trans + '</h3><ul>';
                 displayHtml += langs + '</ul>';
+                displayHtml += '</ul><h3><a name="rlangs" class="anchor" />' + jDataIn.transl.reallang + '</h3><ul>';
+                displayHtml += rlangs + '</ul>';
                 displayHtml += '</ul><h3><a name="sys" class="anchor" />' + val.sys.trans + '</h3><ul>';
                 displayHtml += syst + '</ul>';
                 displayHtml += '<h3><a name="mobile" class="anchor" />' + val.mobile.trans + '</h3>';
