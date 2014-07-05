@@ -18,12 +18,11 @@ function createTimeline(tlD, lang) {
 **/
 function processMenuHtml(jDataIn) {
     var menuHtml = '<ul id="menuul" >';
+    var parent = "";
+    var downSign = "";
     $.each(jDataIn, function (menuName, value) {
-        var parent = "";
-        var downSign = "";
         if (menuName != "transl") {
             if (menuName == "index") {
-                styleClass = '"submenu"';
                 downSign = " <b>&darr;</b> ";
                 parent = ' class="dropdowncontainer" ';
             }
@@ -33,8 +32,10 @@ function processMenuHtml(jDataIn) {
                 menuHtml += '</li>';
             }
             if (menuName == "index") {
-                menuHtml += "<ul class=" + styleClass + ">";
-
+                menuHtml += "<ul class=\"submenu\">";
+                //after first round they're done
+                parent = "";
+                downSign = "";
             }
         }
     });
@@ -65,14 +66,15 @@ function processHtml(jDataIn, name) {
                 
                 
             } else if (key === "about") {
-                displayHtml += '<div class="h-card" <p><img class="u-photo" id="aboutImg" src="' + val.picture + '"/>' + val.description + '</p><ul>';
+                displayHtml += '<div class="h-card" <p><img class="u-photo" id="aboutImg" src="' + val.picture + '"/>' + val.description + '</p><table>';
                 $.each(val.contact, function (cKey, cVal) {
                     if (cKey === "E-Mail") {
-                        displayHtml += '<li><b>' + cKey + '</b>: <a class="u-email" href="mailto:' + cVal + '">' + cVal + '</a></li>';
+                        displayHtml += '<tr><td><b>' + cKey + '</b>:</td><td><a class="u-email" href="mailto:' + cVal + '">' + cVal + '</a></td></tr>';
                     } else {
-                        displayHtml += '<li><b>' + cKey + '</b>: ' + cVal + '</li>';
+                        displayHtml += '<tr><td><b>' + cKey + '</b>:</td><td> ' + cVal + '</td></tr>';
                     }
                 });
+                displayHtml += '</table>';
                 var langs = "";
                 toc += '<ul style="list-style-type: none; list-style: none;" ><li><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
                 $.each(val.languages, function (lKey, lVal) {
@@ -134,7 +136,7 @@ function processHtml(jDataIn, name) {
 
                 toc += "</ul></ul>";
                 //displayHtml += "</div>"+toc+"</ul>";
-                displayHtml += '</ul><h2>'+jDataIn.transl.expiriences+'</h2>'+jDataIn.transl.timeline;
+                displayHtml += '<h2>'+jDataIn.transl.expiriences+'</h2>'+jDataIn.about.timeline;
                 displayHtml += '<h3><a name="languages" class="anchor" />' + val.languages.trans + '</h3><ul>';
                 displayHtml += langs + '</ul>';
                 displayHtml += '</ul><h3><a name="sys" class="anchor" />' + val.sys.trans + '</h3><ul>';
