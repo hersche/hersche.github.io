@@ -4,7 +4,7 @@
     {
         "headline":"Einleitung",
         "type":"default",
-		"text":"Hier finden Sie meine Erfahrungen in einer zeitlichen Ansicht. Einige Ausbildungen sind zum Vergleich auch eingefügt. Einige Bilder und Videos in der Timeline werden nur mit einer aktiven Internetverbindung dargestellt. <h5>Navigation</h5>Sie können sich im unteren Teil per ziehen mit der Maus \"in der Zeit bewegen\" und sehen die Dauer des Ereignisses als blauen Balken, wenn Sie es auswählen. Auch die Details werden durch das Auswählen sichtbar. Sie können auch mit den Pfeiltasten auf Ihrer Tastatur navigieren. BITTE RESPEKTIEREN SIE, DASS DIESE TImELINE NOCH UNFERTIG IST. ",
+		"text":"Hier finden Sie meine Erfahrungen in einer zeitlichen Ansicht. Einige Ausbildungen sind zum Vergleich auch eingefügt. Einige Bilder und Videos in der Timeline werden nur mit einer aktiven Internetverbindung dargestellt. <h5>Navigation</h5>Sie können sich im unteren Teil per ziehen mit der Maus \"in der Zeit bewegen\" und sehen die Dauer des Ereignisses als blauen Balken, wenn Sie es auswählen. Auch die Details werden durch das Auswählen eines Events sichtbar. Sie können auch mit den Pfeiltasten auf Ihrer Tastatur navigieren.",
 		"startDate":"1995,6,1",
         "date": [
                                         {
@@ -120,7 +120,7 @@
                 "startDate":"2008,6,29",
 				"endDate":"2014,6,27",
                 "headline":"Kubuntu",
-                "text":"<p>Durch Kubuntu lernte ich apt gut kennen. Das System ist schnell aufgesetzt und läuft stabil - ich evaluirte es als optimales Linux-Newbie-System, dem ich nur noch libdvdcss, Vlc und Firefox u.ä. hinzufügen muss. Es ist leicht zu supporten und mal etwas zickt (wenn ich mit Gentoo gespielt habe oder ein Update nicht fertig wurde oder ...), habe ich auch eine zweite Festplatte mit diesem System zur Hand.</p>",
+                "text":"<p>Durch Kubuntu lernte ich <a target='_blank' href='http://de.wikipedia.org/wiki/Advanced_Packaging_Tool'>APT</a> gut kennen. Das System ist schnell aufgesetzt und läuft stabil - ich evaluirte es als optimales Linux-Newbie-System, dem ich nur noch libdvdcss, Vlc und Firefox u.ä. hinzufügen muss. Es ist leicht zu supporten und wenn mal etwas auf meinem persönlichen System zickt (wenn ich mit Sabayon gespielt habe oder ein Update nicht fertig wurde oder ...), habe ich auch eine zweite Festplatte mit Kubuntu zur Hand.</p>",
                 "asset":
                 {
                     "media":"http://www.userlogos.org/files/logos/ingalls/kubuntu.png",
@@ -131,8 +131,8 @@
             {
                 "startDate":"2007,8,13",
 				"endDate":"2011,8,12",
-                "headline":"Ausbildung Informatiker",
-                "text":"<p>Eidgenössische Lehre als Applikationsentwickler bei <a href='http://puzzle.ch'>Puzzle</a>.</p>",
+                "headline":"Ausbildung Entwickler",
+                "text":"<p>Eidgenössische Lehre als Applikationsentwickler bei <a target='_blank'<a target='_blank'href='http://puzzle.ch'>Puzzle</a>.</p>",
                 "asset":
                 {
                     "media":"http://blog.zhaw.ch/icclab/files/2012/09/puzzle_withslogan_rgb.jpg",
@@ -167,7 +167,7 @@
              {
                 "startDate":"2009,10,26",
                 "headline":"Erste Begegnung mit Python",
-                "text":"<p>Meine erste Python-Anwendung für das Openmoko nutzte D-Bus und pyGtk. Sie entstand in einem Tag, da das SMS-Programm sich gerade nicht starten liess und ich meine Nachrichten lesen wollte. Funktionierte!</p>",
+                "text":"<p>Meine erste <a target='_blank' href='https://gist.github.com/skamster/10565527' target='_blank'>Python-Anwendung</a> für das Openmoko nutzte D-Bus und pyGtk. Sie entstand in einem Tag, da das SMS-Programm sich gerade nicht starten liess und ich meine Nachrichten lesen wollte. Funktionierte!</p>",
                 "asset":
                 {
                     "media":"https://www.youtube.com/watch?v=cNBtDstOTmA",
@@ -179,7 +179,7 @@
                 "startDate":"2010,1,26",
 				"endDate":"2011,5,27",
                 "headline":"Entwicklung MultiSMS",
-                "text":"<p><a href='http://puzzle.ch'>Puzzle</a> gab mir den Auftrag, eine Anwendung für das bestehende WebSMS-System (per Website) der Firma zu schreiben. Aufgrund meines Interesses durfte ich dies in Python mit pyKde umsetzen. Der Code wurde seit dieser Entwicklung aufgrund abwesender Festplatten und persönlichem Interesse aus den Augen gelassen und erst vor kurzem wieder \"ausgegraben\".</p>",
+                "text":"<p><a target='_blank' href='http://puzzle.ch'>Puzzle</a> gab mir den Auftrag, eine Anwendung für das bestehende WebSMS-System (per Website) der Firma zu schreiben. Aufgrund meines Interesses durfte ich dies in Python mit pyKde umsetzen. Der Code wurde seit dieser Entwicklung aufgrund abwesender Festplatten und persönlichem Interesse aus den Augen gelassen und erst vor kurzem wieder \"ausgegraben\" (2014).</p>",
                 "asset":
                 {
                     "media":"http://cdn.staticportent.com/images/2011/07/python-madness.png",
@@ -202,11 +202,11 @@
                         {
                 "startDate":"2010,5,7",
                 "headline":"1-Tag-Entwicklung eines Gästebuchs",
-                "text":"<p>An einem Tag in der Berufsschule vergass ich, für die Schule ein <a href='https://github.com/skamster/death-guestbook'>Gästebuch</a> zu schreiben - also nahm ich den Aufbau von Learncards-Web und forkte diesen Code über Mittag. Das Resultat war ein <a href='https://github.com/skamster/death-guestbook'>Gästebuch</a> mit Benutzerverwaltung (mehrere Admins) und der Fähigkeit zu löschen und zu editieren, dies in einer MVC-Struktur. Die Anforderungen waren ein Login (mit statischem Administrator) und die Fähigkeit, Beiträge zu erstellen und als Admin zu löschen. Die Note 5.5 (nach CH-System) war das Resultat.</p>",
+                "text":"<p>An einem Tag in der Berufsschule vergass ich, für die Schule ein <a target='_blank' href='https://github.com/skamster/death-guestbook'>Gästebuch</a> zu schreiben - also nahm ich den Aufbau von Learncards-Web und forkte diesen Code über Mittag. Das Resultat war ein <a target='_blank' href='https://github.com/skamster/death-guestbook'>Gästebuch</a> mit Benutzerverwaltung (mehrere Admins) und der Fähigkeit zu löschen und zu editieren, dies in einer MVC-Struktur. Die Anforderungen waren ein Login (mit statischem Administrator) und die Fähigkeit, Beiträge zu erstellen und als Admin zu löschen. Die Note 5.5 (nach CH-System) war das Resultat.</p>",
                 "asset":
                 {
                     "media":"http://ryaandavis.files.wordpress.com/2013/06/wpid-shutterstock_86404090.jpg",
-                    "credit":"<a href='http://ryaandavis.wordpress.com/2013/06/11/6-useful-websites-to-learn-coding-as-a-beginner-to-expert/'>http://ryaandavis.wordpress.com</a>",
+                    "credit":"<a target='_blank' href='http://ryaandavis.wordpress.com/2013/06/11/6-useful-websites-to-learn-coding-as-a-beginner-to-expert/'>http://ryaandavis.wordpress.com</a>",
                     "caption":""
                 }
             },
@@ -226,7 +226,7 @@
                 "startDate":"2014,5,29",
                 "endDate":"2014,6,27",
                 "headline":"Entwicklung tryToxic",
-                "text":"<p>tryToxic enstand aus dem jobManagement-Projekt und ist das Resultat meines Interesses an <a href='http://tox.im'>tox/pyTox</a>. Die Entwicklungsphase von tryToxic geht bis heute.</p>",
+                "text":"<p>tryToxic enstand aus dem jobManagement-Projekt und ist das Resultat meines Interesses an <a target='_blank' href='http://tox.im'>tox/pyTox</a>. Die Entwicklungsphase von tryToxic geht bis heute.</p>",
                 "asset":
                 {
                     "media":"images/tryToxicInit.png",
@@ -273,7 +273,7 @@
                 "startDate":"2012,6,12",
                 "endDate":"2012,10,12",
                 "headline":"Creative Personal",
-                "text":"Arbeit im Gerüstbau. Klettern und in der Höhe montieren, Stahl verschieben und lange Tage - ein bezahltes Fitnesscenter.",
+                "text":"Arbeit in der Gerüst- und Stahlbaumontage. Klettern, Höhenarbeit und lange Tage - ein bezahltes Fitnesscenter.",
                 "asset":
                 {
                     "media":"./images/oldjob2.jpg",

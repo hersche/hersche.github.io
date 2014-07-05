@@ -1,14 +1,14 @@
 {
     "index": {
         "title": "Linklist, about site and projects",
-        "preword": "This is the linklist, or alternative home. Sitemap would may be a good name, but it contains 'external' links too. <br /> It contains also a description about the website and me in context to my projects.",
-        "description": "TEXT IS UNDER CONSTRUCTION! <br /><h4><a name='website'></a>Website</h4>This Website is using your Webstorage, if your browser supports this feature. You will reconize this, when you change the language - you have to refresh via button after, to reload offline-content (which also got the language). This website is really fresh by technics and i like to stay current here, to learn something more about the relative new HTML5-World. Javascript is also a quite new language to me, but a interessting world. It's not a example for a 'secure language', but its was often nice eyecandy and is often also usefull (see <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my computertime.<span style='color: grey;'><h4><a name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg ('the easy entry'), Site 309 (it's a german book, translation by me):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, Security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as now. <h4><a name='about'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. I would like to got a job as dev and also learned this kind of job. After my education, i was working by body, cause 8 hrs pc, 5 days a week for 4 years where too much for me. Now I borke my feed and liked to do something - i never really ended in programming (just reduced), but since april, i am active again, how you see in github. <br />I'm basicly not interessted in donations. Those projects could show, how i could develop. <br /> You could use those projects free and i'm happy, if someone try or fork it (or also report bugs).",
+        "preword": "This is the linklist, or alternative home. Sitemap would may be a good name, but you will find 'external' links too. <br /> It contains also a description about the website and me in context to my projects.",
+        "description": "<h4><a class='anchor' name='website'></a>Website</h4>This Website is using your Webstorage, if your browser supports this feature. You will reconize this, when you change the language - you have to click the refresh-button after you use the language-button to reload the language-file. This website is really fresh by technics and i like to stay current here, to learn something more about the new HTML5-World. Javascript is also a quite new language for me and a interessting world. It's not a example for a 'secure language', but its was always nice eyecandy and get often usefull in this time (see <a href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my personal development.<span style='color: grey;'><h4><a class='anchor' name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg ('the easy entry'), Site 309 (it's a german book, translation by me):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as in python. <h4><a class='anchor' name='about'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. After my education, i worked mostly by body, because 4 years, 8 hours a day computerstuff was too much for me. Because i've got a workeraccidant (middlefoot broken), i would like to do my momentary hobby to a job again. Since april, i'm really activ again on <a href='https://github.com/skamster>Github</a>. <br />Those projects show, how i can developing software. <br /> You could use those projects free (<a href='gpl-2.0.txt>Gpl v2</a>) and i'm happy, when people participate (using, commiting, forking, reporting, auditing).",
         "content": {
             "tryToxic": {
                 "pLink": "tryToxic",
                 "sLink": "https://github.com/skamster/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
-                "stable": "Unshure (API changes very fast, since heavy development in core)"
+                "stable": "Unstable (API changes very fast, since heavy development in core)"
             },
             "jobManagement": {
                 "pLink": "jobManagement",
@@ -42,14 +42,14 @@
         "preword": "tryToxic is just another tox-api-client, written in python 3 and pyQt",
         "description": "The history of tryToxic is a short one - there was a binding to tox in python and my interesst was big enough. So first parts where created into <a href='index.html?s=jobManagement'>jobManagement</a>, called toxTry. It's now proper separeted, and got it's name cause it never will be a official client (instead, it's QtTox, written in C++). What to say further? It's easy designed, you should get a overview quick..",
         "features": {
-            "Local encryption": "Store every personal related information encrypted on harddisk",
-            "Groupchats": "Invite and create groupchats",
-            "Set Loglevel": "Change the level in runtime",
-            "i18n": "It's prepared for every language!"
+            "Local encryption": "Local data could be encrypted. There are 8 diffrent algorithms to choose and the migration to other algorithms works flowing.",
+            "Groupchats": "Invite people into groupchats and even create own ones.",
+            "Set Loglevel": "Change the level in runtime.",
+            "i18n": "It's prepared for every language and already translated to german and english!"
         },
         "bugs": {
             "Filetransfer": "Sending fails, while recive is working",
-            "Others": "undetected"
+            "Local encryption (API)": "The encryption for the local storage from \"Project tox-core\" gets splitted into a seperate lib which isn't avaible to python yet. Because of i want to provide encryption for local data, i work on two new methods to de- and encrypt all kind of files, what makes the project independend in this point. Look into wiki, http://piratepad.net/fileEncryption (posted in diaspora) and the file lib/cryptClass.py for changes and join, if you like to (for auditing, development, forking or using, when it works). If the methods from the tox-core-project gets avaible again, they could be activated too, as a hardening. I also will not remove the sql-data-based encryption, so you will be able to choose at least two algorithms (nice thing would be to increase the algorithms to combined algorithms on both kinds of encryption). "
         },
         "pictures": {
             "initview": {
@@ -69,14 +69,14 @@
         "preword": "Semantic job-overview when you work diffrent companys (freelance/temporary worker). Written in python3 using pyQt and pyCrypto.",
         "description": "As i begann to work as stagehand, there was often a untrusty atmosphere to the companys. So i came to the idea to do a finance-system to check my companys payings. I'm not a big finance-head, but it was and still is good useable. It's definently not designed for classic finance management!",
         "features": {
-            "Local encryption": "Store messages and idendity encrypted on harddisk",
-            "Diffrent companys": "When you work for diffrent companys",
-            "Set Loglevel": "Change in working app",
-            "i18n": "It's prepared for every language!"
+            "Local encryption": "Local data could be encrypted. There are 8 diffrent algorithms to choose and the migration to other algorithms works flowing.",
+            "Diffrent companys": "The application is optimised to get diffrent companys with endless jobs.",
+            "Set Loglevel": "Change the loglevel in runtime.",
+            "i18n": "It's prepared for every language and already translated to german and english!"
         },
         "bugs": {
-            "Generating charts": "They're very unflexible",
-            "Others": "undetected"
+            "Generating charts": "The graphic-chart could be more optimised. It is very unflexible.",
+            "Others": "Not detected yet."
         },
         "pictures": {
             "initview": {
@@ -93,14 +93,14 @@
     },
     "multisms": {
         "title": "MultiSms",
-        "description": "The name MultiSms is taken from it's originalname, Multimobile(widget). The idea is, to send sms over diffrent providers. The script automate steps the users has to do on the website. It also checks for success (depend on plugin).",
+        "description": "The name MultiSms is to retain from it's originalname, Multimobile(widget). The idea is, to send sms over diffrent providers. The script automate steps the users has to do on a website which offers free sms. It also checks for successful sending (depend on plugin).",
         "preword": "The Project is very old (29.11.2008) and was my second pythonapplication. It use pyKde4 and python2.",
         "features": {
             "Pluginsystem": "The application is able to load several providers via it's pluginsystem.",
             "Widget": "The project offers a widget for the KDE-Interface."
         },
         "bugs": {
-            "Everything!": "Need a complete rewrite to python3"
+            "Everything!": "Need a complete rewrite to python3."
         },
         "pictures": {}
     },
@@ -140,7 +140,7 @@
     "about": {
         "title": "About me",
         "preword": "Some information over me",
-        "description": "Hello,<br />This part informs you about my expiriences and also a little about my personal life. I tried many things and detect my strong parts in programming and also a little in administration/support of systems. On the other site, i wouldn't say i'm a designer or hardware-specialist. <br /> Following, you will find a list with my expiriences - the education-passport and personal contacts to references will be sendet on question.",
+        "description": "Hello,<br />This part informs you about my expiriences and also a little about my personal life. I tried many things and detect my strong parts in programming and in administration/support of systems. On the other site, i wouldn't say i'm a designer or hardware-specialist. <br /> Following, you will find a list with my expiriences - more personal information like the education-passport you will find <a href='https://cloud.openmailbox.org/public.php?service=files&t=c514d2742dd7e8b05fa857986984131d'>in this link</a>. The password will be sendet with a bid or on question.",
         "picture": "profile.png",
         "contact": {
             "Xampp": "skamster@jabber.ccc.de",
@@ -164,7 +164,7 @@
             "trans": "Suport references",
             "desc": "I support diffrent people's computers since more than 6 years in assistance with linux. Mostly i use a <a href='http://kubuntu.org'>Kubuntu</a>, sometimes also Linuxmint, but near ever i use <a href='http://kde.org'>KDE</a>",
             "reference": {
-                "Puzzle ITC":"My <a href='http://puzzle.ch'>Educationcompany</a> wrote over me (translated): <h4>Expertise</h4>Thanks to his good grasp and thirst of knowledge, mr Hersche was fast able to work in diffrent topics and get today etablished expertise. He handles problems autonomus and does a good solution.<h4>Method expertise</h4>Mr Hersche worked out of beginn very autonomous and planned. To do this, he used diffrent workingtechniques and choose with help of his cross-linked thinking the most efficience method.",
+                "Puzzle ITC": "My <a href='http://puzzle.ch'>Educationcompany</a> wrote over me (translated): <h4>Expertise</h4>Thanks to his good grasp and thirst of knowledge, mr Hersche was fast able to work in diffrent topics and get today etablished expertise. He handles problems autonomus and does a good solution.<h4>Method expertise</h4>Mr Hersche worked out of beginn very autonomous and planned. To do this, he used diffrent workingtechniques and choose with help of his cross-linked thinking the most efficience method.",
                 "ex-Name": "Usage of person",
                 "name 2": "another ussage"
             }
@@ -172,24 +172,24 @@
         "languages": {
             "trans": "Languages",
             "PHP": {
-                "desc": "Use this for 10 years. Since Oop is default with PHP5, it's beatiful to use. Before it was horrible, but not for me (i didn't know oop in the beginn)",
+                "desc": "Use this language for about 10 years. Since <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>OOP</a> is default with PHP 5, it's beautiful to use. Before it was horrible, but not for me (i didn't know <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>OOP</a> in the beginning).",
                 "frameworks": {
-                    "Smarty": "A templateframework, allow a clean separation between 'controller' and 'view'. <a href='http://smarty.net'>Smarty</a> make <a href='https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller'>MVC</a> really easy!"
+                    "Smarty": "A templateframework, that allow a clean separation between 'controller' and 'view'. <a href='http://smarty.net'>Smarty</a> make <a href='https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller'>MVC</a> in PHP really easy!"
                 }
             },
             "Python": {
-                "desc": "I know <a href='https://python.org'>python</a> since 5 years and it addict me really fast. Perfect possibilitys of sequentell, Oop and modulare code. It also don't use { }, but forces you to format your code proper. Top!",
+                "desc": "I know <a href='https://python.org'>python</a> since 5 years and it addict me really fast. Perfect possibilitys of sequentell, <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>OOP</a> and modulare code. It also don't use { }, but forces you to format your code proper. Top!",
                 "frameworks": {
                     "Urllib2": "<a href='https://docs.python.org/2/library/urllib2.html'>This</a> is a nice framwork to 'speak' with websites, which doesn't get a daemon. Just go to a field, put input in and submit - in python, not in browser. That way you could do a lot automatic, unimportant the hoster like it or not",
-                    "PyQt || PyKde": "Qt is a very modular ui-library - it's easy to use and works very stable. This is one of the first frameworks i used.",
+                    "PyQt || PyKde": "<a href='http://qt-project.org/'>Qt</a> is a very modular <a href='http://en.wikipedia.org/wiki/Graphical_user_interface'>GUI</a>-library - it's easy to use and works very stable. PyKde was one of the first frameworks i used.",
                     "PyTox": "PyTox is a interface to the tox-core-project. The whole project is in heavy development. For further information visit <a href='http://tox.im'>tox.im</a>.",
-                    "PyCrypto": "PyCrypto supports many kinds of hashing, symmetric and asymmetric encryptions. My focus is on symmetric encryptions. I use it to encrypt local data"
+                    "PyCrypto": "<a href='https://www.dlitz.net/software/pycrypto/'>PyCrypto</a> supports many kinds of hashing, symmetric and asymmetric encryptions. My focus is on symmetric encryptions. I use it for the encryption of local data."
                 }
             },
             "Java": {
-                "desc": "Learned this language at education. JVM was/is a really bloating runtime, what i dislike. It's strictly needed Oop-kind was nice for learning. Because android is growing very much and <a href='https://en.wikipedia.org/wiki/Dalvik_%28software%29'>dalvik</a> gets to be very optimized, it looking attractive again.",
+                "desc": "Learned this language in my education. The JVM contains a very big, own framework, what i didn't really like (JVM gets slow out of this). It's strictly needed <a href='http://en.wikipedia.org/wiki/Object-oriented_programming'>OOP</a>, what was nice to learn this kind of programming. Because android grows very much and <a href='https://en.wikipedia.org/wiki/Dalvik_%28software%29'>dalvik</a> is very optimized, this language is looking attractive again.",
                 "frameworks": {
-                    "Groovy & grails": "Similiar to ruby and rails. <a href='https://en.wikipedia.org/wiki/Groovy_%28programming_language%29'>Groovy</a> is a more simple language and <a href='https://en.wikipedia.org/wiki/Grails_%28framework%29'>grails</a> is a great framework! Both are based on Java"
+                    "Groovy & grails": "Similiar to <a href='http://en.wikipedia.org/wiki/Ruby_on_Rails'>Ruby on rails</a>. <a href='https://en.wikipedia.org/wiki/Groovy_%28programming_language%29'>Groovy</a> is a more simple language and <a href='https://en.wikipedia.org/wiki/Grails_%28framework%29'>grails</a> is a great framework! Both are based on Java, what allows to use java-classes withouth problems."
                 }
             },
             "Javascript": {
@@ -204,6 +204,7 @@
         "mobile": {
             "trans": "Mobile hacking",
             "dd-wrt": "Used on some Siemens and Lynksys-routers",
+            "Archos AV100": "I've rooted this old <a href='http://www.gofurygo.de/av100.php'>'multimedia'-player</a> with <a href='http://sourceforge.net/projects/linav/'>MediOS</a>.",
             "GTA02/Openmoko": "<a href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>My first Smartphone</a> (400Mhz). I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, <a href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release) which used the <a href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Windowmanager</a>. I wrote <a href='https://gist.github.com/skamster/10565527'>my first gtk-python-application</a> there.<br />On the other site, what i used - <a href='http://qtmoko.sourceforge.net/'>QtMoko</a> which was really stable and fast (cause it doesn't needed a Xorg-server). <br /><a href='http://qt-project.org/'>Qt</a> is ql! <br />Now the project gets a hardwareupgrade since some years, it's called <a href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> and is continued by another company.",
             "Sony Xperia": "Because of money (i still would like a GTA04) i buyed a <a href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a> after the GSM-modem was fail for doing it's work. The new one was <a href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'secured' with 600Mhz improved processor (1Ghz Singlecore) - nice! Easy to root, i also did this for some friends. The first expirience with <a href='http://www.xda-developers.com/'>xda</a>. After not a year, i couldn't do a phone anymore - the quality was too bad, no matter which rom.",
             "Motorola": "After my Xperia i go back to 600Mhz, a cheap Motorola 'outdoor' Phone, <a href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. This is still <a href='http://forum.xda-developers.com/showthread.php?t=2079202'>rootable</a> by flashing a spain firmware until bootloader is installed (TWRP, i think) and plug out after that step (before install your whished rom). Nice, because recoverable. After the screen gets broken, i get some gifts in short time - two HTC's",
@@ -227,7 +228,7 @@
                 "E-Mail": "<a href='https://en.wikipedia.org/wiki/Sendmail'>Sendmail</a> and <a href='https://en.wikipedia.org/wiki/Dovecot_%28software%29>dovecot</a>. As some sys-admins say: Setup sendmail once, and it's nice. Set it up more and you're a crazy.",
                 "Tor-Node": "A simple node in the <a href='https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29'>tor-anonymizing-network</a>",
                 "Apache": "A <a href='https://en.wikipedia.org/wiki/Apache_HTTP_Server'>webserver</a>, configured for ruby & rails and php-support.",
-                "Squid":"<a href='http://en.wikipedia.org/wiki/Squid'>Squid</a> is a cache-proxy-server",
+                "Squid": "<a href='http://en.wikipedia.org/wiki/Squid'>Squid</a> is a cache-proxy-server",
                 "MySQL": "A really default database",
                 "Diaspora": "This is a <a href='https://en.wikipedia.org/wiki/Diaspora_%28software%29'>social-network</a> which works similiar to E-Mail (P2P). It was running over Apache (<a href='http://rubyonrails.org/'>RoR</a>). Since i have issues with self-signed certificates and not always time, it was still unstable",
                 "Seeks": "A <a href='https://en.wikipedia.org/wiki/Seeks'>P2P-Searchengine</a> for getting results from google, stackoverflow, duckduckgo, wikipedia or whatever else. Today, there's also a fork called <a href='https://github.com/asciimoo/searx'>searx</a>."
@@ -251,11 +252,11 @@
         "nowebstorage": "You don't have webstoragesupport",
         "fromstorage": "from Webstorage",
         "fromnew": "reloaded right now!",
-        "timeline":"<p>Those are my expiriences which you also view look as a <a id='timeline' href='#my-timeline' onclick='$(\"#my-timeline\").show()'>timeline</a>.</p>",
-        "lang":"en",
-        "expiriences":"Expiriences",
-        "security":"Security",
-        "about":"About me",
-        "mobilephonehint":"Your Browser looks to running on a mobile device - rotate your device to the landscape-mode to enjoy the website optimised."
+        "timeline": "<p>Those are my expiriences which you also view look as a <a id='timeline' href='#my-timeline' onclick='$(\"#my-timeline\").show()'>timeline</a>.</p>",
+        "lang": "en",
+        "expiriences": "Expiriences",
+        "security": "Security",
+        "about": "About me",
+        "mobilephonehint": "Your Browser looks to running on a mobile device - rotate your device to the landscape-mode to enjoy the website optimised."
     }
 }
