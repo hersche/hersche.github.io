@@ -32,7 +32,7 @@
                 "pLink": "index.html?s=skamster.github.io",
                 "sLink": "https://github.com/skamster/skamster.github.io/",
                 "dLink": "https://github.com/skamster/skamster.github.io/",
-                "stable": "Near finish, have to correcting Text now."
+                "stable": "Done."
             }
 
         }
@@ -100,7 +100,7 @@
             "Widget": "The project offers a widget for the KDE-Interface."
         },
         "bugs": {
-            "Everything!": "Need a complete rewrite to python3."
+            "Everything!": "Need a complete rewrite to python 3."
         },
         "pictures": {}
     },
@@ -117,8 +117,7 @@
             "Livedemo": "<a target='_blank' href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
-            "Update on Accessrights on Plugins": "The seting fails. Solution: Remove role from plugin and add with whished Rights again.",
-            "Others": "undetected"
+            "Update on Accessrights on Plugins": "The seting fails. Solution: Remove role from plugin and add with whished Rights again."
         },
         "pictures": {}
     },
@@ -129,11 +128,11 @@
         "features": {
             "Offlinestoring": "This site use your HTML5-offlinestorage, so that you can reload this site or also reenter it after closing the browser and dont have a internetconnection. Try it out!",
             "JSON-Dataquery": "All data gets loaded by static JSON. This is for translation.",
-            "jQuery": "jQuery is for loading stuff, animate and finding of classes",
-            "Diffrent styles": "You could choose a alternative style by View->website-style"
+            "jQuery": "jQuery is for loading stuff, animate and finding of classes.",
+            "Diffrent styles": "You could choose a alternative style by View->website-style."
         },
         "bugs": {
-            "onTop-Button in Chrome and Opera": "The button wont move in chrome. Works well in firefox."
+            "<del>onTop-Button in Chrome and Opera</del>": "<del>The button wont move in chrome. Works well in firefox.</del>"
         },
         "pictures": {}
     },

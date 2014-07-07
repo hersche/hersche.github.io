@@ -6,7 +6,7 @@
         "content": {
             "tryToxic": {
                 "pLink": "tryToxic",
-                "sLink": "https://github.com/skamster/tryToxics/",
+                "sLink": "https://github.com/skamster/tryToxic/",
                 "dLink": "tryToxicDocs/index.html",
                 "stable": "Der Kern befindet sich in der Alpha-Phase (offen für Veränderungen). Durch Änderungen an der API können Teile 'aufhören zu funktionieren'."
             },
@@ -32,7 +32,7 @@
                 "pLink": "skamster.github.io",
                 "sLink": "https://github.com/skamster/skamster.github.io/",
                 "dLink": "https://github.com/skamster/skamster.github.io/",
-                "stable": "Beinahe fertig, der Text muss noch korrigiert werden."
+                "stable": "Fertig"
             }
 
         }
@@ -40,7 +40,7 @@
     "tryToxic": {
         "title": "tryToxic",
         "preword": "tryToxic ist ein weiterer tox-api-client. Er ist in python3 und pyTox und pyQt geschrieben.",
-        "description": "Die Geschichte von tryToxic ist eine kurze - es gab ein Binding von tox in Python und mein Interesse war gross genug. Meine ersten Teile flossen in <a target='_blank' href='index.html?s=jobManagement'>jobManagement</a>, genannt toxTry. Es ist nun sauber separiert und hat seinen Namen, da es sowieso nicht ein offizieller Client wird (stattdessen wird dies QtTox, geschrieben in C++) und experimenteller sein kann (python ist sehr leicht anpassbar).Was gibt es noch zu sagen? Es ist einfach designed, Sie sollten sich schnell einen Überblick verschaffen können, in den Funktionen, wie auch im Code.",
+        "description": "Die Geschichte von tryToxic ist eine kurze - es gab ein Binding von tox in Python und mein Interesse war gross genug. Die ersten Teile flossen in <a target='_blank' href='index.html?s=jobManagement'>jobManagement</a> ein, bis dieser teil als toxTry abgespalten wurde. Es ist nun sauber separiert und hat seinen Namen, da es sowieso nicht ein offizieller Client wird (stattdessen wird dies QtTox, geschrieben in C++) und experimenteller sein kann (python ist sehr leicht anpassbar).Was gibt es noch zu sagen? Es ist einfach designed, Sie sollten sich schnell einen Überblick verschaffen können, in den Funktionen, wie auch im Code.",
         "features": {
             "Lokale Verschlüsselung": "Lokalen Daten können verschlüsselt werden. Es stehen 8 verschiedene Algorithmen zur Verfügung und die Migration zu andern Algorithmen funktioniert fliessend.",
             "Gruppenchats": "Lade Menschen in Gruppenchats ein oder erstelle selbst welche.",
@@ -48,8 +48,8 @@
             "I18N": "Es ist für alle Sprachen vorbereitet und in Deutsch und Englisch übersetzt."
         },
         "bugs": {
-            "Dateitransfer": "Senden schlägt fehl",
-            "Lokale Verschlüsselung (API)": "Die lokale Verschlüsselung vom \"Tox-core-Projekt\" wurde in eine eigene Bibliothek geschrieben, die (noch) nicht für Python verfügbar ist. Da ich eine Verschlüsselung der lokalen Daten bereitstellen möchte, arbeite ich an zwei neuen Methoden um alle Arten von Dateien Ver- und Entschlüsseln zu können, was das Projekt in diesem Punkt unabhängig machen würde. Sehen Sie sich das Wiki, http://piratepad.net/fileEncryption (in Diaspora gepostet) und die Datei lib/cryptClass.py für Änderungen und mach mit, wenn du willst (für's auditen, entwickeln, forken oder benutzen, wen es funktioniert). Wenn die Methoden vom Tox-core-Projekt wieder verfügbar werden, können diese zum hardening ebenfalls verwendet werden. Ich werde auch die SQL-Daten-basierte Verschlüsselung nicht entfernen, es werden also mindestens zwei Algorithmen zur verfügung stehen (nett wäre es, kombinierte Algorithmen auf beide Arten von Verschlüsselung zu verwenden)."
+            "Dateitransfer": "Das senden von Dateien schlägt fehl.",
+            "Lokale Verschlüsselung (API)": "Die lokale Verschlüsselung vom \"Tox-core-Projekt\" wurde in eine eigene Bibliothek geschrieben, die (noch) nicht für Python verfügbar ist. Da ich eine Verschlüsselung der lokalen Daten bereitstellen möchte, arbeite ich an zwei neuen Methoden um alle Arten von Dateien Ver- und Entschlüsseln zu können, was das Projekt in diesem Punkt unabhängig machen würde. Sehen Sie sich das Wiki, http://piratepad.net/fileEncryption (in Diaspora gepostet) und die Datei lib/cryptClass.py für Änderungen und mach mit, wenn du willst (für's auditen, entwickeln, forken oder benutzen, wenn es funktioniert). Wenn die Methoden vom Tox-core-Projekt wieder verfügbar werden, können diese zum hardening ebenfalls verwendet werden. Ich werde auch die SQL-Daten-basierte Verschlüsselung nicht entfernen, es werden also mindestens zwei Algorithmen zur verfügung stehen (nett wäre es, kombinierte Algorithmen auf beide Arten von Verschlüsselung zu verwenden)."
         },
         "pictures": {
             "initview": {
@@ -199,7 +199,7 @@
             "trans": "Mobil gehacktes",
             "dd-wrt": "Gebraucht auf einigen Siemens- und Lynksys-Routern",
             "Archos AV100":"Diesen alten <a target='_blank' href='http://www.gofurygo.de/av100.php'>'Multimedia'-Player</a> habe ich mit <a target='_blank' href='http://sourceforge.net/projects/linav/'>MediOS</a> gerooted.",
-            "GTA02/Openmoko": "<a target='_blank' href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>Mein erstes Smartphone</a> (400Mhz). Ich nutzte dieses für 3, relativ unstabile, Jahre. Am Schluss blieben zwei aktive Projekte. Zum einen <a target='_blank' href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release), welches die <a target='_blank' href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Fensterverwaltung</a> nutzte. Ich schrieb <a target='_blank' href='https://gist.github.com/skamster/10565527'>meine erste Gtk-Python-Anwendung</a> auf diesem System (v.a. da das SMS-Programm einen Bug hatte und ich meine SMS lesen wollte).<br />Auf der andern Seite nutzte ich vor allem <a target='_blank' href='http://qtmoko.sourceforge.net/'>QtMoko</a>, welches sehr stabil und schnell war (da es keinen Xorg-Server brauchte). <br /><a target='_blank' href='http://qt-project.org/'>Qt</a> ist ql! <br />Jetzt gab es beim Projekt seit einigen Jahren eine Hardwareaufrüstung, genannt <a target='_blank' href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> die von einer anderen Firma fortgesetzt wird.",
+            "GTA02/Openmoko": "<a target='_blank' href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>Mein erstes Smartphone</a> (400Mhz). Ich nutzte dieses für 3, relativ unstabile, Jahre. Am Schluss blieben zwei aktive Projekte. Zum einen <a target='_blank' href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release), welches die <a target='_blank' href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Fensterverwaltung</a> nutzte. Ich schrieb <a target='_blank' href='https://gist.github.com/skamster/10565527'>meine erste Gtk-Python-Anwendung</a> auf diesem System (v.a. da das SMS-Programm einen Bug hatte und ich meine SMS lesen wollte).<br />Auf der andern Seite nutzte ich vor allem <a target='_blank' href='http://qtmoko.sourceforge.net/'>QtMoko</a>, welches sehr stabil und schnell war (da es keinen Xorg-Server brauchte). <a target='_blank' href='http://qt-project.org/'>Qt</a> ist ql! <br />Jetzt gibt es seit einigen Jahren eine Hardwareaufrüstung namens <a target='_blank' href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a>. Mit diesem Update wechselte auch die Firma (FIC&rarr;Goldelico).",
             "Sony Xperia": "Nachdem das GSM-Modem des Openmokos kaputt ging, kaufte ich mir ein <a target='_blank' href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a>. Dieses ist <a target='_blank' href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'gesichert', mit einem um 600Mhz gesteigerten Prozessor (1Ghz Singlecore) - nice! Einfach zu rooten, ich habe dies auch für einige Kollegen gemacht. Es war die erste Erfahrung mit <a target='_blank' href='http://www.xda-developers.com/'>xda</a>. Nach nicht einem Jahr konnte ich keinen Anruf mehr tätigen, die Qualität war zu schlecht, egal welche Rom ich verwendete.",
             "Motorola": "Nach meinem Xperia ging ich zu 600Mhz zurück, ein billiges Motorola 'outdoor' Telefon, <a target='_blank' href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. Dieses ist immer noch rootbar wenn man eine spanische Firmware flasht, nach dem installieren des Bootloaders (ClockworkMod) jedoch abbricht. Nice, da das Handy einfach in den wirklichen Werkstand zurückgebracht werden kann (kein Garantieverlust). Kurz nachdem das Display brach, bekam ich gleich zwei neue HTC's geschenkt.",
             "HTC": "Ich bekam meine zwei HTC's gratis, als Geschenk von Freunden. Eines ist ein <a target='_blank' href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), das andere ein <a target='_blank' href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). Dies ist eine massive Geschwindigkeitszunahme für mich! Das One X ist schneller als mein Laptop (2x1.86Ghz vs. the 4x1.5Ghz)! Genial, um Sachen zu testen und aktuell zu bleiben. Rooten funktioniert einfach über einen offiziellen Weg.",
