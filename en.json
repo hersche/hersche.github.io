@@ -142,6 +142,7 @@
         "description": "Hello,<br />This part informs you about my expiriences and also a little about my personal life. I tried many things and detect my strong parts in programming and in administration/support of systems. On the other site, i wouldn't say i'm a designer or hardware-specialist. <br /> Following, you will find a list with my expiriences - more personal information like the education-passport you will find <a target='_blank' href='https://cloud.openmailbox.org/public.php?service=files&t=c514d2742dd7e8b05fa857986984131d'>in this link</a>. The password will be sendet with a bid or on question.",
         "picture": "profile.png",
         "contact": {
+            "Personal data":"<a href='https://cloud.openmailbox.org/public.php?service=files&t=c514d2742dd7e8b05fa857986984131d' target='_blank' >Passwordprotected Owncloud-share</a>.",
             "Xampp": "skamster@jabber.ccc.de",
             "E-Mail": "hersche@openmailbox.org",
             "Diaspora": "<a target='_blank' href='https://nerdpol.ch/u/hersche'>hersche@nerdpol.ch</a>",
