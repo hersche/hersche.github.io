@@ -262,6 +262,7 @@
         "security": "Security",
         "about": "About me",
         "mobilephonehint": "Your Browser looks to running on a mobile device - rotate your device to the landscape-mode to enjoy the website optimised.",
-        "reallang":"Real languages"
+        "reallang":"Spoken languages",
+        "impressum":"Impressum: Everything here is from myself (except marked libs and timeline-pictures) - everything's <a href='gpl-2.0.txt' target='_blank' >GPL-v2-licensed</a>."
     }
 }

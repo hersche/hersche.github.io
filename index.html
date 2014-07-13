@@ -122,6 +122,8 @@
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
+                    $("#impressum").html(jData.transl.impressum);
+                    
                 } else {
                     //In the second case, we have webstorage-support, but no data yet. So let's recive!
                     var d = new Date();
@@ -147,7 +149,9 @@
                         var ProcessedHtml = processHtml(jData, lastName);
                         $("#toc").html(ProcessedHtml[1]);
                         $("#showContent").html(ProcessedHtml[0]);
+                        $("#impressum").html(jData.transl.impressum);
                         tljqxhr.complete(function (tldata) {
+                            console.log("Completemethod2 on timeline, let's do the work");
                             localStorage.tlData = tldata.responseText.replace("\n", "");
                             createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
                         });
@@ -156,20 +160,19 @@
                 }
             } else {
                 // There is no webstorage-support, so this method will be used on every refresh (argh!)
+                // There is no logging, because a browser should basicly be new enough
                 var jqxhr = $.getJSON(jsonFile, function () {
-                    console.log("First complete-catch of maincontent");
                 });
                 var tljqxhr = $.getJSON(tlFile, function () {
-                    console.log("First complete-catch of timeline");
                 });
                 jqxhr.complete(function (data2) {
-                    console.log("Completemethod2 on maincontent, let's do the work");
                     jData = jQuery.parseJSON(data2.responseText.replace("\n", ""));
                     $("#menucontent").html(processMenuHtml(jData));
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                     $("#refresh").html(jData.transl.refresh + " (" + jData.transl.nowebstorage + ")");
+                    $("#impressum").html(jData.transl.impressum);
                 });
                 tljqxhr.complete(function (tldata) {
                     createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
@@ -179,9 +182,20 @@
             /**
                 Fade in loaded contents
             **/
-            $("#showContent").fadeIn(2500);
-            $("#menu").fadeIn(1000);
-            $("#scroller").fadeIn(1500);
+            
+            
+            $("#menu").fadeIn(400, function(){
+                    $("#scroller").fadeIn(400, function(){
+                             $("#showContent").fadeIn(200, function(){
+                                                      
+                                                       $("#impressum").fadeIn(1500);
+                                                      });             
+                                          
+                                          });          
+                              
+                              });
+            
+           
             /**
                 Eventwatcher for onClick on about-me-picture"
             **/
@@ -253,7 +267,7 @@
     <div id="animationContainer">
         <div id="showContent" style="display: none"></div>
 
-        <div style="margin-left: 30%">Impressum: Everything here is from myself (except marked libs and timeline-pictures), everything's <a href="gpl-2.0.txt">GPL-v2</a>-licensed.</div>
+        <div id="impressum" style="display: none">Impressum: Everything here is from myself (except marked libs and timeline-pictures), everything's <a href="gpl-2.0.txt">GPL-v2</a>-licensed.</div>
     </div>
     <noscript>
         <h3>This site needs javascript to load it's contents</h3>

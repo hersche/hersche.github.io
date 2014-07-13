@@ -22,6 +22,21 @@ body {
 #animationContainer {
     width: 100%;
 }
+
+#impressum {
+ margin-left: 23%; bottom: 2px; position: fixed; background-color: #FF8800;
+        border: 1px thin;
+    border-radius: 2px;
+    font-size: .8em;
+    border-color: transparent;
+    border-radius: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#impressum a {
+    color: white;
+}
 #menu {
     -moz-box-shadow: 0 0 5px 5px #ADFF2F;
     -webkit-box-shadow: 0 0 5px 5px #ADFF2F;
@@ -183,7 +198,7 @@ body {
     padding-top: 5px;
     padding-left: 2px;
     cursor: pointer;
-    z-index: 555; 
+    z-index: 555;
 }
 .dropdowncontainer:hover > .submenu {
     display: block !important;
@@ -243,16 +258,16 @@ body {
     content: "";
 }
 #menuul {
-    display: inline; margin:0px;
+    display: inline;
+    margin: 0px;
     padding-left: 0px;
     float: left;
 }
-
 #menuul li {
-margin:0;
+    margin: 0;
     outline-style: none;
-     list-style: none; 
-    padding:0;
+    list-style: none;
+    padding: 0;
 }
 #aboutImg {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");

@@ -267,6 +267,7 @@
         "security":"Sicherheit",
         "about":"Über mich",
         "mobilephonehint":"Ihr Browser scheint auf einem Handy oder Tablet zu laufen - kippen Sie das Gerät in das Querformat/den Landscape-Modus, um die Seite in optimaler Form geniessen zu können.",
-        "reallang":"Reale Sprachen"
+        "reallang":"Gesprochene Sprachen",
+        "impressum":"Impressum: Der ganze Inhalt ist von mir (mit Ausnahme markierter Bibliotheken und Bildern in der Timeline) - meine Werke stehen unter der <a href='gpl-2.0.txt' target='_blank'>GPLv2-Lizenz</a>."
     }
 }
