@@ -49,9 +49,9 @@ body {
     -webkit-box-shadow: 0 0 5px 5px black;
     box-shadow: 0 0 5px 5px black;
     min-width: 70%;
-    max-width: 80%;
+    max-width: 82%;
     z-index: 998;
-    margin-left: 25%;
+    margin-left: 23%;
     padding-left: 1px;
     position: fixed;
     padding-right: 1px;
@@ -111,6 +111,7 @@ body {
     max-width: 60%;
     min-width: 30%;
     z-index: 400;
+    margin-bottom: 2%;
 }
 .projectpic {
     width: 50%;
