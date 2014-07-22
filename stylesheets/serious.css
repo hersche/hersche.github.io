@@ -297,11 +297,10 @@ body {
     filter: grayscale(100%);
     /* IE 6-9 */
     z-index: 444;
-    width: 185px;
+    width: 133px;
     float: right;
     margin-left: 1%;
-    max-width: 800px;
-    height: 200px;
+    height: 250px;
     transition: width 2s, height 2s, transform 2s, effect 4s;
 }
 #aboutImg:active {
