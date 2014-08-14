@@ -218,6 +218,14 @@
                         });
                 }
             });
+            $(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() < $(document).height()) {
+       $("#impressum").fadeIn(800,function(){});
+   }
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       $("#impressum").fadeOut(800,function(){});
+   }
+});
             // Check client for mobile-device using
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                 alert(jData.transl.mobilephonehint);

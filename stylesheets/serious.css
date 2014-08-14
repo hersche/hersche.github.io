@@ -111,7 +111,8 @@ body {
     max-width: 60%;
     min-width: 30%;
     z-index: 400;
-    margin-bottom: 2%;
+    
+    /* unneeded due to outfading margin-bottom: 5%; */
 }
 .projectpic {
     width: 50%;
