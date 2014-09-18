@@ -182,21 +182,45 @@
                 });
 
             }
+
+
             /**
                 Fade in loaded contents withouth jquery-ui
             **/
-            $("#menu").fadeIn(400, function () {
-                $("#scroller").fadeIn(400, function () {
-                    $("#showContent").fadeIn(200, function () {
+            $("#showContent").show("slide", {
+                direction: "right"
+            }, 1000, function () {
+                $("#menu").show("shake", {
+                    times: 10,
+                    distance: 40
+                }, "easeInExpo", function () {
+                    $("#scroller").show("drop", {
+                        direction: "right"
+                    }, "easeInExpo", function () {
+                        $("#impressum").show("slide", {
+                            direction: "up"
+                        }, 500, function () {
+                            $(window).scroll(function () {
+                                if ($(window).scrollTop() + $(window).height() < $(document).height()) {
+                                    $("#impressum").show("pulsate", {}, 800, function () {});
+                                }
+                                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                                    $("#impressum").hide("pulsate", {}, 800, function () {});
+                                }
+                            });
 
-                        $("#impressum").fadeIn(1500);
+                        });
                     });
 
                 });
 
             });
-
-
+            /**
+            $("#scroller").toggle("shake",{}, "slow");
+            $( "#impressum" ).toggle( "bounce", { times: 3 }, "slow" );
+            $( "#showContent" ).toggle( "puff",{percent:200},"slow" );
+            $( "#menu" ).toggle( "shake",{times:10,distance:40}, "slow" );
+            **/
             /**
                 Eventwatcher for onClick on about-me-picture"
             **/
@@ -219,14 +243,9 @@
                         });
                 }
             });
-            $(window).scroll(function () {
-                if ($(window).scrollTop() + $(window).height() < $(document).height()) {
-                    $("#impressum").fadeIn(800, function () {});
-                }
-                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                    $("#impressum").fadeOut(800, function () {});
-                }
-            });
+
+
+
             // Check client for mobile-device using
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 alert(jData.transl.mobilephonehint);
@@ -236,7 +255,7 @@
     </script>
 </head>
 
-<body>
+<body style="background-color: black">
     <a id="onTop"></a>
     <div id="scroller" style="display:none">
         <div id="toc"></div>
@@ -255,7 +274,7 @@
 
                 </p>
             </div>
-            <div class="menuelements" >
+            <div class="menuelements">
                 <div id="menucontent">
 
                 </div>
@@ -277,7 +296,7 @@
     <div id="animationContainer">
         <div id="showContent" style="display: none;"></div>
 
-        <div id="impressum" style="display: none">Impressum: Everything here is from myself (except marked libs and timeline-pictures), everything's <a href="gpl-2.0.txt">GPL-v2</a>-licensed.</div>
+        <div id="impressum" style="display: none;">Impressum: Everything here is from myself (except marked libs and timeline-pictures), everything's <a href="gpl-2.0.txt">GPL-v2</a>-licensed.</div>
     </div>
     <noscript>
         <h3>This site needs javascript to load it's contents</h3>

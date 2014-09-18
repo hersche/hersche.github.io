@@ -26,6 +26,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55f400', end
 #impressum {
  margin-left: 1%; bottom: 2px; position: fixed;
         border: 1px thin;
+    display: none;
     border-radius: 2px;
     font-size: .8em;
     margin-bottom: 2%;

@@ -231,7 +231,7 @@ function changeContent(name) {
         }, "skamster.github.io::" + name, "index.html?s=" + name);
     }
     if (name != lastName) {
-        $( "#animationContainer" ).fadeOut( "slow", function() {
+        $( "#animationContainer" ).hide("slide",{direction:"right"},"slow", function() {
         // Animation complete.
         var ProcessedHtml = processHtml(jData, name);
         $("#showContent").html(ProcessedHtml[0]);
@@ -240,7 +240,7 @@ function changeContent(name) {
         $("html, body").animate({
             scrollTop: 0
         }, "slow");
-        $("#animationContainer").fadeIn(1000);
+        $("#animationContainer").show("puff",{},1000);
         lastName = name;
     }
 
