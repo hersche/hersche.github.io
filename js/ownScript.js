@@ -50,7 +50,7 @@ function processMenuHtml(jDataIn) {
 **/
 function processHtml(jDataIn, name) {
     "use strict";
-    var displayHtml = '<div style="margin-top:10%;">';
+    var displayHtml = '<div>';
     var toc = "";
     $.each(jDataIn, function (key, val) {
         if (name === key) {
