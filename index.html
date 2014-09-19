@@ -221,6 +221,48 @@
             $( "#showContent" ).toggle( "puff",{percent:200},"slow" );
             $( "#menu" ).toggle( "shake",{times:10,distance:40}, "slow" );
             **/
+
+            $(function () {
+                $(document).tooltip({
+                    track: true
+                });
+            });
+
+            $(function () {
+                $(document).tooltip({
+                    track: false,
+                    items: "img, [data-geo], [title]",
+                    fixed: true,
+                    content: function () {
+                        var element = $(this);
+                        if (element.is("[data-geo]")) {
+                            var text = element.text();
+
+                            return '<iframe width="250" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=7.422637939453126%2C46.9320959940014%2C7.481002807617187%2C46.965200825877794&amp;layer=hot&amp;marker=46.94865096931497%2C7.451820373535156" style="border: 1px solid black"></iframe>';
+                        }
+                        if (element.is("[title]")) {
+                            return element.attr("title");
+                        }
+                        if (element.is("img")) {
+                            return element.attr("alt");
+                        }
+                    },
+  open: function( event, ui ) {
+    ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+  },
+  close: function( event, ui ) {
+    ui.tooltip.hover(
+        function () {
+            $(this).stop(true).fadeTo(400, 1); 
+            //.fadeIn("slow"); // doesn't work because of stop()
+        },
+        function () {
+            $(this).fadeOut("600", function(){ $(this).remove(); })
+        }
+    );
+  }
+                });
+            });
             /**
                 Eventwatcher for onClick on about-me-picture"
             **/
@@ -279,16 +321,16 @@
 
                 </div>
                 <div class="lefty">
-                    <a target="_blank" data-tool="Go to my personal github-account" href="https://github.com/skamster" class="btn tooltip fade">GitHub</a>
+                    <a target="_blank" title="Go to my personal github-account" href="https://github.com/skamster" class="btn tooltip fade">GitHub</a>
                 </div>
                 <div class="righty">
-                    <a id="refresh" href="#" data-tool="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a> 
+                    <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a> 
                 </div>
                 <div class="righty">
-                    <a data-tool="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade tooltip">DE</a>
+                    <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade tooltip langbtn">DE</a>
                 </div>
                 <div class="righty">
-                    <a data-tool="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade tooltip">EN</a>
+                    <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade tooltip langbtn">EN</a>
                 </div>
             </div>
         </div>
