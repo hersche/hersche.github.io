@@ -41,6 +41,28 @@ body {
     border-color: transparent;
 }
 
+.odd {
+background: rgb(58,165,46);
+background: -moz-linear-gradient(top,  rgba(58,165,46,1) 0%, rgba(99,186,70,1) 48%, rgba(35,168,20,1) 56%, rgba(15,130,7,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(58,165,46,1)), color-stop(48%,rgba(99,186,70,1)), color-stop(56%,rgba(35,168,20,1)), color-stop(100%,rgba(15,130,7,1)));
+background: -webkit-linear-gradient(top,  rgba(58,165,46,1) 0%,rgba(99,186,70,1) 48%,rgba(35,168,20,1) 56%,rgba(15,130,7,1) 100%);
+background: -o-linear-gradient(top,  rgba(58,165,46,1) 0%,rgba(99,186,70,1) 48%,rgba(35,168,20,1) 56%,rgba(15,130,7,1) 100%);
+background: -ms-linear-gradient(top,  rgba(58,165,46,1) 0%,rgba(99,186,70,1) 48%,rgba(35,168,20,1) 56%,rgba(15,130,7,1) 100%);
+background: linear-gradient(to bottom,  rgba(58,165,46,1) 0%,rgba(99,186,70,1) 48%,rgba(35,168,20,1) 56%,rgba(15,130,7,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', endColorstr='#0f8207',GradientType=0 );
+
+}
+.even { background: rgb(58,165,46);
+background: -moz-linear-gradient(top,  rgba(58,165,46,1) 0%, rgba(92,242,102,1) 48%, rgba(100,145,17,1) 56%, rgba(18,107,6,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(58,165,46,1)), color-stop(48%,rgba(92,242,102,1)), color-stop(56%,rgba(100,145,17,1)), color-stop(100%,rgba(18,107,6,1)));
+background: -webkit-linear-gradient(top,  rgba(58,165,46,1) 0%,rgba(92,242,102,1) 48%,rgba(100,145,17,1) 56%,rgba(18,107,6,1) 100%);
+background: -o-linear-gradient(top,  rgba(58,165,46,1) 0%,rgba(92,242,102,1) 48%,rgba(100,145,17,1) 56%,rgba(18,107,6,1) 100%);
+background: -ms-linear-gradient(top,  rgba(58,165,46,1) 0%,rgba(92,242,102,1) 48%,rgba(100,145,17,1) 56%,rgba(18,107,6,1) 100%);
+background: linear-gradient(to bottom,  rgba(58,165,46,1) 0%,rgba(92,242,102,1) 48%,rgba(100,145,17,1) 56%,rgba(18,107,6,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', endColorstr='#126b06',GradientType=0 );
+
+}
+
 #impressum {
     left: 1%;
     bottom: 2px;
