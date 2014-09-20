@@ -20,15 +20,36 @@ body {
 #animationContainer {
     width: 100%;
 }
-#impressum {
+
+#news {
+    -moz-box-shadow: 0 0 5px 5px black;
+    -webkit-box-shadow: 0 0 5px 5px black;
+    box-shadow: 0 0 5px 5px black;
+    min-width: 20%;
+    width: 23%;
+    max-width: 22%;
+    height: auto;
+    z-index: 998;
+    margin-top: 8%;
     margin-left: 1%;
+    position: fixed;
+    padding-left: 1px;
+    left: 23%;
+    padding-bottom: 2px;
+    border: 1px thin;
+    border-radius: 2px;
+    border-color: transparent;
+}
+
+#impressum {
+    left: 1%;
     bottom: 2px;
     position: fixed;
     border: 1px thin;
     display: none;
     border-radius: 2px;
     font-size: .8em;
-    margin-bottom: 2%;
+    margin-bottom: .5%;
     height: auto;
     max-width: 20%;
     margin-top: 50%;
@@ -45,6 +66,7 @@ body {
     background: linear-gradient(135deg, rgba(180, 227, 145, 1) 0%, rgba(97, 196, 25, 1) 50%, rgba(180, 227, 145, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=1);
 }
+
 #impressum a {
     color: white;
 }
@@ -199,6 +221,8 @@ background: linear-gradient(135deg,  rgba(221,255,0,1) 0%,rgba(62,255,0,0.81) 22
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ddff00', endColorstr='#37f27f',GradientType=1 );
 
 }
+
+
 .langbtn {
  display: inline;
     float: left;
@@ -259,6 +283,11 @@ width: 10%;
     visibility: visible !important;
 }
 .submenu:hover > .submenu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible!important;
+}
+#news:hover > #news {
     display: block !important;
     opacity: 1 !important;
     visibility: visible!important;

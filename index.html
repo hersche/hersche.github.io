@@ -10,10 +10,13 @@
     <script src="js/jquery.fancybox.js" type="text/javascript"></script>
     <script src="js/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
     <script src="js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="js/jquery.zrssfeed.js" type="text/javascript"></script>
+    <script src="js/jquery.vticker.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link title="Spaced" rel="alternate stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link title="Example3" rel="stylesheet" type="text/css" href="stylesheets/thirdCase.css" media="screen" />
     <link title="Serious" rel="alternate stylesheet" type="text/css" href="stylesheets/serious.css" media="screen" />
-
+    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.zrssfeed.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.10.4.custom.min.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.theme.css" media="screen" />
@@ -182,7 +185,34 @@
                 });
 
             }
-
+            $('#news').rssfeed('https://github.com/skamster.atom', {
+                snippet: false,
+                header: false,
+                media: false,
+                content: true,
+                linkcontent: true,
+                titletag: "h7",
+                date: false
+            }, function (e) {
+                $(e).find('div.rssBody').vTicker({
+                    showItems: 1
+                });
+            });
+            $("#news").fadeOut(800,function(){});
+            $("#githubbtn").hover(
+                function () {
+                    $("#news").fadeIn(599,function(){});
+                }, function () {
+                    $("#news").fadeOut(599,function(){});
+                }
+            );
+            $("#news").hover(
+                function () {
+                    $("#news").fadeIn(599,function(){});
+                }, function () {
+                    $("#news").fadeOut(599,function(){});
+                }
+            );
 
             /**
                 Fade in loaded contents withouth jquery-ui
@@ -230,7 +260,7 @@
 
             $(function () {
                 $(document).tooltip({
-                    track: false,
+                    track: true,
                     items: "img, [data-geo], [title]",
                     fixed: true,
                     content: function () {
@@ -247,20 +277,24 @@
                             return element.attr("alt");
                         }
                     },
-  open: function( event, ui ) {
-    ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
-  },
-  close: function( event, ui ) {
-    ui.tooltip.hover(
-        function () {
-            $(this).stop(true).fadeTo(400, 1); 
-            //.fadeIn("slow"); // doesn't work because of stop()
-        },
-        function () {
-            $(this).fadeOut("600", function(){ $(this).remove(); })
-        }
-    );
-  }
+                    open: function (event, ui) {
+                        ui.tooltip.animate({
+                            top: ui.tooltip.position().top + 10
+                        }, "fast");
+                    },
+                    close: function (event, ui) {
+                        ui.tooltip.hover(
+                            function () {
+                                $(this).stop(true).fadeTo(400, 1);
+                                //.fadeIn("slow"); // doesn't work because of stop()
+                            },
+                            function () {
+                                $(this).fadeOut("600", function () {
+                                    $(this).remove();
+                                })
+                            }
+                        );
+                    }
                 });
             });
             /**
@@ -321,20 +355,22 @@
 
                 </div>
                 <div class="lefty">
-                    <a target="_blank" title="Go to my personal github-account" href="https://github.com/skamster" class="btn tooltip fade">GitHub</a>
+                    <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
                 </div>
                 <div class="righty">
-                    <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade tooltip ">Refresh</a> 
+                    <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
                 </div>
                 <div class="righty">
-                    <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade tooltip langbtn">DE</a>
+                    <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
                 </div>
                 <div class="righty">
-                    <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade tooltip langbtn">EN</a>
+                    <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
                 </div>
             </div>
         </div>
+
     </header>
+    <div id="news">News und so!</div>
     <div id="animationContainer">
         <div id="showContent" style="display: none;"></div>
 
