@@ -34,7 +34,7 @@ body {
     margin-left: 1%;
     position: fixed;
     padding-left: 1px;
-    left: 23%;
+    left: 22%;
     padding-bottom: 2px;
     border: 1px thin;
     border-radius: 2px;
@@ -433,7 +433,6 @@ li {
 */
 
 .anchor {
-    top: -125px;
     display: inline;
     position: relative;
 }
@@ -583,7 +582,7 @@ hr {
     max-width: 90%;
     padding: .6em .9em;
     margin-left: .4em;
-    padding-left: 5%;
+    align-content: center;
     border-radius: .6em;
     border: 1px solid transparent;
     color: #98FB98;

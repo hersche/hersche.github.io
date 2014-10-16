@@ -200,7 +200,7 @@
                     showItems: 1
                 });
             });
-            $("#news").fadeOut(800,function(){});
+           // $("#news").fadeOut(800,function(){});
             $("#githubbtn").hover(
                 function () {
                     $("#news").fadeIn(599,function(){});
@@ -211,10 +211,19 @@
             $("#news").hover(
                 function () {
                     $("#news").fadeIn(599,function(){});
+                    e.stopImmediatePropagation();
                 }, function () {
-                    $("#news").fadeOut(599,function(){});
+                   //$("#news").fadeOut(599,function(){});
                 }
             );
+            
+            $("#news").on('mouseleave',
+function(e)
+{
+    e.stopImmediatePropagation();    // keeps tooltip visible when hovering tooltip itself
+                $("#news").fadeOut(599,function(){});
+
+})
 
             /**
                 Fade in loaded contents withouth jquery-ui
@@ -223,14 +232,14 @@
                 direction: "right"
             }, 1000, function () {
                 $("#menu").show("shake", {
-                    times: 10,
-                    distance: 40
+                    times: 5,
+                    distance: 20
                 }, "easeInExpo", function () {
                     $("#scroller").show("drop", {
                         direction: "right"
                     }, "easeInExpo", function () {
                         $("#impressum").show("slide", {
-                            direction: "up"
+                            direction: "down"
                         }, 500, function () {
                             $(window).scroll(function () {
                                 if ($(window).scrollTop() + $(window).height() < $(document).height()) {
@@ -372,7 +381,7 @@
         </div>
 
     </header>
-    <div id="news">News und so!</div>
+    <div id="news" style="height: 0px; width: 0px;" >News und so!</div>
     <div id="animationContainer">
         <div id="showContent" style="display: none;"></div>
 
