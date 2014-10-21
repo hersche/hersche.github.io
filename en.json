@@ -148,7 +148,7 @@
             "Diaspora": "<a target='_blank' href='https://nerdpol.ch/u/hersche'>hersche@nerdpol.ch</a>",
             "Xing": "<a target='_blank' href='https://www.xing.com/profile/Vinzenz_Hersche'>Vinzenz Hersche</a>",
             "keybase.io": "<a target='_blank' href='https://keybase.io/hersche'>https://keybase.io/hersche</a>",
-            "Around":"<a target='_blank' href='http://www.openstreetmap.org/?mlat=46.9487&amp;mlon=7.4518#map=14/46.9487/7.4518&amp;layers=H' data-geo=''>Berne</a>"
+            "Around":"<a target='_blank' href='http://tile.stamen.com/toner/#12/46.9407/7.4676' id='map'>Berne</a>"
         },
         "hobbys": {
             "trans": "Other interessts",

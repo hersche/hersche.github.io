@@ -34,7 +34,7 @@ body {
     margin-left: 1%;
     position: fixed;
     padding-left: 1px;
-    left: 22%;
+    left: 21%;
     padding-bottom: 2px;
     border: 1px thin;
     border-radius: 2px;
@@ -306,10 +306,11 @@ width: 10%;
 }
 .submenu:hover > .submenu {
     display: block !important;
-    opacity: 1 !important;
-    visibility: visible!important;
 }
-#news:hover > #news {
+#githubbtn:hover > #news {
+    display: block !important;
+}
+#news:hover {
     display: block !important;
     opacity: 1 !important;
     visibility: visible!important;

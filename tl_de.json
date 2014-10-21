@@ -2,10 +2,11 @@
 {
     "timeline":
     {
+        "startDate":"1995,6,1",
         "headline":"Einleitung",
         "type":"default",
 		"text":"Hier finden Sie meine Erfahrungen in einer zeitlichen Ansicht. Einige Ausbildungen sind zum Vergleich auch eingefügt. Einige Bilder und Videos in der Timeline werden nur mit einer aktiven Internetverbindung dargestellt. <h5>Navigation</h5>Sie können sich im unteren Teil per ziehen mit der Maus \"in der Zeit bewegen\" und sehen die Dauer des Ereignisses als blauen Balken, wenn Sie es auswählen. Auch die Details werden durch das Auswählen eines Events sichtbar. Sie können auch mit den Pfeiltasten auf Ihrer Tastatur navigieren.",
-		"startDate":"1995,6,1",
+		
         "date": [
                                         {
                 "startDate":"1995,6,1",

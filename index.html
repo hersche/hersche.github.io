@@ -13,11 +13,11 @@
     <script src="js/jquery.zrssfeed.js" type="text/javascript"></script>
     <script src="js/jquery.vticker.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    
+
     <link title="Example3" rel="stylesheet" type="text/css" href="stylesheets/thirdCase.css" media="screen" />
     <link title="Serious" rel="alternate stylesheet" type="text/css" href="stylesheets/serious.css" media="screen" />
     <link title="Spaced" rel="alternate stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    
+
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery.zrssfeed.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.10.4.custom.min.css" media="screen" />
@@ -187,6 +187,26 @@
                 });
 
             }
+
+            $('#githubbtn, #news').mouseenter(function () {
+                $(this).addClass('mouse_over')
+                $("#news").show("slide", {
+                    direction: "left"
+                }, 50, function () {});
+            })
+            $('#githubbtn, #news').mouseleave(function () {
+                var $this = $(this)
+                var timeoutId = setTimeout(function () {
+                    $this.removeClass('mouse_over')
+                    if ($('.mouse_over').length == 0) {
+                        console.log('not_in_either');
+                        $("#news").hide("slide", {
+                            direction: "left"
+                        }, 500, function () {});
+                    }
+                }, 1);
+            });
+
             $('#news').rssfeed('https://github.com/skamster.atom', {
                 snippet: false,
                 header: false,
@@ -200,30 +220,6 @@
                     showItems: 1
                 });
             });
-           // $("#news").fadeOut(800,function(){});
-            $("#githubbtn").hover(
-                function () {
-                    $("#news").fadeIn(599,function(){});
-                }, function () {
-                    $("#news").fadeOut(599,function(){});
-                }
-            );
-            $("#news").hover(
-                function () {
-                    $("#news").fadeIn(599,function(){});
-                    e.stopImmediatePropagation();
-                }, function () {
-                   //$("#news").fadeOut(599,function(){});
-                }
-            );
-            
-            $("#news").on('mouseleave',
-function(e)
-{
-    e.stopImmediatePropagation();    // keeps tooltip visible when hovering tooltip itself
-                $("#news").fadeOut(599,function(){});
-
-})
 
             /**
                 Fade in loaded contents withouth jquery-ui
@@ -249,6 +245,9 @@ function(e)
                                     $("#impressum").hide("pulsate", {}, 800, function () {});
                                 }
                             });
+                            $("#news").hide("slide", {
+                                direction: "left"
+                            }, 500, function () {});
 
                         });
                     });
@@ -262,7 +261,6 @@ function(e)
             $( "#showContent" ).toggle( "puff",{percent:200},"slow" );
             $( "#menu" ).toggle( "shake",{times:10,distance:40}, "slow" );
             **/
-
             $(function () {
                 $(document).tooltip({
                     track: true
@@ -270,17 +268,55 @@ function(e)
             });
 
             $(function () {
-                $(document).tooltip({
-                    track: true,
-                    items: "img, [data-geo], [title]",
+                $("#map").tooltip({
+                    track: false,
+                    items: "a",
                     fixed: true,
+                    position: {
+                        my: "center bottom-5",
+                        at: "center top"
+                    },
                     content: function () {
                         var element = $(this);
-                        if (element.is("[data-geo]")) {
-                            var text = element.text();
+                        var text = element.text();
 
-                            return '<iframe width="250" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=7.422637939453126%2C46.9320959940014%2C7.481002807617187%2C46.965200825877794&amp;layer=hot&amp;marker=46.94865096931497%2C7.451820373535156" style="border: 1px solid black"></iframe>';
-                        }
+                        return '<iframe style="width:300px; height:400px; border: 0px solid black; background-color: none;" frameborder="0" scrolling="no" src="http://tile.stamen.com/toner/#12/46.9407/7.4676" ></iframe>';
+
+                    },
+                    open: function (event, ui) {
+
+                        ui.tooltip.animate({
+                            top: ui.tooltip.position().top
+                        }, "fast");
+                    },
+                    close: function (event, ui) {
+                        ui.tooltip.hover(
+                            function () {
+
+                                $(this).stop(true).fadeTo(400, 1);
+
+                                //.fadeIn("slow"); // doesn't work because of stop()
+                            },
+                            function () {
+
+                                $(this).fadeOut("2000", function () {
+                                    $(this).remove();
+                                })
+
+                            }
+                        );
+                    }
+                });
+                $(document).tooltip({
+                    track: true,
+                    items: "img, [title]",
+                    fixed: false,
+                    position: {
+                        my: "center bottom-20",
+                        at: "center top"
+                    },
+                    content: function () {
+                        var element = $(this);
                         if (element.is("[title]")) {
                             return element.attr("title");
                         }
@@ -288,21 +324,18 @@ function(e)
                             return element.attr("alt");
                         }
                     },
-                    open: function (event, ui) {
-                        ui.tooltip.animate({
-                            top: ui.tooltip.position().top + 10
-                        }, "fast");
-                    },
+                    open: function (event, ui) {},
                     close: function (event, ui) {
                         ui.tooltip.hover(
                             function () {
-                                $(this).stop(true).fadeTo(400, 1);
+
                                 //.fadeIn("slow"); // doesn't work because of stop()
                             },
                             function () {
-                                $(this).fadeOut("600", function () {
+                                $(this).fadeOut("30", function () {
                                     $(this).remove();
                                 })
+
                             }
                         );
                     }
@@ -381,7 +414,7 @@ function(e)
         </div>
 
     </header>
-    <div id="news" style="height: 0px; width: 0px;" >News und so!</div>
+    <div id="news">News und so!</div>
     <div id="animationContainer">
         <div id="showContent" style="display: none;"></div>
 
