@@ -186,6 +186,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     border-color: transparent;
     max-width: 100%;
 }
+
+.centry a {
+ margin-left: 20%;   
+}
+
 .submenu {
     padding: 0;
     display: inline;
