@@ -192,7 +192,7 @@
                 $(this).addClass('mouse_over')
                 $("#news").show("slide", {
                     direction: "left"
-                }, 50, function () {});
+                }, 800, function () {});
             })
             $('#githubbtn, #news').mouseleave(function () {
                 var $this = $(this)
@@ -202,7 +202,7 @@
                         console.log('not_in_either');
                         $("#news").hide("slide", {
                             direction: "left"
-                        }, 500, function () {});
+                        }, 1000, function () {});
                     }
                 }, 1);
             });
@@ -227,6 +227,9 @@
             $("#showContent").show("slide", {
                 direction: "right"
             }, 1000, function () {
+                $("#news").hide("explode", {
+                
+                }, 500, function () {
                 $("#menu").show("shake", {
                     times: 5,
                     distance: 20
@@ -245,10 +248,7 @@
                                     $("#impressum").hide("pulsate", {}, 800, function () {});
                                 }
                             });
-                            $("#news").hide("slide", {
-                                direction: "left"
-                            }, 500, function () {});
-
+});
                         });
                     });
 

@@ -228,12 +228,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', end
     position: absolute;
     float: right;
     min-height: 20%;
-    height: 95%;
+    height: 93%;
     right: 2px;
     max-width: 22%;
     min-width: 14%;
-    margin-top: 1%;
-    margin-bottom: 4%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: 1px thin;
     border-radius: 5px;
     background: #383838;
