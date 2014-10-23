@@ -131,7 +131,7 @@
                     var ProcessedHtml = processHtml(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
-                   // $("#impressum").html(jData.transl.impressum);
+                    // $("#impressum").html(jData.transl.impressum);
 
                 } else {
                     //In the second case, we have webstorage-support, but no data yet. So let's recive!
@@ -179,13 +179,15 @@
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                     $("#refresh").html(jData.transl.refresh + " (" + jData.transl.nowebstorage + ")");
-                  //  $("#impressum").html(jData.transl.impressum);
+                    //  $("#impressum").html(jData.transl.impressum);
                 });
                 tljqxhr.complete(function (tldata) {
                     createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
                 });
 
             }
+
+
 
             $('#githubbtn, #news').mouseenter(function () {
                 $(this).addClass('mouse_over')
@@ -201,7 +203,7 @@
                         console.log('not_in_either');
                         $("#news").hide("slide", {
                             direction: "left"
-                        }, 1000, function () {});
+                        }, 10, function () {});
                     }
                 }, 1);
             });
@@ -223,54 +225,49 @@
             /**
                 Fade in loaded contents withouth jquery-ui
             **/
-            $( "#progress" ).progressbar();
-            $( "#progress" ).progressbar( "enable" );
-            $( "#progress" ).progressbar( "option", "value", 0 );
+            $("#progress").progressbar();
+            $("#progress").progressbar("enable");
+            $("#progress").progressbar("option", "value", 0);
             $("#showContent").show("slide", {
                 direction: "right"
             }, 1000, function () {
-                $( "#progress" ).progressbar( "option", "value", 25 );
+                $("#progress").progressbar("option", "value", 25);
                 $("#news").hide("explode", {
-                
+
                 }, 500, function () {
-                $( "#progress" ).progressbar( "option", "value", 35 );
-                $("#menu").show("shake", {
-                    times: 5,
-                    distance: 20
-                }, "easeInExpo", function () {
-                    $( "#progress" ).progressbar( "option", "value", 50 );
-                    $("#scroller").show("drop", {
-                        direction: "right"
+                    $("#progress").progressbar("option", "value", 35);
+                    $("#menu").show("shake", {
+                        times: 5,
+                        distance: 20
                     }, "easeInExpo", function () {
-                        $( "#progress" ).progressbar( "option", "value", 75 );
-                        $("#impressum").show("slide", {
-                            direction: "down"
-                        }, 500, function () {
-                            $( "#progress" ).progressbar( "option", "value", 100 );
-                            $( "#progress" ).hide("pulsate",{},800, function () {});
-                            // $( "#progress" ).progressbar("destroy");
-                            $("#impressum").html(jData.transl.impressum);
-                            $(window).scroll(function () {
-                                if ($(window).scrollTop() + $(window).height() < $(document).height()) {
-                                    $("#impressum").show("pulsate", {}, 800, function () {});
-                                }
-                                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                                    $("#impressum").hide("pulsate", {}, 800, function () {});
-                                }
+
+                        $("#progress").progressbar("option", "value", 50);
+                        $("#scroller").show("drop", {
+                            direction: "right"
+                        }, "easeInExpo", function () {
+                            $("#progress").progressbar("option", "value", 75);
+                            $("#impressum").show("slide", {
+                                direction: "down"
+                            }, 500, function () {
+                                $("#progress").progressbar("option", "value", 100);
+                                $("#progress").hide("pulsate", {}, 800, function () {});
+                                // $( "#progress" ).progressbar("destroy");
+                                $("#impressum").html(jData.transl.impressum);
+                                $(window).scroll(function () {
+                                    if ($(window).scrollTop() + $(window).height() < $(document).height()) {
+                                        $("#impressum").show("pulsate", {}, 800, function () {});
+                                    }
+                                    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                                        $("#impressum").hide("pulsate", {}, 800, function () {});
+                                    }
+                                });
                             });
-});
                         });
                     });
 
                 });
 
             });
-            /**
-            $("#scroller").toggle("shake",{}, "slow");
-            $( "#impressum" ).toggle( "bounce", { times: 3 }, "slow" );
-            $( "#showContent" ).toggle( "puff",{percent:200},"slow" );
-            $( "#menu" ).toggle( "shake",{times:10,distance:40}, "slow" );
-            **/
             $(function () {
                 $(document).tooltip({
                     track: true
@@ -380,6 +377,18 @@
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 alert(jData.transl.mobilephonehint);
             }
+
+            $.browser.chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+            $.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
+
+            if ($.browser.chrome) {
+                $(".btn").css("font-size", "0.7em");
+
+            }
+            if ($.browser.webkit) {
+                $(".btn").css("font-size", "0.75em");
+            }
+
 
         });
     </script>
