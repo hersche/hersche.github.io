@@ -542,7 +542,7 @@ hr {
 
 .langbtn {
  display: inline;
-    float: left;
+    float: right;
     padding: 20px;
 width: auto;
 }
