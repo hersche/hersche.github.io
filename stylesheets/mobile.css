@@ -488,28 +488,3 @@ a:hover {
 .cf {
     zoom: 1;
 }
-a.tooltip:after {
-    visibility: hidden;
-    position: absolute;
-    top: 135px;
-    left: 25%;
-    opacity: 0;
-    content: attr(data-tool);
-    /* might also use attr(title) */
-    /* min-width: 100px; */
-    max-width: 100%;
-    padding: 5px 8px;
-    z-index: 999;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    background: black;
-    border-color: green;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-a.tooltip:hover:after {
-    visibility: visible;
-    opacity: 1;
-}
