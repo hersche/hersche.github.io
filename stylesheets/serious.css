@@ -30,11 +30,11 @@ body {
     width: 20%;
     height: auto;
     z-index: 998;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 1%;
     position: fixed;
     padding-left: 1px;
-    left: 23%;
+    left: 25%;
     padding-bottom: 2px;
     border: 1px thin;
     border-radius: 2px;
@@ -557,6 +557,13 @@ hr {
 /* Buttons
 */
 
+.langbtn {
+ display: inline;
+    float: left;
+    padding: 20px;
+width: auto;
+}
+
 .btn {
     display: inline-block;
     background: -moz-linear-gradient(-45deg, rgba(188, 143, 39, 1) 0%, rgba(188, 143, 39, 0.93) 15%, rgba(197, 83, 31, 0.71) 58%, rgba(206, 24, 24, 1) 100%);
@@ -569,6 +576,7 @@ hr {
     padding: .6em .7em;
     margin-left: .4em;
     border-radius: .6em;
+    text-align: center;
     border: 1px solid transparent;
     color: yellow;
     font-family: Helvetica, Arial, sans-serif;

@@ -20,16 +20,14 @@ body {
     -moz-box-shadow: 0 0 5px 5px black;
     -webkit-box-shadow: 0 0 5px 5px black;
     box-shadow: 0 0 5px 5px black;
-    min-width: 20%;
-    width: 23%;
-    max-width: 22%;
+    width: 20%;
     height: auto;
     z-index: 998;
-    margin-top: 4%;
+    margin-top: 1%;
     margin-left: 1%;
     position: fixed;
     padding-left: 1px;
-    left: 23%;
+    left: 25%;
     padding-bottom: 2px;
     border: 1px thin;
     border-radius: 2px;
@@ -542,6 +540,13 @@ hr {
 /* Buttons
 */
 
+.langbtn {
+ display: inline;
+    float: left;
+    padding: 20px;
+width: auto;
+}
+
 .btn {
     display: inline-block;
     background: -moz-linear-gradient(-45deg, rgba(5, 86, 70, 1) 0%, rgba(5, 86, 70, 0.84) 12%, rgba(11, 84, 74, 0.83) 13%, rgba(174, 24, 191, 0.89) 41%, rgba(98, 21, 168, 0.91) 48%, rgba(54, 20, 155, 0.9) 52%, rgba(158, 33, 183, 0.87) 69%, rgba(106, 75, 157, 0.86) 75%, rgba(18, 145, 113, 0.92) 85%, rgba(18, 145, 113, 1) 100%);
@@ -553,6 +558,7 @@ hr {
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#055646', endColorstr='#129171', GradientType=1);
     padding: 8px 8px;
     margin-left: 6px;
+    text-align: center;
     border-radius: 50px;
     border: 2px solid transparent;
     color: rgba(255, 255, 255, 0.8);
