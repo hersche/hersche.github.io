@@ -127,7 +127,7 @@
                     createTimeline(jQuery.parseJSON(localStorage.tlData), jData.transl.lang);
                     $("#refresh").html(jData.transl.refresh + " (" + localStorage.storeDate + "/" + jData.transl.fromstorage + ")");
                     $("#menucontent").html(processMenuHtml(jData));
-                    var ProcessedHtml = processHtml(jData, lastName);
+                    var ProcessedHtml = processHtmlNext(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                     // $("#impressum").html(jData.transl.impressum);
@@ -155,7 +155,7 @@
                         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
                         $("#refresh").html(jData.transl.refresh + " (" + localStorage.storeDate + "/" + jData.transl.fromnew + ")");
                         $("#menucontent").html(processMenuHtml(jData));
-                        var ProcessedHtml = processHtml(jData, lastName);
+                        var ProcessedHtml = processHtmlNext(jData, lastName);
                         $("#toc").html(ProcessedHtml[1]);
                         $("#showContent").html(ProcessedHtml[0]);
                         // $("#impressum").html(jData.transl.impressum);
@@ -176,7 +176,7 @@
                 jqxhr.complete(function (data2) {
                     jData = jQuery.parseJSON(data2.responseText.replace("\n", ""));
                     $("#menucontent").html(processMenuHtml(jData));
-                    var ProcessedHtml = processHtml(jData, lastName);
+                    var ProcessedHtml = processHtmlNext(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                     $("#refresh").html(jData.transl.refresh + " (" + jData.transl.nowebstorage + ")");
@@ -188,6 +188,24 @@
                 });
 
             }
+           // $(document).on('mouseover', 'body > article', function (e) {
+            $("#showContent > article").mouseover(function () {
+               // var first = $("body > article:first-of-type").index();
+                // index gibt position aus.
+                var cId = $(this).attr('id');
+               // alert("#"+cId+"Btn");
+                $("#"+lastName+"Btn").removeClass('current_page_item');
+                $("#"+cId+"Btn").addClass('current_page_item');
+                lastName = cId;
+                //changeMenu(index - first);
+            });
+            // Functbion changeMenu
+            function changeMenu(index) {
+                var target = $("#header ul li")
+                target.removeClass('current_page_item');
+                target.eq(index).addClass('current_page_item');
+            }
+
 
             $('#news').rssfeed('https://github.com/skamster.atom', {
                 snippet: false,
@@ -203,7 +221,7 @@
                 });
             });
             $("#impressum").html(jData.transl.impressum);
-
+            $("#aboutBtn").text(jData.transl.about);
             /**
                 Fade in loaded contents withouth jquery-ui
             **/
@@ -510,6 +528,9 @@
                 </div>
                 <div class="lefty">
                     <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
+                </div>
+                <div class="righty">
+                    <a class="btn fade" onclick="changeContent('about'); return false;" id="aboutBtn">About</a>
                 </div>
                 <div class="righty">
                     <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 

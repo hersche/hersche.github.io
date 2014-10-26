@@ -55,7 +55,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
 }
 
 #impressum {
- bottom: 2px; position: fixed; background-color: white;
+ bottom: 0.1px; position: fixed; background-color: white;
         border: 1px thin;
     border-radius: 2px;
     font-size: .8em;
@@ -69,6 +69,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
 
 #impressum a {
     color: grey;
+}
+
+.current_page_item {
+    color: blue;
+       border-width: medium;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: groove;
+    border-left-style: none;
+    border-color: blue;
 }
 #menu {
     width: 100%;
@@ -236,12 +246,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     cursor: pointer;
     z-index: 555;
 }
-.dropdowncontainer:hover &gt; .submenu {
+.dropdowncontainer:hover > .submenu {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
-.submenu:hover &gt; .submenu {
+.submenu:hover > .submenu {
     display: block !important;
     opacity: 1 !important;
     visibility: visible!important;
