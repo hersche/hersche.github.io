@@ -71,6 +71,7 @@
                 }
             });
             $("#progress").progressbar("enable");
+            $("#progress").progressbar("option", "value", 0);
             /**
                 Get the current site
             **/
@@ -118,6 +119,7 @@
             /**
                 This gets the information from json or offline-store and load the content.
             **/
+            $("#progress").progressbar("option", "value", 10);
             if (typeof (Storage) !== "undefined") {
                 // In the first case, we have all the information offline
                 if ((localStorage.jData) && (localStorage.storeDate) && (localStorage.tlData)) {
@@ -129,6 +131,7 @@
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                     // $("#impressum").html(jData.transl.impressum);
+                    $("#progress").progressbar("option", "value", 25);
 
                 } else {
                     //In the second case, we have webstorage-support, but no data yet. So let's recive!
@@ -161,6 +164,7 @@
                             localStorage.tlData = tldata.responseText.replace("\n", "");
                             createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
                         });
+                        $("#progress").progressbar("option", "value", 25);
 
                     });
                 }
@@ -176,6 +180,7 @@
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                     $("#refresh").html(jData.transl.refresh + " (" + jData.transl.nowebstorage + ")");
+                    $("#progress").progressbar("option", "value", 25);
                     //  $("#impressum").html(jData.transl.impressum);
                 });
                 tljqxhr.complete(function (tldata) {
@@ -203,40 +208,38 @@
                 Fade in loaded contents withouth jquery-ui
             **/
 
-            $("#progress").progressbar("option", "value", 0);
+            $("#progress").progressbar("option", "value", 30);
             $("#showContent").show("slide", {
                 direction: "right"
             }, 1000, function () {
-                $("#progress").progressbar("option", "value", 25);
+                $("#progress").progressbar("option", "value", 50);
 
-                $("#progress").progressbar("option", "value", 35);
                 $("#menu").show("shake", {
                     times: 5,
                     distance: 20
                 }, "easeInExpo", function () {
 
-                    $("#progress").progressbar("option", "value", 50);
-                        $("#progress").progressbar("option", "value", 75);
-                        $("#impressum").show("slide", {
-                            direction: "down"
-                        }, 500, function () {
-                            $("#news").hide("explode", {
+                    $("#progress").progressbar("option", "value", 75);
+                    $("#impressum").show("slide", {
+                        direction: "down"
+                    }, 500, function () {
+                        $("#news").hide("explode", {
 
-                            }, 500, function () {
-                                $("#progress").progressbar("option", "value", 100);
-                                $("#progress").hide("pulsate", {}, 800, function () {});
-                                // $( "#progress" ).progressbar("destroy");
-                                
-                                $(window).scroll(function () {
-                                    if ($(window).scrollTop() + $(window).height() < $(document).height()) {
-                                        $("#impressum").show("pulsate", {}, 800, function () {});
-                                    }
-                                    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                                        $("#impressum").hide("pulsate", {}, 800, function () {});
-                                    }
-                                });
+                        }, 500, function () {
+                            $("#progress").progressbar("option", "value", 100);
+                            $("#progress").hide("pulsate", {}, 800, function () {});
+                            // $( "#progress" ).progressbar("destroy");
+
+                            $(window).scroll(function () {
+                                if ($(window).scrollTop() + $(window).height() < $(document).height()) {
+                                    $("#impressum").show("pulsate", {}, 800, function () {});
+                                }
+                                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                                    $("#impressum").hide("pulsate", {}, 800, function () {});
+                                }
                             });
                         });
+                    });
 
                 });
 
@@ -397,13 +400,19 @@
                     $("#tocButton").html("&rarr;");
                     $("#tocButton").css("left", "0%");
                 } else {
+                    var leftSpace = "14%";
+                    if (lastName === "about") {
+                        var leftSpace = "22%";
+                    }
                     $("#toc").fadeIn(500);
                     $("#top").fadeIn(500);
                     $("#scroller").css("min-width", "14%");
-                    $("#showContent").css("padding-left", "16%");
+
+                    $("#showContent").css("padding-left", leftSpace);
                     $("#showContent").css("width", "84%");
                     $("#tocButton").html("&larr;");
-                    $("#tocButton").css("left", "14%");
+
+                    $("#tocButton").css("left", leftSpace);
 
                 }
             });
@@ -477,79 +486,79 @@
 
     <div id="scroller">
         <div id="tocButton">&larr;</div>
-                <div id="toc"></div>
-                <div id="top">
-                    <a href="#onTop">
-                        <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
-                    </a>
-                </div>
-
+        <div id="toc"></div>
+        <div id="top">
+            <a href="#onTop">
+                <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
+            </a>
         </div>
 
-        <header>
+    </div>
 
-            <div style="display: none;" id="menu">
-                <div style="display:block;">
-                    <h1 style="display: inline;">skamster.github.io</h1>
-                    <p style="display: inline; vertical-align: top;">projects, docs and personal infos
+    <header>
 
-                    </p>
+        <div style="display: none;" id="menu">
+            <div style="display:block;">
+                <h1 style="display: inline;">skamster.github.io</h1>
+                <p style="display: inline; vertical-align: top;">projects, docs and personal infos
+
+                </p>
+            </div>
+            <div class="menuelements">
+                <div id="menucontent">
+
                 </div>
-                <div class="menuelements">
-                    <div id="menucontent">
-
-                    </div>
-                    <div class="lefty">
-                        <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
-                    </div>
-                    <div class="righty">
-                        <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
-                    </div>
-                    <div class="centry">
-                        <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
-                    </div>
-                    <div class="centry">
-                        <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
-                    </div>
+                <div class="lefty">
+                    <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
+                </div>
+                <div class="righty">
+                    <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
+                </div>
+                <div class="centry">
+                    <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
+                </div>
+                <div class="centry">
+                    <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
                 </div>
             </div>
-            <div id="menuButton">&uarr;</div>
-        </header>
-        <div id="news"></div>
-        <div id="animationContainer">
-            <div id="showContent" style="display: none;"></div>
-            <div id="impressumButton">&darr;</div>
-            <div id="impressum"></div>
         </div>
-        <noscript>
-            <h3>This site needs javascript to load it's contents</h3>
-            <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
-            <ul>
-                <li><a href="petaDocs/">Peta</a>
-                </li>b
-                <li><a href="tryToxicDocs/">tryToxic</a>
-                </li>
-                <li><a href="jobManagementDocs/">jobManagement</a>
-                </li>
-            </ul>
+        <div id="menuButton">&uarr;</div>
+    </header>
+    <div id="news"></div>
+    <div id="animationContainer">
+        <div id="showContent" style="display: none;"></div>
+        <div id="impressumButton">&darr;</div>
+        <div id="impressum"></div>
+    </div>
+    <noscript>
+        <h3>This site needs javascript to load it's contents</h3>
+        <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
+        <ul>
+            <li><a href="petaDocs/">Peta</a>
+            </li>b
+            <li><a href="tryToxicDocs/">tryToxic</a>
+            </li>
+            <li><a href="jobManagementDocs/">jobManagement</a>
+            </li>
+        </ul>
 
 
-            <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
-            <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
-            <ul>
-                <li><a href="petaDocs/">Peta</a>
-                </li>
-                <li><a href="tryToxicDocs/">tryToxic</a>
-                </li>
-                <li><a href="jobManagementDocs/">jobManagement</a>
-                </li>
-            </ul>
+        <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
+        <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
+        <ul>
+            <li><a href="petaDocs/">Peta</a>
+            </li>
+            <li><a href="tryToxicDocs/">tryToxic</a>
+            </li>
+            <li><a href="jobManagementDocs/">jobManagement</a>
+            </li>
+        </ul>
 
-        </noscript>
+    </noscript>
 
-        <div style="height:0px; width: 0px; overflow: hidden; ">
-            <div id="my-timeline"></div>
-        </div>
+    <div style="height:0px; width: 0px; overflow: hidden; ">
+        <div id="my-timeline"></div>
+    </div>
 </body>
 
 </html>
