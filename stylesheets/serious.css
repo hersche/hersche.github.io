@@ -61,17 +61,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     font-size: .8em;
     border-color: transparent;
     border-radius: 20px;
+    width: 100%;
+    text-align: center;
     padding-left: 1%;
     padding-right: 1%;
 }
 
 #impressum a {
-    color: white;
+    color: grey;
 }
 #menu {
-    -moz-box-shadow: 0 0 5px 5px black;
-    -webkit-box-shadow: 0 0 5px 5px black;
-    box-shadow: 0 0 5px 5px black;
     width: 100%;
     z-index: 998;
     padding-left: 1px;
@@ -80,10 +79,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     top: 8px;
     padding-bottom: 2px;
     text-shadow: 1px 1px 1px white;
-    border: 1px thin;
-    border-radius: 2px;
     height: 13%;
-    border-color: transparent;
     background-color: white;
 }
 .gallerytable {
@@ -172,7 +168,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     float: left;
     min-height: 20%;
     height: 70%;
-    top: 20%;
+    top: 17%;
     max-width: 22%;
     min-width: 14%;
     border: 1px thin;
@@ -289,21 +285,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     /*line-height: 16px; */
 }
 #tocButton {
-    border-width: medium;
+    cursor: pointer;
+    font-size: 0.5em;
+    border-width: thin;
     border-top-style: dotted;
     border-right-style: solid;
     border-bottom-style: none;
     border-left-style: solid;
     float: right;
     width:auto;
-    top: 20%;
+    top: 17%;
     left: 17%;
     padding-top: 20%;
     position: fixed;
-    height: 35%;
+    height: 43%;
 }
 
+#tocButton:hover {
+    background-color: red;
+ }   
+
 #impressumButton {
+    cursor: pointer;
+    font-size: 0.5em;
     border-width: thin;
     border-top-style: solid;
     border-right-style: none;
@@ -317,7 +321,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     width: 100%;
 }
 
+#impressumButton:hover {
+    background-color: red;
+ } 
+
 #menuButton {
+    cursor: pointer;
+    font-size: 0.5em;
     border-width: thin;
     border-top-style: solid;
     border-right-style: none;
@@ -331,6 +341,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     width: 100%;
 }
 
+#menuButton:hover {
+    background-color: red;
+ } 
 
 .dropdowncontainer li:before {
     content: none;

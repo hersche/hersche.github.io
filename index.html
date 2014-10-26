@@ -197,6 +197,7 @@
                     showItems: 1
                 });
             });
+            $("#impressum").html(jData.transl.impressum);
 
             /**
                 Fade in loaded contents withouth jquery-ui
@@ -215,9 +216,6 @@
                 }, "easeInExpo", function () {
 
                     $("#progress").progressbar("option", "value", 50);
-                    $("#scroller").show("drop", {
-                        direction: "right"
-                    }, "easeInExpo", function () {
                         $("#progress").progressbar("option", "value", 75);
                         $("#impressum").show("slide", {
                             direction: "down"
@@ -228,7 +226,7 @@
                                 $("#progress").progressbar("option", "value", 100);
                                 $("#progress").hide("pulsate", {}, 800, function () {});
                                 // $( "#progress" ).progressbar("destroy");
-                                $("#impressum").html(jData.transl.impressum);
+                                
                                 $(window).scroll(function () {
                                     if ($(window).scrollTop() + $(window).height() < $(document).height()) {
                                         $("#impressum").show("pulsate", {}, 800, function () {});
@@ -239,7 +237,6 @@
                                 });
                             });
                         });
-                    });
 
                 });
 
@@ -478,7 +475,7 @@
         <div class="progress-label" style="color: green; text-align: center;">Howdy</div>
     </div>
 
-    <div id="scroller" style="display:none">
+    <div id="scroller">
         <div id="tocButton">&larr;</div>
                 <div id="toc"></div>
                 <div id="top">
@@ -522,7 +519,7 @@
         <div id="animationContainer">
             <div id="showContent" style="display: none;"></div>
             <div id="impressumButton">&darr;</div>
-            <div id="impressum" style="display: block;"></div>
+            <div id="impressum"></div>
         </div>
         <noscript>
             <h3>This site needs javascript to load it's contents</h3>
