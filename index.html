@@ -386,40 +386,65 @@
                         });
                 }
             });
-            
-            
-            
+
+
+
             $(document).on('click', '#tocButton', function (e) {
-                if ($("#tocButton").text()==="<") {
+                // alert($("#tocButton").text());
+                if ($("#tocButton").html().trim() === "←") {
                     $("#toc").fadeOut(500);
                     $("#top").fadeOut(500);
                     $("#scroller").css("min-width", "1%");
                     $("#showContent").css("padding-left", "2%");
-                    $("#showContent").css("width", "95%");
-                    $("#tocButton").text(">");
-                     $("#tocButton").css("left", "0%");
+                    $("#showContent").css("width", "98%");
+                    $("#tocButton").html("&rarr;");
+                    $("#tocButton").css("left", "0%");
                 } else {
-                  $("#toc").fadeIn(500); 
-                  $("#top").fadeIn(500);
-                  $("#scroller").css("min-width", "14%");
-                    $("#showContent").css("padding-left", "15%");
+                    $("#toc").fadeIn(500);
+                    $("#top").fadeIn(500);
+                    $("#scroller").css("min-width", "14%");
+                    $("#showContent").css("padding-left", "16%");
                     $("#showContent").css("width", "84%");
-                  $("#tocButton").text("<");
-                     $("#tocButton").css("left", "14%");
+                    $("#tocButton").html("&larr;");
+                    $("#tocButton").css("left", "14%");
+
                 }
             });
-            
+
             $(document).on('click', '#impressumButton', function (e) {
                 // alert($("#impressumButton").text());
-                if ($("#impressumButton").html()=="↓") {
+                if ($("#impressumButton").html().trim() == "↓") {
                     $("#impressum").css("display", "none");
-                    
                     $("#impressumButton").html("&uarr;");
                     $("#impressumButton").css("bottom", "0%");
                 } else {
-                  $("#impressum").css("display", "block"); 
+                    $("#impressum").css("display", "block");
                     $("#impressumButton").css("bottom", "3%");
                     $("#impressumButton").html("&darr;");
+                }
+            });
+
+            $(document).on('click', '#menuButton', function (e) {
+                // alert($("#menuButton").text());
+                if ($("#menuButton").html().trim() == ("↑")) {
+                    $("#menu").css("display", "none");
+
+                    $("#menuButton").html("&darr;");
+                    $("#menuButton").css("top", "0%");
+                    $("#showContent").css("margin-top", "0%");
+                    $("#scroller").css("top", "2%");
+                    $("#tocButton").css("top", "2%");
+                    $("#tocButton").css("height", "55%");
+                    $("#scroller").css("height", "95%");
+                } else {
+                    $("#menu").css("display", "block");
+                    $("#menuButton").css("top", "15%");
+                    $("#menuButton").html("&uarr;");
+                    $("#showContent").css("margin-top", "7%");
+                    $("#scroller").css("top", "17%");
+                    $("#tocButton").css("top", "17%");
+                    $("#tocButton").css("height", "35%");
+                    $("#scroller").css("height", "70%");
                 }
             });
 
@@ -452,82 +477,82 @@
     <div id="progress" style="background-color: red; width: 80%; height: 15%; margin-left: 10%; margin-top: 15%; position: fixed; background-image: url(images/progress.jpg); opacity: 0.90; color: green;">
         <div class="progress-label" style="color: green; text-align: center;">Howdy</div>
     </div>
-    
+
     <div id="scroller" style="display:none">
-         <div id="tocButton" ><</div>
-        <div id="toc"></div>
-        <div id="top">
-            <a href="#onTop">
-                <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
-            </a>
+        <div id="tocButton">&larr;</div>
+                <div id="toc"></div>
+                <div id="top">
+                    <a href="#onTop">
+                        <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
+                    </a>
+                </div>
+
         </div>
-        
-    </div>
-       
-    <header>
 
-        <div style="display: none;" id="menu">
-            <div style="display:block;">
-                <h1 style="display: inline;">skamster.github.io</h1>
-                <p style="display: inline; vertical-align: top;">projects, docs and personal infos
+        <header>
 
-                </p>
+            <div style="display: none;" id="menu">
+                <div style="display:block;">
+                    <h1 style="display: inline;">skamster.github.io</h1>
+                    <p style="display: inline; vertical-align: top;">projects, docs and personal infos
+
+                    </p>
+                </div>
+                <div class="menuelements">
+                    <div id="menucontent">
+
+                    </div>
+                    <div class="lefty">
+                        <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
+                    </div>
+                    <div class="righty">
+                        <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
+                    </div>
+                    <div class="centry">
+                        <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
+                    </div>
+                    <div class="centry">
+                        <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
+                    </div>
+                </div>
             </div>
-            <div class="menuelements">
-                <div id="menucontent">
-
-                </div>
-                <div class="lefty">
-                    <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
-                </div>
-                <div class="righty">
-                    <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
-                </div>
-                <div class="centry">
-                    <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
-                </div>
-                <div class="centry">
-                    <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
-                </div>
-            </div>
+            <div id="menuButton">&uarr;</div>
+        </header>
+        <div id="news"></div>
+        <div id="animationContainer">
+            <div id="showContent" style="display: none;"></div>
+            <div id="impressumButton">&darr;</div>
+            <div id="impressum" style="display: block;"></div>
         </div>
-<div id="menuButton" ><</div>
-    </header>
-    <div id="news"></div>
-    <div id="animationContainer">
-        <div id="showContent" style="display: none;"></div>
-        <div id="impressumButton" >&darr;</div>
-        <div id="impressum" style="display: block;"></div>
-    </div>
-    <noscript>
-        <h3>This site needs javascript to load it's contents</h3>
-        <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
-        <ul>
-            <li><a href="petaDocs/">Peta</a>
-            </li>b
-            <li><a href="tryToxicDocs/">tryToxic</a>
-            </li>
-            <li><a href="jobManagementDocs/">jobManagement</a>
-            </li>
-        </ul>
+        <noscript>
+            <h3>This site needs javascript to load it's contents</h3>
+            <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
+            <ul>
+                <li><a href="petaDocs/">Peta</a>
+                </li>b
+                <li><a href="tryToxicDocs/">tryToxic</a>
+                </li>
+                <li><a href="jobManagementDocs/">jobManagement</a>
+                </li>
+            </ul>
 
 
-        <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
-        <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
-        <ul>
-            <li><a href="petaDocs/">Peta</a>
-            </li>
-            <li><a href="tryToxicDocs/">tryToxic</a>
-            </li>
-            <li><a href="jobManagementDocs/">jobManagement</a>
-            </li>
-        </ul>
+            <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
+            <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
+            <ul>
+                <li><a href="petaDocs/">Peta</a>
+                </li>
+                <li><a href="tryToxicDocs/">tryToxic</a>
+                </li>
+                <li><a href="jobManagementDocs/">jobManagement</a>
+                </li>
+            </ul>
 
-    </noscript>
+        </noscript>
 
-    <div style="height:0px; width: 0px; overflow: hidden; ">
-        <div id="my-timeline"></div>
-    </div>
+        <div style="height:0px; width: 0px; overflow: hidden; ">
+            <div id="my-timeline"></div>
+        </div>
 </body>
 
 </html>
