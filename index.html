@@ -188,15 +188,30 @@
                 });
 
             }
-           // $(document).on('mouseover', 'body > article', function (e) {
+            // $(document).on('mouseover', 'body > article', function (e) {
             $("#showContent > article").mouseover(function () {
-               // var first = $("body > article:first-of-type").index();
+                // var first = $("body > article:first-of-type").index();
                 // index gibt position aus.
                 var cId = $(this).attr('id');
-               // alert("#"+cId+"Btn");
-                $("#"+lastName+"Btn").removeClass('current_page_item');
-                $("#"+cId+"Btn").addClass('current_page_item');
-                lastName = cId;
+                if (cId !== lastName) {
+                    // alert("#"+cId+"Btn");
+                    $("#" + lastName + "Btn").removeClass('current_page_item');
+                    $("#" + cId + "Btn").addClass('current_page_item');
+                    lastName = cId;
+                }
+                //changeMenu(index - first);
+            });
+            $("#showContent > article").scroll(function () {
+                // var first = $("body > article:first-of-type").index();
+                // index gibt position aus.
+                var cId = $(this).attr('id');
+                // alert("#"+cId+"Btn");
+                if (cId !== lastName) {
+                    // alert("#"+cId+"Btn");
+                    $("#" + lastName + "Btn").removeClass('current_page_item');
+                    $("#" + cId + "Btn").addClass('current_page_item');
+                    lastName = cId;
+                }
                 //changeMenu(index - first);
             });
             // Functbion changeMenu
@@ -418,7 +433,7 @@
                     $("#tocButton").html("&rarr;");
                     $("#tocButton").css("left", "0%");
                 } else {
-                    var leftSpace = "14%";
+                    var leftSpace = "22%";
                     if (lastName === "about") {
                         var leftSpace = "22%";
                     }
