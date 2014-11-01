@@ -1,11 +1,4 @@
-<html>
-  <head>
-    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
-    <link rel="alternate stylesheet" type="text/css" href="resource://gre-resources/plaintext.css"
-      title="Wrap Long Lines">
-  </head>
-  <body>
-    <pre>body {
+body {
     margin: 0;
     padding: 0;
     color: black;
@@ -640,6 +633,4 @@ a:hover {
 }
 .cf {
     zoom: 1;
-}</pre>
-  </body>
-</html>
+}
