@@ -82,7 +82,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
 }
 #menu {
     width: 100%;
-    z-index: 995;
+    z-index: 898;
     padding-left: 1px;
     position: fixed;
     top: 0px;
@@ -145,6 +145,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     top: 30px;
     left: 1px;
     right: 1%;
+    z-index: 999;
     padding-left: 20px;
     margin-left: 30px;
     margin-bottom: 1%;
@@ -176,7 +177,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     position: fixed;
     float: left;
     min-height: 20%;
-    height: 70%;
+    height: 80%;
     top: 17%;
     max-width: 22%;
     min-width: 22%;
@@ -243,7 +244,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     padding-top: 15px;
     padding-left: 2px;
     cursor: pointer;
-    z-index: 555;
+    z-index: 1000;
 }
 .dropdowncontainer:hover > .submenu {
     display: block !important;
@@ -344,7 +345,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     border-left-style: none;
     top: 13%;
     background-color: white;
-    z-index: 996;
+    z-index: 899;
     position: fixed;
     padding-left: 45%;
     width: 100%;
@@ -436,7 +437,7 @@ li {
 */
 
 .anchor {
-    top: -125px;
+    top: -90px;
     display: inline;
     position: relative;
 }
