@@ -197,6 +197,7 @@
                     // alert("#"+cId+"Btn");
                     $("#" + lastName + "Btn").removeClass('current_page_item');
                     $("#" + cId + "Btn").addClass('current_page_item');
+                    document.title = cId+"@skamster.github.io";
                     lastName = cId;
                 }
                 //changeMenu(index - first);
@@ -210,6 +211,7 @@
                     // alert("#"+cId+"Btn");
                     $("#" + lastName + "Btn").removeClass('current_page_item');
                     $("#" + cId + "Btn").addClass('current_page_item');
+                    document.title = cId+"@skamster.github.io";
                     lastName = cId;
                 }
                 //changeMenu(index - first);
@@ -265,10 +267,10 @@
 
                             $(window).scroll(function () {
                                 if ($(window).scrollTop() + $(window).height() < $(document).height()) {
-                                    $("#impressum").show("pulsate", {}, 800, function () {});
+                                    $("#impressumButton").show("pulsate", {}, 800, function () {});
                                 }
                                 if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                                    $("#impressum").hide("pulsate", {}, 800, function () {});
+                                    $("#impressumButton").hide("pulsate", {}, 800, function () {});
                                 }
                             });
                         });
@@ -425,6 +427,7 @@
             $(document).on('click', '#tocButton', function (e) {
                 // alert($("#tocButton").text());
                 if ($("#tocButton").html().trim() === "←") {
+                    // clip in
                     $("#toc").fadeOut(500);
                     $("#top").fadeOut(500);
                     $("#scroller").css("min-width", "1%");
@@ -433,19 +436,17 @@
                     $("#tocButton").html("&rarr;");
                     $("#tocButton").css("left", "0%");
                 } else {
-                    var leftSpace = "22%";
-                    if (lastName === "about") {
-                        var leftSpace = "22%";
-                    }
+                    // clip out
+                    var leftSpace = "22";
                     $("#toc").fadeIn(500);
                     $("#top").fadeIn(500);
                     $("#scroller").css("min-width", "14%");
 
-                    $("#showContent").css("padding-left", leftSpace);
-                    $("#showContent").css("width", "84%");
+                    $("#showContent").css("padding-left", "23%");
+                    $("#showContent").css("width", "auto");
                     $("#tocButton").html("&larr;");
 
-                    $("#tocButton").css("left", leftSpace);
+                    $("#tocButton").css("left", "22%");
 
                 }
             });
@@ -471,19 +472,20 @@
                     $("#menuButton").html("&darr;");
                     $("#menuButton").css("top", "0%");
                     $("#showContent").css("margin-top", "0%");
+                    $("#showContent").css("top", "0%");
                     $("#scroller").css("top", "2%");
                     $("#tocButton").css("top", "2%");
                     $("#tocButton").css("height", "55%");
                     $("#scroller").css("height", "95%");
                 } else {
                     $("#menu").css("display", "block");
-                    $("#menuButton").css("top", "15%");
+                    $("#menuButton").css("top", "13%");
                     $("#menuButton").html("&uarr;");
                     $("#showContent").css("margin-top", "7%");
-                    $("#scroller").css("top", "17%");
-                    $("#tocButton").css("top", "17%");
-                    $("#tocButton").css("height", "35%");
-                    $("#scroller").css("height", "70%");
+                    $("#scroller").css("top", "15%");
+                    $("#tocButton").css("top", "15%");
+                    $("#tocButton").css("height", "41%");
+                    $("#scroller").css("height", "80%");
                 }
             });
 

@@ -75,7 +75,7 @@ function processHtmlNext(jDataIn, name) {
                 });
                 displayHtml += '</table>';
                 var langs = "";
-                toc += '<ul style="list-style-type: none; list-style: none;" ><li><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
+                toc += '<h4>'+jDataIn.transl.about+'</h4><ul style="list-style-type: none; list-style: none;" ><li><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
                 $.each(val.languages, function (lKey, lVal) {
                     if (lKey != "trans") {
                         toc += '<li><a href="#' + lKey + '">' + lKey + '</a></li>';
@@ -141,7 +141,7 @@ function processHtmlNext(jDataIn, name) {
                     }
                 });
 
-                toc += "</ul></ul>";
+                toc += "</ul></ul><hr />";
                 //displayHtml += "</div>"+toc+"</ul>";
                 displayHtml += '<h2>'+jDataIn.transl.expiriences+'</h2>'+jDataIn.about.timeline;
                 displayHtml += '<h3><a name="languages" class="anchor" />' + val.languages.trans + '</h3><ul>';
@@ -161,31 +161,32 @@ function processHtmlNext(jDataIn, name) {
 
             } else {
                 displayHtml += '<article id="'+key+'"><h2>' + val.title + '</h2><p>' + val.preword + "</p>";
-                toc += '<ul><li><a href="#features">' + jDataIn.transl.features + '</a></li>';
+                toc += '<h4>'+key+'</h4><ul><li><a href="#'+key+'features">' + jDataIn.transl.features + '</a></li>';
                 var pictureCount = Object.keys(val.pictures).length
                 if (pictureCount > 0) {
-                    toc += '<li><a href="#pictures" >' + jDataIn.transl.pictures + '</a></li>';
+                    toc += '<li><a href="#'+key+'pictures" >' + jDataIn.transl.pictures + '</a></li>';
                 }
-                toc += '<li><a href="#bugs">' + jDataIn.transl.bugs + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a></li></ul>';
+                toc += '<li><a href="#'+key+'bugs">' + jDataIn.transl.bugs + '</a></li><li><a href="#'+key+'description">' + jDataIn.transl.description + '</a></li></ul><hr />';
                 displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>';
-                displayHtml += '<h3><a name="features" class="anchor" />' + jDataIn.transl.features + '</h3><ul>';
+                displayHtml += '<h3><a name="'+key+'features" class="anchor" />' + jDataIn.transl.features + '</h3><ul>';
                 $.each(val.features, function (fKey, fVal) {
                     displayHtml += "<li>" + fKey + ": " + fVal + "</li>";
                 });
 
                 if (pictureCount > 0) {
-                    displayHtml += '</ul><h3><a name="pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul>';
+                    displayHtml += '</ul><h3><a name="'+key+'pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul>';
                     $.each(val.pictures, function (pKey, pVal) {
                         displayHtml += '<li>' + pVal.desc + ': <br /><a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></li>';
                     });
                 }
-                displayHtml += '</ul><h3 ><a name="bugs" class="anchor" />' + jDataIn.transl.bugs + '</h3><ul>';
+                displayHtml += '</ul><h3 ><a name="'+key+'bugs" class="anchor" />' + jDataIn.transl.bugs + '</h3><ul>';
                 $.each(val.bugs, function (bKey, bVal) {
                     displayHtml += "<li>" + bKey + ": " + bVal + "</li>";
                 });
-                displayHtml += '</ul><h3><a name="description" class="anchor" />' + jDataIn.transl.description + '</h3><p>' + val.description + '</p></article>';
+                displayHtml += '</ul><h3><a name="'+key+'description" class="anchor" />' + jDataIn.transl.description + '</h3><p>' + val.description + '</p></article>';
             }
            } 
+        displayHtml += '<hr />';
         
     });
     if ((toc == "undefined") || (toc == "")) {
