@@ -21,11 +21,9 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.theme.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fancybox.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.10.4.custom.min.css" media="screen" />
     <title>skamster.github.io</title>
     <script type="text/javascript">
         "use strict";
-
         /**
             This is searching for all GET-variables in URL
         **/
@@ -188,33 +186,39 @@
 
             }
             // $(document).on('mouseover', 'body > article', function (e) {
+            var cId = "index";
+
+            function getCurrentID(el) {
+                cId = el.attr('id');
+                if (cId !== lastName) {
+                    // alert("#"+cId+"Btn");
+                    $("#" + lastName + "Btn").removeClass('current_page_item');
+                    $("#" + cId + "Btn").addClass('current_page_item');
+                    document.title = cId + "@skamster.github.io";
+                    lastName = cId;
+                }
+            }
+
+
+            $(window).scroll(function () {
+                var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
+                var div_top = $("#"+cId).offset().top;
+                if (window_top > div_top && cId !== lastName) {
+                    $("#" + lastName + "Btn").removeClass('current_page_item');
+                    $("#" + cId + "Btn").addClass('current_page_item');
+                    document.title = cId + "@skamster.github.io";
+                    lastName = cId;
+                }
+            });
+
+
             $("#showContent > article").mouseover(function () {
                 // var first = $("body > article:first-of-type").index();
                 // index gibt position aus.
-                var cId = $(this).attr('id');
-                if (cId !== lastName) {
-                    // alert("#"+cId+"Btn");
-                    $("#" + lastName + "Btn").removeClass('current_page_item');
-                    $("#" + cId + "Btn").addClass('current_page_item');
-                    document.title = cId+"@skamster.github.io";
-                    lastName = cId;
-                }
+                getCurrentID($(this));
                 //changeMenu(index - first);
             });
-            $("#showContent > article").scroll(function () {
-                // var first = $("body > article:first-of-type").index();
-                // index gibt position aus.
-                var cId = $(this).attr('id');
-                // alert("#"+cId+"Btn");
-                if (cId !== lastName) {
-                    // alert("#"+cId+"Btn");
-                    $("#" + lastName + "Btn").removeClass('current_page_item');
-                    $("#" + cId + "Btn").addClass('current_page_item');
-                    document.title = cId+"@skamster.github.io";
-                    lastName = cId;
-                }
-                //changeMenu(index - first);
-            });
+
             // Functbion changeMenu
             function changeMenu(index) {
                 var target = $("#header ul li")
@@ -464,29 +468,31 @@
             });
 
             $(document).on('click', '#menuButton', function (e) {
-                // alert($("#menuButton").text());
-                if ($("#menuButton").html().trim() == ("↑")) {
+                // alert($("#menuButton").html());
+                if ($("#menuButton").html().trim() == ("<div>↑</div>")) {
+                    // $("body").toggleClass("active");
                     $("#menu").css("display", "none");
-
-                    $("#menuButton").html("&darr;");
-                    $("#menuButton").css("top", "0%");
-                    $("#showContent").css("margin-top", "0%");
-                    $("#showContent").css("top", "0%");
+                    //
+                    $("#menuButton").html("<div>&darr;</div>").css("top", "0%");
+                    $("#showContent").css({marginTop:"0%",top:"0%"});
                     $(".anchor").css("top", "-20px");
                     $("#scroller").css("top", "2%");
-                    $("#tocButton").css("top", "2%");
-                    $("#tocButton").css("height", "55%");
+                    $("#tocButton").css({top:"1%",height:"100%"});
                     $("#scroller").css("height", "95%");
                 } else {
-                    $(".anchor").css("top", "-120px");
+                    $("body").toggleClass("active");
+                    $("#menuButton").html("<div>&uarr;</div>");
+                    $("#menuButton div").css("left", "40%");
+                    // $("#menuButton div").css("margin-top", "0%");
+                     $(".anchor").css("top", "-120px");
                     $("#menu").css("display", "block");
-                    $("#menuButton").css("top", "13%");
-                    $("#menuButton").html("&uarr;");
+                    $("#menuButton").css({"top": "0%"});
+                    // $("#menuButton").html("&uarr;");
                     $("#showContent").css("margin-top", "7%");
                     $("#scroller").css("top", "15%");
                     $("#tocButton").css("top", "15%");
                     $("#tocButton").css("height", "41%");
-                    $("#scroller").css("height", "80%");
+                    $("#scroller").css("height", "80%"); 
                 }
             });
 
@@ -500,14 +506,7 @@
             $.browser.chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
             $.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
 
-            // relativ ugly workaround for font-size-failures i saw. my reference is firefox with 0.8.
-            if ($.browser.webkit) {
-                $(".btn").css("font-size", "0.75em");
-            }
-            if ($.browser.chrome) {
-                $(".btn").css("font-size", "0.7em");
 
-            }
 
 
         });
@@ -521,7 +520,7 @@
     </div>
 
     <div id="scroller">
-        <div id="tocButton">&larr;</div>
+        
         <div id="toc"></div>
         <div id="top">
             <a href="#onTop">
@@ -530,35 +529,47 @@
         </div>
 
     </div>
+    <div id="tocButton">&larr;</div>
 
     <header>
 
-        <div style="display: none;" id="menu">
+        <div id="menu">
             <div class="logo">
-                <h1>skamster.github.io</h1>
+                <h2>skamster.github.io</h2>
             </div>
-            <div class="menuelements">
-                <div id="menucontent">
+            <nav>
+                <ul id="language">
+                    <li><a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
+                    </li>
+                    <li><a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
+                    </li>
+                </ul>
+                <ul id="mainnav">
+                    <li>
+                        <a class="btn fade" onclick="changeContent('index'); return false;" id="indexBtn">Home</a>
+                    </li>
+                    <li id="menucontent" class="dropdowncontainer">
+                        <span>Projects</span>
+                        <ul class="submenu">
+                        </ul>
 
-                </div>
-                <div class="lefty">
-                    <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
-                </div>
-                <div class="righty">
-                    <a class="btn fade" onclick="changeContent('about'); return false;" id="aboutBtn">About</a>
-                </div>
-                <div class="righty">
-                    <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
-                </div>
-                <div class="centry">
-                    <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
-                </div>
-                <div class="centry">
-                    <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
-                </div>
-            </div>
+                    </li>
+                    <li>
+                        <a class="btn fade" onclick="changeContent('about'); return false;" id="aboutBtn">About</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
+                    </li>
+                </ul>
+                <ul class="subnav">
+                    <li><a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
+                    </li>
+                </ul>
+
         </div>
-        <div id="menuButton">&uarr;</div>
+        <div id="menuButton" class="cf">
+            <div>&uarr;</div>
+        </div>
     </header>
     <div id="news"></div>
     <div id="animationContainer">

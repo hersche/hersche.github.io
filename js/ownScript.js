@@ -17,29 +17,21 @@ function createTimeline(tlD, lang) {
     Generates a menu out of json. This one is for just one entry with a submenu (the first one). Would be possible to improve, but it's not necessary for that case
 **/
 function processMenuHtml(jDataIn) {
-    var menuHtml = '<ul id="menuul" >';
+    
     var parent = "";
     var downSign = "";
+    var menuHtml = "<span>Projects</span><ul class=\"submenu\" >";
     $.each(jDataIn, function (menuName, value) {
-        if ((menuName != "transl") && (menuName != "about")) {
-            if (menuName == "index") {
-                downSign = " <b>&darr;</b> ";
-                parent = ' class="dropdowncontainer" ';
-            }
+        if ((menuName != "transl") && (menuName != "about") && (menuName != "index")) {
+            
             menuHtml += '<li' + parent + ' ><a href="#" onclick="changeContent(\'' + menuName + '\'); return false;" id="' + menuName + 'Btn" class="btn fade">'+downSign + value.title + downSign+'</a>';
             // This is because i know, index is the first.. it have to be!	  
-            if (menuName != "index") {
+            
                 menuHtml += '</li>';
-            }
-            if (menuName == "index") {
-                menuHtml += "<ul class=\"submenu\">";
-                //after first round they're done
-                parent = "";
-                downSign = "";
-            }
+          
         }
     });
-    return menuHtml + '</li></ul>';
+    return menuHtml + '</ul>';
 
 
 }
