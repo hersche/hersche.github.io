@@ -210,20 +210,21 @@ body.active #menu {
   width: auto;
   border-radius: 1em;
   margin-top: 100px;
-  padding-left: 23%;
+  margin-left: 23.5%;
   z-index: 400;
   background: #e6edf4;
 }
 .projectpic {
-  width: 50%;
-  height: 50%;
+  max-width: 100%;
 }
 #showContent a > img {
   border: 2px solid;
   border-radius: 30px;
   border-color: transparent;
-  max-width: 50%;
   padding: 0;
+}
+.gallerybox {
+  max-width: 40%;
 }
 .submenu {
   position: absolute;

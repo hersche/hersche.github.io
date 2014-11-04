@@ -48,7 +48,7 @@ function processHtmlNext(jDataIn, name) {
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
                 displayHtml += '</table><p><a name="description" class="anchor" ></a>' + val.description + '</p></article>';
-                toc += '<ul><li><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a><ul><li><a href="#website">Website</a></li><li><a href="#security">'+jDataIn.transl.security+'</a></li><li><a href="#about">'+jDataIn.transl.about+'</a></li></ul></li></ul>';
+                toc += '<h2>Home</h2><ul><li><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a><ul><li><a href="#website">Website</a></li><li><a href="#security">'+jDataIn.transl.security+'</a></li><li><a href="#about">'+jDataIn.transl.about+'</a></li></ul></li></ul>';
                 
                 
             } else if (key === "about") {
@@ -62,7 +62,7 @@ function processHtmlNext(jDataIn, name) {
                 });
                 displayHtml += '</table>';
                 var langs = "";
-                toc += '<h4>'+jDataIn.transl.about+'</h4><ul style="list-style-type: none; list-style: none;" ><li><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
+                toc += '<h2>'+jDataIn.transl.about+'</h4><ul style="list-style-type: none; list-style: none;" ><li><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
                 $.each(val.languages, function (lKey, lVal) {
                     if (lKey != "trans") {
                         toc += '<li><a href="#' + lKey + '">' + lKey + '</a></li>';
@@ -148,7 +148,7 @@ function processHtmlNext(jDataIn, name) {
 
             } else {
                 displayHtml += '<article id="'+key+'"><h2>' + val.title + '</h2><p>' + val.preword + "</p>";
-                toc += '<h4>'+key+'</h4><ul><li><a href="#'+key+'features">' + jDataIn.transl.features + '</a></li>';
+                toc += '<h2>'+val.title+'</h2><ul><li><a href="#'+key+'features">' + jDataIn.transl.features + '</a></li>';
                 var pictureCount = Object.keys(val.pictures).length
                 if (pictureCount > 0) {
                     toc += '<li><a href="#'+key+'pictures" >' + jDataIn.transl.pictures + '</a></li>';
