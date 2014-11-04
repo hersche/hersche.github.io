@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.theme.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fancybox.css" media="screen" />
-    <title>skamster.github.io</title>
+    <title>hersche.github.io</title>
     <script type="text/javascript">
         "use strict";
         /**
@@ -193,7 +193,7 @@
 
             function getCurrentID(el) {
                 cId = el.attr('id');
-                if (cId !== lastName) {
+                if ((cId !== lastName)||(lastName==="")) {
                     // alert($("#" + cId+"Btn").parent().parent().html());
                     if($("#" + cId+"Btn").parent().parent().hasClass("submenu")){
                         $("#menucontent > span").addClass('current_page_item').effect("shake");
@@ -209,7 +209,10 @@
                     // alert("#"+cId+"Btn");
                     $("#" + lastName + "Btn").removeClass('current_page_item');
                     $("#" + cId + "Btn").addClass('current_page_item');
-                    document.title = cId + "@skamster.github.io";
+                    document.title = cId + "@hersche.github.io";
+                    $('#toc').animate({
+                     scrollTop: $('#toc').scrollTop() + $('#toc'+cId).position().top
+                    }, 1000);
                     lastName = cId;
                 }
             }
@@ -221,7 +224,8 @@
                 if (window_top > div_top && cId !== lastName) {
                     $("#" + lastName + "Btn").removeClass('current_page_item');
                     $("#" + cId + "Btn").addClass('current_page_item');
-                    document.title = cId + "@skamster.github.io";
+                    document.title = cId + "@hersche.github.io";
+                    
                     lastName = cId;
                 }
             });
