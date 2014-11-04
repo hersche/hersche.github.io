@@ -148,10 +148,10 @@ header h1 {
   cursor: pointer;
   z-index: 1000;
 }
-#menu nav #mainnav .dropdowncontainer:hover > .submenu {
+#menu nav #mainnav .dropdowncontainer:hover > .submenuInvisible {
   display: inline-block !important;
 }
-#menu nav #mainnav .submenu:hover > .submenu {
+#menu nav #mainnav .submenu:hover > .submenuInvisible {
   display: inline-block !important;
 }
 #menu nav #language {
@@ -228,26 +228,26 @@ body.active #menu {
 }
 .submenu {
   position: absolute;
-  padding: 0;
-  top: 20px;
-  left: 1px;
+  top: -40px;
   z-index: 999;
   height: auto;
-  padding-left: 20px;
-  margin-left: 30px;
-  margin-bottom: 1%;
+  left: -17em;
   width: 35em;
+  padding-bottom: 10px;
   list-style: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  display: none !important;
   background-color: #e6edf4;
+}
+.submenuInvisible {
+  display: none !important;
 }
 .submenu > li {
   float: left;
   display: inline;
   padding-top: 4px;
+  z-index: 999;
   /* background-color: @lightblue; */
 }
 .submenu li a {
@@ -390,19 +390,19 @@ body.active #menu {
   bottom: 3%;
   height: 5px;
   text-align: center;
-  z-index: 997;
+  z-index: 911;
   position: fixed;
   padding-left: 45%;
   width: 100%;
   background-color: #DBB69D;
 }
 #impressumButton div {
-  position: inherit;
+  position: fixed;
   height: 25px;
   text-align: center;
   padding-top: 5px;
   width: 30px;
-  z-index: 899;
+  z-index: 912;
   margin-left: auto;
   margin-right: auto;
   margin-top: -25px;

@@ -18,7 +18,7 @@ function createTimeline(tlD, lang) {
 **/
 function processMenuHtml(jDataIn) {
     var downSign = "";
-    var menuHtml = "<span>Projects</span><ul class=\"submenu\" >";
+    var menuHtml = "<span>Projects</span><ul class=\"submenu submenuInvisible \" >";
     $.each(jDataIn, function (menuName, value) {
         if ((menuName != "transl") && (menuName != "about") && (menuName != "index")) {
             
