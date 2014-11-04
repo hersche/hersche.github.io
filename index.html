@@ -193,7 +193,7 @@
 
             function getCurrentID(el) {
                 cId = el.attr('id');
-                if ((cId !== lastName)||(lastName==="")) {
+                if (cId !== lastName) {
                     // alert($("#" + cId+"Btn").parent().parent().html());
                     if($("#" + cId+"Btn").parent().parent().hasClass("submenu")){
                         $("#menucontent > span").addClass('current_page_item').effect("shake");

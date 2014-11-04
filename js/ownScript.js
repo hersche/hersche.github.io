@@ -371,7 +371,7 @@ function changeContent(name) {
         }, "skamster.github.io::" + name, "index.html?s=" + name);
     }
     if (name != lastName) {
-        $( "#animationContainer" ).hide("slide",{direction:"right"},"slow", function() {
+/*        $( "#animationContainer" ).hide("slide",{direction:"right"},"slow", function() {
         // Animation complete.
         var ProcessedHtml = processHtml(jData, name);
         $("#showContent").html(ProcessedHtml[0]);
@@ -380,7 +380,32 @@ function changeContent(name) {
         $("html, body").animate({
             scrollTop: 0
         }, "slow");
-        $("#animationContainer").show("puff",{},1000);
+        $("#animationContainer").show("puff",{},1000);*/
+        
+                            if($("#" + name+"Btn").parent().parent().hasClass("submenu")){
+                        $("#menucontent > span").addClass('current_page_item').effect("shake");
+                        // $("#menucontent > ul").attr('style', 'display: inline-block !important');
+                        $("#menucontent > ul").removeClass('submenuInvisible');
+                       // alert($(".submenu").css("display"));
+                    }
+                    else {
+                        $("#menucontent > span").removeClass('current_page_item');
+                       // $("#menucontent > ul").attr('style', 'display: none !important');
+                        $("#menucontent > ul").addClass('submenuInvisible');
+                    }
+                    // alert("#"+cId+"Btn");
+                    $("#" + lastName + "Btn").removeClass('current_page_item');
+                    $("#" + name + "Btn").addClass('current_page_item');
+        
+        $('html, body').animate({
+             scrollTop: $('#showContent').scrollTop() + $('#'+name).position().top - 100
+        }, 1000);
+        $('#toc').animate({
+            scrollTop: $('#toc').scrollTop() + $('#toc'+name).position().top
+        }, 1000);
+        
+        
+        
         lastName = name;
     }
 
