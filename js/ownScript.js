@@ -135,7 +135,7 @@ function processHtmlNext(jDataIn, name) {
                 displayHtml += langs + '</ul>';
                 displayHtml += '</ul><h3><a name="rlangs" class="anchor" />' + jDataIn.transl.reallang + '</h3><ul>';
                 displayHtml += rlangs + '</ul>';
-                displayHtml += '</ul><h3><a name="sys" class="anchor" />' + val.sys.trans + '</h3><ul>';
+                displayHtml += '</ul><h3><a name="sys" class="anchor" />' + val.sys.trans + '</h3>';
                 displayHtml += syst + '</ul>';
                 displayHtml += '<h3><a name="mobile" class="anchor" />' + val.mobile.trans + '</h3>';
                 displayHtml += mobile + '</ul></div>';
