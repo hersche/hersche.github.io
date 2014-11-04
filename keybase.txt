@@ -4,7 +4,7 @@ https://keybase.io/hersche
 
 I hereby claim:
 
-  * I am an admin of https://skamster.github.io
+  * I am an admin of https://hersche.github.io
   * I am hersche (https://keybase.io/hersche) on keybase.
   * I have a public key with fingerprint F497 DD57 F7A7 FE3C EA60  D4B9 97FC EED5 EC63 5430
 
@@ -14,7 +14,7 @@ To claim this, I am signing this object:
     "body": {
         "client": {
             "name": "keybase.io node.js client",
-            "version": "0.4.14"
+            "version": "0.7.2"
         },
         "key": {
             "fingerprint": "f497dd57f7a7fe3cea60d4b997fceed5ec635430",
@@ -24,21 +24,21 @@ To claim this, I am signing this object:
             "username": "hersche"
         },
         "merkle_root": {
-            "ctime": 1407766996,
-            "hash": "2be799c07d539b47e9b507b4b17845af8861e99fc9c5b4711d1dde2e029204f5b7fede0ae0327b3a814156c5f7266f39660fdaad2b59d41b5703a8c6a1b4af98",
-            "seqno": 35374
+            "ctime": 1415111726,
+            "hash": "57f25cf9516676fadcb7e47fd24e025120376a60ace41ce6c407e101630dbfcc891f6bcb5920571dcf774e62442eccc4dded56114ea6ffa4fe081b6c013f2db0",
+            "seqno": 91702
         },
         "service": {
-            "hostname": "skamster.github.io",
+            "hostname": "hersche.github.io",
             "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1407767225,
+    "ctime": 1415112604,
     "expire_in": 157680000,
-    "prev": "a674b8c808edb705d4cf0f92b1760d7c48495b40a299910bcc755176d9fdf8c7",
-    "seqno": 2,
+    "prev": "3c1ce8bdf738619905941b5a96e339b2910130478f3925428a8db9d75b53b75d",
+    "seqno": 5,
     "tag": "signature"
 }
 
@@ -47,20 +47,20 @@ with the aforementioned key, yielding the PGP signature:
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v2
 
-owFVkj1oFEEUx1ejEgOKAVshLIIEjnNmdz52zs541oIBNYLHfLy5m1yye+5uzhwh
-iJ2NkEbsUtto40ch2IqiWAgWFlpZRBCxFiHOnOdHttrd95//e7/3n60jU9H07L2f
-395/1Yto3+svKrq48+7ZRqwKM4pbG7FecZDX4S2XqxC34j6MlKyg6Yq5vDDQXK7m
-JppGPISyckXuVahJmpjEm42gD6ety7tQDkoXzGJLBDeGcsslt5BqkAwZooTgVgMY
-CpqllKTIe/aKqt7TNh57dpzxfwU/v9Bun6Pthb/6tXFBYp0Jq4xlnDNKEoUT34ZJ
-LTOlFRoLKygnTD0/t+5BGHcVyv4KdMqiGEPr2gUFJsj7MCGYH0hWPX8mUcCF0Igb
-mgpFOAhFEVdEYZ4RKm2WMQxCWC009WWMDTYGEkCJSBCxVHlwA0gCShOuUplhginT
-1PKEMZsKxpA1UppEUWEIVpQjL/IIWBFpReYJKrieF3ErpSknm+GzHDoNYeywtAlb
-1ZerVQ1ls+vq3pr6vcBBWdSFLlYCe10PqlZAr0cDiB+14hugOhOvjnK58cn9ny32
-0j1r4UlCGzGsD1wJHRcUlLMM+Sc0gmGIg3GiMp2hDIziiBqiLbLCx8J98FyTjAi/
-JSQTIQRGSmtOqa8ZYY3NNP8Hm/g5ZTdwuW4u67XSp3b72oFodjo6dHB/uLvRzOFj
-fy7096lotzxz68780tHL6UwjWT/Br2zPR/QsX775wZ42i3dPPY52R1e3nyxf+nH/
-6YOplx93Prvnn5YeDt5eeHOcbJ180X8V/QI=
-=q1O7
+owFVUj1rFEEYPjWRqAheJViF7YRwzszOx85hlTMpRSSFEvScj3fuxiS75+4mGkN6
+sVALQdFGsFMRUukf0MbCRhuxsBBEFJFUIsE4c0ZjptrZeeZ5n4+5dXBPY6x5Z+Pb
+269mBu169Vk3Zs58eriS6MIuJ+2VxMx7yOv4lasFSNrJHCxrVUHLF+N5YaF1sRrf
+wkwkS1BWvsgDCrVEiySrExEeLzuf96AclD5yJY5KYS0TTijhIDWgOLJUSymcAbAM
+DE8ZTVGg7BdVvWNqMuTsehv+SjHdmZo6waY6//CLwwOFTSadto4LwRklGpMwhiuj
+Mm00GgIrKLcs9YNs04codwHKuXnolkUx9GxqHxGYYoYxFoQHQarqhztBPGHGSYY5
+F9wpa7QAKpwlFBBhmKBU8GBLGaDYADcUCcAI8xRZ7UyQhx0PWpgkiAlsjROCAieU
+EjDGUGtDDhxjGrJxTlEHKMOaG4RTR6yODiq4lBdJW2KByGrclkveQJQdQ9vprdXz
+dX9R/8lvUBZ1YYr5eFzXg6odndfLg4hfuwy6u0XV1T63obj/m8UBuiMVwhGdSODK
+wJfQ9RHBBM9QWHEQLAXO1IQEstCGSDOOpURMUqyZkhzSVGoiQy4poiJzqSShrUxl
+VksrmGapFsxue2VBp+oFysr3clUvlqG0a+dHGs2xxt7R3fHlNvbvO/T3OY/+amzO
+3jty9UX25MPNyZfXv7w5PDLaIQc6J8e/v19/tPngVPNnQDybPr52+u6x5+eOvr7x
+4/6F27Nrk+/y5tONwq1/fHzW/AY=
+=hY3A
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
