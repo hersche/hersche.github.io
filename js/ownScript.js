@@ -363,14 +363,14 @@ function GET(v) {
 /**
     Change from one content to another.
 **/
-function changeContent(name) {
+function changeContent(name,fuckOff=false) {
     "use strict";
     if (history.pushState) {
         history.pushState({
             "id": 100
         }, "skamster.github.io::" + name, "index.html?s=" + name);
     }
-    if (name != lastName) {
+    if ((name != lastName)||(fuckOff)) {
 /*        $( "#animationContainer" ).hide("slide",{direction:"right"},"slow", function() {
         // Animation complete.
         var ProcessedHtml = processHtml(jData, name);

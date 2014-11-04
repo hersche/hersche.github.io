@@ -283,10 +283,15 @@
                         $("#news").hide("explode", {
 
                         }, 500, function () {
-                            $("#progress").progressbar("option", "value", 100);
-                            $("#progress").hide("pulsate", {}, 800, function () {});
+                            $("#progress").progressbar("option", "value", 90);
+                            changeContent(lastName, true);
+                            setTimeout(function() {
+                                $("#progress").progressbar("option", "value", 100);
+                                $("#progress").hide("pulsate", {}, 800, function () {});
+                            }, 1000);
+                            
                             // $( "#progress" ).progressbar("destroy");
-
+                            
                             $(window).scroll(function () {
                                 if ($(window).scrollTop() + $(window).height() < $(document).height()) {
                                     $("#impressumButton").show("pulsate", {}, 800, function () {});
