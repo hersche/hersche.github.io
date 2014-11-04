@@ -113,7 +113,6 @@ header h1 {
   list-style: none;
   display: table;
   margin: 0;
-  height: 100%;
 }
 #menu nav ul li {
   display: table-cell;
@@ -230,14 +229,17 @@ body.active #menu {
   position: absolute;
   top: -40px;
   z-index: 999;
-  height: auto;
+  height: 30px;
   left: -17em;
   width: 35em;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   list-style: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  background-color: none;
+}
+.submenu > li > a {
   background-color: #e6edf4;
 }
 .submenuInvisible {

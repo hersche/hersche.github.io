@@ -138,7 +138,6 @@ header {
             list-style: none;
             display: table;
             margin: 0;
-            height: 100%;
             li {
                 display:table-cell;
                 float: left;
@@ -267,10 +266,10 @@ body.active #menu {
     position: absolute;
     top: -40px;
     z-index: 999;
-    height: auto;
+    height: 30px;
     left: -17em;
     width: 35em;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     list-style: none;
     
     -webkit-box-shadow: none;
@@ -278,8 +277,13 @@ body.active #menu {
     box-shadow: none;
     
 
-    background-color: @lightblue;
+    background-color: none;
         
+}
+
+
+.submenu > li > a {
+    background-color: @lightblue;   
 }
 
 .submenuInvisible {

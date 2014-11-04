@@ -363,8 +363,9 @@ function GET(v) {
 /**
     Change from one content to another.
 **/
-function changeContent(name,fuckOff=false) {
+function changeContent(name,fuckOff) {
     "use strict";
+    fuckOff = fuckOff || false;
     if (history.pushState) {
         history.pushState({
             "id": 100
