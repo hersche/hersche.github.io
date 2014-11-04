@@ -480,15 +480,16 @@
                 if ($("#menuButton > div").html().trim() == ("↑")) {
                     // $("body").toggleClass("active");
                     $("#menu").css("display", "none");
+                    $("header").css("height", "0px");
                     //
                     $("#menuButton > div").html("&darr;");
                     $("#menuButton").css("top", "0%");
                     $("#showContent").css({
                         marginTop: "0%",
-                        top: "0%"
+                        top: "10px"
                     });
                     $(".anchor").css("top", "-20px");
-                    $("#scroller").css("top", "2%");
+                    $("#scroller").css("top", "1%");
                     $("#tocButton").css({
                         top: "1%",
                         height: "100%"
@@ -501,12 +502,13 @@
                     // $("#menuButton div").css("margin-top", "0%");
                     $(".anchor").css("top", "-120px");
                     $("#menu").css("display", "inline-block");
+                    $("header").css("height", "100px");
                     // $("#menuButton").css({"top": "0%"});
                     // $("#menuButton").html("&uarr;");
                     $("#showContent").css("margin-top", "80px");
                     $("#scroller").css("top", "70px");
                     $("#tocButton").css("top", "78px");
-                    $("#tocButton").css("height", "44%");
+                    $("#tocButton").css("height", "60%");
                     $("#scroller").css("height", "80%");
                 }
             });
