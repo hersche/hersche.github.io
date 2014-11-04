@@ -193,7 +193,7 @@
                 if (cId !== lastName) {
                     // alert($("#" + cId+"Btn").parent().parent().html());
                     if($("#" + cId+"Btn").parent().parent().hasClass("submenu")){
-                           $("#menucontent > span").addClass('current_page_item');
+                           $("#menucontent > span").addClass('current_page_item').effect("shake");
                     }
                     else {
                         $("#menucontent > span").removeClass('current_page_item');
@@ -211,7 +211,6 @@
                 var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
                 var div_top = $("#" + cId).offset().top();
                 if (window_top > div_top && cId !== lastName) {
-
                     $("#" + lastName + "Btn").removeClass('current_page_item');
                     $("#" + cId + "Btn").addClass('current_page_item');
                     document.title = cId + "@skamster.github.io";

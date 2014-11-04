@@ -297,7 +297,7 @@ body.active #menu {
   white-space: nowrap;
 }
 #toc ul li a:hover {
-  color: #FDEEF4;
+  color: #be8e80;
 }
 #toc ul li:before {
   content: ">";
