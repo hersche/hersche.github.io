@@ -246,7 +246,7 @@
             }
 
 
-            $('#news').rssfeed('https://github.com/skamster.atom', {
+            $('#news').rssfeed('https://github.com/hersche.atom', {
                 snippet: false,
                 header: false,
                 media: false,
@@ -280,9 +280,7 @@
                     $("#impressum").show("slide", {
                         direction: "down"
                     }, 500, function () {
-                        $("#news").hide("explode", {
-
-                        }, 500, function () {
+                            hideNews();
                             $("#progress").progressbar("option", "value", 90);
                             changeContent(lastName, true);
                             setTimeout(function() {
@@ -299,7 +297,6 @@
                                 if ($(window).scrollTop() + $(window).height() == $(document).height()) {
                                     $("#impressumButton").hide("pulsate", {}, 800, function () {});
                                 }
-                            });
                         });
                     });
 
@@ -478,6 +475,32 @@
                 }
             });
 
+            function hideNews(){
+                    $("#news").css("display", "none");
+                    $("#showContent").css("margin-right", "1%");
+                    $("#showContent").css("width", "auto");
+                    $("#newsButton > div").html("&larr;");
+                    $("#newsButton").css("right", "0%");
+            }
+            
+            $(document).on('click', '#newsButton', function (e) {
+                // alert($("#tocButton").text());
+                if ($("#newsButton > div").html().trim() === "→") {
+                    // clip in
+                    hideNews();
+
+                } else {
+                    // clip out
+                    var leftSpace = "22";
+                    $("#news").css("display", "block");
+                    $("#newsButton > div").html("&rarr;");
+                    $("#showContent").css("margin-right", "21%");
+                    $("#showContent").css("width", "auto");
+                    $("#newsButton").css("right", "20%");
+
+                }
+            });
+            
             $(document).on('click', '#impressumButton', function (e) {
                 // alert($("#impressumButton").text());
                 if ($("#impressumButton > div").html().trim() == "↓") {
@@ -593,7 +616,7 @@
         </div>
     <div id="tocButton"><div>&larr;</div></div>
             <div id="impressumButton"><div>&darr;</div></div>
-                
+                <div id="newsButton"><div>&rarr;</div></div>
         <div id="scroller">
 
             <div id="toc"></div>
@@ -605,7 +628,10 @@
             <div id="impressum"></div>
 
         </div>
-        
+        <div id="secondScroller" >
+            <div id="news"></div>
+        </div>
+            
     </header>
 
     <div id="news"></div>

@@ -184,6 +184,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aa52e', end
     min-width: 10%;
     /* border: 2px solid; */
 }
+#secondScroller {
+    position: absolute;
+    float: right;
+    height: 100%;
+    max-width: 22%;
+    min-width: 10%;
+    right: 0px;
+    /* border: 2px solid; */
+}
 #top {
     position: absolute;
     bottom: 20px;
