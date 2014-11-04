@@ -121,7 +121,7 @@
         },
         "pictures": {}
     },
-    "skamster.github.io": {
+    "skamstergithubio": {
         "title": "skamster.github.io",
         "preword": "This website informs about current projects and about me. Style isn't my strongest part, but it should looking acceptable.",
         "description": "A technical demo, descriptions, links and pictures, nice collected and marked up. This is the idea of this website. If this would be a clientwebsite or on a project, i would never use that much effects. But here, it's for playing in use. By the way, the most of this effects is wrote in CSS 3.",
@@ -265,6 +265,6 @@
         "about": "About me",
         "mobilephonehint": "Your Browser looks to running on a mobile device - rotate your device to the landscape-mode to enjoy the website optimised.",
         "reallang":"Spoken languages",
-        "impressum":"Impressum: Everything here is from myself (except marked libs and timeline-pictures) - everything's <a href='gpl-2.0.txt' target='_blank' >GPL-v2-licensed</a>."
+        "impressum":"Impressum: Everything here is from myself (except marked libs and timeline-pictures) - everything's <a href='gpl-2.0.txt' id='gpl' target='_blank' >GPL-v2-licensed</a>."
     }
 }

@@ -191,6 +191,13 @@
             function getCurrentID(el) {
                 cId = el.attr('id');
                 if (cId !== lastName) {
+                    // alert($("#" + cId+"Btn").parent().parent().html());
+                    if($("#" + cId+"Btn").parent().parent().hasClass("submenu")){
+                           $("#menucontent > span").addClass('current_page_item');
+                    }
+                    else {
+                        $("#menucontent > span").removeClass('current_page_item');
+                    }
                     // alert("#"+cId+"Btn");
                     $("#" + lastName + "Btn").removeClass('current_page_item');
                     $("#" + cId + "Btn").addClass('current_page_item');
@@ -199,11 +206,12 @@
                 }
             }
 
-
+            var subMenu = false;
             $(window).scroll(function () {
                 var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
-                var div_top = $("#"+cId).offset().top;
+                var div_top = $("#" + cId).offset().top();
                 if (window_top > div_top && cId !== lastName) {
+
                     $("#" + lastName + "Btn").removeClass('current_page_item');
                     $("#" + cId + "Btn").addClass('current_page_item');
                     document.title = cId + "@skamster.github.io";
@@ -429,14 +437,14 @@
 
             $(document).on('click', '#tocButton', function (e) {
                 // alert($("#tocButton").text());
-                if ($("#tocButton").html().trim() === "←") {
+                if ($("#tocButton > div").html().trim() === "←") {
                     // clip in
                     $("#toc").fadeOut(500);
                     $("#top").fadeOut(500);
                     $("#scroller").css("min-width", "1%");
                     $("#showContent").css("padding-left", "2%");
                     $("#showContent").css("width", "98%");
-                    $("#tocButton").html("&rarr;");
+                    $("#tocButton > div").html("&rarr;");
                     $("#tocButton").css("left", "0%");
                 } else {
                     // clip out
@@ -447,7 +455,7 @@
 
                     $("#showContent").css("padding-left", "23%");
                     $("#showContent").css("width", "auto");
-                    $("#tocButton").html("&larr;");
+                    $("#tocButton > div").html("&larr;");
 
                     $("#tocButton").css("left", "22%");
 
@@ -456,43 +464,50 @@
 
             $(document).on('click', '#impressumButton', function (e) {
                 // alert($("#impressumButton").text());
-                if ($("#impressumButton").html().trim() == "↓") {
+                if ($("#impressumButton > div").html().trim() == "↓") {
                     $("#impressum").css("display", "none");
-                    $("#impressumButton").html("&uarr;");
+                    $("#impressumButton > div").html("&uarr;");
                     $("#impressumButton").css("bottom", "0%");
                 } else {
                     $("#impressum").css("display", "block");
                     $("#impressumButton").css("bottom", "3%");
-                    $("#impressumButton").html("&darr;");
+                    $("#impressumButton > div").html("&darr;");
                 }
             });
 
             $(document).on('click', '#menuButton', function (e) {
                 // alert($("#menuButton").html());
-                if ($("#menuButton").html().trim() == ("<div>↑</div>")) {
+                if ($("#menuButton > div").html().trim() == ("↑")) {
                     // $("body").toggleClass("active");
                     $("#menu").css("display", "none");
                     //
-                    $("#menuButton").html("<div>&darr;</div>").css("top", "0%");
-                    $("#showContent").css({marginTop:"0%",top:"0%"});
+                    $("#menuButton > div").html("&darr;");
+                    $("#menuButton").css("top", "0%");
+                    $("#showContent").css({
+                        marginTop: "0%",
+                        top: "0%"
+                    });
                     $(".anchor").css("top", "-20px");
                     $("#scroller").css("top", "2%");
-                    $("#tocButton").css({top:"1%",height:"100%"});
+                    $("#tocButton").css({
+                        top: "1%",
+                        height: "100%"
+                    });
                     $("#scroller").css("height", "95%");
                 } else {
-                    $("body").toggleClass("active");
-                    $("#menuButton").html("<div>&uarr;</div>");
-                    $("#menuButton div").css("left", "40%");
+                    // $("body").toggleClass("active");
+                    $("#menuButton > div").html("&uarr;");
+                    // $("#menuButton div").css("margin-left", "400px");
                     // $("#menuButton div").css("margin-top", "0%");
-                     $(".anchor").css("top", "-120px");
-                    $("#menu").css("display", "block");
-                    $("#menuButton").css({"top": "0%"});
+                    $(".anchor").css("top", "-120px");
+                    $("#menu").css("display", "inline-block");
+                    // $("#menuButton").css({"top": "0%"});
                     // $("#menuButton").html("&uarr;");
-                    $("#showContent").css("margin-top", "7%");
-                    $("#scroller").css("top", "15%");
-                    $("#tocButton").css("top", "15%");
-                    $("#tocButton").css("height", "41%");
-                    $("#scroller").css("height", "80%"); 
+                    $("#showContent").css("margin-top", "80px");
+                    $("#scroller").css("top", "70px");
+                    $("#tocButton").css("top", "78px");
+                    $("#tocButton").css("height", "44%");
+                    $("#scroller").css("height", "80%");
                 }
             });
 
@@ -519,23 +534,11 @@
         <div class="progress-label" style="color: green; text-align: center;">Howdy</div>
     </div>
 
-    <div id="scroller">
-        
-        <div id="toc"></div>
-        <div id="top">
-            <a href="#onTop">
-                <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
-            </a>
-        </div>
-
-    </div>
-    <div id="tocButton">&larr;</div>
-
     <header>
 
         <div id="menu">
             <div class="logo">
-                <h2>skamster.github.io</h2>
+                <h2>hersche.github.io</h2>
             </div>
             <nav>
                 <ul id="language">
@@ -567,15 +570,32 @@
                 </ul>
 
         </div>
-        <div id="menuButton" class="cf">
+        <div id="menuButton">
             <div>&uarr;</div>
         </div>
+    <div id="tocButton"><div>&larr;</div></div>
+            <div id="impressumButton"><div>&darr;</div></div>
+                
+        <div id="scroller">
+
+            <div id="toc"></div>
+            <div id="top">
+                <a href="#onTop">
+                    <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
+                </a>
+            </div>
+            <div id="impressum"></div>
+
+        </div>
+        
     </header>
+
     <div id="news"></div>
-    <div id="animationContainer">
+<div id="animationContainer">
+        
         <div id="showContent" style="display: none;"></div>
-        <div id="impressumButton">&darr;</div>
-        <div id="impressum"></div>
+        
+        
     </div>
     <noscript>
         <h3>This site needs javascript to load it's contents</h3>

@@ -1,6 +1,6 @@
 {
     "index": {
-        "title": "Linkliste, über die Seite und Projekte",
+        "title": "Projekte",
         "preword": "Dies ist die Linkliste, die 'alternative Startseite' oder die 'Sitemap'. Diese Seite enthält jedoch auch externe Links. <br /> Sie liefert auch eine Beschreibung der Website, der aktiven Projekte und mir.",
         "description": "<h4><a name='website' class='anchor'></a>Website</h4>Diese Website nutzt Ihren Webstorage, wenn Ihr Browser dies unterstützt. Dies bemerken Sie am besten beim wechseln der Sprachen - Sie müssen nach dem Wechsel der Sprache den 'Erneuern'-Knopf drücken, um die neue Sprachdatei zu laden.<br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch die relativ neuen <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a> Technologien kennenzulernen. Auch Javascript ist relativ neu für mich, aber eine interessante Welt. Es ist keine 'sichere' Sprache, aber sie ist oftmals schöner Augenzucker (Eyecandy) und aktuell sogar nützlich (siehe <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Kartenplugin in Peta</a> und auch <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>). <br />Auf der anderen Seite mag ich 'ernst zu nehmenderen' und meistens <a target='_blank' href='https://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a> und <a target='_blank' href='https://de.wikipedia.org/wiki/Objektorientierte_Programmierung'>objektorientieren Code</a>. Auf dieser Seite bekommen Sie eine Übersicht über die Projekte, welche ich programmiert habe. <span style='color: grey;'><h4><a name='security' class='anchor'></a>Kapitel Sicherheit/Websiten schützen</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Seite 309:<br />'Fragen Sie nach dem Zufallsprinzip nur bestimmte Zeichen des Passwortes ab: mal das erste und dritte Zeichen, mal das sechste und vierte.' Weiter unten: 'Wenn sie diese zusätzlichen Features integrieren, sind sie schon dicht an dem Verfahren das Banken für browserbasiertes Online-Banking verwenden.'</span><hr /> Logisch! Nein ernsthaft, Sicherheit ist ein wichtiges Thema, auf das man zwei Augen richten sollte. Zwei meiner Projekte haben bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<h4><a name='about' class='anchor'></a>Über mich</h4>Der letzte Teil ist <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>Über mich</a>. Nach der Ausbildung arbeitete ich vor allem körperlich, da 4 Jahre lang, 8 Stunden am Tag Computer, zu viel Computer für mich war. Da ich 2014 einen Arbeitsunfall (Mittelfussbruch) erlitt, möchte ich mein momentanes Hobby wieder zum Beruf machen. Seit April bin ich auf <a target='_blank' href='http://github.com/skamster'>Github</a> wieder ziemlich aktiv!<br />Dieser Code soll als Beispiel dienen, wie ich programmieren kann. <br />Sie können diese Projekte frei (GPLv2) benutzen und ich bin glücklich, wenn jemand es forkt, Fehler meldet oder es ausprobiert.",
         "content": {
@@ -123,7 +123,7 @@
         },
         "pictures": {}
     },
-    "skamster.github.io": {
+    "skamstergithubio": {
         "title": "skamster.github.io",
         "preword": "Die Website informiert über aktuelle Projekte und mich.",
         "description": "Was ist der Sinn dieser Website? Eine technische Demonstration, Beschreibung, Links und Bilder aller Ideen und Projekte schön gesammelt und dargestellt. Dies ist die Umsetzung dieser Idee. Wenn es eine Kundenwebsite oder eine Projektwebsite wäre, würde ich nie so viele Effekte verwenden. Aber hier kann dies als lustige Umsetzungsspielerei und, wie erwähnt, Demonstration meiner Fähigkeiten zugleich dienen. Die meisten Effekte sind nebenbei CSS 3 zu verdanken.",
@@ -131,7 +131,9 @@
             "Offlinespeicherung": "Die Seite nutzt Ihren <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>-Offlinespeicher, so dass Sie die Seite mit einem einigermassen aktuellen Browser auch ohne Internetverbindung neu laden und aufrufen können. Probieren Sie es aus!",
             "JSON-Datenabfrage": "Alle Daten werden mittels statischen JSON-Dateien geladen. Dies dient der Übersetzung.",
             "jQuery": "jQuery dient als Hauptbibliothek zur Animierung, des Ladens und Findens der Klassen",
-            "Verschiedene Stile": "Gehen sie zu Ansicht->Websiten-Stil und wählen sie z.B spaced aus"
+            "Popup-Newsticker": "Ein Newsticker für meinen Github-Account.",
+            "Verschiedene Tooltips und Aufklapp-Menüs": "Ich habe bewusst Aufklappvarianten mit jQuery (pop-up beim Github-Knopf und Ort mit bedienbarer Karte im Tooltip) und CSS (Hauptmenü, komplette Eigenentwicklung) erstellt.",
+            "Verschiedene Stile": "Gehen sie zu Ansicht->Websiten-Stil und wählen sie z.B spaced oder serious aus. Auch die verschiedenen Effekte mit dem Inhaltsverzeichniss aber dem fixen Menü sind zur Demonstration bewusst so umgesetzt."
         },
         "bugs": {
             "<del>onTop-Knopf in Chrome und Opera</del>": "<del>Der Knopf bewegt sich in Chrome nicht. In Firefox funktioniert dies tadellos</del>"
@@ -271,6 +273,6 @@
         "about":"Über mich",
         "mobilephonehint":"Ihr Browser scheint auf einem Handy oder Tablet zu laufen - kippen Sie das Gerät in das Querformat/den Landscape-Modus, um die Seite in optimaler Form geniessen zu können.",
         "reallang":"Gesprochene Sprachen",
-        "impressum":"Impressum: Der ganze Inhalt ist von mir (mit Ausnahme markierter Bibliotheken und Bildern in der Timeline) - meine Werke stehen unter der <a href='gpl-2.0.txt' target='_blank'>GPLv2-Lizenz</a>."
+        "impressum":"Impressum: Der ganze Inhalt ist von mir (mit Ausnahme markierter Bibliotheken und Bildern in der Timeline) - meine Werke stehen unter der <a href='gpl-2.0.txt' id='gpl' target='_blank'>GPLv2-Lizenz</a>."
     }
 }
