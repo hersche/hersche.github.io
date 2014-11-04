@@ -127,7 +127,8 @@
                     var ProcessedHtml = processHtmlNext(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
-                    // $("#impressum").html(jData.transl.impressum);
+                    $("#impressum").html(jData.transl.impressum);
+                    $("#aboutBtn").text(jData.transl.about);
                     $("#progress").progressbar("option", "value", 25);
 
                 } else {
@@ -155,7 +156,8 @@
                         var ProcessedHtml = processHtmlNext(jData, lastName);
                         $("#toc").html(ProcessedHtml[1]);
                         $("#showContent").html(ProcessedHtml[0]);
-                        // $("#impressum").html(jData.transl.impressum);
+                        $("#impressum").html(jData.transl.impressum);
+                        $("#aboutBtn").text(jData.transl.about);
                         tljqxhr.complete(function (tldata) {
                             console.log("Completemethod2 on timeline, let's do the work");
                             localStorage.tlData = tldata.responseText.replace("\n", "");
@@ -178,7 +180,8 @@
                     $("#showContent").html(ProcessedHtml[0]);
                     $("#refresh").html(jData.transl.refresh + " (" + jData.transl.nowebstorage + ")");
                     $("#progress").progressbar("option", "value", 25);
-                    //  $("#impressum").html(jData.transl.impressum);
+                    $("#impressum").html(jData.transl.impressum);
+                    $("#aboutBtn").text(jData.transl.about);
                 });
                 tljqxhr.complete(function (tldata) {
                     createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
@@ -247,8 +250,8 @@
                     showItems: 1
                 });
             });
-            $("#impressum").html(jData.transl.impressum);
-            $("#aboutBtn").text(jData.transl.about);
+            // $("#impressum").html(jData.transl.impressum);
+            
             /**
                 Fade in loaded contents withouth jquery-ui
             **/
