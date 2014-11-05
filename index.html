@@ -45,6 +45,17 @@
         var jData;
         var tlData;
         var aboutImgBig = false;
+        var indexTop;
+        var petaTop;
+        var tryToxicTop;
+        var jobManagementTop;
+        var herschegithubioTop;
+        var multismsTop;
+        var aboutTop;
+
+
+
+
         /**
             Get language automatic
         **/
@@ -91,6 +102,20 @@
                     lang = GET('lang');
                 }
             }
+
+            function defineTops() {
+                // alert($('#multisms').html());
+                var showTop = $('#showContent').scrollTop();
+                indexTop = showTop + $('#index').position().top - 100;
+                petaTop = showTop + $('#peta').position().top - 100;
+                tryToxicTop = showTop + $('#tryToxic').position().top - 100;
+                jobManagementTop = showTop + $('#jobManagement').position().top - 100;
+                herschegithubioTop = showTop + $('#skamstergithubio').position().top - 100;
+                multismsTop = showTop + $('#multisms').position().top - 100;
+                aboutTop = showTop + $('#about').position().top - 100;
+            }
+
+
 
             /**
                 Eventhandlers for fancybox - once a gallery, once the timeline
@@ -188,6 +213,8 @@
                 });
 
             }
+
+
             // $(document).on('mouseover', 'body > article', function (e) {
             var cId = "index";
 
@@ -195,48 +222,39 @@
                 cId = el.attr('id');
                 if (cId !== lastName) {
                     // alert($("#" + cId+"Btn").parent().parent().html());
-                    if($("#" + cId+"Btn").parent().parent().hasClass("submenu")){
-                        $("#menucontent > span").addClass('current_page_item').effect("shake");
-                        // $("#menucontent > ul").attr('style', 'display: inline-block !important');
-                        $("#menucontent > ul").removeClass('submenuInvisible');
-                       // alert($(".submenu").css("display"));
-                    }
-                    else {
-                        $("#menucontent > span").removeClass('current_page_item');
-                       // $("#menucontent > ul").attr('style', 'display: none !important');
-                        $("#menucontent > ul").addClass('submenuInvisible');
-                    }
-                    // alert("#"+cId+"Btn");
-                    $("#" + lastName + "Btn").removeClass('current_page_item');
-                    $("#" + cId + "Btn").addClass('current_page_item');
-                    document.title = cId + "@hersche.github.io";
-                    $('#toc').animate({
-                     scrollTop: $('#toc').scrollTop() + $('#toc'+cId).position().top
-                    }, 1000);
-                    lastName = cId;
+
                 }
             }
 
-            var subMenu = false;
-            $(window).scroll(function () {
-                var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
-                var div_top = $("#" + cId).offset().top();
+
+                $(window).scroll(function () {
+                        updateMenu();
+                    } );
+                    //console.info(getCurrentIDNext(window_top).toString());
+                    /*                 console.info("ind"+indexTop);
+                console.info("try"+tryToxicTop);
+                 console.info("job"+jobManagementTop);
+                 console.info("multi"+multismsTop);
+                 console.info("peta"+petaTop);
+                 console.info("hersche"+herschegithubioTop);
+                 console.info("about"+aboutTop);
                 if (window_top > div_top && cId !== lastName) {
                     $("#" + lastName + "Btn").removeClass('current_page_item');
                     $("#" + cId + "Btn").addClass('current_page_item');
                     document.title = cId + "@hersche.github.io";
-                    
+
                     lastName = cId;
                 }
-            });
+                */
+               
 
 
-            $("#showContent > article").mouseover(function () {
+/*            $("#showContent > article").mouseover(function () {
                 // var first = $("body > article:first-of-type").index();
                 // index gibt position aus.
-                getCurrentID($(this));
+                getCurrentIDNext(window);
                 //changeMenu(index - first);
-            });
+            });*/
 
             // Functbion changeMenu
             function changeMenu(index) {
@@ -260,7 +278,7 @@
                 });
             });
             // $("#impressum").html(jData.transl.impressum);
-            
+
             /**
                 Fade in loaded contents withouth jquery-ui
             **/
@@ -280,23 +298,24 @@
                     $("#impressum").show("slide", {
                         direction: "down"
                     }, 500, function () {
-                            hideNews();
-                            $("#progress").progressbar("option", "value", 90);
-                            changeContent(lastName, true);
-                            setTimeout(function() {
-                                $("#progress").progressbar("option", "value", 100);
-                                $("#progress").hide("pulsate", {}, 800, function () {});
-                            }, 1000);
-                            
-                            // $( "#progress" ).progressbar("destroy");
-                            
-                            $(window).scroll(function () {
-                                if ($(window).scrollTop() + $(window).height() < $(document).height()) {
-                                    $("#impressumButton").show("pulsate", {}, 800, function () {});
-                                }
-                                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                                    $("#impressumButton").hide("pulsate", {}, 800, function () {});
-                                }
+                        hideNews();
+                        $("#progress").progressbar("option", "value", 90);
+                        changeContent(lastName, true);
+                        setTimeout(function () {
+                            $("#progress").progressbar("option", "value", 100);
+                            $("#progress").hide("pulsate", {}, 800, function () {});
+
+                        }, 1000);
+
+                        // $( "#progress" ).progressbar("destroy");
+
+                        $(window).scroll(function () {
+                            if ($(window).scrollTop() + $(window).height() < $(document).height()) {
+                                $("#impressumButton").show("pulsate", {}, 800, function () {});
+                            }
+                            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                                $("#impressumButton").hide("pulsate", {}, 800, function () {});
+                            }
                         });
                     });
 
@@ -475,14 +494,14 @@
                 }
             });
 
-            function hideNews(){
-                    $("#news").css("display", "none");
-                    $("#showContent").css("margin-right", "1%");
-                    $("#showContent").css("width", "auto");
-                    $("#newsButton > div").html("&larr;");
-                    $("#newsButton").css("right", "0%");
+            function hideNews() {
+                $("#news").css("display", "none");
+                $("#showContent").css("margin-right", "1%");
+                $("#showContent").css("width", "auto");
+                $("#newsButton > div").html("&larr;");
+                $("#newsButton").css("right", "0%");
             }
-            
+
             $(document).on('click', '#newsButton', function (e) {
                 // alert($("#tocButton").text());
                 if ($("#newsButton > div").html().trim() === "→") {
@@ -500,7 +519,7 @@
 
                 }
             });
-            
+
             $(document).on('click', '#impressumButton', function (e) {
                 // alert($("#impressumButton").text());
                 if ($("#impressumButton > div").html().trim() == "↓") {
@@ -614,9 +633,15 @@
         <div id="menuButton">
             <div>&uarr;</div>
         </div>
-    <div id="tocButton"><div>&larr;</div></div>
-            <div id="impressumButton"><div>&darr;</div></div>
-                <div id="newsButton"><div>&rarr;</div></div>
+        <div id="tocButton">
+            <div>&larr;</div>
+        </div>
+        <div id="impressumButton">
+            <div>&darr;</div>
+        </div>
+        <div id="newsButton">
+            <div>&rarr;</div>
+        </div>
         <div id="scroller">
 
             <div id="toc"></div>
@@ -628,18 +653,18 @@
             <div id="impressum"></div>
 
         </div>
-        <div id="secondScroller" >
+        <div id="secondScroller">
             <div id="news"></div>
         </div>
-            
+
     </header>
 
     <div id="news"></div>
-<div id="animationContainer">
-        
+    <div id="animationContainer">
+
         <div id="showContent" style="display: none;"></div>
-        
-        
+
+
     </div>
     <noscript>
         <h3>This site needs javascript to load it's contents</h3>

@@ -69,8 +69,7 @@ a:hover {
   color: grey;
 }
 .current_page_item {
-  color: red;
-  background: #dbb69d;
+  background: #dbb69d !important;
 }
 header {
   width: 100%;
@@ -249,7 +248,7 @@ body.active #menu {
   display: inline;
   padding-top: 4px;
   z-index: 999;
-  /* background-color: @lightblue; */
+  background-color: none;
 }
 .submenu li a {
   margin-top: 4px;
