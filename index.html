@@ -45,13 +45,6 @@
         var jData;
         var tlData;
         var aboutImgBig = false;
-        var indexTop;
-        var petaTop;
-        var tryToxicTop;
-        var jobManagementTop;
-        var herschegithubioTop;
-        var multismsTop;
-        var aboutTop;
 
 
 
@@ -103,17 +96,7 @@
                 }
             }
 
-            function defineTops() {
-                // alert($('#multisms').html());
-                var showTop = $('#showContent').scrollTop();
-                indexTop = showTop + $('#index').position().top - 100;
-                petaTop = showTop + $('#peta').position().top - 100;
-                tryToxicTop = showTop + $('#tryToxic').position().top - 100;
-                jobManagementTop = showTop + $('#jobManagement').position().top - 100;
-                herschegithubioTop = showTop + $('#skamstergithubio').position().top - 100;
-                multismsTop = showTop + $('#multisms').position().top - 100;
-                aboutTop = showTop + $('#about').position().top - 100;
-            }
+
 
 
 
@@ -300,10 +283,11 @@
                     }, 500, function () {
                         hideNews();
                         $("#progress").progressbar("option", "value", 90);
-                        changeContent(lastName, true);
+                        
                         setTimeout(function () {
                             $("#progress").progressbar("option", "value", 100);
                             $("#progress").hide("pulsate", {}, 800, function () {});
+                            changeContent(lastName, true);
 
                         }, 1000);
 
