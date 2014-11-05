@@ -221,9 +221,10 @@ var herschegithubioTop;
 var multismsTop;
 var aboutTop;
 
+/**
 
+**/
 function defineTops() {
-    // alert($('#multisms').html());
     var showTop = $('#showContent').scrollTop();
     indexTop = showTop + $('#index').position().top - 100;
     petaTop = showTop + $('#peta').position().top - 100;
@@ -235,7 +236,9 @@ function defineTops() {
 }
 
 
-
+/**
+    This will look, where your mouse is right now. It need defineTops(); for fill the (initialy empty) variables.
+**/
 function getCurrentIDNext(curPos) {
     if ((indexTop < curPos) && (tryToxicTop > curPos)) {
         return "index";
@@ -256,11 +259,13 @@ function getCurrentIDNext(curPos) {
     }
 }
 
+/**
+    This updates all the moving buttons, toc, adress
+**/
 function updateMenu(name, force) {
     name = name || "";
     force = force || false;
-    defineTops();
-
+    // defineTops could be used less - maybe.
     var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
     // 
     if (name !== "") {
@@ -268,9 +273,7 @@ function updateMenu(name, force) {
     } else {
         cId = getCurrentIDNext(window_top).toString();
     }
-
-    //changeMenu(cId);
-    if (((cId !== "-1") && (lastName !== cId))||(force)) {
+    if (((cId !== "-1") && (lastName !== cId)) || (force)) {
         if (history.pushState) {
             history.pushState({
                 "id": 100
@@ -290,7 +293,7 @@ function updateMenu(name, force) {
         $("#" + lastName + "Btn").removeClass('current_page_item');
         $("#" + cId + "Btn").addClass('current_page_item');
         document.title = cId + "@hersche.github.io";
-        $('#toc').animate({
+        $('#toc').stop(true).animate({
             scrollTop: $('#toc').scrollTop() + $('#toc' + cId).position().top
         }, 200);
         lastName = cId;
@@ -305,7 +308,7 @@ function changeContent(name, fuckOff) {
     fuckOff = fuckOff || false;
 
     if ((name != lastName) || (fuckOff)) {
-        updateMenu(name,fuckOff);
+        updateMenu(name, fuckOff);
 
         $('html, body').animate({
             scrollTop: $('#showContent').scrollTop() + $('#' + name).position().top - 105
