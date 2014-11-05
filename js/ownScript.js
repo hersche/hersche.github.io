@@ -224,15 +224,20 @@ var aboutTop;
 /**
 
 **/
+var extraSpace = 400;
 function defineTops() {
     var showTop = $('#showContent').scrollTop();
-    indexTop = showTop + $('#index').position().top - 100;
-    petaTop = showTop + $('#peta').position().top - 100;
-    tryToxicTop = showTop + $('#tryToxic').position().top - 100;
-    jobManagementTop = showTop + $('#jobManagement').position().top - 100;
-    herschegithubioTop = showTop + $('#skamstergithubio').position().top - 100;
-    multismsTop = showTop + $('#multisms').position().top - 100;
-    aboutTop = showTop + $('#about').position().top - 100;
+    indexTop = showTop + $('#index').position().top - extraSpace;
+    petaTop = showTop + $('#peta').position().top - extraSpace;
+    tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
+    jobManagementTop = showTop + $('#jobManagement').position().top - extraSpace;
+    herschegithubioTop = showTop + $('#skamstergithubio').position().top - extraSpace;
+    multismsTop = showTop + $('#multisms').position().top - extraSpace;
+    aboutTop = showTop + $('#about').position().top - extraSpace;
+    if((indexTop===undefined)||(petaTop===undefined)||(tryToxicTop===undefined)||(jobManagementTop===undefined)||(multismsTop===undefined)||(aboutTop===undefined)){
+        alert("do again");
+        defineTops();   
+    }
 }
 
 
@@ -265,31 +270,28 @@ function getCurrentIDNext(curPos) {
 function updateMenu(name, force) {
     name = name || "";
     force = force || false;
-    // defineTops could be used less - maybe.
     var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
-    // 
     if (name !== "") {
         cId = name;
     } else {
         cId = getCurrentIDNext(window_top).toString();
+        
     }
+    console.info(cId);
     if (((cId !== "-1") && (lastName !== cId)) || (force)) {
         if (history.pushState) {
             history.pushState({
                 "id": 100
-            }, "skamster.github.io::" + cId, "index.html?s=" + cId);
+            }, "hersche.github.io::" + cId, "index.html?s=" + cId);
         }
         if ($("#" + cId + "Btn").parent().parent().hasClass("submenu")) {
-            $("#menucontent > span").addClass('current_page_item').effect("shake");
-            // $("#menucontent > ul").attr('style', 'display: inline-block !important');
+            $("#menucontent > span").addClass('current_page_item');
             $("#menucontent > ul").removeClass('submenuInvisible');
-            // alert($(".submenu").css("display"));
         } else {
             $("#menucontent > span").removeClass('current_page_item');
-            // $("#menucontent > ul").attr('style', 'display: none !important');
             $("#menucontent > ul").addClass('submenuInvisible');
         }
-        // alert("#"+cId+"Btn");
+        
         $("#" + lastName + "Btn").removeClass('current_page_item');
         $("#" + cId + "Btn").addClass('current_page_item');
         document.title = cId + "@hersche.github.io";
