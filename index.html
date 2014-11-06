@@ -449,8 +449,9 @@
 
 <body style="background-color: black" id="body">
     <a id="onTop"></a>
-    <div id="progress" style="background-color: red; width: 80%; height: 15%; margin-left: 10%; margin-top: 15%; position: fixed; background-image: url(images/progress.jpg); opacity: 0.90; color: green;">
-        <div class="progress-label" style="color: green; text-align: center;">Howdy</div>
+    <div id="warn" style="background-color: red; width: 80%; height: 15%; margin-left: 10%; margin-top: 15%; position: fixed; color: white; z-index: 999; padding-left: 15px;"><img src="http://pixcdn.posterrevolution.com/posters/biohazard-warning-art-poster-print.jpg" style="height: 100px; float: left; padding-right: 15px;" />This Website is in a heavy restructuring right now. Please be patient till 15.11.2014. You still could use the old website, but its still deprecated. For the latest version of the redesign, check out the <a href="https://github.com/hersche/hersche.github.io/tree/flat" target="_blank">flat-branch</a>.
+    <hr />
+    <a href="#" onclick='$("#warn").fadeOut(200);' style="">[x] Close this warning</a>
     </div>
     <div id="scroller" style="display:none">
         <div id="toc"></div>
