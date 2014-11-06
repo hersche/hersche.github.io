@@ -48,7 +48,7 @@ function processHtmlNext(jDataIn, name) {
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
                 displayHtml += '</table><p><a name="description" class="anchor" ></a>' + val.description + '</p></article>';
-                toc += '<h2 id="toc' + key + '">Home</h2><ul><li><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li><a href="#description">' + jDataIn.transl.description + '</a><ul><li><a href="#website">Website</a></li><li><a href="#security">' + jDataIn.transl.security + '</a></li><li><a href="#about">' + jDataIn.transl.about + '</a></li></ul></li></ul>';
+                toc += '<h2 id="toc' + key + '">Home</h2><ul><li id="tocindextable"><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li id="tocindexdescription"><a href="#description">' + jDataIn.transl.description + '</a></li><li id="tocindexwebsite"><a href="#website">Website</a></li><li id="tocindextsecurity"><a href="#security">' + jDataIn.transl.security + '</a></li><li id="tocindexabout"><a href="#about">' + jDataIn.transl.about + '</a></li></ul></li></ul>';
 
 
             } else if (key === "about") {
@@ -128,7 +128,7 @@ function processHtmlNext(jDataIn, name) {
                     }
                 });
 
-                toc += "</ul></ul><hr />";
+                toc += "</ul></ul>";
                 //displayHtml += "</div>"+toc+"</ul>";
                 displayHtml += '<h2>' + jDataIn.transl.expiriences + '</h2>' + jDataIn.about.timeline;
                 displayHtml += '<h3><a name="languages" class="anchor" />' + val.languages.trans + '</h3><ul>';
@@ -153,7 +153,7 @@ function processHtmlNext(jDataIn, name) {
                 if (pictureCount > 0) {
                     toc += '<li><a href="#' + key + 'pictures" >' + jDataIn.transl.pictures + '</a></li>';
                 }
-                toc += '<li><a href="#' + key + 'bugs">' + jDataIn.transl.bugs + '</a></li><li><a href="#' + key + 'description">' + jDataIn.transl.description + '</a></li></ul><hr />';
+                toc += '<li><a href="#' + key + 'bugs">' + jDataIn.transl.bugs + '</a></li><li><a href="#' + key + 'description">' + jDataIn.transl.description + '</a></li></ul>';
                 displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>';
                 displayHtml += '<h3><a name="' + key + 'features" class="anchor" />' + jDataIn.transl.features + '</h3><ul>';
                 $.each(val.features, function (fKey, fVal) {
@@ -173,7 +173,7 @@ function processHtmlNext(jDataIn, name) {
                 displayHtml += '</ul><h3><a name="' + key + 'description" class="anchor" />' + jDataIn.transl.description + '</h3><p>' + val.description + '</p></article>';
             }
         }
-        displayHtml += '<hr />';
+        // displayHtml += '<hr />';
 
     });
     if ((toc == "undefined") || (toc == "")) {
@@ -214,6 +214,7 @@ function GET(v) {
 
 
 var indexTop;
+var indexTocTop;
 var petaTop;
 var tryToxicTop;
 var jobManagementTop;
@@ -225,18 +226,29 @@ var aboutTop;
 
 **/
 var extraSpace = 400;
+
 function defineTops() {
-    var showTop = $('#showContent').scrollTop();
-    indexTop = showTop + $('#index').position().top - extraSpace;
-    petaTop = showTop + $('#peta').position().top - extraSpace;
-    tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
-    jobManagementTop = showTop + $('#jobManagement').position().top - extraSpace;
-    herschegithubioTop = showTop + $('#skamstergithubio').position().top - extraSpace;
-    multismsTop = showTop + $('#multisms').position().top - extraSpace;
-    aboutTop = showTop + $('#about').position().top - extraSpace;
-    if((indexTop===undefined)||(petaTop===undefined)||(tryToxicTop===undefined)||(jobManagementTop===undefined)||(multismsTop===undefined)||(aboutTop===undefined)){
-        alert("do again");
-        defineTops();   
+    try {
+        var showTop = $('#showContent').scrollTop();
+        indexTop = showTop + $('#index').position().top - extraSpace;
+        //indexTocTop = {
+          //  table: $('#TheTable').position().top - extraSpace,
+            //description: $('#description').position().top - extraSpace
+        //}
+        // console.info($("li:regex(id, .*ocindex.*)").toString());
+        petaTop = showTop + $('#peta').position().top - extraSpace;
+        tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
+        jobManagementTop = showTop + $('#jobManagement').position().top - extraSpace;
+        herschegithubioTop = showTop + $('#skamstergithubio').position().top - extraSpace;
+        multismsTop = showTop + $('#multisms').position().top - extraSpace;
+        aboutTop = showTop + $('#about').position().top - extraSpace;
+    } catch (er) {
+
+        setTimeout(function () {
+            console.info("defineTops: one of the variables was undefined. Start defineTops again. " + er);
+            defineTops();
+        }, 100);
+
     }
 }
 
@@ -275,7 +287,7 @@ function updateMenu(name, force) {
         cId = name;
     } else {
         cId = getCurrentIDNext(window_top).toString();
-        
+
     }
     console.info(cId);
     if (((cId !== "-1") && (lastName !== cId)) || (force)) {
@@ -291,7 +303,7 @@ function updateMenu(name, force) {
             $("#menucontent > span").removeClass('current_page_item');
             $("#menucontent > ul").addClass('submenuInvisible');
         }
-        
+
         $("#" + lastName + "Btn").removeClass('current_page_item');
         $("#" + cId + "Btn").addClass('current_page_item');
         document.title = cId + "@hersche.github.io";
@@ -313,7 +325,7 @@ function changeContent(name, fuckOff) {
         updateMenu(name, fuckOff);
 
         $('html, body').animate({
-            scrollTop: $('#showContent').scrollTop() + $('#' + name).position().top - 105
+            scrollTop: $('#showContent').scrollTop() + $('#' + name).position().top - 95
         }, 1000);
 
 

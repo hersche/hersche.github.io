@@ -55,6 +55,10 @@ a:hover {
     padding-bottom: 2px;
 }
 
+#index, #jobManagement, #peta, #about {
+ background-color: @white;   
+}
+
 .odd {
     background-color: @active;
 
@@ -142,15 +146,15 @@ header {
                 a, span {
                         display: inline;
                         padding: 8px 12px;
-                        
+                        cursor: pointer;
                         color: @active;
                         text-shadow: none;
                         height: 100%;
                         color: @active;
                         text-decoration: none;
-                        padding-bottom: 1px;
-                        border-spacing: .5px .1px;
-                        border-bottom: 2px dotted @active;
+                        padding-bottom: 3px;
+                        border-spacing: none;
+                        border-bottom: none;
                 }
                 a:hover, span:hover {
                         border-bottom: 2px dashed @active;
@@ -235,14 +239,35 @@ body.active #menu {
     padding: 0;
     margin: 0;
 }
+
 #showContent {
     width: auto;
     border-radius: 1em;
-    margin-top:100px;  
-    margin-left: 23.5%;
+    margin-top:20px;  
+    margin-left: 22.5%;
     z-index: 400;
     background: @lightblue;
+    article {
+        padding-top: 3px;
+        padding-left: 1%;   
+        h2 {
+            margin-top: 0px;
+        }
+        ul li ul, ul ul{
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    }
 }
+
+#index {
+ padding-top: 35px;
+}
+
+#tocindex {
+    margin-top: 7px !important;
+}
+
 .projectpic {
     max-width: 100%; 
 }
@@ -347,26 +372,35 @@ float: left;
     overflow-y: auto;
     overflow-x: auto;
     background-color: @lightblue;
+    
+    h2 {
+      margin-bottom: 2px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    ul {
+        margin-top: 1px;
+        padding-left: 7px;
+        margin-bottom: 7px;
+    }
+    ul li a {
+        width: auto;
+        max-width: 10%;
+        line-height: 1.5;
+        white-space: nowrap;
+    }
+    
+    ul li a:hover {
+        color: @active;
+    }
+    
+    ul li:before {
+        content: ">";
+        color: #FF8040;
+    }
 }
 
-#toc > ul {
-    padding-left: 10px;
-}
-
-#toc ul li a {
-    width: auto;
-    max-width: 10%;
-    line-height: 1.5;
-    white-space: nowrap;
-}
-
-#toc ul li a:hover {
-    color: @active;
-}
-#toc ul li:before {
-    content: ">";
-    color: #FF8040;
-}
 
 
 .righty {

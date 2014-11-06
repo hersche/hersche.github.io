@@ -42,6 +42,12 @@ a:hover {
   margin-right: 0px;
   padding-bottom: 2px;
 }
+#index,
+#jobManagement,
+#peta,
+#about {
+  background-color: #ffffff;
+}
 .odd {
   background-color: #be8e80;
 }
@@ -123,13 +129,14 @@ header h1 {
 #menu nav ul li span {
   display: inline;
   padding: 8px 12px;
+  cursor: pointer;
   text-shadow: none;
   height: 100%;
   color: #be8e80;
   text-decoration: none;
-  padding-bottom: 1px;
-  border-spacing: .5px .1px;
-  border-bottom: 2px dotted #be8e80;
+  padding-bottom: 3px;
+  border-spacing: none;
+  border-bottom: none;
 }
 #menu nav ul li a:hover,
 #menu nav ul li span:hover {
@@ -206,10 +213,28 @@ body.active #menu {
 #showContent {
   width: auto;
   border-radius: 1em;
-  margin-top: 100px;
-  margin-left: 23.5%;
+  margin-top: 20px;
+  margin-left: 22.5%;
   z-index: 400;
   background: #e6edf4;
+}
+#showContent article {
+  padding-top: 3px;
+  padding-left: 1%;
+}
+#showContent article h2 {
+  margin-top: 0px;
+}
+#showContent article ul li ul,
+#showContent article ul ul {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+#index {
+  padding-top: 35px;
+}
+#tocindex {
+  margin-top: 7px !important;
 }
 .projectpic {
   max-width: 100%;
@@ -300,8 +325,15 @@ body.active #menu {
   overflow-x: auto;
   background-color: #e6edf4;
 }
-#toc > ul {
-  padding-left: 10px;
+#toc h2 {
+  margin-bottom: 2px;
+  margin-top: 30px;
+  text-align: center;
+}
+#toc ul {
+  margin-top: 1px;
+  padding-left: 7px;
+  margin-bottom: 7px;
 }
 #toc ul li a {
   width: auto;
