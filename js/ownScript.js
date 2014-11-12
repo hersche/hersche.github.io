@@ -48,7 +48,7 @@ function processHtmlNext(jDataIn, name) {
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
                 displayHtml += '</table><p><a name="description" class="anchor" ></a>' + val.description + '</p></article>';
-                toc += '<h2 id="toc' + key + '">Home</h2><ul><li id="tocindextable"><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li id="tocindexdescription"><a href="#description">' + jDataIn.transl.description + '</a></li><li id="tocindexwebsite"><a href="#website">Website</a></li><li id="tocindextsecurity"><a href="#security">' + jDataIn.transl.security + '</a></li><li id="tocindexabout"><a href="#about">' + jDataIn.transl.about + '</a></li></ul></li></ul>';
+                toc += '<h2 id="toc' + key + '">Home</h2><ul><li id="tocindextable"><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li id="tocindexwebsite"><a href="#website">Website</a></li><li id="tocindexsecurity"><a href="#security">' + jDataIn.transl.security + '</a></li><li id="tocindexabout"><a href="#about">' + jDataIn.transl.about + '</a></li></ul></li></ul>';
 
 
             } else if (key === "about") {
@@ -231,13 +231,13 @@ var aboutSubTop;
 /**
 
 **/
-var extraSpace = 400;
+var extraSpace = 0;
 
 function defineTops() {
     try {
         var showTop = $('#showContent').scrollTop();
         var indexTop = showTop + $('#index').position().top;
-        var indexSubTop = [$('a[name=TheTable]').position().top, $('a[name=description]').position().top]
+        var indexSubTop = [$('a[name=TheTable]').position().top, $('a[name=website]').position().top, $('a[name=security]').position().top, $('a[name=about]').position().top]
             //indexTocTop = {
             //  table: $('#TheTable').position().top - extraSpace,
             //description: $('#description').position().top - extraSpace

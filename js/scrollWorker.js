@@ -23,13 +23,21 @@ function getCurrentIDNext(curPos) {
         if ((indexTop < curPos) && (indexSubTop[0] > curPos)) {
             //  console.info("PRE description");
             // respective before the table
-            sub = "tocindextable"
+            sub = "index"
         } else if ((indexSubTop[0] < curPos) && (indexSubTop[1] > curPos)) {
             // console.info("table");
             sub = "tocindextable";
-        } else if (indexSubTop[1] < curPos) {
+        } else if ((indexSubTop[1] < curPos) && (indexSubTop[2] > curPos))  {
             // console.info("description");
-            sub = "tocindexdescription";
+            sub = "tocindexwebsite";
+        } else if ((indexSubTop[2] < curPos) && (indexSubTop[3] > curPos))  {
+            // console.info("description");
+            sub = "tocindexsecurity";
+        } 
+        
+        else if (indexSubTop[3] < curPos) {
+            // console.info("description");
+            sub = "tocindexabout";
         }
         // console.info(curPos + "currentPos, " + indexSubTop[0] + " [0], " + indexSubTop[1] + " [1] " + indexTop + " indextop, " + sub + " sub");
         return ["index", sub];
