@@ -201,8 +201,7 @@
 
 
             $(window).resize(function () {
-                //alert("resize");
-                defineTops();
+                scrollWorker.postMessage({'cmd': 'setHeight', 'msg': defineTops()});
                 updateMenu(lastName, true);
             });
 
@@ -257,7 +256,7 @@
                         setTimeout(function () {
                             $("#progress").progressbar("option", "value", 100);
                             $("#progress").hide("pulsate", {}, 800, function () {});
-                            defineTops();
+                            scrollWorker.postMessage({'cmd': 'setHeight', 'msg': defineTops()});
                             changeContent(lastName, true);
                         }, 1000);
 
@@ -463,8 +462,8 @@
                     var leftSpace = "22";
                     $("#news").css("display", "block");
                     $("#newsButton > div").html("&rarr;");
-                    $("#showContent").css("margin-right", "21%");
-                    $("#showContent").css("width", "auto");
+                   // $("#showContent").css("margin-right", "21%");
+                 //   $("#showContent").css("width", "auto");
                     $("#newsButton").css("right", "20%");
 
                 }

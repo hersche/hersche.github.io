@@ -148,12 +148,12 @@ function processHtmlNext(jDataIn, name) {
 
             } else {
                 displayHtml += '<article id="' + key + '"><h2>' + val.title + '</h2><p>' + val.preword + "</p>";
-                toc += '<h2 id="toc' + key + '">' + val.title + '</h2><ul><li><a href="#' + key + 'features">' + jDataIn.transl.features + '</a></li>';
+                toc += '<h2 id="toc' + key + '">' + val.title + '</h2><ul><li id="toc' + key + 'features"><a href="#' + key + 'features">' + jDataIn.transl.features + '</a></li>';
                 var pictureCount = Object.keys(val.pictures).length
                 if (pictureCount > 0) {
-                    toc += '<li><a href="#' + key + 'pictures" >' + jDataIn.transl.pictures + '</a></li>';
+                    toc += '<li id="toc' + key + 'pictures"><a href="#' + key + 'pictures" >' + jDataIn.transl.pictures + '</a></li>';
                 }
-                toc += '<li><a href="#' + key + 'bugs">' + jDataIn.transl.bugs + '</a></li><li><a href="#' + key + 'description">' + jDataIn.transl.description + '</a></li></ul>';
+                toc += '<li id="toc' + key + 'bugs"><a href="#' + key + 'bugs">' + jDataIn.transl.bugs + '</a></li><li id="toc' + key + 'description"><a href="#' + key + 'description">' + jDataIn.transl.description + '</a></li></ul>';
                 displayHtml += '<a href="index.html" onclick="changeContent(\'index\'); return false">Links</a>';
                 displayHtml += '<h3><a name="' + key + 'features" class="anchor" />' + jDataIn.transl.features + '</h3><ul>';
                 $.each(val.features, function (fKey, fVal) {
@@ -214,13 +214,19 @@ function GET(v) {
 
 
 var indexTop;
-var indexTocTop;
+var indexSubTop;
 var petaTop;
+var petaSubTop;
 var tryToxicTop;
+var tryToxicSubTop;
 var jobManagementTop;
+var jobManagementSubTop;
 var herschegithubioTop;
+var herschegithubioSubTop;
 var multismsTop;
+var multismsSubTop;
 var aboutTop;
+var aboutSubTop;
 
 /**
 
@@ -230,18 +236,25 @@ var extraSpace = 400;
 function defineTops() {
     try {
         var showTop = $('#showContent').scrollTop();
-        indexTop = showTop + $('#index').position().top - extraSpace;
-        //indexTocTop = {
-          //  table: $('#TheTable').position().top - extraSpace,
+        var indexTop = showTop + $('#index').position().top;
+        var indexSubTop = [$('a[name=TheTable]').position().top, $('a[name=description]').position().top]
+            //indexTocTop = {
+            //  table: $('#TheTable').position().top - extraSpace,
             //description: $('#description').position().top - extraSpace
-        //}
-        // console.info($("li:regex(id, .*ocindex.*)").toString());
-        petaTop = showTop + $('#peta').position().top - extraSpace;
-        tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
-        jobManagementTop = showTop + $('#jobManagement').position().top - extraSpace;
-        herschegithubioTop = showTop + $('#skamstergithubio').position().top - extraSpace;
-        multismsTop = showTop + $('#multisms').position().top - extraSpace;
-        aboutTop = showTop + $('#about').position().top - extraSpace;
+            //}
+            // console.info($("li:regex(id, .*ocindex.*)").toString());
+        var petaTop = showTop + $('#peta').position().top - extraSpace;
+        var petaSubTop = [$('a[name=petafeatures]').position().top, $('a[name=petabugs]').position().top, $('a[name=petadescription]').position().top];
+        var tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
+        var tryToxicSubTop = [$('a[name=tryToxicfeatures]').position().top, $('a[name=tryToxicpictures]').position().top, $('a[name=tryToxicbugs]').position().top, $('a[name=tryToxicdescription]').position().top];
+        var jobManagementTop = showTop + $('#jobManagement').position().top - extraSpace;
+        var jobManagementSubTop = [$('a[name=jobManagementpictures]').position().top, $('a[name=jobManagementfeatures]').position().top, $('a[name=jobManagementbugs]').position().top, $('a[name=jobManagementdescription]').position().top];
+        var herschegithubioTop = showTop + $('#skamstergithubio').position().top - extraSpace;
+        var herschegithubioSubTop = [$('a[name=skamstergithubiofeatures]').position().top, $('a[name=skamstergithubiobugs]').position().top, $('a[name=skamstergithubiodescription]').position().top];
+        var multismsTop = showTop + $('#multisms').position().top - extraSpace;
+        var multismsSubTop = [$('a[name=multismsfeatures]').position().top, $('a[name=multismsbugs]').position().top, $('a[name=multismsdescription]').position().top];
+        var aboutTop = showTop + $('#about').position().top - extraSpace;
+        return [indexTop, indexSubTop, petaTop, petaSubTop, tryToxicTop, tryToxicSubTop, jobManagementTop, jobManagementSubTop, herschegithubioTop, herschegithubioSubTop, multismsTop, multismsSubTop, aboutTop, aboutSubTop];
     } catch (er) {
 
         setTimeout(function () {
@@ -252,44 +265,44 @@ function defineTops() {
     }
 }
 
-
-/**
-    This will look, where your mouse is right now. It need defineTops(); for fill the (initialy empty) variables.
-**/
-function getCurrentIDNext(curPos) {
-    if ((indexTop < curPos) && (tryToxicTop > curPos)) {
-        return "index";
-    } else if ((tryToxicTop < curPos) && (jobManagementTop > curPos)) {
-        return "tryToxic";
-    } else if ((jobManagementTop < curPos) && (multismsTop > curPos)) {
-        return "jobManagement";
-    } else if ((multismsTop < curPos) && (petaTop > curPos)) {
-        return "multisms";
-    } else if ((petaTop < curPos) && (herschegithubioTop > curPos)) {
-        return "peta";
-    } else if ((herschegithubioTop < curPos) && (aboutTop > curPos)) {
-        return "skamstergithubio";
-    } else if (aboutTop < curPos) {
-        return "about";
-    } else {
-        return "-1";
+var scrollWorker = new Worker('js/scrollWorker.js');
+var scrollWorkerPosition;
+scrollWorker.addEventListener('message', function (e) {
+    // console.info('Worker said: ', e.data);
+    if (e.data.length === 2) {
+        scrollWorkerPosition = e.data;
     }
-}
-
+}, false);
+var lastSubMenu = "";
 /**
     This updates all the moving buttons, toc, adress
 **/
 function updateMenu(name, force) {
     name = name || "";
     force = force || false;
+    var cId;
+    var subcId;
     var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
     if (name !== "") {
         cId = name;
     } else {
-        cId = getCurrentIDNext(window_top).toString();
-
+        scrollWorker.postMessage({
+            'cmd': 'getCurrentElement',
+            'msg': window_top
+        });
+        cId = scrollWorkerPosition[0].toString();
+        subcId = scrollWorkerPosition[1].toString();
     }
-    console.info(cId);
+    if (subcId) {
+        // console.info(cId + " SUBMENU " + subcId);
+        if ((subcId !== "") && (subcId !== cId) && (subcId !== "1") && (subcId !== undefined)) {
+            console.info("CHANGE SUBMENU " + subcId);
+            $("#" + lastSubMenu).removeClass('current_page_item');
+            $("#" + subcId).addClass('current_page_item');
+            lastSubMenu = subcId;
+        }
+    }
+    // console.info(cId);
     if (((cId !== "-1") && (lastName !== cId)) || (force)) {
         if (history.pushState) {
             history.pushState({
@@ -303,6 +316,7 @@ function updateMenu(name, force) {
             $("#menucontent > span").removeClass('current_page_item');
             $("#menucontent > ul").addClass('submenuInvisible');
         }
+
 
         $("#" + lastName + "Btn").removeClass('current_page_item');
         $("#" + cId + "Btn").addClass('current_page_item');
