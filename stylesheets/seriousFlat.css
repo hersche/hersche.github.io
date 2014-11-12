@@ -347,6 +347,7 @@ body.active #menu {
 #toc ul li:before {
   content: ">";
   color: #FF8040;
+  padding-right: 2px;
 }
 .righty {
   float: right;
@@ -583,7 +584,7 @@ li {
   line-height: 1.4;
 }
 .anchor {
-  top: -90px;
+  top: -120px;
   display: inline;
   position: relative;
 }
