@@ -108,20 +108,18 @@ function getCurrentIDNext(curPos) {
         } else if ((aboutSubTop[0] < curPos) && (aboutSubTop[1] > curPos)) {
             sub = "tocaboutlanguages";
         } else if ((aboutSubTop[1] < curPos) && (aboutSubTop[2] > curPos)) {
-            sub = "tocaboutPHP";
-        } else if ((aboutSubTop[2] < curPos) && (aboutSubTop[3] > curPos)) {
-            sub = "tocaboutPython";
-        } else if ((aboutSubTop[3] < curPos) && (aboutSubTop[4] > curPos)) {
-            sub = "tocaboutJava";
-        } else if ((aboutSubTop[4] < curPos) && (aboutSubTop[5] > curPos)) {
-            sub = "tocaboutJavascript";
-        } else if ((aboutSubTop[5] < curPos) && (aboutSubTop[6] > curPos)) {
             sub = "tocaboutrlangs";
-        } else if ((aboutSubTop[6] < curPos) && (aboutSubTop[7] > curPos)) {
-            sub = "tocaboutDeutsch";
-        } else if ((aboutSubTop[7] < curPos) && (aboutSubTop[8] > curPos)) {
-            sub = "tocaboutEnglisch";
-        }
+        } else if ((aboutSubTop[2] < curPos) && (aboutSubTop[3] > curPos)) {
+            sub = "tocaboutsys";
+        } else if ((aboutSubTop[3] < curPos) && (aboutSubTop[4] > curPos)) {
+            sub = "tocaboutmobile";
+        } else if ((aboutSubTop[4] < curPos) && (aboutSubTop[5] > curPos)) {
+            sub = "tocaboutsupport";
+        } else if ((aboutSubTop[5] < curPos) && (aboutSubTop[6] > curPos)) {
+            sub = "tocaboutoldjobs";
+        } else if (aboutSubTop[6] < curPos) {
+            sub = "tocabouthobbys";
+        } 
         return ["about", sub];
     } else {
         return ["-1", sub];

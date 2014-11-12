@@ -48,7 +48,7 @@ function processHtmlNext(jDataIn, name) {
                     displayHtml += "<td><a href='" + cVal.dLink + "'>Doc</a></td><td>" + cVal.stable + "</td></tr>";
                 });
                 displayHtml += '</table><p><a name="description" class="anchor" ></a>' + val.description + '</p></article>';
-                toc += '<h2 id="toc' + key + '">Home</h2><ul><li id="tocindextable"><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li id="tocindexwebsite"><a href="#website">Website</a></li><li id="tocindexsecurity"><a href="#security">' + jDataIn.transl.security + '</a></li><li id="tocindexabout"><a href="#about">' + jDataIn.transl.about + '</a></li></ul></li></ul>';
+                toc += '<h2 id="toc' + key + '">Home</h2><ul><li id="tocindextable"><a href="#TheTable">' + jDataIn.transl.table + '</a></li><li id="tocindexwebsite"><a href="#website">Website</a></li><li id="tocindexsecurity"><a href="#security">' + jDataIn.transl.security + '</a></li><li id="tocindexabout"><a href="#homeAbout">' + jDataIn.transl.about + '</a></li></ul></li></ul>';
 
 
             } else if (key === "about") {
@@ -65,7 +65,7 @@ function processHtmlNext(jDataIn, name) {
                 toc += '<h2 id="toc' + key + '">' + jDataIn.transl.about + '</h2><ul style="list-style-type: none; list-style: none;" ><li id="tocaboutlanguages" ><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
                 $.each(val.languages, function (lKey, lVal) {
                     if (lKey != "trans") {
-                        toc += '<li id="tocabout'+lKey+'"><a href="#' + lKey + '">' + lKey + '</a></li>';
+                        toc += '<li id="tocabout' + lKey + '"><a href="#' + lKey + '">' + lKey + '</a></li>';
                         langs += '<li><b>' + lKey + '</b><a name="' + lKey + '" class="anchor" />: ' + lVal.desc + '<ul style="margin-bottom:10px; list-style-type: none; list-style: none;">';
                         $.each(lVal.frameworks, function (fKey, fVal) {
                             langs += '<li style="margin-bottom:5px;">' + fKey + ': ' + fVal + '</li>';
@@ -77,7 +77,7 @@ function processHtmlNext(jDataIn, name) {
                 toc += '</ul><li id="tocaboutrlangs"><a href="#rlangs">' + jDataIn.transl.reallang + '</a></li><ul>';
                 var rlangs = "<ul>";
                 $.each(val.rlang, function (sKey, sVal) {
-                        toc += '<li id="tocabout'+sKey+'"><a href="#' + sKey + '">' + sKey + '</a></li>';
+                        toc += '<li id="tocabout' + sKey + '"><a href="#' + sKey + '">' + sKey + '</a></li>';
                         rlangs += '<li><b>' + sKey + '</b><a name="' + sKey + '" class="anchor" />: ' + sVal + '</li>';
                     }
 
@@ -99,7 +99,7 @@ function processHtmlNext(jDataIn, name) {
                         }
                     }
                 });
-                toc += '</ul><li><a href="#mobile">' + val.mobile.trans + '</a></li><ul>';
+                toc += '</ul><li id="tocaboutmobile"><a href="#mobile">' + val.mobile.trans + '</a></li><ul>';
                 var mobile = "<ul>";
                 $.each(val.mobile, function (mKey, mVal) {
                     if (mKey != "trans") {
@@ -108,7 +108,7 @@ function processHtmlNext(jDataIn, name) {
                     }
                 });
 
-                toc += '</ul><li><a href="#support">' + val.support.trans + '</a></li><ul>';
+                toc += '</ul><li id="tocaboutsupport"><a href="#support">' + val.support.trans + '</a></li><ul>';
                 var support = "<ul>";
                 $.each(val.support.reference, function (sKey, sVal) {
                     toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
@@ -116,10 +116,10 @@ function processHtmlNext(jDataIn, name) {
                 });
 
 
-                toc += '</ul><li><a href="#oldjobs">' + val.oldjobs.trans + '</a></li><ul>';
+                toc += '</ul><li id="tocaboutoldjobs"><a href="#oldjobs">' + val.oldjobs.trans + '</a></li><ul>';
                 var oldjobs = '<p><a name="oldjobs" class="anchor" />' + val.oldjobs.description + '</p>';
 
-                toc += '</ul><li><a href="#hobbys">' + val.hobbys.trans + '</a></li><ul>';
+                toc += '</ul><li id="tocabouthobbys"><a href="#hobbys">' + val.hobbys.trans + '</a></li><ul>';
                 var hobbys = "<ul>";
                 $.each(val.hobbys, function (hKey, hVal) {
                     if (hKey != "trans") {
@@ -212,22 +212,6 @@ function GET(v) {
 }
 
 
-
-var indexTop;
-var indexSubTop;
-var petaTop;
-var petaSubTop;
-var tryToxicTop;
-var tryToxicSubTop;
-var jobManagementTop;
-var jobManagementSubTop;
-var herschegithubioTop;
-var herschegithubioSubTop;
-var multismsTop;
-var multismsSubTop;
-var aboutTop;
-var aboutSubTop;
-
 /**
 
 **/
@@ -237,7 +221,7 @@ function defineTops() {
     try {
         var showTop = $('#showContent').scrollTop();
         var indexTop = showTop + $('#index').position().top;
-        var indexSubTop = [$('a[name=TheTable]').position().top, $('a[name=website]').position().top, $('a[name=security]').position().top, $('a[name=about]').position().top]
+        var indexSubTop = [$('a[name=TheTable]').position().top, $('a[name=website]').position().top, $('a[name=security]').position().top, $('a[name=homeAbout]').position().top]
             //indexTocTop = {
             //  table: $('#TheTable').position().top - extraSpace,
             //description: $('#description').position().top - extraSpace
@@ -248,13 +232,14 @@ function defineTops() {
         var tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
         var tryToxicSubTop = [$('a[name=tryToxicfeatures]').position().top, $('a[name=tryToxicpictures]').position().top, $('a[name=tryToxicbugs]').position().top, $('a[name=tryToxicdescription]').position().top];
         var jobManagementTop = showTop + $('#jobManagement').position().top - extraSpace;
-        var jobManagementSubTop = [$('a[name=jobManagementfeatures]').position().top,$('a[name=jobManagementpictures]').position().top, $('a[name=jobManagementbugs]').position().top, $('a[name=jobManagementdescription]').position().top];
+        var jobManagementSubTop = [$('a[name=jobManagementfeatures]').position().top, $('a[name=jobManagementpictures]').position().top, $('a[name=jobManagementbugs]').position().top, $('a[name=jobManagementdescription]').position().top];
         var herschegithubioTop = showTop + $('#skamstergithubio').position().top - extraSpace;
         var herschegithubioSubTop = [$('a[name=skamstergithubiofeatures]').position().top, $('a[name=skamstergithubiobugs]').position().top, $('a[name=skamstergithubiodescription]').position().top];
         var multismsTop = showTop + $('#multisms').position().top - extraSpace;
         var multismsSubTop = [$('a[name=multismsfeatures]').position().top, $('a[name=multismsbugs]').position().top, $('a[name=multismsdescription]').position().top];
         var aboutTop = showTop + $('#about').position().top - extraSpace;
-        var aboutSubTop = [$('a[name=languages]').position().top, $('a[name=PHP]').position().top, $('a[name=Python]').position().top, $('a[name=Java]').position().top, $('a[name=Javascript]').position().top, $('a[name=rlangs]').position().top, $('a[name=Deutsch]').position().top, $('a[name=Englisch]').position().top];
+        /* var aboutSubTop = [$('a[name=languages]').position().top, $('a[name=PHP]').position().top, $('a[name=Python]').position().top, $('a[name=Java]').position().top, $('a[name=Javascript]').position().top, $('a[name=rlangs]').position().top, $('a[name=Deutsch]').position().top, $('a[name=Englisch]').position().top];*/
+        var aboutSubTop = [$('a[name=languages]').position().top, $('a[name=rlangs]').position().top, $('a[name=sys]').position().top, $('a[name=mobile]').position().top, $('a[name=support]').position().top, $('a[name=oldjobs]').position().top, $('a[name=hobbys]').position().top];
         return [indexTop, indexSubTop, petaTop, petaSubTop, tryToxicTop, tryToxicSubTop, jobManagementTop, jobManagementSubTop, herschegithubioTop, herschegithubioSubTop, multismsTop, multismsSubTop, aboutTop, aboutSubTop];
     } catch (er) {
 
@@ -270,20 +255,21 @@ var scrollWorker = new Worker('js/scrollWorker.js');
 scrollWorker.addEventListener('message', function (e) {
     // console.info('Worker said: ', e.data);
     if (e.data.length === 2) {
-        renderMenu(e.data[0], e.data[1]);
+        renderMenu(e.data[0], e.data[1], menuForce);
     }
 }, false);
 var lastSubMenu = "";
 var curPos;
+var menuForce;
 /**
     This updates all the moving buttons, toc, adress
 **/
 function updateMenu(name, force) {
     name = name || "";
-    force = force || false;
+    menuForce = force || false;
     var cId;
     var subcId;
-    var window_top = $(window).scrollTop() + 200; // the "12" should equal the margin-top value for nav.stick
+    var window_top = $(window).scrollTop() + 110; // the "12" should equal the margin-top value for nav.stick
     if (name !== "") {
         cId = name;
     } else {
@@ -302,7 +288,13 @@ function renderMenu(cId, subcId, force) {
     if (subcId) {
         // console.info(cId + " SUBMENU " + subcId);
         if ((subcId !== "") && (subcId !== cId) && (subcId !== "1") && (subcId !== undefined)) {
-            console.info("CHANGE SUBMENU " + subcId);
+            if (cId === "about") {
+                console.info("CHANGE SUBMENU " + '#' + subcId);
+                $('#toc').stop(true).animate({
+                    scrollTop: $('#toc').scrollTop() + $('#' + subcId).position().top - 70
+                }, 200);
+            }
+            
             $("#" + lastSubMenu).removeClass('current_page_item');
             $("#" + subcId).addClass('current_page_item');
             lastSubMenu = subcId;
