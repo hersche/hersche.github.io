@@ -62,10 +62,10 @@ function processHtmlNext(jDataIn, name) {
                 });
                 displayHtml += '</table>';
                 var langs = "";
-                toc += '<h2 id="toc' + key + '">' + jDataIn.transl.about + '</h2><ul style="list-style-type: none; list-style: none;" ><li><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
+                toc += '<h2 id="toc' + key + '">' + jDataIn.transl.about + '</h2><ul style="list-style-type: none; list-style: none;" ><li id="tocaboutlanguages" ><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
                 $.each(val.languages, function (lKey, lVal) {
                     if (lKey != "trans") {
-                        toc += '<li><a href="#' + lKey + '">' + lKey + '</a></li>';
+                        toc += '<li id="tocabout'+lKey+'"><a href="#' + lKey + '">' + lKey + '</a></li>';
                         langs += '<li><b>' + lKey + '</b><a name="' + lKey + '" class="anchor" />: ' + lVal.desc + '<ul style="margin-bottom:10px; list-style-type: none; list-style: none;">';
                         $.each(lVal.frameworks, function (fKey, fVal) {
                             langs += '<li style="margin-bottom:5px;">' + fKey + ': ' + fVal + '</li>';
@@ -74,15 +74,15 @@ function processHtmlNext(jDataIn, name) {
                     }
                 });
 
-                toc += '</ul><li><a href="#rlangs">' + jDataIn.transl.reallang + '</a></li><ul>';
+                toc += '</ul><li id="tocaboutrlangs"><a href="#rlangs">' + jDataIn.transl.reallang + '</a></li><ul>';
                 var rlangs = "<ul>";
                 $.each(val.rlang, function (sKey, sVal) {
-                        toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
+                        toc += '<li id="tocabout'+sKey+'"><a href="#' + sKey + '">' + sKey + '</a></li>';
                         rlangs += '<li><b>' + sKey + '</b><a name="' + sKey + '" class="anchor" />: ' + sVal + '</li>';
                     }
 
                 );
-                toc += '</ul><li><a href="#sys">' + val.sys.trans + '</a></li><ul>';
+                toc += '</ul><li id="tocaboutsys"><a href="#sys">' + val.sys.trans + '</a></li><ul>';
                 var syst = "<ul>";
                 $.each(val.sys, function (sKey, sVal) {
                     if ((sKey != "trans") && (sKey != "centossub")) {
@@ -248,12 +248,13 @@ function defineTops() {
         var tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
         var tryToxicSubTop = [$('a[name=tryToxicfeatures]').position().top, $('a[name=tryToxicpictures]').position().top, $('a[name=tryToxicbugs]').position().top, $('a[name=tryToxicdescription]').position().top];
         var jobManagementTop = showTop + $('#jobManagement').position().top - extraSpace;
-        var jobManagementSubTop = [$('a[name=jobManagementpictures]').position().top, $('a[name=jobManagementfeatures]').position().top, $('a[name=jobManagementbugs]').position().top, $('a[name=jobManagementdescription]').position().top];
+        var jobManagementSubTop = [$('a[name=jobManagementfeatures]').position().top,$('a[name=jobManagementpictures]').position().top, $('a[name=jobManagementbugs]').position().top, $('a[name=jobManagementdescription]').position().top];
         var herschegithubioTop = showTop + $('#skamstergithubio').position().top - extraSpace;
         var herschegithubioSubTop = [$('a[name=skamstergithubiofeatures]').position().top, $('a[name=skamstergithubiobugs]').position().top, $('a[name=skamstergithubiodescription]').position().top];
         var multismsTop = showTop + $('#multisms').position().top - extraSpace;
         var multismsSubTop = [$('a[name=multismsfeatures]').position().top, $('a[name=multismsbugs]').position().top, $('a[name=multismsdescription]').position().top];
         var aboutTop = showTop + $('#about').position().top - extraSpace;
+        var aboutSubTop = [$('a[name=languages]').position().top, $('a[name=PHP]').position().top, $('a[name=Python]').position().top, $('a[name=Java]').position().top, $('a[name=Javascript]').position().top, $('a[name=rlangs]').position().top, $('a[name=Deutsch]').position().top, $('a[name=Englisch]').position().top];
         return [indexTop, indexSubTop, petaTop, petaSubTop, tryToxicTop, tryToxicSubTop, jobManagementTop, jobManagementSubTop, herschegithubioTop, herschegithubioSubTop, multismsTop, multismsSubTop, aboutTop, aboutSubTop];
     } catch (er) {
 
@@ -282,7 +283,7 @@ function updateMenu(name, force) {
     force = force || false;
     var cId;
     var subcId;
-    var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
+    var window_top = $(window).scrollTop() + 200; // the "12" should equal the margin-top value for nav.stick
     if (name !== "") {
         cId = name;
     } else {
