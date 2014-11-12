@@ -266,14 +266,14 @@ function defineTops() {
 }
 
 var scrollWorker = new Worker('js/scrollWorker.js');
-var scrollWorkerPosition;
 scrollWorker.addEventListener('message', function (e) {
     // console.info('Worker said: ', e.data);
     if (e.data.length === 2) {
-        scrollWorkerPosition = e.data;
+        renderMenu(e.data[0], e.data[1]);
     }
 }, false);
 var lastSubMenu = "";
+var curPos;
 /**
     This updates all the moving buttons, toc, adress
 **/
@@ -290,9 +290,14 @@ function updateMenu(name, force) {
             'cmd': 'getCurrentElement',
             'msg': window_top
         });
-        cId = scrollWorkerPosition[0].toString();
-        subcId = scrollWorkerPosition[1].toString();
+        // cId = scrollWorkerPosition[0].toString();
+        // subcId = scrollWorkerPosition[1].toString();
     }
+
+}
+
+function renderMenu(cId, subcId, force) {
+    force = force || false;
     if (subcId) {
         // console.info(cId + " SUBMENU " + subcId);
         if ((subcId !== "") && (subcId !== cId) && (subcId !== "1") && (subcId !== undefined)) {
@@ -326,6 +331,7 @@ function updateMenu(name, force) {
         }, 200);
         lastName = cId;
     }
+
 }
 
 /**
