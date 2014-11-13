@@ -42,23 +42,43 @@ a:hover {
   margin-right: 0px;
   padding-bottom: 2px;
 }
+#news .odd {
+  background-color: #ffffff;
+}
+#news .even {
+  background-color: #dbb69d;
+}
 #index,
 #jobManagement,
 #peta,
 #about {
   background-color: #ffffff;
 }
-.odd {
-  background-color: #be8e80;
-}
-.even {
-  background-color: #dbb69d;
-}
 .container {
   width: 100%;
 }
 #animationContainer {
   width: 100%;
+}
+#animationContainer #showContent {
+  width: auto;
+  border-radius: 1em;
+  margin-top: 20px;
+  margin-left: 22.5%;
+  z-index: 400;
+  background: #e6edf4;
+}
+#animationContainer #showContent article {
+  padding-top: 3px;
+  padding-left: 1%;
+}
+#animationContainer #showContent article h2 {
+  margin-top: 0px;
+}
+#animationContainer #showContent article ul li ul,
+#animationContainer #showContent article ul ul {
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 #impressum {
   bottom: 0.1px;
@@ -152,6 +172,16 @@ header h1 {
   cursor: pointer;
   z-index: 1000;
 }
+#menu nav #mainnav .dropdowncontainer li:before {
+  content: none;
+}
+#menu nav #mainnav .dropdowncontainer:before {
+  content: none;
+}
+#menu nav #mainnav .dropdowncontainer:hover > .submenu li:before {
+  opacity: 1;
+  content: none;
+}
 #menu nav #mainnav .dropdowncontainer:hover > .submenuInvisible {
   display: inline-block !important;
 }
@@ -188,21 +218,10 @@ body.active #menu {
   margin: 0;
   max-width: 300%;
 }
-.gallerytablediv {
-  max-height: 450px;
-  width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
 .gallerytable tr {
   padding: 0;
   margin: 0;
   overflow-x: scroll;
-  height: 400px;
-}
-.gallerytable tr td {
-  padding: 0;
-  margin: 0;
   height: 400px;
 }
 .gallerytable tr td a img {
@@ -210,25 +229,16 @@ body.active #menu {
   padding: 0;
   margin: 0;
 }
-#showContent {
-  width: auto;
-  border-radius: 1em;
-  margin-top: 20px;
-  margin-left: 22.5%;
-  z-index: 400;
-  background: #e6edf4;
+.gallerytablediv {
+  max-height: 450px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
-#showContent article {
-  padding-top: 3px;
-  padding-left: 1%;
-}
-#showContent article h2 {
-  margin-top: 0px;
-}
-#showContent article ul li ul,
-#showContent article ul ul {
-  padding-top: 7px;
-  padding-bottom: 7px;
+.gallerytable tr td {
+  padding: 0;
+  margin: 0;
+  height: 400px;
 }
 #index {
   padding-top: 35px;
@@ -262,13 +272,10 @@ body.active #menu {
   box-shadow: none;
   background-color: none;
 }
-.submenu > li > a {
+.submenu li > a {
   background-color: #e6edf4;
 }
-.submenuInvisible {
-  display: none !important;
-}
-.submenu > li {
+.submenu li {
   float: left;
   display: inline;
   padding-top: 4px;
@@ -278,6 +285,9 @@ body.active #menu {
 .submenu li a {
   margin-top: 4px;
   margin-left: 25%;
+}
+.submenuInvisible {
+  display: none !important;
 }
 #onTopImg:hover {
   animation: bounceit 3s infinite linear;
@@ -295,6 +305,47 @@ body.active #menu {
   z-index: 911;
   border-radius: 5px;
 }
+#scroller #top {
+  position: absolute;
+  bottom: .7%;
+  margin-left: 20%;
+  float: bottom;
+  max-height: 17%;
+  overflow: hidden;
+}
+#scroller #toc {
+  z-index: 911;
+  padding-left: 5px;
+  height: auto;
+  max-height: 85%;
+  overflow-y: auto;
+  overflow-x: auto;
+  background-color: #e6edf4;
+}
+#scroller #toc h2 {
+  margin-bottom: 2px;
+  margin-top: 30px;
+  text-align: center;
+}
+#scroller #toc ul {
+  margin-top: 1px;
+  padding-left: 7px;
+  margin-bottom: 7px;
+}
+#scroller #toc ul li a {
+  width: auto;
+  max-width: 10%;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+#scroller #toc ul li a:hover {
+  color: #be8e80;
+}
+#scroller #toc ul li:before {
+  content: ">";
+  color: #FF8040;
+  padding-right: 2px;
+}
 #secondScroller {
   position: fixed;
   float: right;
@@ -307,47 +358,6 @@ body.active #menu {
   min-width: 22%;
   z-index: 911;
   border-radius: 5px;
-}
-#top {
-  position: absolute;
-  bottom: .7%;
-  margin-left: 20%;
-  float: bottom;
-  max-height: 17%;
-  overflow: hidden;
-}
-#toc {
-  z-index: 911;
-  padding-left: 5px;
-  height: auto;
-  max-height: 85%;
-  overflow-y: auto;
-  overflow-x: auto;
-  background-color: #e6edf4;
-}
-#toc h2 {
-  margin-bottom: 2px;
-  margin-top: 30px;
-  text-align: center;
-}
-#toc ul {
-  margin-top: 1px;
-  padding-left: 7px;
-  margin-bottom: 7px;
-}
-#toc ul li a {
-  width: auto;
-  max-width: 10%;
-  line-height: 1.5;
-  white-space: nowrap;
-}
-#toc ul li a:hover {
-  color: #be8e80;
-}
-#toc ul li:before {
-  content: ">";
-  color: #FF8040;
-  padding-right: 2px;
 }
 .righty {
   float: right;
@@ -395,9 +405,6 @@ body.active #menu {
   100% {
     -webkit-transform: scale(1);
   }
-}
-.dropdowncontainer:before {
-  content: none;
 }
 #tocButton {
   cursor: pointer;
@@ -510,13 +517,6 @@ body.active #menu {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background: #dbb69d;
-}
-.dropdowncontainer li:before {
-  content: none;
-}
-.dropdowncontainer:hover > .submenu li:before {
-  opacity: 1;
-  content: none;
 }
 #aboutImg {
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
