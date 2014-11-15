@@ -301,7 +301,7 @@ function renderMenu(cId, subcId, force) {
         }
     }
     // console.info(cId);
-    if (((cId !== "-1") && (lastName !== cId)) || (force)) {
+    if (((cId !== "-1")) || (force)) {
         if (history.pushState) {
             history.pushState({
                 "id": 100

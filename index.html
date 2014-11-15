@@ -57,30 +57,15 @@
             lang = lang.substr(0, 2);
 
         }
-        
+
         var jsonFile = "en.json";
         var tlFile = "tl_en.json";
         $(document).ready(function () {
-            var progressbar = $("#progress"),
-                progressLabel = $(".progress-label");
-            $("#progress").progressbar({
-                value: false,
-                change: function () {
-                    progressLabel.text("Finished with " + progressbar.progressbar("value") + "%");
-                },
-                complete: function () {
-                    progressLabel.text("Complete! HF!");
-                }
-            });
-            $("#progress").progressbar("enable");
-            $("#progress").progressbar("option", "value", 0);
             /**
                 Get the current site
             **/
-            if (GET('s') != 'undefined') {
+            if ((GET('s') != 'undefined') || (GET('s') != '')) {
                 lastName = GET('s');
-            } else {
-                lastName = "";
             }
             /**
                 Get the current language
@@ -115,6 +100,16 @@
                 closeEffect: 'elastic',
                 closeSpeed: 150
             });
+
+            $('.gallerybox').fancybox({
+                padding: 0,
+                radius: "6px",
+                openEffect: 'elastic',
+                openSpeed: 150,
+                closeEffect: 'elastic',
+                closeSpeed: 150
+            });
+
             $('#timeline').fancybox({
                 'overlayOpacity': 0.1,
                 'showCloseButton': false,
@@ -149,9 +144,9 @@
                     structureUpdate.setUTCDate(12);
                     structureUpdate.setUTCMonth(11);
                     structureUpdate.setUTCFullYear(2014);
-                    if (structureUpdate > dateObject) {
+                    if (structureUpdate < dateObject) {
                         console.info("doing update here!");
-                        updateContent();
+                        //updateContent();
                     }
                     jData = jQuery.parseJSON(localStorage.jData);
                     createTimeline(jQuery.parseJSON(localStorage.tlData), jData.transl.lang);
@@ -270,9 +265,16 @@
                     'cmd': 'setHeight',
                     'msg': defineTops()
                 });
+                scrollWorker.addEventListener('message', function (e) {
+                    // console.info('Worker said: ', e.data);
+                if (e.data.length === 2) {
+                    //renderMenu(e.data[0], e.data[1], menuForce);
+                    updateMenu();
+                }
+                }, false);
                 changeContent(lastName, true);
                 hideNews();
-                updateMenu(lastName, true);
+                updateMenu();
             }, 1000);
 
             // $( "#progress" ).progressbar("destroy");
@@ -431,30 +433,50 @@
                 // alert($("#tocButton").text());
                 if ($("#tocButton > div").html().trim() === "∧") {
                     // clip in
-                    $("#scroller").animate({"margin-left": "-22%"}, 1000);
-                    $("#showContent").animate({"margin-left": "0px","width": "100%"},1000);
-                    $("#impressum").css({width:"122%"});
+                    $("#scroller").animate({
+                        "margin-left": "-22%"
+                    }, 1000);
+                    $("#showContent").animate({
+                        "margin-left": "0px",
+                        "width": "100%"
+                    }, 1000);
+                    $("#impressum").css({
+                        width: "122%"
+                    });
                     $("#tocButton > div").html("&or;");
-                    $("#tocButton").animate({"left": "0%"});
+                    $("#tocButton").animate({
+                        "left": "0%"
+                    });
                 } else {
                     // clip out
                     var leftSpace = "22";
-                    $("#scroller").animate({"margin-left": "0px"}, 1000);
-                    $("#showContent").animate({"margin-left": "22%", "width": "78%"}, 1000);
+                    $("#scroller").animate({
+                        "margin-left": "0px"
+                    }, 1000);
+                    $("#showContent").animate({
+                        "margin-left": "22%",
+                        "width": "78%"
+                    }, 1000);
                     $("#tocButton > div").html("&and;");
-                    $("#tocButton").animate({"left": "22%"}, 1000);
+                    $("#tocButton").animate({
+                        "left": "22%"
+                    }, 1000);
 
                 }
             });
 
             function hideNews() {
-                $("#news").animate({"margin-right": "-22%"}, 1000);
+                $("#news").animate({
+                    "margin-right": "-22%"
+                }, 1000);
                 $("#newsButton > div").html("&or;");
-                $("#newsButton").animate({"right": "0px"}, 1000);
+                $("#newsButton").animate({
+                    "right": "0px"
+                }, 1000);
             }
 
             $(document).on('click', '#newsButton', function (e) {
-                 //alert($("#tocButton").text());
+                //alert($("#tocButton").text());
                 if ($("#newsButton > div").html().trim() === "∧") {
                     // clip in
                     hideNews();
@@ -462,11 +484,15 @@
                 } else {
                     // clip out
                     var leftSpace = "22";
-                    $("#news").animate({"margin-right": "0px"}, 1000);
+                    $("#news").animate({
+                        "margin-right": "0px"
+                    }, 1000);
                     $("#newsButton > div").html("&and;");
                     // $("#showContent").css("margin-right", "21%");
                     //   $("#showContent").css("width", "auto");
-                    $("#newsButton").animate({"right": "20%"},  1000);
+                    $("#newsButton").animate({
+                        "right": "20%"
+                    }, 1000);
 
                 }
             });
@@ -488,34 +514,51 @@
                 //alert($("#menuButton").html());
                 if ($("#menuButton > div").html().trim() == ("∧")) {
                     // $("body").toggleClass("active");
-                    $("#menu").animate({marginTop:"-70px"}, 1000);
+                    $("#menu").animate({
+                        marginTop: "-70px"
+                    }, 1000);
                     $("#menuButton > div").html("&or;");
-                    
+
                     $("#showContent").animate({
                         marginTop: "0%",
                         top: "10px"
-                        
+
                     }, 1000);
                     $(".anchor").css("top", "-20px");
-                    $("#scroller").animate({"top": "1%"}, 1000);
+                    $("#scroller").animate({
+                        "top": "1%"
+                    }, 1000);
                     $("#tocButton").animate({
                         top: "0px",
                         height: "100%"
-                    },1000);
-                    
-                    $("#scroller").animate({"height": "95%"}, 1000);
+                    }, 1000);
+
+                    $("#scroller").animate({
+                        "height": "95%"
+                    }, 1000);
                 } else {
                     // $("body").toggleClass("active");
                     $("#menuButton > div").html("&and;");
                     // $("#menuButton div").css("margin-left", "400px");
                     // $("#menuButton div").css("margin-top", "0%");
-                    $("#menu").animate({marginTop:"0px"}, 1000);
-                    
+                    $("#menu").animate({
+                        marginTop: "0px"
+                    }, 1000);
+
                     $(".anchor").css("top", "-120px");
-                    $("#showContent").animate({"margin-top": "80px"}, 1000);
-                    $("#scroller").animate({"top":"70px"}, 1000);
-                    $("#tocButton").animate({"top":"70px","height": "60%"}, 1000);
-                    $("#scroller").animate({"height": "90%"}, 1000);
+                    $("#showContent").animate({
+                        "margin-top": "80px"
+                    }, 1000);
+                    $("#scroller").animate({
+                        "top": "70px"
+                    }, 1000);
+                    $("#tocButton").animate({
+                        "top": "70px",
+                        "height": "60%"
+                    }, 1000);
+                    $("#scroller").animate({
+                        "height": "90%"
+                    }, 1000);
                 }
             });
 
@@ -537,7 +580,7 @@
 </head>
 
 <body id="body">
-    
+
     <header>
 
         <div id="menu">
@@ -596,7 +639,7 @@
             <div id="impressum"></div>
 
         </div>
-            <div id="news"></div>
+        <div id="news"></div>
 
 
     </header>
