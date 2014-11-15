@@ -14,19 +14,16 @@
     <script src="js/jquery.vticker.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <link title="Example3" rel="stylesheet" type="text/css" href="stylesheets/thirdCase.css" media="screen" />
-    <link title="Serious" rel="alternate stylesheet" type="text/css" href="stylesheets/serious.css" media="screen" />
-    <link title="Spaced" rel="alternate stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+
+    <link title="Serious Flat" rel="stylesheet" type="text/css" href="stylesheets/seriousFlat.css" media="screen" />
 
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery.zrssfeed.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.theme.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fancybox.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.10.4.custom.min.css" media="screen" />
-    <title>skamster.github.io</title>
+    <title>hersche.github.io</title>
     <script type="text/javascript">
         "use strict";
-
         /**
             This is searching for all GET-variables in URL
         **/
@@ -48,6 +45,10 @@
         var jData;
         var tlData;
         var aboutImgBig = false;
+
+
+
+
         /**
             Get language automatic
         **/
@@ -56,28 +57,15 @@
             lang = lang.substr(0, 2);
 
         }
+
         var jsonFile = "en.json";
         var tlFile = "tl_en.json";
         $(document).ready(function () {
-            var progressbar = $("#progress"),
-                progressLabel = $(".progress-label");
-            $("#progress").progressbar({
-                value: false,
-                change: function () {
-                    progressLabel.text("Finished with " + progressbar.progressbar("value") + "%");
-                },
-                complete: function () {
-                    progressLabel.text("Complete! HF!");
-                }
-            });
-            $("#progress").progressbar("enable");
             /**
                 Get the current site
             **/
-            if (GET('s') != 'undefined' & GET('s') != 'index') {
+            if ((GET('s') != 'undefined') || (GET('s') != '')) {
                 lastName = GET('s');
-            } else {
-                lastName = "index";
             }
             /**
                 Get the current language
@@ -93,10 +81,26 @@
                     lang = GET('lang');
                 }
             }
-
             /**
                 Eventhandlers for fancybox - once a gallery, once the timeline
             **/
+            $('#projectPicturejobManagement li a').fancybox({
+                padding: 0,
+                radius: "6px",
+                openEffect: 'elastic',
+                openSpeed: 150,
+                closeEffect: 'elastic',
+                closeSpeed: 150
+            });
+            $('#projectPicturetryToxic li a').fancybox({
+                padding: 0,
+                radius: "6px",
+                openEffect: 'elastic',
+                openSpeed: 150,
+                closeEffect: 'elastic',
+                closeSpeed: 150
+            });
+
             $('.gallerybox').fancybox({
                 padding: 0,
                 radius: "6px",
@@ -105,6 +109,7 @@
                 closeEffect: 'elastic',
                 closeSpeed: 150
             });
+
             $('#timeline').fancybox({
                 'overlayOpacity': 0.1,
                 'showCloseButton': false,
@@ -113,37 +118,46 @@
                 closeEffect: 'elastic',
                 closeSpeed: 150
             });
-            /**
-             This part makes the menu and table-of-content scrolling with you
-            **/
-            var tocYloc = parseInt($("#scroller").css("top").substring(0, $("#scroller").css("top").indexOf("px")));
-            $(window).scroll(function () {
-                if (isNaN(tocYloc)) {
-                    tocYloc = 0;
-                }
-                var tocoffset = tocYloc + $(document).scrollTop() + "px";
-                $("#scroller").animate({
-                    top: tocoffset
-                }, {
-                    duration: 1500,
-                    queue: false
-                });
-            });
+
 
             /**
                 This gets the information from json or offline-store and load the content.
             **/
+            $("#progress").progressbar("option", "value", 10);
             if (typeof (Storage) !== "undefined") {
                 // In the first case, we have all the information offline
                 if ((localStorage.jData) && (localStorage.storeDate) && (localStorage.tlData)) {
+                    var dateObject = new Date();
+                    var splitDate = localStorage.storeDate.split(".");
+                    if (lang === "de") {
+                        dateObject.setUTCDate(splitDate[0]);
+                        dateObject.setUTCMonth(splitDate[1]);
+                        dateObject.setUTCFullYear(splitDate[2]);
+                        // localStorage.storeDate = d.getUTCDate() + "." + d.getUTCMonth() + "." + d.getUTCFullYear();
+                    } else {
+                        dateObject.setUTCDate(splitDate[1]);
+                        dateObject.setUTCMonth(splitDate[2]);
+                        dateObject.setUTCFullYear(splitDate[2]);
+                        // localStorage.storeDate = d.getUTCMonth() + "." + d.getUTCDate() + "." + d.getUTCFullYear();
+                    }
+                    var structureUpdate = new Date();
+                    structureUpdate.setUTCDate(12);
+                    structureUpdate.setUTCMonth(11);
+                    structureUpdate.setUTCFullYear(2014);
+                    if (structureUpdate < dateObject) {
+                        console.info("doing update here!");
+                        //updateContent();
+                    }
                     jData = jQuery.parseJSON(localStorage.jData);
                     createTimeline(jQuery.parseJSON(localStorage.tlData), jData.transl.lang);
                     $("#refresh").html(jData.transl.refresh + " (" + localStorage.storeDate + "/" + jData.transl.fromstorage + ")");
                     $("#menucontent").html(processMenuHtml(jData));
-                    var ProcessedHtml = processHtml(jData, lastName);
+                    var ProcessedHtml = processHtmlNext(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
-                    // $("#impressum").html(jData.transl.impressum);
+                    $("#impressum").html(jData.transl.impressum);
+                    $("#aboutBtn").text(jData.transl.about);
+                    $("#progress").progressbar("option", "value", 25);
 
                 } else {
                     //In the second case, we have webstorage-support, but no data yet. So let's recive!
@@ -167,15 +181,17 @@
                         jData = jQuery.parseJSON(data.responseText.replace("\n", ""));
                         $("#refresh").html(jData.transl.refresh + " (" + localStorage.storeDate + "/" + jData.transl.fromnew + ")");
                         $("#menucontent").html(processMenuHtml(jData));
-                        var ProcessedHtml = processHtml(jData, lastName);
+                        var ProcessedHtml = processHtmlNext(jData, lastName);
                         $("#toc").html(ProcessedHtml[1]);
                         $("#showContent").html(ProcessedHtml[0]);
-                        // $("#impressum").html(jData.transl.impressum);
+                        $("#impressum").html(jData.transl.impressum);
+                        $("#aboutBtn").text(jData.transl.about);
                         tljqxhr.complete(function (tldata) {
                             console.log("Completemethod2 on timeline, let's do the work");
                             localStorage.tlData = tldata.responseText.replace("\n", "");
                             createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
                         });
+                        $("#progress").progressbar("option", "value", 25);
 
                     });
                 }
@@ -187,11 +203,13 @@
                 jqxhr.complete(function (data2) {
                     jData = jQuery.parseJSON(data2.responseText.replace("\n", ""));
                     $("#menucontent").html(processMenuHtml(jData));
-                    var ProcessedHtml = processHtml(jData, lastName);
+                    var ProcessedHtml = processHtmlNext(jData, lastName);
                     $("#toc").html(ProcessedHtml[1]);
                     $("#showContent").html(ProcessedHtml[0]);
                     $("#refresh").html(jData.transl.refresh + " (" + jData.transl.nowebstorage + ")");
-                    //  $("#impressum").html(jData.transl.impressum);
+                    $("#progress").progressbar("option", "value", 25);
+                    $("#impressum").html(jData.transl.impressum);
+                    $("#aboutBtn").text(jData.transl.about);
                 });
                 tljqxhr.complete(function (tldata) {
                     createTimeline(jQuery.parseJSON(tldata.responseText.replace("\n", "")), jData.transl.lang);
@@ -201,26 +219,28 @@
 
 
 
-            $('#githubbtn, #news').mouseenter(function () {
-                $(this).addClass('mouse_over')
-                $("#news").show("slide", {
-                    direction: "left"
-                }, 800, function () {});
-            })
-            $('#githubbtn, #news').mouseleave(function () {
-                var $this = $(this)
-                var timeoutId = setTimeout(function () {
-                    $this.removeClass('mouse_over')
-                    if ($('.mouse_over').length == 0) {
-                        console.log('not_in_either');
-                        $("#news").hide("slide", {
-                            direction: "left"
-                        }, 10, function () {});
-                    }
-                }, 1);
+
+            $(window).resize(function () {
+                scrollWorker.postMessage({
+                    'cmd': 'setHeight',
+                    'msg': defineTops()
+                });
+                updateMenu(lastName, true);
             });
 
-            $('#news').rssfeed('https://github.com/skamster.atom', {
+            $(window).scroll(function () {
+                updateMenu();
+            });
+            /*
+            // This method works basicly perfect, but is filled with nerved conflicts
+            $("#showContent > article").mouseover(function () {
+                var name = $(this).attr("id"); 
+                updateMenu(name);
+            });
+            */
+
+
+            $('#news').rssfeed('https://github.com/hersche.atom', {
                 snippet: false,
                 header: false,
                 media: false,
@@ -233,58 +253,42 @@
                     showItems: 1
                 });
             });
+            // $("#impressum").html(jData.transl.impressum);
 
             /**
                 Fade in loaded contents withouth jquery-ui
             **/
 
-            $("#progress").progressbar("option", "value", 0);
-            $("#showContent").show("slide", {
-                direction: "right"
-            }, 1000, function () {
-                $("#progress").progressbar("option", "value", 25);
-
-                $("#progress").progressbar("option", "value", 35);
-                $("#menu").show("shake", {
-                    times: 5,
-                    distance: 20
-                }, "easeInExpo", function () {
-
-                    $("#progress").progressbar("option", "value", 50);
-                    $("#scroller").show("drop", {
-                        direction: "right"
-                    }, "easeInExpo", function () {
-                        $("#progress").progressbar("option", "value", 75);
-                        $("#impressum").show("slide", {
-                            direction: "down"
-                        }, 500, function () {
-                            $("#news").hide("explode", {
-
-                            }, 500, function () {
-                                $("#progress").progressbar("option", "value", 100);
-                                $("#progress").hide("pulsate", {}, 800, function () {});
-                                // $( "#progress" ).progressbar("destroy");
-                                $("#impressum").html(jData.transl.impressum);
-                                $(window).scroll(function () {
-                                    if ($(window).scrollTop() + $(window).height() < $(document).height()) {
-                                        $("#impressum").show("pulsate", {}, 800, function () {});
-                                    }
-                                    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                                        $("#impressum").hide("pulsate", {}, 800, function () {});
-                                    }
-                                });
-                            });
-                        });
-                    });
-
+            setTimeout(function () {
+                $("#progress").hide("pulsate", {}, 800, function () {});
+                scrollWorker.postMessage({
+                    'cmd': 'setHeight',
+                    'msg': defineTops()
                 });
+                scrollWorker.addEventListener('message', function (e) {
+                    // console.info('Worker said: ', e.data);
+                if (e.data.length === 2) {
+                    //renderMenu(e.data[0], e.data[1], menuForce);
+                    updateMenu();
+                }
+                }, false);
+                changeContent(lastName, true);
+                hideNews();
+                updateMenu();
+            }, 1000);
 
+            // $( "#progress" ).progressbar("destroy");
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() + $(window).height() < $(document).height()) {
+                    $("#impressumButton").show("pulsate", {}, 800, function () {});
+                }
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    $("#impressumButton").hide("pulsate", {}, 800, function () {});
+                }
             });
-            $(function () {
-                $(document).tooltip({
-                    track: true
-                });
-            });
+            $("#showContent").fadeIn(200);
+
 
             $(function () {
                 $("#map").tooltip({
@@ -425,6 +429,141 @@
 
 
 
+            $(document).on('click', '#tocButton', function (e) {
+                // alert($("#tocButton").text());
+                if ($("#tocButton > div").html().trim() === "∧") {
+                    // clip in
+                    $("#scroller").animate({
+                        "margin-left": "-22%"
+                    }, 1000);
+                    $("#showContent").animate({
+                        "margin-left": "0px",
+                        "width": "100%"
+                    }, 1000);
+                    $("#impressum").css({
+                        width: "122%"
+                    });
+                    $("#tocButton > div").html("&or;");
+                    $("#tocButton").animate({
+                        "left": "0%"
+                    });
+                } else {
+                    // clip out
+                    var leftSpace = "22";
+                    $("#scroller").animate({
+                        "margin-left": "0px"
+                    }, 1000);
+                    $("#showContent").animate({
+                        "margin-left": "22%",
+                        "width": "78%"
+                    }, 1000);
+                    $("#tocButton > div").html("&and;");
+                    $("#tocButton").animate({
+                        "left": "22%"
+                    }, 1000);
+
+                }
+            });
+
+            function hideNews() {
+                $("#news").animate({
+                    "margin-right": "-22%"
+                }, 1000);
+                $("#newsButton > div").html("&or;");
+                $("#newsButton").animate({
+                    "right": "0px"
+                }, 1000);
+            }
+
+            $(document).on('click', '#newsButton', function (e) {
+                //alert($("#tocButton").text());
+                if ($("#newsButton > div").html().trim() === "∧") {
+                    // clip in
+                    hideNews();
+
+                } else {
+                    // clip out
+                    var leftSpace = "22";
+                    $("#news").animate({
+                        "margin-right": "0px"
+                    }, 1000);
+                    $("#newsButton > div").html("&and;");
+                    // $("#showContent").css("margin-right", "21%");
+                    //   $("#showContent").css("width", "auto");
+                    $("#newsButton").animate({
+                        "right": "20%"
+                    }, 1000);
+
+                }
+            });
+
+            $(document).on('click', '#impressumButton', function (e) {
+                alert($("#impressumButton").text());
+                if ($("#impressumButton > div").html().trim() == "∧") {
+                    $("#impressum").css("display", "none");
+                    $("#impressumButton > div").html("&or;");
+                    $("#impressumButton").css("bottom", "0%");
+                } else {
+                    $("#impressum").css("display", "block");
+                    $("#impressumButton").css("bottom", "3%");
+                    $("#impressumButton > div").html("&and;");
+                }
+            });
+
+            $(document).on('click', '#menuButton', function (e) {
+                //alert($("#menuButton").html());
+                if ($("#menuButton > div").html().trim() == ("∧")) {
+                    // $("body").toggleClass("active");
+                    $("#menu").animate({
+                        marginTop: "-70px"
+                    }, 1000);
+                    $("#menuButton > div").html("&or;");
+
+                    $("#showContent").animate({
+                        marginTop: "0%",
+                        top: "10px"
+
+                    }, 1000);
+                    $(".anchor").css("top", "-20px");
+                    $("#scroller").animate({
+                        "top": "1%"
+                    }, 1000);
+                    $("#tocButton").animate({
+                        top: "0px",
+                        height: "100%"
+                    }, 1000);
+
+                    $("#scroller").animate({
+                        "height": "95%"
+                    }, 1000);
+                } else {
+                    // $("body").toggleClass("active");
+                    $("#menuButton > div").html("&and;");
+                    // $("#menuButton div").css("margin-left", "400px");
+                    // $("#menuButton div").css("margin-top", "0%");
+                    $("#menu").animate({
+                        marginTop: "0px"
+                    }, 1000);
+
+                    $(".anchor").css("top", "-120px");
+                    $("#showContent").animate({
+                        "margin-top": "80px"
+                    }, 1000);
+                    $("#scroller").animate({
+                        "top": "70px"
+                    }, 1000);
+                    $("#tocButton").animate({
+                        "top": "70px",
+                        "height": "60%"
+                    }, 1000);
+                    $("#scroller").animate({
+                        "height": "90%"
+                    }, 1000);
+                }
+            });
+
+
+
             // Check client for mobile-device using
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 alert(jData.transl.mobilephonehint);
@@ -433,75 +572,92 @@
             $.browser.chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
             $.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
 
-            // relativ ugly workaround for font-size-failures i saw. my reference is firefox with 0.8.
-            if ($.browser.webkit) {
-                $(".btn").css("font-size", "0.75em");
-            }
-            if ($.browser.chrome) {
-                $(".btn").css("font-size", "0.7em");
 
-            }
 
 
         });
     </script>
 </head>
 
-<body style="background-color: black" id="body">
-    <a id="onTop"></a>
-    <div id="warn" style="background-color: red; width: 80%; height: 15%; margin-left: 10%; margin-top: 15%; position: fixed; color: white; z-index: 999; padding-left: 15px;"><img src="http://pixcdn.posterrevolution.com/posters/biohazard-warning-art-poster-print.jpg" style="height: 100px; float: left; padding-right: 15px;" />This Website is in a heavy restructuring right now. Please be patient till 15.11.2014. You still could use the old website, but its still deprecated. For the latest version of the redesign, check out the <a href="https://github.com/hersche/hersche.github.io/tree/flat" target="_blank">flat-branch</a>.
-    <hr />
-    <a href="#" onclick='$("#warn").fadeOut(200);' style="">[x] Close this warning</a>
-    </div>
-    <div id="scroller" style="display:none">
-        <div id="toc"></div>
-        <div id="top">
-            <a href="#onTop">
-                <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
-            </a>
-        </div>
-    </div>
+
+<body id="body">
+
     <header>
 
-        <div style="display: none;" id="menu">
-            <div style="display:block;">
-                <h1 style="display: inline;">skamster.github.io</h1>
-                <p style="display: inline; vertical-align: top;">projects, docs and personal infos
-
-                </p>
+        <div id="menu">
+            <div class="logo">
+                <h2>hersche.github.io</a></h2>
             </div>
-            <div class="menuelements">
-                <div id="menucontent">
+            <nav>
+                <ul id="language">
+                    <li><a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
+                    </li>
+                    <li><a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
+                    </li>
+                </ul>
+                <ul id="mainnav">
+                    <li>
+                        <a class="btn fade" onclick="changeContent('index'); return false;" id="indexBtn">Home</a>
+                    </li>
+                    <li id="menucontent" class="dropdowncontainer">
+                        <span>Projects</span>
+                        <ul class="submenu">
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="btn fade" onclick="changeContent('about'); return false;" id="aboutBtn">About</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
+                    </li>
+                </ul>
+                <ul class="subnav">
+                    <li><a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
+                    </li>
+                </ul>
 
-                </div>
-                <div class="lefty">
-                    <a target="_blank" href="https://github.com/skamster" id="githubbtn" class="btn fade">GitHub</a>
-                </div>
-                <div class="righty">
-                    <a id="refresh" href="#" title="This website is using your webstorage, what means it's offline useable. With one click, you could update the information." onclick="updateContent(); return false" class="btn fade ">Refresh</a> 
-                </div>
-                <div class="centry">
-                    <a title="Wechsle zu deutschem Inhalt. Drücken Sie danach auf den 'Refresh'-Knopf!" href="index.html?lang=de" class="btn fade langbtn">DE</a>
-                </div>
-                <div class="centry">
-                    <a title="Change to english content. After, click on the 'Erneuern'-Button!" href="index.html?lang=en" class="btn fade langbtn">EN</a>
-                </div>
-            </div>
         </div>
+        <div id="menuButton">
+            <div>&and;</div>
+        </div>
+        <div id="tocButton">
+            <div>&and;</div>
+        </div>
+        <div id="impressumButton">
+            <div>&and;</div>
+        </div>
+        <div id="newsButton">
+            <div>&and;</div>
+        </div>
+        <div id="scroller">
+
+            <div id="toc"></div>
+            <div id="top">
+                <a href="#onTop" onclick="changeContent('index', true);">
+                    <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
+                </a>
+            </div>
+            <div id="impressum"></div>
+
+        </div>
+        <div id="news"></div>
+
 
     </header>
-    <div id="news">News und so!</div>
+
+    <div id="news"></div>
     <div id="animationContainer">
+
         <div id="showContent" style="display: none;"></div>
 
-        <div id="impressum" style="display: block;"></div>
+
     </div>
     <noscript>
         <h3>This site needs javascript to load it's contents</h3>
-        <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
+        <p>If you don't wanna do a risk, have a look to <a href="https://github.com/hersche/hersche.github.io/">hersche.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
         <ul>
             <li><a href="petaDocs/">Peta</a>
-            </li>
+            </li>b
             <li><a href="tryToxicDocs/">tryToxic</a>
             </li>
             <li><a href="jobManagementDocs/">jobManagement</a>
@@ -510,7 +666,7 @@
 
 
         <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
-        <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
+        <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/hersche/hersche.github.io/">hersche.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
         <ul>
             <li><a href="petaDocs/">Peta</a>
             </li>

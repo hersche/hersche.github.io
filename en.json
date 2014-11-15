@@ -1,37 +1,36 @@
-{
-    "index": {
-        "title": "Linklist, about site and projects",
+{ "index": {
+        "title": "Home",
         "preword": "This is the linklist, or alternative home. Sitemap would may be a good name, but you will find 'external' links too. <br /> It contains also a description about the website and me in context to my projects.",
-        "description": "<h4><a class='anchor' name='website'></a>Website</h4>This Website is using your Webstorage, if your browser supports this feature. You will reconize this, when you change the language - you have to click the refresh-button after you use the language-button to reload the language-file. This website is really fresh by technics and i like to stay current here, to learn something more about the new HTML5-World. Javascript is also a quite new language for me and a interessting world. It's not a example for a 'secure language', but its was always nice eyecandy and get often usefull in this time (see <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a target='_blank' href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a target='_blank' href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my personal development.<span style='color: grey;'><h4><a class='anchor' name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg ('the easy entry'), Site 309 (it's a german book, translation by me):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as in python. <h4><a class='anchor' name='about'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. After my education, i worked mostly by body, because 4 years, 8 hours a day computerstuff was too much for me. Because i've got a workeraccidant (middlefoot broken), i would like to do my momentary hobby to a job again. Since april, i'm really activ again on <a target='_blank' href='https://github.com/skamster>Github</a>. <br />Those projects show, how i can developing software. <br /> You could use those projects free (<a target='_blank' href='gpl-2.0.txt>Gpl v2</a>) and i'm happy, when people participate (using, commiting, forking, reporting, auditing).",
+        "description": "<h4><a class='anchor' name='website'></a>Website</h4>This Website is using your Webstorage, if your browser supports this feature. You will reconize this, when you change the language - you have to click the refresh-button after you use the language-button to reload the language-file. This website is really fresh by technics and i like to stay current here, to learn something more about the new HTML5-World. Javascript is also a quite new language for me and a interessting world. It's not a example for a 'secure language', but its was always nice eyecandy and get often usefull in this time (see <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a target='_blank' href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a target='_blank' href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my personal development.<span style='color: grey;'><h4><a class='anchor' name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg ('the easy entry'), Site 309 (it's a german book, translation by me):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as in python. <h4><a class='anchor' name='homeAbout'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. After my education, i worked mostly by body, because 4 years, 8 hours a day computerstuff was too much for me. Because i've got a workeraccidant (middlefoot broken), i would like to do my momentary hobby to a job again. Since april, i'm really activ again on <a target='_blank' href='https://github.com/hersche>Github</a>. <br />Those projects show, how i can developing software. <br /> You could use those projects free (<a target='_blank' href='gpl-2.0.txt>Gpl v2</a>) and i'm happy, when people participate (using, commiting, forking, reporting, auditing).",
         "content": {
             "tryToxic": {
                 "pLink": "tryToxic",
-                "sLink": "https://github.com/skamster/tryToxics/",
+                "sLink": "https://github.com/hersche/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
                 "stable": "Unstable (API changes very fast, since heavy development in core)"
             },
             "jobManagement": {
                 "pLink": "jobManagement",
-                "sLink": "https://github.com/skamster/jobManagement/",
+                "sLink": "https://github.com/hersche/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
                 "stable": "Basicly stable, paused"
             },
             "Peta": {
                 "pLink": "peta",
-                "sLink": "https://github.com/skamster/Peta/",
+                "sLink": "https://github.com/hersche/Peta/",
                 "dLink": "petaDocs/index.html",
                 "stable": "Need some features to finish, but basicly stable"
             },
             "MultiSms": {
                 "pLink": "multisms",
-                "sLink": "https://github.com/skamster/MultiSms/",
+                "sLink": "https://github.com/hersche/MultiSms/",
                 "dLink": "petaDocs/index.html",
                 "stable": "Doesn't work atm, need a rewrite from python 2.7 to 3.x"
             },
-            "skamster.github.io": {
-                "pLink": "index.html?s=skamster.github.io",
-                "sLink": "https://github.com/skamster/skamster.github.io/",
-                "dLink": "https://github.com/skamster/skamster.github.io/",
+            "hersche.github.io": {
+                "pLink": "index.html?s=hersche.github.io",
+                "sLink": "https://github.com/hersche/hersche.github.io/",
+                "dLink": "https://github.com/hersche/hersche.github.io/",
                 "stable": "Done."
             }
 
@@ -113,7 +112,7 @@
             "Flexible pluginsystem": "Every plugin could have one to n instances",
             "Flexible accesssystem": "Every user have one to n roles. Every instanced plugin has one to n roles with a r/rw/admin-right.",
             "MVC-Structure": "It's easy to learn the code or write a plugin, since there's a separation between model, view and controller.",
-            "Plugins": "<ul><li><a target='_blank' href='https://github.com/skamster/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a>|<a target='_blank' href='http://www.openstreetmap.org'>openstreetmap</a>'s with POI-support</li><li><a target='_blank' href='https://github.com/skamster/Peta/tree/master/plugins/markdownSite'>mdSite</a>|<a target='_blank' href='https://en.wikipedia.org/wiki/Markdown'>markDown-Websites</a></li><li><a target='_blank' href='https://github.com/skamster/Peta/blob/master/plugins/site/site.php'>site</a>|html-Websites</li><li><a target='_blank' href='https://github.com/skamster/Peta/blob/master/plugins/forum/forum.php'>forum</a>|Tree-like forum</li><li>Some simple examples..</li></ul>",
+            "Plugins": "<ul><li><a target='_blank' href='https://github.com/hersche/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a>|<a target='_blank' href='http://www.openstreetmap.org'>openstreetmap</a>'s with POI-support</li><li><a target='_blank' href='https://github.com/hersche/Peta/tree/master/plugins/markdownSite'>mdSite</a>|<a target='_blank' href='https://en.wikipedia.org/wiki/Markdown'>markDown-Websites</a></li><li><a target='_blank' href='https://github.com/hersche/Peta/blob/master/plugins/site/site.php'>site</a>|html-Websites</li><li><a target='_blank' href='https://github.com/hersche/Peta/blob/master/plugins/forum/forum.php'>forum</a>|Tree-like forum</li><li>Some simple examples..</li></ul>",
             "Livedemo": "<a target='_blank' href='http://dev.thoeni.me/peta'>PETA LIVEDEMO</a>"
         },
         "bugs": {
@@ -121,8 +120,8 @@
         },
         "pictures": {}
     },
-    "skamster.github.io": {
-        "title": "skamster.github.io",
+    "skamstergithubio": {
+        "title": "hersche.github.io",
         "preword": "This website informs about current projects and about me. Style isn't my strongest part, but it should looking acceptable.",
         "description": "A technical demo, descriptions, links and pictures, nice collected and marked up. This is the idea of this website. If this would be a clientwebsite or on a project, i would never use that much effects. But here, it's for playing in use. By the way, the most of this effects is wrote in CSS 3.",
         "features": {
@@ -143,7 +142,7 @@
         "picture": "profile.png",
         "contact": {
             "Personal data":"<a href='https://cloud.openmailbox.org/public.php?service=files&t=c514d2742dd7e8b05fa857986984131d' target='_blank' >Passwordprotected Owncloud-share</a>.",
-            "Xampp": "skamster@jabber.ccc.de",
+            "Xampp": "hersche@jabber.ccc.de",
             "E-Mail": "hersche@openmailbox.org",
             "Diaspora": "<a target='_blank' href='https://nerdpol.ch/u/hersche'>hersche@nerdpol.ch</a>",
             "Xing": "<a target='_blank' href='https://www.xing.com/profile/Vinzenz_Hersche'>Vinzenz Hersche</a>",
@@ -212,7 +211,7 @@
             "trans": "Mobile hacking",
             "dd-wrt": "Used on some Siemens and Lynksys-routers",
             "Archos AV100": "I've rooted this old <a target='_blank' href='http://www.gofurygo.de/av100.php'>'multimedia'-player</a> with <a target='_blank' href='http://sourceforge.net/projects/linav/'>MediOS</a>.",
-            "GTA02/Openmoko": "<a target='_blank' href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>My first Smartphone</a> (400Mhz). I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, <a target='_blank' href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release) which used the <a target='_blank' href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Windowmanager</a>. I wrote <a target='_blank' href='https://gist.github.com/skamster/10565527'>my first gtk-python-application</a> there.<br />On the other site, what i used - <a target='_blank' href='http://qtmoko.sourceforge.net/'>QtMoko</a> which was really stable and fast (cause it doesn't needed a Xorg-server). <br /><a target='_blank' href='http://qt-project.org/'>Qt</a> is ql! <br />Now the project gets a hardwareupgrade since some years, it's called <a target='_blank' href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> and is continued by another company.",
+            "GTA02/Openmoko": "<a target='_blank' href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>My first Smartphone</a> (400Mhz). I used it for 3, relative unstable, years (so i love the much more stable Androids). In the end, there where two active Projects. First, <a target='_blank' href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release) which used the <a target='_blank' href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Windowmanager</a>. I wrote <a target='_blank' href='https://gist.github.com/hersche/10565527'>my first gtk-python-application</a> there.<br />On the other site, what i used - <a target='_blank' href='http://qtmoko.sourceforge.net/'>QtMoko</a> which was really stable and fast (cause it doesn't needed a Xorg-server). <br /><a target='_blank' href='http://qt-project.org/'>Qt</a> is ql! <br />Now the project gets a hardwareupgrade since some years, it's called <a target='_blank' href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a> and is continued by another company.",
             "Sony Xperia": "Because of money (i still would like a GTA04) i buyed a <a target='_blank' href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a> after the GSM-modem was fail for doing it's work. The new one was <a target='_blank' href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'secured' with 600Mhz improved processor (1Ghz Singlecore) - nice! Easy to root, i also did this for some friends. The first expirience with <a target='_blank' href='http://www.xda-developers.com/'>xda</a>. After not a year, i couldn't do a phone anymore - the quality was too bad, no matter which rom.",
             "Motorola": "After my Xperia i go back to 600Mhz, a cheap Motorola 'outdoor' Phone, <a target='_blank' href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. This is still <a target='_blank' href='http://forum.xda-developers.com/showthread.php?t=2079202'>rootable</a> by flashing a spain firmware until bootloader is installed (TWRP, i think) and plug out after that step (before install your whished rom). Nice, because recoverable. After the screen gets broken, i get some gifts in short time - two HTC's",
             "HTC": "I became my two HTC's for free, as a gift from friends. One is a <a target='_blank' href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), the other a <a target='_blank' href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). This is a massive performance-improvement for me! The One X is faster than my Laptop (2x1.86Ghz vs. the 4x1.5)! Nice for testing stuff, being up to date but secured. Rooting is still easy through a official way.",
@@ -248,6 +247,7 @@
     "transl": {
         "features": "Features",
         "bugs": "Bugs",
+        "projects":"Projects",
         "pictures": "Pictures",
         "description": "Description",
         "stability": "Stability",
@@ -265,6 +265,6 @@
         "about": "About me",
         "mobilephonehint": "Your Browser looks to running on a mobile device - rotate your device to the landscape-mode to enjoy the website optimised.",
         "reallang":"Spoken languages",
-        "impressum":"Impressum: Everything here is from myself (except marked libs and timeline-pictures) - everything's <a href='gpl-2.0.txt' target='_blank' >GPL-v2-licensed</a>."
+        "impressum":"Impressum: Everything here is from myself (except marked libs and timeline-pictures) - everything's <a href='gpl-2.0.txt' id='gpl' target='_blank' >GPL-v2-licensed</a>."
     }
 }
