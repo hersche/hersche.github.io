@@ -149,7 +149,7 @@ function processHtmlNext(jDataIn, name) {
             } else {
                 displayHtml += '<article id="' + key + '"><h2>' + val.title + '</h2><p>' + val.preword + "</p>";
                 toc += '<h2 id="toc' + key + '">' + val.title + '</h2><ul><li id="toc' + key + 'features"><a href="#' + key + 'features">' + jDataIn.transl.features + '</a></li>';
-                var pictureCount = Object.keys(val.pictures).length
+                var pictureCount = Object.keys(val.pictures).length;
                 if (pictureCount > 0) {
                     toc += '<li id="toc' + key + 'pictures"><a href="#' + key + 'pictures" >' + jDataIn.transl.pictures + '</a></li>';
                 }
@@ -161,7 +161,7 @@ function processHtmlNext(jDataIn, name) {
                 });
 
                 if (pictureCount > 0) {
-                    displayHtml += '</ul><h3><a name="' + key + 'pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul>';
+                    displayHtml += '</ul><h3><a name="' + key + 'pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul id="projectPicture'+key+'">';
                     $.each(val.pictures, function (pKey, pVal) {
                         displayHtml += '<li>' + pVal.desc + ': <br /><a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></li>';
                     });
@@ -215,7 +215,7 @@ function GET(v) {
 /**
 
 **/
-var extraSpace = 0;
+var extraSpace = 50;
 
 function defineTops() {
     try {
@@ -250,7 +250,7 @@ function defineTops() {
 
     }
 }
-
+var menuForce;
 var scrollWorker = new Worker('js/scrollWorker.js');
 scrollWorker.addEventListener('message', function (e) {
     // console.info('Worker said: ', e.data);
@@ -260,7 +260,7 @@ scrollWorker.addEventListener('message', function (e) {
 }, false);
 var lastSubMenu = "";
 var curPos;
-var menuForce;
+
 /**
     This updates all the moving buttons, toc, adress
 **/
@@ -287,11 +287,11 @@ function renderMenu(cId, subcId, force) {
     force = force || false;
     if (subcId) {
         // console.info(cId + " SUBMENU " + subcId);
-        if ((subcId !== "") && (subcId !== cId) && (subcId !== "1") && (subcId !== undefined)) {
+        if (((subcId !== "") && (subcId !== cId) && (subcId !== "1") && (subcId !== undefined))||(force)) {
             if (cId === "about") {
                 console.info("CHANGE SUBMENU " + '#' + subcId);
                 $('#toc').stop(true).animate({
-                    scrollTop: $('#toc').scrollTop() + $('#' + subcId).position().top - 70
+                    scrollTop: $('#toc').scrollTop() + $('#' + subcId).position().top - 90
                 }, 200);
             }
             
@@ -316,7 +316,7 @@ function renderMenu(cId, subcId, force) {
         }
 
 
-        $("#" + lastName + "Btn").removeClass('current_page_item');
+        $("#mainnav li a").removeClass('current_page_item');
         $("#" + cId + "Btn").addClass('current_page_item');
         document.title = cId + "@hersche.github.io";
         $('#toc').stop(true).animate({
@@ -335,10 +335,14 @@ function changeContent(name, fuckOff) {
     fuckOff = fuckOff || false;
 
     if ((name != lastName) || (fuckOff)) {
+        try{ 
         updateMenu(name, fuckOff);
-
+        } catch (er) {
+         console.info(er +" with name "+name);   
+        }
+        if(name===""){ name="index" } 
         $('html, body').animate({
-            scrollTop: $('#showContent').scrollTop() + $('#' + name).position().top - 95
+            scrollTop: $('#showContent').scrollTop() + $('#' + name).position().top - 120
         }, 1000);
 
 

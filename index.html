@@ -57,6 +57,7 @@
             lang = lang.substr(0, 2);
 
         }
+        
         var jsonFile = "en.json";
         var tlFile = "tl_en.json";
         $(document).ready(function () {
@@ -76,10 +77,10 @@
             /**
                 Get the current site
             **/
-            if (GET('s') != 'undefined' & GET('s') != 'index') {
+            if (GET('s') != 'undefined') {
                 lastName = GET('s');
             } else {
-                lastName = "index";
+                lastName = "";
             }
             /**
                 Get the current language
@@ -95,15 +96,18 @@
                     lang = GET('lang');
                 }
             }
-
-
-
-
-
             /**
                 Eventhandlers for fancybox - once a gallery, once the timeline
             **/
-            $('.gallerybox').fancybox({
+            $('#projectPicturejobManagement li a').fancybox({
+                padding: 0,
+                radius: "6px",
+                openEffect: 'elastic',
+                openSpeed: 150,
+                closeEffect: 'elastic',
+                closeSpeed: 150
+            });
+            $('#projectPicturetryToxic li a').fancybox({
                 padding: 0,
                 radius: "6px",
                 openEffect: 'elastic',
@@ -128,6 +132,27 @@
             if (typeof (Storage) !== "undefined") {
                 // In the first case, we have all the information offline
                 if ((localStorage.jData) && (localStorage.storeDate) && (localStorage.tlData)) {
+                    var dateObject = new Date();
+                    var splitDate = localStorage.storeDate.split(".");
+                    if (lang === "de") {
+                        dateObject.setUTCDate(splitDate[0]);
+                        dateObject.setUTCMonth(splitDate[1]);
+                        dateObject.setUTCFullYear(splitDate[2]);
+                        // localStorage.storeDate = d.getUTCDate() + "." + d.getUTCMonth() + "." + d.getUTCFullYear();
+                    } else {
+                        dateObject.setUTCDate(splitDate[1]);
+                        dateObject.setUTCMonth(splitDate[2]);
+                        dateObject.setUTCFullYear(splitDate[2]);
+                        // localStorage.storeDate = d.getUTCMonth() + "." + d.getUTCDate() + "." + d.getUTCFullYear();
+                    }
+                    var structureUpdate = new Date();
+                    structureUpdate.setUTCDate(12);
+                    structureUpdate.setUTCMonth(11);
+                    structureUpdate.setUTCFullYear(2014);
+                    if (structureUpdate > dateObject) {
+                        console.info("doing update here!");
+                        updateContent();
+                    }
                     jData = jQuery.parseJSON(localStorage.jData);
                     createTimeline(jQuery.parseJSON(localStorage.tlData), jData.transl.lang);
                     $("#refresh").html(jData.transl.refresh + " (" + localStorage.storeDate + "/" + jData.transl.fromstorage + ")");
@@ -201,7 +226,10 @@
 
 
             $(window).resize(function () {
-                scrollWorker.postMessage({'cmd': 'setHeight', 'msg': defineTops()});
+                scrollWorker.postMessage({
+                    'cmd': 'setHeight',
+                    'msg': defineTops()
+                });
                 updateMenu(lastName, true);
             });
 
@@ -235,46 +263,29 @@
             /**
                 Fade in loaded contents withouth jquery-ui
             **/
-            $("#progress").progressbar("option", "value", 30);
-            $("#showContent").show("slide", {
-                direction: "right"
-            }, 1000, function () {
-                $("#progress").progressbar("option", "value", 50);
 
-                $("#menu").show("shake", {
-                    times: 5,
-                    distance: 20
-                }, "easeInExpo", function () {
-
-                    $("#progress").progressbar("option", "value", 75);
-                    $("#impressum").show("slide", {
-                        direction: "down"
-                    }, 500, function () {
-                        hideNews();
-                        $("#progress").progressbar("option", "value", 90);
-
-                        setTimeout(function () {
-                            $("#progress").progressbar("option", "value", 100);
-                            $("#progress").hide("pulsate", {}, 800, function () {});
-                            scrollWorker.postMessage({'cmd': 'setHeight', 'msg': defineTops()});
-                            changeContent(lastName, true);
-                        }, 1000);
-
-                        // $( "#progress" ).progressbar("destroy");
-
-                        $(window).scroll(function () {
-                            if ($(window).scrollTop() + $(window).height() < $(document).height()) {
-                                $("#impressumButton").show("pulsate", {}, 800, function () {});
-                            }
-                            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                                $("#impressumButton").hide("pulsate", {}, 800, function () {});
-                            }
-                        });
-                    });
-
+            setTimeout(function () {
+                $("#progress").hide("pulsate", {}, 800, function () {});
+                scrollWorker.postMessage({
+                    'cmd': 'setHeight',
+                    'msg': defineTops()
                 });
+                changeContent(lastName, true);
+                hideNews();
+                updateMenu(lastName, true);
+            }, 1000);
 
+            // $( "#progress" ).progressbar("destroy");
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() + $(window).height() < $(document).height()) {
+                    $("#impressumButton").show("pulsate", {}, 800, function () {});
+                }
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    $("#impressumButton").hide("pulsate", {}, 800, function () {});
+                }
             });
+            $("#showContent").fadeIn(200);
 
 
             $(function () {
@@ -418,105 +429,93 @@
 
             $(document).on('click', '#tocButton', function (e) {
                 // alert($("#tocButton").text());
-                if ($("#tocButton > div").html().trim() === "←") {
+                if ($("#tocButton > div").html().trim() === "∧") {
                     // clip in
-                    $("#toc").fadeOut(500);
-                    $("#top").fadeOut(500);
-                    $("#scroller").css("min-width", "1%");
-                    $("#showContent").css("margin-left", "1%");
-                    $("#showContent").css("width", "98%");
-                    $("#tocButton > div").html("&rarr;");
-                    $("#tocButton").css("left", "0%");
+                    $("#scroller").animate({"margin-left": "-22%"}, 1000);
+                    $("#showContent").animate({"margin-left": "0px","width": "100%"},1000);
+                    $("#impressum").css({width:"122%"});
+                    $("#tocButton > div").html("&or;");
+                    $("#tocButton").animate({"left": "0%"});
                 } else {
                     // clip out
                     var leftSpace = "22";
-                    $("#toc").fadeIn(500);
-                    $("#top").fadeIn(500);
-                    $("#scroller").css("min-width", "22%");
-
-                    $("#showContent").css("margin-left", "23.5%");
-                    $("#showContent").css("width", "auto");
-                    $("#tocButton > div").html("&larr;");
-
-                    $("#tocButton").css("left", "22%");
+                    $("#scroller").animate({"margin-left": "0px"}, 1000);
+                    $("#showContent").animate({"margin-left": "22%", "width": "78%"}, 1000);
+                    $("#tocButton > div").html("&and;");
+                    $("#tocButton").animate({"left": "22%"}, 1000);
 
                 }
             });
 
             function hideNews() {
-                $("#news").css("display", "none");
-                $("#showContent").css("margin-right", "1%");
-                $("#showContent").css("width", "auto");
-                $("#newsButton > div").html("&larr;");
-                $("#newsButton").css("right", "0%");
+                $("#news").animate({"margin-right": "-22%"}, 1000);
+                $("#newsButton > div").html("&or;");
+                $("#newsButton").animate({"right": "0px"}, 1000);
             }
 
             $(document).on('click', '#newsButton', function (e) {
-                // alert($("#tocButton").text());
-                if ($("#newsButton > div").html().trim() === "→") {
+                 //alert($("#tocButton").text());
+                if ($("#newsButton > div").html().trim() === "∧") {
                     // clip in
                     hideNews();
 
                 } else {
                     // clip out
                     var leftSpace = "22";
-                    $("#news").css("display", "block");
-                    $("#newsButton > div").html("&rarr;");
-                   // $("#showContent").css("margin-right", "21%");
-                 //   $("#showContent").css("width", "auto");
-                    $("#newsButton").css("right", "20%");
+                    $("#news").animate({"margin-right": "0px"}, 1000);
+                    $("#newsButton > div").html("&and;");
+                    // $("#showContent").css("margin-right", "21%");
+                    //   $("#showContent").css("width", "auto");
+                    $("#newsButton").animate({"right": "20%"},  1000);
 
                 }
             });
 
             $(document).on('click', '#impressumButton', function (e) {
-                // alert($("#impressumButton").text());
-                if ($("#impressumButton > div").html().trim() == "↓") {
+                alert($("#impressumButton").text());
+                if ($("#impressumButton > div").html().trim() == "∧") {
                     $("#impressum").css("display", "none");
-                    $("#impressumButton > div").html("&uarr;");
+                    $("#impressumButton > div").html("&or;");
                     $("#impressumButton").css("bottom", "0%");
                 } else {
                     $("#impressum").css("display", "block");
                     $("#impressumButton").css("bottom", "3%");
-                    $("#impressumButton > div").html("&darr;");
+                    $("#impressumButton > div").html("&and;");
                 }
             });
 
             $(document).on('click', '#menuButton', function (e) {
-                // alert($("#menuButton").html());
-                if ($("#menuButton > div").html().trim() == ("↑")) {
+                //alert($("#menuButton").html());
+                if ($("#menuButton > div").html().trim() == ("∧")) {
                     // $("body").toggleClass("active");
-                    $("#menu").css("display", "none");
-                    $("header").css("height", "0px");
-                    //
-                    $("#menuButton > div").html("&darr;");
-                    $("#menuButton").css("top", "0%");
-                    $("#showContent").css({
+                    $("#menu").animate({marginTop:"-70px"}, 1000);
+                    $("#menuButton > div").html("&or;");
+                    
+                    $("#showContent").animate({
                         marginTop: "0%",
                         top: "10px"
-                    });
+                        
+                    }, 1000);
                     $(".anchor").css("top", "-20px");
-                    $("#scroller").css("top", "1%");
-                    $("#tocButton").css({
-                        top: "1%",
+                    $("#scroller").animate({"top": "1%"}, 1000);
+                    $("#tocButton").animate({
+                        top: "0px",
                         height: "100%"
-                    });
-                    $("#scroller").css("height", "95%");
+                    },1000);
+                    
+                    $("#scroller").animate({"height": "95%"}, 1000);
                 } else {
                     // $("body").toggleClass("active");
-                    $("#menuButton > div").html("&uarr;");
+                    $("#menuButton > div").html("&and;");
                     // $("#menuButton div").css("margin-left", "400px");
                     // $("#menuButton div").css("margin-top", "0%");
+                    $("#menu").animate({marginTop:"0px"}, 1000);
+                    
                     $(".anchor").css("top", "-120px");
-                    $("#menu").css("display", "inline-block");
-                    $("header").css("height", "100px");
-                    // $("#menuButton").css({"top": "0%"});
-                    // $("#menuButton").html("&uarr;");
-                    $("#showContent").css("margin-top", "80px");
-                    $("#scroller").css("top", "70px");
-                    $("#tocButton").css("top", "78px");
-                    $("#tocButton").css("height", "60%");
-                    $("#scroller").css("height", "80%");
+                    $("#showContent").animate({"margin-top": "80px"}, 1000);
+                    $("#scroller").animate({"top":"70px"}, 1000);
+                    $("#tocButton").animate({"top":"70px","height": "60%"}, 1000);
+                    $("#scroller").animate({"height": "90%"}, 1000);
                 }
             });
 
@@ -538,16 +537,12 @@
 </head>
 
 <body id="body">
-    <a id="onTop"></a>
-    <div id="progress" style="background-color: red; width: 80%; height: 15%; margin-left: 10%; margin-top: 15%; position: fixed; background-image: url(images/progress.jpg); opacity: 0.90; color: green;">
-        <div class="progress-label" style="color: green; text-align: center;">Howdy</div>
-    </div>
-
+    
     <header>
 
         <div id="menu">
             <div class="logo">
-                <h2>hersche.github.io</h2>
+                <h2>hersche.github.io</a></h2>
             </div>
             <nav>
                 <ul id="language">
@@ -564,7 +559,6 @@
                         <span>Projects</span>
                         <ul class="submenu">
                         </ul>
-
                     </li>
                     <li>
                         <a class="btn fade" onclick="changeContent('about'); return false;" id="aboutBtn">About</a>
@@ -580,31 +574,30 @@
 
         </div>
         <div id="menuButton">
-            <div>&uarr;</div>
+            <div>&and;</div>
         </div>
         <div id="tocButton">
-            <div>&larr;</div>
+            <div>&and;</div>
         </div>
         <div id="impressumButton">
-            <div>&darr;</div>
+            <div>&and;</div>
         </div>
         <div id="newsButton">
-            <div>&rarr;</div>
+            <div>&and;</div>
         </div>
         <div id="scroller">
 
             <div id="toc"></div>
             <div id="top">
-                <a href="#onTop">
+                <a href="#onTop" onclick="changeContent('index', true);">
                     <img id="onTopImg" src="images/onTop.png" alt="Go on Top/Gehe nach zu oberst" />
                 </a>
             </div>
             <div id="impressum"></div>
 
         </div>
-        <div id="secondScroller">
             <div id="news"></div>
-        </div>
+
 
     </header>
 
@@ -617,7 +610,7 @@
     </div>
     <noscript>
         <h3>This site needs javascript to load it's contents</h3>
-        <p>If you don't wanna do a risk, have a look to <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
+        <p>If you don't wanna do a risk, have a look to <a href="https://github.com/hersche/hersche.github.io/">hersche.github.io @ github</a>. Check it there for malware, none of my code will be executed. Elsewhere you could visit my github-account and look into the wikis..Docs:</p>
         <ul>
             <li><a href="petaDocs/">Peta</a>
             </li>b
@@ -629,7 +622,7 @@
 
 
         <h3>Diese Seite braucht Javascript, um ihre Inhalte zu laden.</h3>
-        <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/skamster/skamster.github.io/">skamster.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
+        <p>Wenn Sie kein Risiko eingehen wollen, werfen Sie einen Blick auf <a href="https://github.com/hersche/hersche.github.io/">hersche.github.io @ github</a>. Überprüfen Sie die Seite dort auf Malware/schädlichen Code, es wird von meinem Code nichts ausgeführt. Ansonsten können Sie meine github-seite besuchen und dort in den Wikis stöbern..Dokumentationen:</p>
         <ul>
             <li><a href="petaDocs/">Peta</a>
             </li>

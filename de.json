@@ -1,36 +1,36 @@
 { "index": {
-        "title": "Projekte",
+        "title": "Home",
         "preword": "Dies ist die Linkliste, die 'alternative Startseite' oder die 'Sitemap'. Diese Seite enthält jedoch auch externe Links. <br /> Sie liefert auch eine Beschreibung der Website, der aktiven Projekte und mir.",
-        "description": "<h4><a name='website' class='anchor'></a>Website</h4>Diese Website nutzt Ihren Webstorage, wenn Ihr Browser dies unterstützt. Dies bemerken Sie am besten beim wechseln der Sprachen - Sie müssen nach dem Wechsel der Sprache den 'Erneuern'-Knopf drücken, um die neue Sprachdatei zu laden.<br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch die relativ neuen <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a> Technologien kennenzulernen. Auch Javascript ist relativ neu für mich, aber eine interessante Welt. Es ist keine 'sichere' Sprache, aber sie ist oftmals schöner Augenzucker (Eyecandy) und aktuell sogar nützlich (siehe <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Kartenplugin in Peta</a> und auch <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>). <br />Auf der anderen Seite mag ich 'ernst zu nehmenderen' und meistens <a target='_blank' href='https://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a> und <a target='_blank' href='https://de.wikipedia.org/wiki/Objektorientierte_Programmierung'>objektorientieren Code</a>. Auf dieser Seite bekommen Sie eine Übersicht über die Projekte, welche ich programmiert habe. <span style='color: grey;'><h4><a name='security' class='anchor'></a>Kapitel Sicherheit/Websiten schützen</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Seite 309:<br />'Fragen Sie nach dem Zufallsprinzip nur bestimmte Zeichen des Passwortes ab: mal das erste und dritte Zeichen, mal das sechste und vierte.' Weiter unten: 'Wenn sie diese zusätzlichen Features integrieren, sind sie schon dicht an dem Verfahren das Banken für browserbasiertes Online-Banking verwenden.'</span><hr /> Logisch! Nein ernsthaft, Sicherheit ist ein wichtiges Thema, auf das man zwei Augen richten sollte. Zwei meiner Projekte haben bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<h4><a name='homeAbout' class='anchor'></a>Über mich</h4>Der letzte Teil ist <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>Über mich</a>. Nach der Ausbildung arbeitete ich vor allem körperlich, da 4 Jahre lang, 8 Stunden am Tag Computer, zu viel Computer für mich war. Da ich 2014 einen Arbeitsunfall (Mittelfussbruch) erlitt, möchte ich mein momentanes Hobby wieder zum Beruf machen. Seit April bin ich auf <a target='_blank' href='http://github.com/skamster'>Github</a> wieder ziemlich aktiv!<br />Dieser Code soll als Beispiel dienen, wie ich programmieren kann. <br />Sie können diese Projekte frei (GPLv2) benutzen und ich bin glücklich, wenn jemand es forkt, Fehler meldet oder es ausprobiert.",
+        "description": "<h4><a name='website' class='anchor'></a>Website</h4>Diese Website nutzt Ihren Webstorage, wenn Ihr Browser dies unterstützt. Dies bemerken Sie am besten beim wechseln der Sprachen - Sie müssen nach dem Wechsel der Sprache den 'Erneuern'-Knopf drücken, um die neue Sprachdatei zu laden.<br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch die relativ neuen <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a> Technologien kennenzulernen. Auch Javascript ist relativ neu für mich, aber eine interessante Welt. Es ist keine 'sichere' Sprache, aber sie ist oftmals schöner Augenzucker (Eyecandy) und aktuell sogar nützlich (siehe <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Kartenplugin in Peta</a> und auch <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>). <br />Auf der anderen Seite mag ich 'ernst zu nehmenderen' und meistens <a target='_blank' href='https://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a> und <a target='_blank' href='https://de.wikipedia.org/wiki/Objektorientierte_Programmierung'>objektorientieren Code</a>. Auf dieser Seite bekommen Sie eine Übersicht über die Projekte, welche ich programmiert habe. <span style='color: grey;'><h4><a name='security' class='anchor'></a>Kapitel Sicherheit/Websiten schützen</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Seite 309:<br />'Fragen Sie nach dem Zufallsprinzip nur bestimmte Zeichen des Passwortes ab: mal das erste und dritte Zeichen, mal das sechste und vierte.' Weiter unten: 'Wenn sie diese zusätzlichen Features integrieren, sind sie schon dicht an dem Verfahren das Banken für browserbasiertes Online-Banking verwenden.'</span><hr /> Logisch! Nein ernsthaft, Sicherheit ist ein wichtiges Thema, auf das man zwei Augen richten sollte. Zwei meiner Projekte haben bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<h4><a name='homeAbout' class='anchor'></a>Über mich</h4>Der letzte Teil ist <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>Über mich</a>. Nach der Ausbildung arbeitete ich vor allem körperlich, da 4 Jahre lang, 8 Stunden am Tag Computer, zu viel Computer für mich war. Da ich 2014 einen Arbeitsunfall (Mittelfussbruch) erlitt, möchte ich mein momentanes Hobby wieder zum Beruf machen. Seit April bin ich auf <a target='_blank' href='http://github.com/hersche'>Github</a> wieder ziemlich aktiv!<br />Dieser Code soll als Beispiel dienen, wie ich programmieren kann. <br />Sie können diese Projekte frei (GPLv2) benutzen und ich bin glücklich, wenn jemand es forkt, Fehler meldet oder es ausprobiert.",
         "content": {
             "tryToxic": {
                 "pLink": "tryToxic",
-                "sLink": "https://github.com/skamster/tryToxic/",
+                "sLink": "https://github.com/hersche/tryToxic/",
                 "dLink": "tryToxicDocs/index.html",
                 "stable": "Der Kern befindet sich in der Alpha-Phase (offen für Veränderungen). Durch Änderungen an der API können Teile 'aufhören zu funktionieren'."
             },
             "jobManagement": {
                 "pLink": "jobManagement",
-                "sLink": "https://github.com/skamster/jobManagement/",
+                "sLink": "https://github.com/hersche/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
                 "stable": "Funktioniert stabil."
             },
             "Peta": {
                 "pLink": "peta",
-                "sLink": "https://github.com/skamster/Peta/",
+                "sLink": "https://github.com/hersche/Peta/",
                 "dLink": "petaDocs/index.html",
                 "stable": "Funktioniert stabil, benötigt noch ein paar grundlegende Features."
             },
             "MultiSms": {
                 "pLink": "multisms",
-                "sLink": "https://github.com/skamster/MultiSms/",
+                "sLink": "https://github.com/hersche/MultiSms/",
                 "dLink": "petaDocs/index.html",
                 "stable": "Funktioniert derzeit nicht, benötigt ein umschreiben von Python 2.7 auf 3.x."
             },
-            "skamster.github.io": {
-                "pLink": "skamster.github.io",
-                "sLink": "https://github.com/skamster/skamster.github.io/",
-                "dLink": "https://github.com/skamster/skamster.github.io/",
+            "hersche.github.io": {
+                "pLink": "hersche.github.io",
+                "sLink": "https://github.com/hersche/hersche.github.io/",
+                "dLink": "https://github.com/hersche/hersche.github.io/",
                 "stable": "Fertig"
             }
 
@@ -112,7 +112,7 @@
             "Flexibles Pluginsystem": "Jedes Plugin kann eine bis n Instanzen erstellen.",
             "Flexibles Zugriffssystem": "Jeder Benutzer hat eine bis n Rollen. Jedes instanzierte Plugin hat eine bis n Rollen mit einem r/rw/admin-recht.",
             "MVC-Struktur": "Es sollte einfach sein, sich den Code anzueignen oder ein Plugin zu schreiben.",
-            "Plugins": "<ul><li><a target='_blank' href='https://github.com/skamster/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a> | <a target='_blank' href='http://www.openstreetmap.org'>Openstreetmap-Karten</a> mit POI-support</li><li><a target='_blank' href='https://github.com/skamster/Peta/tree/master/plugins/markdownSite'>mdSite</a> | <a target='_blank' href='https://de.wikipedia.org/wiki/Markdown'>markDown</a>-Websites</li><li><a target='_blank' href='https://github.com/skamster/Peta/blob/master/plugins/site/site.php'>site</a> | html-Websites</li><li><a target='_blank' href='https://github.com/skamster/Peta/blob/master/plugins/forum/forum.php'>forum</a> | Baumstrukturiertes Forum</li><li>Einige einfache Beispiele.</li></ul>",
+            "Plugins": "<ul><li><a target='_blank' href='https://github.com/hersche/Peta/tree/master/plugins/osmapPlugin'>osmapPlugin</a> | <a target='_blank' href='http://www.openstreetmap.org'>Openstreetmap-Karten</a> mit POI-support</li><li><a target='_blank' href='https://github.com/hersche/Peta/tree/master/plugins/markdownSite'>mdSite</a> | <a target='_blank' href='https://de.wikipedia.org/wiki/Markdown'>markDown</a>-Websites</li><li><a target='_blank' href='https://github.com/hersche/Peta/blob/master/plugins/site/site.php'>site</a> | html-Websites</li><li><a target='_blank' href='https://github.com/hersche/Peta/blob/master/plugins/forum/forum.php'>forum</a> | Baumstrukturiertes Forum</li><li>Einige einfache Beispiele.</li></ul>",
 
             "Livedemo": "<a target='_blank' href='http://dev.thoeni.me/peta'>PETA Livedemo</a>"
         },
@@ -123,7 +123,7 @@
         "pictures": {}
     },
     "skamstergithubio": {
-        "title": "skamster.github.io",
+        "title": "hersche.github.io",
         "preword": "Die Website informiert über aktuelle Projekte und mich.",
         "description": "Was ist der Sinn dieser Website? Eine technische Demonstration, Beschreibung, Links und Bilder aller Ideen und Projekte schön gesammelt und dargestellt. Dies ist die Umsetzung dieser Idee. Wenn es eine Kundenwebsite oder eine Projektwebsite wäre, würde ich nie so viele Effekte verwenden. Aber hier kann dies als lustige Umsetzungsspielerei und, wie erwähnt, Demonstration meiner Fähigkeiten zugleich dienen. Die meisten Effekte sind nebenbei CSS 3 zu verdanken.",
         "features": {
@@ -146,7 +146,7 @@
         "picture": "profile.png",
         "contact": {
             "Persönliche Daten":"<a href='https://cloud.openmailbox.org/public.php?service=files&t=c514d2742dd7e8b05fa857986984131d' target='_blank' >Passwortgeschützte Owncloud-Freigabe</a>.",
-            "Xampp": "skamster@jabber.ccc.de",
+            "Xampp": "hersche@jabber.ccc.de",
             "E-Mail": "hersche@openmailbox.org",
             "Diaspora": "<a target='_blank' href='https://nerdpol.ch/u/hersche'>hersche@nerdpol.ch</a>",
             "Xing": "<a target='_blank' href='https://www.xing.com/profile/Vinzenz_Hersche'>Vinzenz Hersche</a>",
@@ -203,7 +203,7 @@
             "trans": "Mobil gehacktes",
             "dd-wrt": "Gebraucht auf einigen Siemens- und Lynksys-Routern",
             "Archos AV100":"Diesen alten <a target='_blank' href='http://www.gofurygo.de/av100.php'>'Multimedia'-Player</a> habe ich mit <a target='_blank' href='http://sourceforge.net/projects/linav/'>MediOS</a> gerooted.",
-            "GTA02/Openmoko": "<a target='_blank' href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>Mein erstes Smartphone</a> (400Mhz). Ich nutzte dieses für 3, relativ unstabile, Jahre. Am Schluss blieben zwei aktive Projekte. Zum einen <a target='_blank' href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release), welches die <a target='_blank' href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Fensterverwaltung</a> nutzte. Ich schrieb <a target='_blank' href='https://gist.github.com/skamster/10565527'>meine erste Gtk-Python-Anwendung</a> auf diesem System (v.a. da das SMS-Programm einen Bug hatte und ich meine SMS lesen wollte).<br />Auf der andern Seite nutzte ich vor allem <a target='_blank' href='http://qtmoko.sourceforge.net/'>QtMoko</a>, welches sehr stabil und schnell war (da es keinen Xorg-Server brauchte). <a target='_blank' href='http://qt-project.org/'>Qt</a> ist ql! <br />Jetzt gibt es seit einigen Jahren eine Hardwareaufrüstung namens <a target='_blank' href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a>. Mit diesem Update wechselte auch die Firma (FIC&rarr;Goldelico). Aktuell bin ich im Besitz eines GTA04's.",
+            "GTA02/Openmoko": "<a target='_blank' href='http://en.wikipedia.org/wiki/Neo_FreeRunner'>Mein erstes Smartphone</a> (400Mhz). Ich nutzte dieses für 3, relativ unstabile, Jahre. Am Schluss blieben zwei aktive Projekte. Zum einen <a target='_blank' href='http://shr-project.org/trac'>SHR</a>  (stable hybrid release), welches die <a target='_blank' href='http://en.wikipedia.org/wiki/Enlightenment_%28software%29'>E17-Fensterverwaltung</a> nutzte. Ich schrieb <a target='_blank' href='https://gist.github.com/hersche/10565527'>meine erste Gtk-Python-Anwendung</a> auf diesem System (v.a. da das SMS-Programm einen Bug hatte und ich meine SMS lesen wollte).<br />Auf der andern Seite nutzte ich vor allem <a target='_blank' href='http://qtmoko.sourceforge.net/'>QtMoko</a>, welches sehr stabil und schnell war (da es keinen Xorg-Server brauchte). <a target='_blank' href='http://qt-project.org/'>Qt</a> ist ql! <br />Jetzt gibt es seit einigen Jahren eine Hardwareaufrüstung namens <a target='_blank' href='http://projects.goldelico.com/p/gta04-main/'>GTA04</a>. Mit diesem Update wechselte auch die Firma (FIC&rarr;Goldelico). Aktuell bin ich im Besitz eines GTA04's.",
             "Sony Xperia": "Nachdem das GSM-Modem des Openmokos (GTA02) kaputt ging, kaufte ich mir ein <a target='_blank' href='http://en.wikipedia.org/wiki/Sony_Ericsson_Xperia_active'>Xperia Active</a>. Dieses ist <a target='_blank' href='http://en.wikipedia.org/wiki/IP_Code'>IP</a>67-'gesichert', mit einem um 600Mhz gesteigerten Prozessor (1Ghz Singlecore) - nice! Einfach zu rooten, ich habe dies auch für einige Kollegen gemacht. Es war die erste Erfahrung mit <a target='_blank' href='http://www.xda-developers.com/'>xda</a>. Nach nicht einem Jahr konnte ich keinen Anruf mehr tätigen, die Qualität war zu schlecht, egal welche Rom ich verwendete.",
             "Motorola": "Nach meinem Xperia ging ich zu 600Mhz zurück, ein billiges Motorola 'outdoor' Telefon, <a target='_blank' href='http://www.gsmarena.com/motorola_defy_mini_xt320-4375.php'>X320</a>. Dieses ist immer noch rootbar wenn man eine spanische Firmware flasht, nach dem Installieren des Bootloaders (ClockworkMod) jedoch abbricht. Nice, da das Handy einfach in den wirklichen Werkstand zurückgebracht werden kann (kein Garantieverlust). Kurz nachdem das Display brach, bekam ich gleich zwei neue HTC's geschenkt.",
             "HTC": "Ich bekam meine zwei HTC's gratis, als Geschenk von Freunden. Eines ist ein <a target='_blank' href='http://forum.xda-developers.com/htc-sensation/'>Sensation</a> (Dualcore, 1.2 Ghz), das Andere ein <a target='_blank' href='http://forum.xda-developers.com/htc-one-x'>One X</a> (Quadcore, 1.5Ghz). Dies ist eine massive Geschwindigkeitszunahme für mich! Das One X ist schneller als mein Laptop (2x1.86Ghz vs. the 4x1.5Ghz)! Genial, um Sachen zu testen und aktuell zu bleiben. Rooten funktioniert einfach über einen offiziellen Weg.",
@@ -261,6 +261,7 @@
         "projectname": "Projektname",
         "source": "Quelltext",
         "doc": "Doku",
+        "projects":"Projekte",
         "table": "Linktabelle",
         "refresh": "Erneuern",
         "nowebstorage": "kein Offlinespeichersupport",
