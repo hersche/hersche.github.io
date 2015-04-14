@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="js/jquery-migrate-1.2.1.min.js"></script> -->
     <script src="js/ownScript.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/storyjs-embed.js"></script>
     <script src="js/jquery.fancybox.js" type="text/javascript"></script>
@@ -267,7 +267,7 @@
                 });
                 scrollWorker.addEventListener('message', function (e) {
                     // console.info('Worker said: ', e.data);
-                if (e.data.length === 2) {
+                if ((undefined !== e.data) && (e.data.length === 2)) {
                     //renderMenu(e.data[0], e.data[1], menuForce);
                     updateMenu();
                 }
@@ -275,7 +275,7 @@
                 changeContent(lastName, true);
                 hideNews();
                 updateMenu();
-            }, 1000);
+            }, 300);
 
             // $( "#progress" ).progressbar("destroy");
 
@@ -498,7 +498,7 @@
             });
 
             $(document).on('click', '#impressumButton', function (e) {
-                alert($("#impressumButton").text());
+                // alert($("#impressumButton").text());
                 if ($("#impressumButton > div").html().trim() == "∧") {
                     $("#impressum").css("display", "none");
                     $("#impressumButton > div").html("&or;");
@@ -510,6 +510,8 @@
                 }
             });
 
+            
+            
             $(document).on('click', '#menuButton', function (e) {
                 //alert($("#menuButton").html());
                 if ($("#menuButton > div").html().trim() == ("∧")) {

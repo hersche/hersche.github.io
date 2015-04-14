@@ -2,6 +2,7 @@
     A little wrapper for the createStoryJS-function
 **/
 function createTimeline(tlD, lang) {
+    "use strict";
     createStoryJS({
         type: 'timeline',
         width: '850',
@@ -17,11 +18,11 @@ function createTimeline(tlD, lang) {
     Generates a menu out of json. This one is for just one entry with a submenu (the first one). Would be possible to improve, but it's not necessary for that case
 **/
 function processMenuHtml(jDataIn) {
-    var downSign = "";
+    "use strict";
+    // var downSign = "";
     var menuHtml = "<span>Projects</span><ul class=\"submenu submenuInvisible \" >";
     $.each(jDataIn, function (menuName, value) {
-        if ((menuName != "transl") && (menuName != "about") && (menuName != "index")) {
-
+        if ((menuName !== "transl") && (menuName !== "about") && (menuName !== "index")) {
             menuHtml += '<li><a href="#" onclick="changeContent(\'' + menuName + '\'); return false;" id="' + menuName + 'Btn">' + value.title + '</a></li>';
 
         }
@@ -36,8 +37,7 @@ function processMenuHtml(jDataIn) {
 **/
 function processHtmlNext(jDataIn, name) {
     "use strict";
-    var displayHtml = '';
-    var toc = "";
+    var displayHtml = '', toc = '';
     $.each(jDataIn, function (key, val) {
         if ("transl" !== key) {
             if (key === "index") {
@@ -61,10 +61,13 @@ function processHtmlNext(jDataIn, name) {
                     }
                 });
                 displayHtml += '</table>';
-                var langs = "";
+                var langs = "",
+                    rlangs = "<ul>",
+                    syst = "<ul>",
+                    mobile = "<ul>";
                 toc += '<h2 id="toc' + key + '">' + jDataIn.transl.about + '</h2><ul style="list-style-type: none; list-style: none;" ><li id="tocaboutlanguages" ><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
                 $.each(val.languages, function (lKey, lVal) {
-                    if (lKey != "trans") {
+                    if (lKey !== "trans") {
                         toc += '<li id="tocabout' + lKey + '"><a href="#' + lKey + '">' + lKey + '</a></li>';
                         langs += '<li><b>' + lKey + '</b><a name="' + lKey + '" class="anchor" />: ' + lVal.desc + '<ul style="margin-bottom:10px; list-style-type: none; list-style: none;">';
                         $.each(lVal.frameworks, function (fKey, fVal) {
@@ -75,17 +78,13 @@ function processHtmlNext(jDataIn, name) {
                 });
 
                 toc += '</ul><li id="tocaboutrlangs"><a href="#rlangs">' + jDataIn.transl.reallang + '</a></li><ul>';
-                var rlangs = "<ul>";
                 $.each(val.rlang, function (sKey, sVal) {
-                        toc += '<li id="tocabout' + sKey + '"><a href="#' + sKey + '">' + sKey + '</a></li>';
-                        rlangs += '<li><b>' + sKey + '</b><a name="' + sKey + '" class="anchor" />: ' + sVal + '</li>';
-                    }
-
-                );
+                    toc += '<li id="tocabout' + sKey + '"><a href="#' + sKey + '">' + sKey + '</a></li>';
+                    rlangs += '<li><b>' + sKey + '</b><a name="' + sKey + '" class="anchor" />: ' + sVal + '</li>';
+                });
                 toc += '</ul><li id="tocaboutsys"><a href="#sys">' + val.sys.trans + '</a></li><ul>';
-                var syst = "<ul>";
                 $.each(val.sys, function (sKey, sVal) {
-                    if ((sKey != "trans") && (sKey != "centossub")) {
+                    if ((sKey !== "trans") && (sKey !== "centossub")) {
                         if (sKey === "CentOS") {
                             toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
                             syst += '<li><b>' + sKey + '</b>: ' + sVal + '<a name="' + sKey + '" class="anchor" /></li><ul>';
@@ -100,9 +99,8 @@ function processHtmlNext(jDataIn, name) {
                     }
                 });
                 toc += '</ul><li id="tocaboutmobile"><a href="#mobile">' + val.mobile.trans + '</a></li><ul>';
-                var mobile = "<ul>";
                 $.each(val.mobile, function (mKey, mVal) {
-                    if (mKey != "trans") {
+                    if (mKey !== "trans") {
                         toc += '<li><a href="#' + mKey + '">' + mKey + '</a></li>';
                         mobile += '<li><b>' + mKey + '</b><a name="' + mKey + '" class="anchor" />: ' + mVal + '</li>';
                     }
@@ -122,7 +120,7 @@ function processHtmlNext(jDataIn, name) {
                 toc += '</ul><li id="tocabouthobbys"><a href="#hobbys">' + val.hobbys.trans + '</a></li><ul>';
                 var hobbys = "<ul>";
                 $.each(val.hobbys, function (hKey, hVal) {
-                    if (hKey != "trans") {
+                    if (hKey !== "trans") {
                         toc += '<li><a href="#' + hKey + '">' + hKey + '</a></li>';
                         hobbys += '<li><b>' + hKey + '</b><a name="' + hKey + '" class="anchor" />: ' + hVal + '</li>';
                     }
@@ -161,7 +159,7 @@ function processHtmlNext(jDataIn, name) {
                 });
 
                 if (pictureCount > 0) {
-                    displayHtml += '</ul><h3><a name="' + key + 'pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul id="projectPicture'+key+'">';
+                    displayHtml += '</ul><h3><a name="' + key + 'pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul id="projectPicture' + key + '">';
                     $.each(val.pictures, function (pKey, pVal) {
                         displayHtml += '<li>' + pVal.desc + ': <br /><a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></li>';
                     });
@@ -176,7 +174,7 @@ function processHtmlNext(jDataIn, name) {
         // displayHtml += '<hr />';
 
     });
-    if ((toc == "undefined") || (toc == "")) {
+    if ((toc === "undefined") || (toc === "")) {
 
         toc = "No TOC should not be possible. There's a failure!";
     }
@@ -218,15 +216,16 @@ function GET(v) {
 var extraSpace = 50;
 
 function defineTops() {
+    "use strict";
     try {
         var showTop = $('#showContent').scrollTop();
         var indexTop = showTop + $('#index').position().top;
-        var indexSubTop = [$('a[name=TheTable]').position().top, $('a[name=website]').position().top, $('a[name=security]').position().top, $('a[name=homeAbout]').position().top]
-            //indexTocTop = {
-            //  table: $('#TheTable').position().top - extraSpace,
-            //description: $('#description').position().top - extraSpace
-            //}
-            // console.info($("li:regex(id, .*ocindex.*)").toString());
+        var indexSubTop = [$('a[name=TheTable]').position().top, $('a[name=website]').position().top, $('a[name=security]').position().top, $('a[name=homeAbout]').position().top];
+        //indexTocTop = {
+        //  table: $('#TheTable').position().top - extraSpace,
+        //description: $('#description').position().top - extraSpace
+        //}
+        // console.info($("li:regex(id, .*ocindex.*)").toString());
         var petaTop = showTop + $('#peta').position().top - extraSpace;
         var petaSubTop = [$('a[name=petafeatures]').position().top, $('a[name=petabugs]').position().top, $('a[name=petadescription]').position().top];
         var tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
@@ -244,17 +243,26 @@ function defineTops() {
     } catch (er) {
 
         setTimeout(function () {
-            console.info("defineTops: one of the variables was undefined. Start defineTops again. " + er);
+            console.error("defineTops: one of the variables was undefined. Start defineTops again. " + er);
             defineTops();
-        }, 100);
+        }, 200);
 
     }
 }
 var menuForce;
 var scrollWorker = new Worker('js/scrollWorker.js');
+/*
+Die Idee bei dieser Übung wäre es, eine Verzögerung des ScrollListeners hinzukriegen.
+Der Zweck ist dieser, dass es wesentlich weniger Leistung braucht, wenn der User sich durchscrollt, das Rendering des Menüs kurz abgewartet und dann Gesetzt wird.
+*/
+var lastNameForScrollWorkerOnly;
 scrollWorker.addEventListener('message', function (e) {
     // console.info('Worker said: ', e.data);
-    if (e.data.length === 2) {
+    "use strict";
+    console.log(e.data);
+    if ((undefined !== e.data) && (e.data.length === 2)) {
+        // console.log(e.data);
+        lastNameForScrollWorkerOnly = e.data;
         renderMenu(e.data[0], e.data[1], menuForce);
     }
 }, false);
@@ -264,19 +272,23 @@ var curPos;
 /**
     This updates all the moving buttons, toc, adress
 **/
+var currentWindowTop;
 function updateMenu(name, force) {
+    "use strict";
     name = name || "";
-    menuForce = force || false;
-    var cId;
-    var subcId;
+    var menuForce = force || false;
+    var cId, subcId;
     var window_top = $(window).scrollTop() + 110; // the "12" should equal the margin-top value for nav.stick
     if (name !== "") {
         cId = name;
     } else {
+        if (currentWindowTop !== window_top) {
+            currentWindowTop = window_top;
         scrollWorker.postMessage({
             'cmd': 'getCurrentElement',
             'msg': window_top
         });
+        }
         // cId = scrollWorkerPosition[0].toString();
         // subcId = scrollWorkerPosition[1].toString();
     }
@@ -284,17 +296,19 @@ function updateMenu(name, force) {
 }
 
 function renderMenu(cId, subcId, force) {
+    "use strict";
     force = force || false;
     if (subcId) {
         // console.info(cId + " SUBMENU " + subcId);
-        if (((subcId !== "") && (subcId !== cId) && (subcId !== "1") && (subcId !== undefined))||(force)) {
+        if (((subcId !== "") && (subcId !== cId) && (subcId !== "1") && (subcId !== undefined)) || (force)) {
             if (cId === "about") {
-                console.info("CHANGE SUBMENU " + '#' + subcId);
+                // console.info("CHANGE SUBMENU " + '#' + subcId);
                 $('#toc').stop(true).animate({
                     scrollTop: $('#toc').scrollTop() + $('#' + subcId).position().top - 90
-                }, 200);
+                }, 100);
             }
-            
+            // $("#" + lastSubMenu).setAttribute('class', '');
+            // $("#" + subcId).setAttribute('class', 'current_page_item');
             $("#" + lastSubMenu).removeClass('current_page_item');
             $("#" + subcId).addClass('current_page_item');
             lastSubMenu = subcId;
@@ -303,10 +317,10 @@ function renderMenu(cId, subcId, force) {
     // console.info(cId);
     if (((cId !== "-1")) || (force)) {
         if (history.pushState) {
-            history.pushState({
-                "id": 100
+           history.pushState({
+             "id": 100
             }, "hersche.github.io::" + cId, "index.html?s=" + cId);
-        }
+         }
         if ($("#" + cId + "Btn").parent().parent().hasClass("submenu")) {
             $("#menucontent > span").addClass('current_page_item');
             $("#menucontent > ul").removeClass('submenuInvisible');
@@ -314,14 +328,12 @@ function renderMenu(cId, subcId, force) {
             $("#menucontent > span").removeClass('current_page_item');
             $("#menucontent > ul").addClass('submenuInvisible');
         }
-
-
         $("#mainnav li a").removeClass('current_page_item');
         $("#" + cId + "Btn").addClass('current_page_item');
         document.title = cId + "@hersche.github.io";
         $('#toc').stop(true).animate({
             scrollTop: $('#toc').scrollTop() + $('#toc' + cId).position().top
-        }, 200);
+        }, 100);
         lastName = cId;
     }
 
@@ -333,21 +345,18 @@ function renderMenu(cId, subcId, force) {
 function changeContent(name, fuckOff) {
     "use strict";
     fuckOff = fuckOff || false;
-
-    if ((name != lastName) || (fuckOff)) {
-        try{ 
-        updateMenu(name, fuckOff);
+    if ((name !== lastName) || (fuckOff)) {
+        try {
+            updateMenu(name, fuckOff);
         } catch (er) {
-         console.info(er +" with name "+name);   
+            console.info(er + " with name " + name);
         }
-        if(name===""){ name="index" } 
+        if (name === "") {
+            name = "index";
+        }
         $('html, body').animate({
             scrollTop: $('#showContent').scrollTop() + $('#' + name).position().top - 120
         }, 1000);
-
-
-
-
         lastName = name;
     }
 

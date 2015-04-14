@@ -17,13 +17,14 @@ var aboutSubTop;
     This will look, where your mouse is right now. It need defineTops(); for fill the (initialy empty) variables.
 **/
 function getCurrentIDNext(curPos) {
+    "use strict";
     var sub = "";
     if (tryToxicTop > curPos) {
         //  console.info(indexSubTop[0] + " vs " + indexSubTop[1] + " curpos " + curPos);
         if ((indexTop < curPos) && (indexSubTop[0] > curPos)) {
             //  console.info("PRE description");
             // respective before the table
-            sub = "index"
+            sub = "index";
         } else if ((indexSubTop[0] < curPos) && (indexSubTop[1] > curPos)) {
             // console.info("table");
             sub = "tocindextable";
@@ -41,7 +42,7 @@ function getCurrentIDNext(curPos) {
         return ["index", sub];
     } else if ((tryToxicTop < curPos) && (jobManagementTop > curPos)) {
         if ((tryToxicTop < curPos) && (tryToxicSubTop[0] > curPos)) {
-            sub = "tryToxic"
+            sub = "tryToxic";
         } else if ((tryToxicSubTop[0] < curPos) && (tryToxicSubTop[1] > curPos)) {
             sub = "toctryToxicfeatures";
         } else if ((tryToxicSubTop[1] < curPos) && (tryToxicSubTop[2] > curPos)) {
@@ -55,7 +56,7 @@ function getCurrentIDNext(curPos) {
         return ["tryToxic", sub];
     } else if ((jobManagementTop < curPos) && (multismsTop > curPos)) {
         if ((jobManagementTop < curPos) && (jobManagementSubTop[0] > curPos)) {
-            sub = "jobManagement"
+            sub = "jobManagement";
         } else if ((jobManagementSubTop[0] < curPos) && (jobManagementSubTop[1] > curPos)) {
             sub = "tocjobManagementfeatures";
         } else if ((jobManagementSubTop[1] < curPos) && (jobManagementSubTop[2] > curPos)) {
@@ -69,7 +70,7 @@ function getCurrentIDNext(curPos) {
         return ["jobManagement", sub];
     } else if ((multismsTop < curPos) && (petaTop > curPos)) {
         if ((multismsTop < curPos) && (multismsSubTop[0] > curPos)) {
-            sub = "multisms"
+            sub = "multisms";
         } else if ((multismsSubTop[0] < curPos) && (multismsSubTop[1] > curPos)) {
             sub = "tocmultismsfeatures";
         } else if ((multismsSubTop[1] < curPos) && (multismsSubTop[2] > curPos)) {
@@ -81,7 +82,7 @@ function getCurrentIDNext(curPos) {
         return ["multisms", sub];
     } else if ((petaTop < curPos) && (herschegithubioTop > curPos)) {
         if ((petaTop < curPos) && (petaSubTop[0] > curPos)) {
-            sub = "peta"
+            sub = "peta";
         } else if ((petaSubTop[0] < curPos) && (petaSubTop[1] > curPos)) {
             sub = "tocpetafeatures";
         } else if ((petaSubTop[1] < curPos) && (petaSubTop[2] > curPos)) {
@@ -93,7 +94,7 @@ function getCurrentIDNext(curPos) {
         return ["peta", sub];
     } else if ((herschegithubioTop < curPos) && (aboutTop > curPos)) {
         if ((herschegithubioTop < curPos) && (herschegithubioSubTop[0] > curPos)) {
-            sub = "peta"
+            sub = "peta";
         } else if ((herschegithubioSubTop[0] < curPos) && (herschegithubioSubTop[1] > curPos)) {
             sub = "tocskamstergithubiofeatures";
         } else if ((herschegithubioSubTop[1] < curPos) && (herschegithubioSubTop[2] > curPos)) {
@@ -104,7 +105,7 @@ function getCurrentIDNext(curPos) {
         return ["skamstergithubio", sub];
     } else if (aboutTop < curPos) {
         if ((aboutTop < curPos) && (aboutSubTop[0] > curPos)) {
-            sub = "about"
+            sub = "about";
         } else if ((aboutSubTop[0] < curPos) && (aboutSubTop[1] > curPos)) {
             sub = "tocaboutlanguages";
         } else if ((aboutSubTop[1] < curPos) && (aboutSubTop[2] > curPos)) {
@@ -119,14 +120,15 @@ function getCurrentIDNext(curPos) {
             sub = "tocaboutoldjobs";
         } else if (aboutSubTop[6] < curPos) {
             sub = "tocabouthobbys";
-        } 
+        }
         return ["about", sub];
     } else {
         return ["-1", sub];
     }
 }
-
+var currentElement;
 self.addEventListener('message', function (e) {
+    "use strict";
     var data = e.data;
     switch (data.cmd) {
     case 'start':
@@ -154,9 +156,15 @@ self.addEventListener('message', function (e) {
         // self.postMessage('scrollWorker: Setted the values');
         break;
     case 'getCurrentElement':
-        self.postMessage(getCurrentIDNext(data.msg));
+        var currentId = getCurrentIDNext(data.msg);
+        // rewrite currentElement
+        // console.log(currentElement);
+        if ((currentId !== currentElement)&&(currentId !== undefined)) {
+            currentElement = currentId;
+            self.postMessage(currentId);
+        }
         break;
     default:
         self.postMessage('Unknown command: ' + data.msg);
-    };
+    }
 }, false);
