@@ -279,6 +279,30 @@
                     "credit":"",
                     "caption":"Paléo, Nyon 2012"
                 }
+            },
+			{
+                "startDate":"2014,10,2",
+                "endDate":"2016,2,1",
+                "headline":"Entdeckung Arduino & C",
+                "text":"Konzentration auf Mikrokontroller und die Programmiersprache C.",
+                "asset":
+                {
+                    "media":"./images/arduino_mega.jpg",
+                    "credit":"arduino.cc",
+                    "caption":""
+                }
+            },
+			{
+                "startDate":"2015,2,2",
+                "endDate":"2016,2,1",
+                "headline":"Qt in C++",
+                "text":"Wechsel von pyQt zu Qt mit C++.",
+                "asset":
+                {
+                    "media":"./images/qt.png",
+                    "credit":"qt.org",
+                    "caption":""
+                }
             }
         ]
     }

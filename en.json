@@ -1,31 +1,37 @@
 { "index": {
         "title": "Home",
         "preword": "This is the linklist, or alternative home. Sitemap would may be a good name, but you will find 'external' links too. <br /> It contains also a description about the website and me in context to my projects.",
-        "description": "<h4><a class='anchor' name='website'></a>Website</h4>This Website is using your Webstorage, if your browser supports this feature. You will reconize this, when you change the language - you have to click the refresh-button after you use the language-button to reload the language-file. This website is really fresh by technics and i like to stay current here, to learn something more about the new HTML5-World. Javascript is also a quite new language for me and a interessting world. It's not a example for a 'secure language', but its was always nice eyecandy and get often usefull in this time (see <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a target='_blank' href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a target='_blank' href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my personal development.<span style='color: grey;'><h4><a class='anchor' name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg ('the easy entry'), Site 309 (it's a german book, translation by me):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as in python. <h4><a class='anchor' name='homeAbout'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. After my education, i worked mostly by body, because 4 years, 8 hours a day computerstuff was too much for me. Because i've got a workeraccidant (middlefoot broken), i would like to do my momentary hobby to a job again. Since april, i'm really activ again on <a target='_blank' href='https://github.com/hersche' >Github</a>. <br />Those projects show, how i can developing software. <br /> You could use those projects free (<a target='_blank' href='gpl-2.0.txt'>Gpl v2</a>) and i'm happy, when people participate (using, commiting, forking, reporting, auditing).",
+        "description": "<h4><a class='anchor' name='website'></a>Website</h4>This Website is using your Webstorage, if your browser supports this feature. You will reconize this, when you change the language - you have to click the refresh-button after you use the language-button to reload the language-file. This website is really fresh by technics and i like to stay current here, to learn something more about the new HTML5-World. Javascript is also a quite new language for me and a interessting world. It's not a example for a 'secure language', but its was always nice eyecandy and get often usefull in this time (see <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Cardplugin in Peta</a> and also in HTML5). <br />On the other site, i like more serious and mostly <a target='_blank' href='http://en.wikipedia.org/wiki/Model–view–controller'>MVC</a> and <a target='_blank' href='http://en.wikipedia.org/wiki/Object-oriented_programming'>objectoriented Code</a>. On this site, you become a overview of the projects, which where created out of my personal development.<span style='color: grey;'><h4><a class='anchor' name='security'></a>Chapter Security/Protect Websites</h4>PHP 5 & MySQL 4 - Der leichte Einstieg ('the easy entry'), Site 309 (it's a german book, translation by me):<br />'Ask by random just for some chars of the password - one time the first and third, another time the sixt and fourth char.' More on bottom: 'If you integrate this additional features, you're similiar secure as online-bankingsystems are'</span><hr /> Logic! No, seriously, security is a important topic, on which you should have two eyes focused. Two of my projects got a local encryption. The others will follow. In PHP i've to figure out a solution, i will do this, when i find time and space for this. It will be similiar implemented as in python. <h4><a class='anchor' name='homeAbout'></a>About me</h4>The last part is <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>about me</a>. This part describes expiriences and skills of me and show them in a timeline as well. Currently, i'm a single administrator on a group of people's server and work primary on a arduino-plattform combined with a qt-client, written in c++ (look project horain)  Other projects are stalled because of this. The older projects are under <a target='_blank' href='gpl-2.0.txt'>Gpl v2</a>, horain will follow sooner or later.",
         "content": {
+                        "horain": {
+                "pLink": "horain",
+                "sLink": "-",
+                "dLink": "-",
+                "stable": "In a closed alpha-phase."
+            },
             "tryToxic": {
                 "pLink": "tryToxic",
                 "sLink": "https://github.com/hersche/tryToxics/",
                 "dLink": "tryToxicDocs/index.html",
-                "stable": "Unstable (API changes very fast, since heavy development in core)"
+                "stable": "(Stalled) Unstable (API changes very fast, since heavy development in core)"
             },
             "jobManagement": {
                 "pLink": "jobManagement",
                 "sLink": "https://github.com/hersche/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
-                "stable": "Basicly stable, paused"
+                "stable": "(Stalled) Basicly stable, paused"
             },
             "Peta": {
                 "pLink": "peta",
                 "sLink": "https://github.com/hersche/Peta/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Need some features to finish, but basicly stable"
+                "stable": "(Stalled) Need some features to finish, but basicly stable"
             },
             "MultiSms": {
                 "pLink": "multisms",
                 "sLink": "https://github.com/hersche/MultiSms/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Doesn't work atm, need a rewrite from python 2.7 to 3.x"
+                "stable": "(Stalled) Doesn't work atm, need a rewrite from python 2.7 to 3.x"
             },
             "hersche.github.io": {
                 "pLink": "index.html?s=hersche.github.io",
@@ -36,6 +42,48 @@
 
         }
     },
+ 
+ 
+      "horain": {
+        "title": "Horain",
+        "preword": "The Horain ('HomeBrain') is a combination of a Arduino-device and a Arduino or desktop-Client based on qt.",
+        "description": "The horain-project has some relativ high targets. It should be able to readout diffrent devices and sensors and is able to react in a optimised way - that means for example that a motion-sensor could do a reaction for light - but on the base of arduino, much more complex and in my case over bluetooth or usb-cable-controlled devices are possible.",
+        "features": {
+            "Bluetooth": "The device is controllable through bluetooth and/or usb, via PC or mobilephone.",
+            "Qt-Client": "The client is executable under Android, Linux, Mac and Windows - native!",
+            "Neopixel": "Open adressables RGB-Leds from Adafruit.",
+            "Diverse Inputmöglichkeiten": "Buttons, touch and capacitive stuff gets explored.",
+            "Diverse Outputmöglichkeiten": "Led's, fans, motors, pumps and other stuff can be controlled automaticly and 'intelligent'."
+        },
+        "bugs": {
+            "Diverse": "This project is a learning-project as well and got some own forks, which works diffrently stable atm.",
+            "NON-FOSS": "This Software is closed right now. I'm not shure when it's ready for release, but it's also a question of success."
+        },
+        "pictures": {
+            "horain1": {
+                "desc": "One of some horain-setups.",
+                "src": "images/horain.jpg",
+                "link": "images/horain.jpg"
+            },
+            "horain2": {
+                "desc": "My own horain for home",
+                "src": "images/horain2.jpg",
+                "link": "images/horain2.jpg"
+            },
+                        "horainclient1": {
+                "desc": "Client, startsite",
+                "src": "images/horainclient.jpg",
+                "link": "images/horainclient.jpg"
+            },
+                        "horainclient2": {
+                "desc": "Client, logging-analyse. Here for V and A for 40d of my solarsystem.",
+                "src": "images/horainclient2.jpg",
+                "link": "images/horainclient2.jpg"
+            }
+        }
+    },
+ 
+ 
     "tryToxic": {
         "title": "tryToxic",
         "preword": "tryToxic is just another tox-api-client, written in python 3 and pyQt",

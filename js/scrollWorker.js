@@ -1,5 +1,7 @@
 var indexTop;
 var indexSubTop;
+var horainTop;
+var horainSubTop;
 var petaTop;
 var petaSubTop;
 var tryToxicTop;
@@ -19,7 +21,7 @@ var aboutSubTop;
 function getCurrentIDNext(curPos) {
     "use strict";
     var sub = "";
-    if (tryToxicTop > curPos) {
+    if (horainTop > curPos) {
         //  console.info(indexSubTop[0] + " vs " + indexSubTop[1] + " curpos " + curPos);
         if ((indexTop < curPos) && (indexSubTop[0] > curPos)) {
             //  console.info("PRE description");
@@ -40,7 +42,25 @@ function getCurrentIDNext(curPos) {
         }
         // console.info(curPos + "currentPos, " + indexSubTop[0] + " [0], " + indexSubTop[1] + " [1] " + indexTop + " indextop, " + sub + " sub");
         return ["index", sub];
-    } else if ((tryToxicTop < curPos) && (jobManagementTop > curPos)) {
+    }
+    
+    else if ((horainTop < curPos) && (tryToxicTop >  curPos)) {
+        if ((horainTop < curPos) && (horainSubTop[0] > curPos)) {
+            sub = "horain";
+        } else if ((horainSubTop[0] < curPos) && (horainSubTop[1] > curPos)) {
+            sub = "tochorainfeatures";
+        } else if ((horainSubTop[1] < curPos) && (horainSubTop[2] > curPos)) {
+            sub = "tochorainpictures";
+        } else if ((horainSubTop[2] < curPos) && (horainSubTop[3] > curPos)) {
+            sub = "tochorainicbugs";
+        } else {
+            sub = "tochoraindescription";
+        }
+        //console.info(sub);
+        return ["horain", sub];
+    }
+    
+    else if ((tryToxicTop < curPos) && (jobManagementTop > curPos)) {
         if ((tryToxicTop < curPos) && (tryToxicSubTop[0] > curPos)) {
             sub = "tryToxic";
         } else if ((tryToxicSubTop[0] < curPos) && (tryToxicSubTop[1] > curPos)) {
@@ -141,18 +161,20 @@ self.addEventListener('message', function (e) {
     case 'setHeight':
         indexTop = data.msg[0];
         indexSubTop = data.msg[1];
-        petaTop = data.msg[2];
-        petaSubTop = data.msg[3];
-        tryToxicTop = data.msg[4];
-        tryToxicSubTop = data.msg[5];
-        jobManagementTop = data.msg[6];
-        jobManagementSubTop = data.msg[7];
-        herschegithubioTop = data.msg[8];
-        herschegithubioSubTop = data.msg[9];
-        multismsTop = data.msg[10];
-        multismsSubTop = data.msg[11];
-        aboutTop = data.msg[12];
-        aboutSubTop = data.msg[13];
+        horainTop = data.msg[2];
+        horainSubTop = data.msg[3];
+        petaTop = data.msg[4];
+        petaSubTop = data.msg[5];
+        tryToxicTop = data.msg[6];
+        tryToxicSubTop = data.msg[7];
+        jobManagementTop = data.msg[8];
+        jobManagementSubTop = data.msg[9];
+        herschegithubioTop = data.msg[10];
+        herschegithubioSubTop = data.msg[11];
+        multismsTop = data.msg[12];
+        multismsSubTop = data.msg[13];
+        aboutTop = data.msg[14];
+        aboutSubTop = data.msg[15];
         // self.postMessage('scrollWorker: Setted the values');
         break;
     case 'getCurrentElement':

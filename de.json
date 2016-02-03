@@ -1,41 +1,90 @@
 { "index": {
         "title": "Home",
         "preword": "Dies ist die Linkliste, die 'alternative Startseite' oder die 'Sitemap'. Diese Seite enthält jedoch auch externe Links. <br /> Sie liefert auch eine Beschreibung der Website, der aktiven Projekte und mir.",
-        "description": "<h4><a name='website' class='anchor'></a>Website</h4>Diese Website nutzt Ihren Webstorage, wenn Ihr Browser dies unterstützt. Dies bemerken Sie am besten beim wechseln der Sprachen - Sie müssen nach dem Wechsel der Sprache den 'Erneuern'-Knopf drücken, um die neue Sprachdatei zu laden.<br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch die relativ neuen <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a> Technologien kennenzulernen. Auch Javascript ist relativ neu für mich, aber eine interessante Welt. Es ist keine 'sichere' Sprache, aber sie ist oftmals schöner Augenzucker (Eyecandy) und aktuell sogar nützlich (siehe <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Kartenplugin in Peta</a> und auch <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>). <br />Auf der anderen Seite mag ich 'ernst zu nehmenderen' und meistens <a target='_blank' href='https://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a> und <a target='_blank' href='https://de.wikipedia.org/wiki/Objektorientierte_Programmierung'>objektorientieren Code</a>. Auf dieser Seite bekommen Sie eine Übersicht über die Projekte, welche ich programmiert habe. <span style='color: grey;'><h4><a name='security' class='anchor'></a>Kapitel Sicherheit/Websiten schützen</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Seite 309:<br />'Fragen Sie nach dem Zufallsprinzip nur bestimmte Zeichen des Passwortes ab: mal das erste und dritte Zeichen, mal das sechste und vierte.' Weiter unten: 'Wenn sie diese zusätzlichen Features integrieren, sind sie schon dicht an dem Verfahren das Banken für browserbasiertes Online-Banking verwenden.'</span><hr /> Logisch! Nein ernsthaft, Sicherheit ist ein wichtiges Thema, auf das man zwei Augen richten sollte. Zwei meiner Projekte haben bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<h4><a name='homeAbout' class='anchor'></a>Über mich</h4>Der letzte Teil ist <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>Über mich</a>. Nach der Ausbildung arbeitete ich vor allem körperlich, da 4 Jahre lang, 8 Stunden am Tag Computer, zu viel Computer für mich war. Da ich 2014 einen Arbeitsunfall (Mittelfussbruch) erlitt, möchte ich mein momentanes Hobby wieder zum Beruf machen. Seit April bin ich auf <a target='_blank' href='http://github.com/hersche'>Github</a> wieder ziemlich aktiv!<br />Dieser Code soll als Beispiel dienen, wie ich programmieren kann. <br />Sie können diese Projekte frei (GPLv2) benutzen und ich bin glücklich, wenn jemand es forkt, Fehler meldet oder es ausprobiert.",
+        "description": "<h4><a name='website' class='anchor'></a>Website</h4>Diese Website nutzt Ihren Webstorage, wenn Ihr Browser dies unterstützt. Dies bemerken Sie am besten beim wechseln der Sprachen - Sie müssen nach dem Wechsel der Sprache den 'Erneuern'-Knopf drücken, um die neue Sprachdatei zu laden.<br />Diese Seite ist sehr aktuell und ich werde sie aktuell halten, um auch die relativ neuen <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a> Technologien kennenzulernen. Auch Javascript ist relativ neu für mich, aber eine interessante Welt. Es ist keine 'sichere' Sprache (z.B Browser-Inkompatibilitäten), aber sie ist oftmals schöner Augenzucker (Eyecandy) und aktuell sogar nützlich (siehe <a target='_blank' href='http://dev.thoeni.me/peta/plugin.php?plugin=32'>Kartenplugin in Peta</a> und auch <a target='_blank' href='http://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>). <br />Auf der anderen Seite mag ich 'ernst zu nehmenderen' und meistens <a target='_blank' href='https://de.wikipedia.org/wiki/Model_View_Controller'>MVC</a> und <a target='_blank' href='https://de.wikipedia.org/wiki/Objektorientierte_Programmierung'>objektorientieren Code</a>. Auf dieser Seite bekommen Sie eine Übersicht über die Projekte, welche ich programmiert habe. <span style='color: grey;'><h4><a name='security' class='anchor'></a>Kapitel Sicherheit/Websiten schützen</h4>PHP 5 & MySQL 4 - Der leichte Einstieg, Seite 309:<br />'Fragen Sie nach dem Zufallsprinzip nur bestimmte Zeichen des Passwortes ab: mal das erste und dritte Zeichen, mal das sechste und vierte.' Weiter unten: 'Wenn sie diese zusätzlichen Features integrieren, sind sie schon dicht an dem Verfahren das Banken für browserbasiertes Online-Banking verwenden.'</span><hr /> Logisch! Nein ernsthaft, Sicherheit ist ein wichtiges Thema, auf das man zwei Augen richten sollte. Zwei meiner Projekte haben bereits die Fähigkeit zur Verschlüsselung ihrer lokalen Daten. Das letzte Projekt ist in PHP geschrieben und enthält derzeit keine Verschlüsselung in der Datenbank - dies wird folgen, sobald ich Zeit und Ideen dafür finde. Es wird ähnlich implementiert wie in den vorangegangenen Projekten.<h4><a name='homeAbout' class='anchor'></a>Über mich</h4>Der letzte Teil ist <a href='index.html?s=\"about\"' onclick='changeContent(\"about\"); return false;'>Über mich</a>. Dieser Teil beschreibt Fähigkeiten und Erfahrungen und stellt diese auch in einer Timeline dar. Aktuell verwalte ich derzeit einen Server als alleiniger Admin einer Gruppe und arbeite vorwiegend an einem Projekt mit Arduinos und Qt in C++ (siehe Horain), weshalb andere Projekte derzeit vernachlässigt werden. Die älteren Projekte stehen unter der GPL v2, das Horain-Projekt wird früher oder später folgen.",
         "content": {
+            "horain": {
+                "pLink": "horain",
+                "sLink": "",
+                "dLink": "",
+                "stable": "Geschlossene Alphaphase."
+            },
             "tryToxic": {
                 "pLink": "tryToxic",
                 "sLink": "https://github.com/hersche/tryToxic/",
                 "dLink": "tryToxicDocs/index.html",
-                "stable": "Der Kern befindet sich in der Alpha-Phase (offen für Veränderungen). Durch Änderungen an der API können Teile 'aufhören zu funktionieren'."
+                "stable": "(Momentan Eingestellt) Der Kern befindet sich in der Alpha-Phase (offen für Veränderungen). Durch Änderungen an der API können Teile 'aufhören zu funktionieren'."
             },
             "jobManagement": {
                 "pLink": "jobManagement",
                 "sLink": "https://github.com/hersche/jobManagement/",
                 "dLink": "jobManagementDocs/index.html",
-                "stable": "Funktioniert stabil."
+                "stable": "(Momentan Eingestellt) Funktioniert stabil."
             },
             "Peta": {
                 "pLink": "peta",
                 "sLink": "https://github.com/hersche/Peta/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Funktioniert stabil, benötigt noch ein paar grundlegende Features."
+                "stable": "(Momentan Eingestellt) Funktioniert stabil, benötigt noch ein paar grundlegende Features."
             },
             "MultiSms": {
                 "pLink": "multisms",
                 "sLink": "https://github.com/hersche/MultiSms/",
                 "dLink": "petaDocs/index.html",
-                "stable": "Funktioniert derzeit nicht, benötigt ein umschreiben von Python 2.7 auf 3.x."
+                "stable": "(Momentan Eingestellt) Funktioniert derzeit nicht, benötigt ein umschreiben von Python 2.7 auf 3.x."
             },
             "hersche.github.io": {
                 "pLink": "hersche.github.io",
                 "sLink": "https://github.com/hersche/hersche.github.io/",
                 "dLink": "https://github.com/hersche/hersche.github.io/",
-                "stable": "Fertig"
+                "stable": "(Momentan Eingestellt) Fertig"
             }
 
         }
     },
+ 
+     "horain": {
+        "title": "Horain",
+        "preword": "Das Horain ('HomeBrain') ist eine Kombination aus Arduino-Gerät und Android/Desktop-Client auf Qt-Basis.",
+        "description": "Das Horain-Projekt hat einige, relativ hochgesteckte Ziele. Es soll diverse Geräte und Sensoren auslesen können und aufgrund der Daten entsprechend optimal reagieren - das bedeutet z.B, dass ein Bewegungsmelder als Auslöser für ein Licht dient - allerdings lassen sich auf der Basis von Arduino wesentlich komplexere und in meinem Fall über Bluetooth und USB-Kabel ansteuerbare Lösungen anbieten.",
+        "features": {
+            "Bluetooth": "Das Gerät lässt sich über Bluetooth per Handy und PC ansteuern.",
+            "Qt-Client": "Der Client lässt sich auf Android, Linux, Mac und Windows ausführen - native!",
+            "Neopixel": "Offen ansteuerbare RGB-Leds von Adafruit.",
+            "Geschichte & Live": "Loggen der Daten und/oder live-Anzeige per Client - grafisch und semantisch.",
+            "Kompatibilität": "Synchronisierungsmöglichkeit per Qt-Client mit openenergy-monitor u.ä ist geplant",
+            "Diverse Inputmöglichkeiten": "Buttons, Touch und Kapazitives wird erpropt.",
+            "Diverse Outputmöglichkeiten": "Leds, Lüfter, Motoren, Pumpen und anderes kann automatisiert und 'intelligent' angesteuert werden."
+        },
+        "bugs": {
+            "Diverse": "Das Projekt ist zugleich ein Lernprojekt und hat einige Ableger, die verschieden Stabil funktionieren.",
+            "NON-FOSS": "Die Software ist derzeit nicht offengelegt - dies wird bis zu einem gewissen Erfolg auch nicht der Fall sein."
+        },
+        "pictures": {
+            "horain1": {
+                "desc": "Eines von einigen Proto-aufgesetzten Projekten",
+                "src": "images/horain.jpg",
+                "link": "images/horain.jpg"
+            },
+            "horain2": {
+                "desc": "Mein eigenes Horain für zuhause.",
+                "src": "images/horain2.jpg",
+                "link": "images/horain2.jpg"
+            },
+                        "horainclient1": {
+                "desc": "Client, Startseite",
+                "src": "images/horainclient.jpg",
+                "link": "images/horainclient.jpg"
+            },
+                        "horainclient2": {
+                "desc": "Client, Logger-Analyse.Hier: Volt und Ampere meines Solarsystems in 40 Tagen.",
+                "src": "images/horainclient2.jpg",
+                "link": "images/horainclient2.jpg"
+            }
+        }
+    },
+ 
+ 
     "tryToxic": {
         "title": "tryToxic",
         "preword": "tryToxic ist ein weiterer tox-api-client. Er ist in python 3 mit den Bibliotheken pyTox und pyQt geschrieben.",
@@ -225,6 +274,7 @@
         },
         "sys": {
             "trans": "Systemadministrator-Erfahrungen",
+                        "Aktuell": "Ich betreue einen Debian-Server für http://energiewandler.ch, welche eine cloud und diverse andere Dienste anbietet.",
             "Windows 3.1": "Mein erster Computer. Er hatte 486hz und eine Harddisk mit 20Mb. <a target='_blank' href='https://de.wikipedia.org/wiki/Microsoft_Windows_3.1'>Windows 3.1</a> brauchte rund 20 Disketten zum Aufsetzen. Dies war auch das erste Gerät, das ich auseinandernahm und wieder zusammensetzte.",
             "Windows 95-Xp": "Dies waren meine folgenden Computer. Von meinem ersten 4x-CD-Laufwerk bis zum ersten CD-Brenner. Ich machte viele Erfahrungen, wovon nicht wenige mühsam waren.",
             "Mandrivia Linux": "<a target='_blank' href='https://de.wikipedia.org/wiki/Mandriva_Linux'>Mandrake/Mandrivia</a> war mein erstes, richtig gebrauchtes Linux. Es war ein wenig wie Kubuntu heute.",

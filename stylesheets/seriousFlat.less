@@ -20,6 +20,16 @@
     src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(shadows.woff) format('woff');
 }
 
+.tocClass {
+    li {
+        a {
+            width:300px%;
+        }
+        
+    }
+    
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -141,7 +151,7 @@ body {
                             z-index: 999;
                             height: 30px;
                             left: -17em;
-                            width: 35em;
+                            width: 40em;
                             padding-bottom: 5px;
                             list-style: none;
                             -webkit-box-shadow: none;
@@ -351,6 +361,10 @@ body {
 
 .current_page_item { background: @white !important; }
 
+#timelineinside {
+    width: 100%;
+}
+
 body.active #menu {
     top: -13%;
     transition: top 0.5s;
@@ -369,7 +383,7 @@ body.active #menu {
     }
 
     tr td a img {
-        max-height: 350px;
+        height: 200px;
         padding: 0;
         margin: 0;
     }
@@ -392,7 +406,7 @@ body.active #menu {
 
 #tocindex { margin-top: 7px !important; }
 
-.projectpic { max-width: 100%; }
+.projectpic { height: 200px; }
 
 .gallerybox { max-width: 40%; }
 

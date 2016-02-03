@@ -5,8 +5,19 @@ function createTimeline(tlD, lang) {
     "use strict";
     createStoryJS({
         type: 'timeline',
-        width: '850',
-        height: '500',
+        width: 'auto',
+        height: '350',
+        source: tlD,
+        lang: lang,
+        embed_id: 'timelineinside',
+        debug: 'false'
+    });
+}function createTimelineEmbedded(tlD, lang) {
+    "use strict";
+    createStoryJS({
+        type: 'timeline',
+        width: 'auto',
+        height: '350',
         source: tlD,
         lang: lang,
         embed_id: 'my-timeline',
@@ -128,7 +139,7 @@ function processHtmlNext(jDataIn, name) {
 
                 toc += "</ul></ul>";
                 //displayHtml += "</div>"+toc+"</ul>";
-                displayHtml += '<h2>' + jDataIn.transl.expiriences + '</h2>' + jDataIn.about.timeline;
+                displayHtml += '<h2>' + jDataIn.transl.expiriences + '</h2><div id="timelineinside"></div>' + jDataIn.about.timeline;
                 displayHtml += '<h3><a name="languages" class="anchor" />' + val.languages.trans + '</h3><ul>';
                 displayHtml += langs + '</ul>';
                 displayHtml += '</ul><h3><a name="rlangs" class="anchor" />' + jDataIn.transl.reallang + '</h3><ul>';
@@ -146,7 +157,7 @@ function processHtmlNext(jDataIn, name) {
 
             } else {
                 displayHtml += '<article id="' + key + '"><h2>' + val.title + '</h2><p>' + val.preword + "</p>";
-                toc += '<h2 id="toc' + key + '">' + val.title + '</h2><ul><li id="toc' + key + 'features"><a href="#' + key + 'features">' + jDataIn.transl.features + '</a></li>';
+                toc += '<h2 id="toc' + key + '">' + val.title + '</h2><ul class="tocClass" ><li id="toc' + key + 'features"><a href="#' + key + 'features">' + jDataIn.transl.features + '</a></li>';
                 var pictureCount = Object.keys(val.pictures).length;
                 if (pictureCount > 0) {
                     toc += '<li id="toc' + key + 'pictures"><a href="#' + key + 'pictures" >' + jDataIn.transl.pictures + '</a></li>';
@@ -159,10 +170,11 @@ function processHtmlNext(jDataIn, name) {
                 });
 
                 if (pictureCount > 0) {
-                    displayHtml += '</ul><h3><a name="' + key + 'pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><ul id="projectPicture' + key + '">';
+                    displayHtml += '</ul><h3><a name="' + key + 'pictures" class="anchor" />' + jDataIn.transl.pictures + '</h3><div id="projectPicture' + key + '" class="gallerytable"><tbody><tr>';
                     $.each(val.pictures, function (pKey, pVal) {
-                        displayHtml += '<li>' + pVal.desc + ': <br /><a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></li>';
+                        displayHtml += '<td><a href="' + pVal.link + '" title="' + pVal.desc + '" class="gallerybox" data-fancybox-group="gallery"><img class="projectpic" src="' + pVal.src + '" /></a></td>';
                     });
+                    displayHtml += '</tr></tbody></div>';
                 }
                 displayHtml += '</ul><h3 ><a name="' + key + 'bugs" class="anchor" />' + jDataIn.transl.bugs + '</h3><ul>';
                 $.each(val.bugs, function (bKey, bVal) {
@@ -213,7 +225,7 @@ function GET(v) {
 /**
 
 **/
-var extraSpace = 50;
+var extraSpace = 40;
 
 function defineTops() {
     "use strict";
@@ -226,6 +238,11 @@ function defineTops() {
         //description: $('#description').position().top - extraSpace
         //}
         // console.info($("li:regex(id, .*ocindex.*)").toString());
+        
+        var horainTop = showTop + $('#horain').position().top - extraSpace;
+        var horainSubTop = [$('a[name=horainfeatures]').position().top,$('a[name=horainpictures]').position().top, $('a[name=horainbugs]').position().top, $('a[name=horaindescription]').position().top];
+        console.info(horainTop);
+        console.info(horainSubTop);
         var petaTop = showTop + $('#peta').position().top - extraSpace;
         var petaSubTop = [$('a[name=petafeatures]').position().top, $('a[name=petabugs]').position().top, $('a[name=petadescription]').position().top];
         var tryToxicTop = showTop + $('#tryToxic').position().top - extraSpace;
@@ -239,7 +256,7 @@ function defineTops() {
         var aboutTop = showTop + $('#about').position().top - extraSpace;
         /* var aboutSubTop = [$('a[name=languages]').position().top, $('a[name=PHP]').position().top, $('a[name=Python]').position().top, $('a[name=Java]').position().top, $('a[name=Javascript]').position().top, $('a[name=rlangs]').position().top, $('a[name=Deutsch]').position().top, $('a[name=Englisch]').position().top];*/
         var aboutSubTop = [$('a[name=languages]').position().top, $('a[name=rlangs]').position().top, $('a[name=sys]').position().top, $('a[name=mobile]').position().top, $('a[name=support]').position().top, $('a[name=oldjobs]').position().top, $('a[name=hobbys]').position().top];
-        return [indexTop, indexSubTop, petaTop, petaSubTop, tryToxicTop, tryToxicSubTop, jobManagementTop, jobManagementSubTop, herschegithubioTop, herschegithubioSubTop, multismsTop, multismsSubTop, aboutTop, aboutSubTop];
+        return [indexTop, indexSubTop,horainTop, horainSubTop, petaTop, petaSubTop, tryToxicTop, tryToxicSubTop, jobManagementTop, jobManagementSubTop, herschegithubioTop, herschegithubioSubTop, multismsTop, multismsSubTop, aboutTop, aboutSubTop];
     } catch (er) {
 
         setTimeout(function () {
@@ -358,6 +375,7 @@ function changeContent(name, fuckOff) {
             scrollTop: $('#showContent').scrollTop() + $('#' + name).position().top - 120
         }, 1000);
         lastName = name;
+        
     }
 
     return false;
