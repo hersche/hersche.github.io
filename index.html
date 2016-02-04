@@ -161,7 +161,8 @@
                     structureUpdate.setUTCFullYear(2014);
                     if (structureUpdate < dateObject) {
                         console.info("doing update here!");
-                        //updateContent();
+                        updateContent();
+                        console.info("doing update here!");
                     }
                     jData = jQuery.parseJSON(localStorage.jData);
                     createTimeline(jQuery.parseJSON(localStorage.tlData), jData.transl.lang);
