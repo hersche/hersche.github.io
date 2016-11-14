@@ -25,6 +25,14 @@ function createTimeline(tlD, lang) {
     });
 }
 
+function toggleElement(elem){       
+    $('#'+elem).fadeToggle(250);
+    if($('#'+elem).css("display")!="none"){
+        $('html, body').animate({ scrollTop: $('#'+elem).position().top -160}, 250);
+        //alert($('#'+elem).position.top());
+    }
+}
+
 /** 
     Generates a menu out of json. This one is for just one entry with a submenu (the first one). Would be possible to improve, but it's not necessary for that case
 **/
@@ -72,10 +80,10 @@ function processHtmlNext(jDataIn, name) {
                     }
                 });
                 displayHtml += '</table>';
-                var langs = "",
-                    rlangs = "<ul>",
-                    syst = "<ul>",
-                    mobile = "<ul>";
+                var langs = '<ul id="langsContent" style="display:none;">',
+                    rlangs = '<ul id="rlangsContent" style="display:none;">',
+                    syst = '<ul id="systContent" style="display:none;">',
+                    mobile = '<ul id="mobileContent" style="display:none;">';
                 toc += '<h2 id="toc' + key + '">' + jDataIn.transl.about + '</h2><ul style="list-style-type: none; list-style: none;" ><li id="tocaboutlanguages" ><a href="#languages">' + val.languages.trans + '</a></li><ul style="list-style-type: none; list-style: none;">';
                 $.each(val.languages, function (lKey, lVal) {
                     if (lKey !== "trans") {
@@ -118,7 +126,7 @@ function processHtmlNext(jDataIn, name) {
                 });
 
                 toc += '</ul><li id="tocaboutsupport"><a href="#support">' + val.support.trans + '</a></li><ul>';
-                var support = "<ul>";
+                var support = '<ul>';
                 $.each(val.support.reference, function (sKey, sVal) {
                     toc += '<li><a href="#' + sKey + '">' + sKey + '</a></li>';
                     support += '<li><b>' + sKey + '</b><a name="' + sKey + '" class="anchor" />: ' + sVal + '</li>';
@@ -126,10 +134,10 @@ function processHtmlNext(jDataIn, name) {
 
 
                 toc += '</ul><li id="tocaboutoldjobs"><a href="#oldjobs">' + val.oldjobs.trans + '</a></li><ul>';
-                var oldjobs = '<p><a name="oldjobs" class="anchor" />' + val.oldjobs.description + '</p>';
+                var oldjobs = '<div id="oldjobsContent" style="display:none;"><p><a name="oldjobs" class="anchor" />' + val.oldjobs.description + '</p>';
 
                 toc += '</ul><li id="tocabouthobbys"><a href="#hobbys">' + val.hobbys.trans + '</a></li><ul>';
-                var hobbys = "<ul>";
+                var hobbys = '<ul id="hobbyContent" style="display:none;">';
                 $.each(val.hobbys, function (hKey, hVal) {
                     if (hKey !== "trans") {
                         toc += '<li><a href="#' + hKey + '">' + hKey + '</a></li>';
@@ -140,19 +148,19 @@ function processHtmlNext(jDataIn, name) {
                 toc += "</ul></ul>";
                 //displayHtml += "</div>"+toc+"</ul>";
                 displayHtml += '<h2>' + jDataIn.transl.expiriences + '</h2><div id="timelineinside"></div>' + jDataIn.about.timeline;
-                displayHtml += '<h3><a name="languages" class="anchor" />' + val.languages.trans + '</h3><ul>';
+                displayHtml += '<h3 class="aboutSubmenubutton" onclick="toggleElement(\'langsContent\')"><a name="languages" class="anchor" />' + val.languages.trans + '</h3>';
                 displayHtml += langs + '</ul>';
-                displayHtml += '</ul><h3><a name="rlangs" class="anchor" />' + jDataIn.transl.reallang + '</h3><ul>';
+                displayHtml += '</ul ><h3 class="aboutSubmenubutton" onclick="toggleElement(\'rlangsContent\')"><a name="rlangs" class="anchor" />' + jDataIn.transl.reallang + '</h3><ul>';
                 displayHtml += rlangs + '</ul>';
-                displayHtml += '</ul><h3><a name="sys" class="anchor" />' + val.sys.trans + '</h3>';
+                displayHtml += '</ul><h3 class="aboutSubmenubutton" onclick="toggleElement(\'systContent\')"><a name="sys" class="anchor" />' + val.sys.trans + '</h3>';
                 displayHtml += syst + '</ul>';
-                displayHtml += '<h3><a name="mobile" class="anchor" />' + val.mobile.trans + '</h3>';
+                displayHtml += '<h3 class="aboutSubmenubutton" onclick="toggleElement(\'mobileContent\')"><a name="mobile" class="anchor" />' + val.mobile.trans + '</h3>';
                 displayHtml += mobile + '</ul></div>';
-                displayHtml += '<h3><a name="support" class="anchor" />' + val.support.trans + '</h3>';
-                displayHtml += val.support.desc + support + '</ul></div>';
-                displayHtml += '<h3><a name="oldjobs" class="anchor" />' + val.oldjobs.trans + '</h3>';
-                displayHtml += oldjobs + '</ul></div>';
-                displayHtml += '<h3><a name="hobbys" class="anchor" />' + val.hobbys.trans + '</h3>';
+                displayHtml += '<h3 class="aboutSubmenubutton" onclick="toggleElement(\'supportContent\')"><a name="support" class="anchor" />' + val.support.trans + '</h3>';
+                displayHtml += '<div  id="supportContent" style="display:none;">'+val.support.desc + support + '</div>';
+                displayHtml += '<h3 class="aboutSubmenubutton" onclick="toggleElement(\'oldjobsContent\')" ><a name="oldjobs" class="anchor" />' + val.oldjobs.trans + '</h3>';
+                displayHtml += oldjobs + '</div>';
+                displayHtml += '<h3 class="aboutSubmenubutton" onclick="toggleElement(\'hobbyContent\')"><a name="hobbys" class="anchor" />' + val.hobbys.trans + '</h3>';
                 displayHtml += hobbys + '</ul></div></article>';
 
             } else {
