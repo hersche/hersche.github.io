@@ -227,6 +227,29 @@ h3 {
         background-attachment: scroll;
     }
 }
+    
+    .bg-change {
+        color: blue;
+    background:red;
+    animation:myfirst 10s;
+    -moz-animation:myfirst 10s infinite; /* Firefox */
+    -webkit-animation:myfirst 10s infinite; /* Safari and Chrome */
+}
+
+@-moz-keyframes myfirst /* Firefox */ {
+    0% {background:red; color: blue;}
+    50% {background:yellow;color:black;}
+    75% {background:blue;color:red;}
+    100% {background:black;color:yellow;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */ {
+    0% {background:red; color: blue;}
+    50% {background:yellow;color:black;}
+    75% {background:blue;color:red;}
+    100% {background:black;color:yellow;}
+}
+    
 </style>
 
 <!-- Prepare a container for your calendar. -->
@@ -327,10 +350,6 @@ $(document).ready(function(){
             <a class="nav-link " href="#contact">Contact</a>
           </li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
       </div>
     </nav>
     
@@ -571,7 +590,7 @@ Ethereum-Mining (Graphiccard/GPU only): <a href="https://eth.nanopool.org/accoun
 
 <div class="bgimg-6">
   <div class="caption">
-    <span class="border">Stay tuned!</span>
+    <a href="https://github.com/hersche" target="_blank" ><span class="border bg-change">Stay tuned!</span></a>
   </div>
 </div>
 <script>
