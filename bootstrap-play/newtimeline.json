@@ -152,7 +152,7 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "helloworld.jpg"
+                "url":  "linux.jpg"
             },
             "text": {
                 "headline": "Change to linux",
@@ -176,7 +176,7 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "helloworld.jpg"
+                "url":  "gentoo.png"
             },
             "text": {
                 "headline": "Change to Gentoo Linux",

@@ -235,15 +235,6 @@ h3 {
 >
 </script>
 <script>
-    var timelineconf = {
-        type: 'timeline',
-        width: 'auto',
-        height: '400',
-        source: 'timeline.json',
-        lang: 'de',
-        embed_id: 'timelineinside',
-        debug: 'false'
-    };
     $( document ).ready(function() {
        new TL.Timeline('timelineinside', 'newtimeline.json'); 
 });
@@ -367,7 +358,7 @@ $(document).ready(function(){
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#github-popup">
   Show Github-Activity
 </button>
-     <div style="width:auto; height: 550px; margin-top: 20px;" id="timelineinside"></div>
+     <div style="width:auto; height: 800px; margin-top: 20px;" id="timelineinside"></div>
 
 
 <!-- Modal -->
@@ -507,7 +498,7 @@ $(document).ready(function(){
               <div class="" style="background-color: black; opacity: 0.9; width: 60%; padding: 10px; border-radius: 30px;">
                 <h1>YouPHPTube</h1>
                 <p>This is a very cool project. It's kind of a youtube-clone, but because it's open source, i can help improving it.</p>
-                <p><ul><li>Various sort-possibilitys</li><li>Category-descriptions</li><li>Hotkey-plugin (video-shortcuts)</li><li>YouPHPFlixHybrid-Plugin (Combine YouPHPFlix- and Gallery-plugin)</li><li>Message when database-update is avaible</li></ul></p>
+                  <p><ul><li>Various sort-possibilitys</li><li>Category-descriptions</li><li><a href="https://github.com/DanielnetoDotCom/YouPHPTube/tree/master/plugin/Hotkeys" target="_blank">Hotkey-plugin</a> (video-shortcuts)</li><li><a href="https://github.com/DanielnetoDotCom/YouPHPTube/tree/master/plugin/YouPHPFlixHybrid" target="_blank">YouPHPFlixHybrid-Plugin</a> (Combine YouPHPFlix- and Gallery-plugin)</li><li><a href="https://github.com/hersche/YouPHPTube/tree/unstable/plugin/MP4ThumbsAndGifLocal" target="_blank">MP4ThumbsAndGifLocal</a> (Create thumbs and thumb-gifs after upload video)</li><li>Message when database-update is avaible</li></ul></p>
 
               </div>
               <div class="carousel-caption text-right">
