@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
   <script src="popper.min.js"></script>
   <script src="bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -247,7 +248,59 @@ h3 {
        new TL.Timeline('timelineinside', 'newtimeline.json'); 
 });
 
-    
+    $(window).on('activate.bs.scrollspy', function (event) {
+   // console.log('activate.bs.scrollspy', event);
+           var activeSection = $("#navbarCollapse").find(".nav-link.active").attr("href");
+console.log(activeSection);
+   if((activeSection === "#donations")||(activeSection === "#contact"))
+   {
+       $("#donationsTitle").show("slide" , { direction: "right" },1500);
+       $("#donationsContent").show("slide" , { direction: "left" },1500);
+       //alert("I have reached to the top.");
+   }
+        else {
+               $("#donationsTitle").hide("slide" , { direction: "left" },1500);
+       $("#donationsContent").hide("slide" , { direction: "right" },1500);    
+            
+        }
+    if(activeSection === "#about")
+   {
+       $("#aboutTitle").show("slide" , { direction: "right" },1500);
+       $("#face").show("slide" , { direction: "left" },1500);
+   } else {
+       $("#face").hide();
+       $("#aboutTitle").hide();
+   }
+})
+
+$(document).ready(function(){ 
+ $("#aboutTitle").hide();
+
+    $("#donationsTitle").hide();
+    $("#donationsContent").hide();
+    $("#face").hide();
+  // Add smooth scrolling on all links inside the navbar
+  $("#navbarCollapse a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
 </script>
 <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
 <link
@@ -257,13 +310,13 @@ h3 {
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="myScrollspy">
       <a class="navbar-brand" href="#">hersche.github.io</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" id="nav">
           <li class="nav-item">
             <a class="nav-link" href="#about">About me</a>
           </li>
@@ -291,9 +344,9 @@ h3 {
 </div>
 <div class="bgimg-6" id="about">
   <div class="caption">
-    <span class="border">About me</span>
+    <span id="aboutTitle"  class="border">About me</span>
   
-      <p><img src="me.jpg" style="border-radius: 100px; text-align: center; height: 150px;margin-top: 10px;" /></p>
+      <p><img src="me.jpg" id="face" style="border-radius: 100px; text-align: center; height: 150px;margin-top: 30px;" /></p>
       </div>
 </div>
 <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
@@ -485,11 +538,11 @@ h3 {
 
 <div class="bgimg-5" id="donations">
   <div class="caption">
-    <span class="border" style="background-color:black; opacity: 0.6; font-size:25px;color: #f7f7f7;">Donations</span>
+    <span id="donationsTitle" class="border" style="background-color:black; opacity: 0.6; font-size:25px;color: #f7f7f7;">Donations</span>
   </div>
 </div>
 
-<div style="position:relative;">
+<div style="position:relative;" id="donationsContent">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
   <p>If you like what i do, feel free to do a donation. Instead of boost banks, i prefer direct payments or cpu-performance instead of money - feel free! :)</p>
     <p>BTC-Adress:</p>
