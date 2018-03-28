@@ -265,11 +265,14 @@ console.log(activeSection);
         }
     if(activeSection === "#about")
    {
-       $("#aboutTitle").show("slide" , { direction: "right" },1500);
-       $("#face").show("slide" , { direction: "left" },1500);
+       $("#aboutTitle").show("slide" , { direction: "right" },1000);
+       $("#face").show("slide" , { direction: "left" },1000);
    } else {
-       $("#face").hide();
-       $("#aboutTitle").hide();
+      // $("#face").hide();
+    //   $("#aboutTitle").hide();
+       
+              $("#aboutTitle").hide("slide" , { direction: "right" },1500);
+       $("#face").hide("slide" , { direction: "left" },1500);
    }
 })
 
@@ -317,6 +320,9 @@ $(document).ready(function(){
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto" id="nav">
+            <li class="nav-item" style="display:none;">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About me</a>
           </li>
@@ -337,7 +343,7 @@ $(document).ready(function(){
       </div>
     </nav>
     
-<div class="bgimg-1">
+<div class="bgimg-1" id="home">
   <div class="caption">
     <span class="border">Welcome to hersche.github.io</span>
   </div>
@@ -545,7 +551,8 @@ $(document).ready(function(){
 <div style="position:relative;" id="donationsContent">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
   <p>If you like what i do, feel free to do a donation. Instead of boost banks, i prefer direct payments or cpu-performance instead of money - feel free! :)</p>
-    <p>BTC-Adress:</p>
+      <p>Paypal: <a href="https://paypal.me/pools/c/834BNmFO2H" target="_blank">https://paypal.me/pools/c/834BNmFO2H</a></p>
+    <p>BTC-Adress: 1L2F4xcDjfEUaincHsdhfWBDiPzAegFTZq</p>
 <p>Monero/Coinhive (CPU/All/just as Experiment/No installation needed): <a href="https://authedmine.com/media/miner.html?key=b34R7MbTePcWLblpVZRHKLW6sKtdxfpy" rel="nofollow">https://authedmine.com/media/miner.html?key=b34R7MbTePcWLblpVZRHKLW6sKtdxfpy</a></p>
 <p>Ethereum-Adress: 0xA46e6435d6211AD26a2fA549754f4Fc67c0a04b7</p><p>
 Ethereum-Mining (Graphiccard/GPU only): <a href="https://eth.nanopool.org/account/0x7e9e9b1e41e413173c2886dbe755b6c729620cf7" rel="nofollow">https://eth.nanopool.org/account/0x7e9e9b1e41e413173c2886dbe755b6c729620cf7</a> (on nanopool.org is a nice config-generator, just use my payment-adress)</p>
