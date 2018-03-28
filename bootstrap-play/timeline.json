@@ -1,0 +1,285 @@
+
+{ "timeline":
+    {
+        "headline":"Introducion",
+        "type":"default",
+		"text":"Here you will find my expiriences in a timeline-view. Some educations are here as well, so you have something to compare. Some pictures and videos will only be showed with a active internetconnection. <h5>Navigation</h5> You could drag the downer part, so you could \"move in time\". You also see the duration of a event by the blue line on the bottom, as well as the details, when you click a event. It is also possible to use the arrows on the keyboard to navigate.",
+		"startDate":"1995,6,1",
+        "date": [
+                                        {
+                "startDate":"1995,6,1",
+				"endDate":"2001,6,27",
+                "headline":"Basicscool Neufeld",
+                "text":"<p>The 1-6.e class in the normal scool.</p>",
+                "asset":
+                {
+                    "media":"http://www.otto-bennemann-schule.de/cms/upload/bilder/404-monster-classrom-450px.png",
+                    "credit":"http://otto-bennemann-schule.de",
+                    "caption":""
+                }
+            },
+                                        {
+                "startDate":"1997,1,1",
+                "headline":"First view on a computer",
+                "text":"<p>The first computer my dad buyed - was fascinating for me since beginning. I was 9 years old, then.</p>",
+                "asset":
+                {
+                    "media":"http://upload.wikimedia.org/wikipedia/de/6/6c/Wfw.PNG",
+                    "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
+                {
+                "startDate":"1998,2,16",
+				"endDate":"1999,6,27",
+                "headline":"First computer",
+                "text":"<p>Windows 3.1, 20 floppys for the system and a 20 mb harddrive. Before i get this device, i haved to deconstruct and construct it again. This was the demand of my parents - i am thankfull for that.</p>",
+                "asset":
+                {
+                    "media":"http://www.ohgizmo.com/wp-content/uploads/2007/10/sky_puter5.jpg",
+                    "credit":"http://www.ohgizmo.com/2007/10/18/deconstructed-computer-case-mod",
+                    "caption":""
+                }
+            },
+
+                                        {
+                "startDate":"2001,6,1",
+				"endDate":"2004,6,27",
+                "headline":"High-stage-scool Strättligen",
+                "text":"<p>Die 7-9.e class in the normal scool.</p>",
+                "asset":
+                {
+                    "media":"http://www.24gb.de/Gallery/schule/und_wegen_so_eines_kleinen_fehlers_bestellen_sie_mich_extra_in_die_schule.gif",
+                    "credit":"http://24gb.de",
+                    "caption":""
+                }
+            },
+                                                    {
+                "startDate":"2004,6,1",
+				"endDate":"2005,6,27",
+                "headline":"10. scoolyear",
+                "text":"<p>The 10. scoolyear was additional.</p>",
+                "asset":
+                {
+                    "media":"http://www.aarauinfo.ch/bilder/02_wohnen_arbeiten/03_bildung_wissenschaft/symbol_schule.jpg",
+                    "credit":"http://www.aarauinfo.ch",
+                    "caption":""
+                }
+            },
+                            {
+                "startDate":"1999,6,29",
+				"endDate":"2005,6,27",
+                "headline":"Windows-phase",
+                "text":"<p>Regedit, cmd, bluescreens and the first genuine-products. Windows 95 to XP was a interessting time - there was always something to fix.</p>",
+                "asset":
+                {
+                    "media":"http://upload.wikimedia.org/wikipedia/de/a/a2/Win98SE_Bildschirmausdruck.png",
+                    "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
+            
+                                        {
+                "startDate":"2004,3,15",
+				"endDate":"2005,6,27",
+                "headline":"First Code",
+                "text":"<p>The first \"Hello World\", which i wrote, was in Perl. I developed also some very simple applications with it. After i changed to PHP, what was easy because of the similiar syntax.</p>",
+                "asset":
+                {
+                    "media":"http://developer.asustor.com/uploadIcons/0020_999_1373967199_perl_256.png",
+                    "credit":"http://developer.asustor.com/",
+                    "caption":""
+                }
+            },
+                                        {
+                "startDate":"2004,6,29",
+				"endDate":"2006,6,27",
+                "headline":"Linux-beginning-phase",
+                "text":"<p>Trys with Mandrivia, OpenSuse, Ubuntu. Dualboots, wine, MBR-Recoverys and a lot more..</p>",
+                "asset":
+                {
+                    "media":"http://upload.wikimedia.org/wikipedia/commons/thumb/2/20/KDE35desktop.png/800px-KDE35desktop.png",
+                    "credit":"Wikipedia",
+                    "caption":""
+                }
+            },
+                                                    {
+                "startDate":"2006,6,29",
+				"endDate":"2014,6,27",
+                "headline":"Gentoo",
+                "text":"<p>As i found this distribution, i was happy - you learn the system and you become a very individual and performant system!</p>",
+                "asset":
+                {
+                    "media":"http://i-009.mannaz.cc/wp-content/uploads/2010/03/gentoo-transparent.png",
+                    "credit":"http://i-009.mannaz.cc",
+                    "caption":""
+                }
+            },
+                                                                {
+                "startDate":"2008,6,29",
+				"endDate":"2014,6,27",
+                "headline":"Kubuntu",
+                "text":"<p>Through Kubuntu i've learned <a target='_blank' href='http://en.wikipedia.org/wiki/Advanced_Packaging_Tool'>APT</a> well. The system is has a fast setup and works stable - i evaluate it as a optimal Linux-newbie-system, where i just have to add libdvdcss, Vlc, Firefox and similiar stuff. It is easy to support and when something fails on my personal sabayon (if i played too much, bad update or similiar), i always could use my secondary harddisk with Kubuntu.</p>",
+                "asset":
+                {
+                    "media":"http://www.userlogos.org/files/logos/ingalls/kubuntu.png",
+                    "credit":"http://www.userlogos.org/node/8425",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2007,8,13",
+				"endDate":"2011,8,12",
+                "headline":"Education developer",
+                "text":"<p>Confederate education as developer at <a target='_blank' href='http://puzzle.ch'>Puzzle</a>.</p>",
+                "asset":
+                {
+                    "media":"http://blog.zhaw.ch/icclab/files/2012/09/puzzle_withslogan_rgb.jpg",
+                    "credit":"http://puzzle.ch",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2008,8,12",
+				"endDate":"2011,8,12",
+                "headline":"Java/OOP",
+                "text":"<p>Through Puzzle i came to Java and learned out of this how to think OOP.</p>",
+                "asset":
+                {
+                    "media":"http://swordrock.files.wordpress.com/2010/10/images.jpg",
+                    "credit":"http://swordrock.wordpress.com",
+                    "caption":""
+                }
+            },
+                         {
+                "startDate":"2008,10,26",
+                "endDate":"2012,8,26",
+                "headline":"Buy of Openmoko/GTA02",
+                "text":"<p>My first smartphone - and also for hackers. My first smartphone-systems wasn't using not Android, but Debian with Xorg, Qt and Gtk. Android 1.5 was still too unstable as a daily system.</p>",
+                "asset":
+                {
+                    "media":"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Freerunner02.png/170px-Freerunner02.png",
+                    "credit":"Wikipedia",
+                    "caption":"GTA02/Freerunner/Openmoko"
+                }
+            },
+             {
+                "startDate":"2009,10,26",
+                "headline":"First meeting of python",
+                "text":"<p>My first <a href='https://gist.github.com/skamster/10565527' target='_blank'>python-application</a> was for the Openmoko and used D-bus and pyGtk. It was created in one day, because a update broke the sms-application and i wanted to read my sms. It worked!</p>",
+                "asset":
+                {
+                    "media":"https://www.youtube.com/watch?v=cNBtDstOTmA",
+                    "credit":"Gource/Python/Youtube",
+                    "caption":"Entwicklung des Python-Intepreters, visualisiert mit Gource"
+                }
+            },
+            {
+                "startDate":"2010,1,26",
+				"endDate":"2011,5,27",
+                "headline":"Development MultiSMS",
+                "text":"<p><a target='_blank' href='http://puzzle.ch'>Puzzle</a> gave me the job, to write a application for the existing websms-system (per website) of the company. Because of my interessts i was allowed to do this in python with pyKde. The code was, because of stored harddisks and not enough personal interesst, just grabed out before a short time (2014).</p>",
+                "asset":
+                {
+                    "media":"http://cdn.staticportent.com/images/2011/07/python-madness.png",
+                    "credit":"http://staticportent.com/",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2009,11,13",
+                "endDate":"2012,2,27",
+                "headline":"Development Learncards-Web (PHP)",
+                "text":"<p>First developmentphase of the today Peta-project.</p>",
+                "asset":
+                {
+                    "media":"http://php.baraja.cz/phpslon.jpg",
+                    "credit":"http://php.baraja.cz/",
+                    "caption":""
+                }
+            },
+                        {
+                "startDate":"2010,5,7",
+                "headline":"1-day-development of a guestbook",
+                "text":"<p>One day in my education, i forgott to write a <a href='https://github.com/skamster/death-guestbook' target='_blank'>guestbook</a> - so i take the learncards-web-project and forket this over midday. The result was a <a href='https://github.com/skamster/death-guestbook' target='_blank'>guestbook</a> with usermanagment (multiple admins) and the ability to delete and edit, this in a MVC-structure. The requirements where the ability to make entrys and delete them with a static admin. My scoolrating was a 5.5 (CH-System, 6 is the best).</p>",
+                "asset":
+                {
+                    "media":"http://ryaandavis.files.wordpress.com/2013/06/wpid-shutterstock_86404090.jpg",
+                    "credit":"<a target='_blank' href='http://ryaandavis.wordpress.com/2013/06/11/6-useful-websites-to-learn-coding-as-a-beginner-to-expert/'>http://ryaandavis.wordpress.com</a>",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2013,5,25",
+                "endDate":"2014,6,27",
+                "headline":"Development jobManagement",
+                "text":"<p>This project gets created to check the finances from diffrent companys.s The developmentphase of jobManagement during till today.</p>",
+                "asset":
+                {
+                    "media":"images/jobManagementDataInit.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+                        {
+                "startDate":"2014,5,29",
+                "endDate":"2014,6,27",
+                "headline":"Development tryToxic",
+                "text":"<p>tryToxic came out of the jobManagement-project and was the result of my interesst in <a href='http://tox.im' target='_blank' >tox/pyTox</a>. The developmentphase of jobManagement during till today.</p>",
+                "asset":
+                {
+                    "media":"images/tryToxicInit.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+                                     {
+                "startDate":"2014,4,10",
+                "endDate":"2014,6,27",
+                "headline":"Development skamster.github.io",
+                "text":"<p>Development of the website you see right now - 123+ Commits!</p>",
+                "asset":
+                {
+                    "media":"http://www.thebubbleindex.com/public/images/content/HTML.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate": "2014,4,12",
+                "endDate": "2014,6,27",
+                "headline": "Development PhpmETA",
+                "text": "<p>Fork of learncards-web (for flashcards) to PhpMeta (plugin- und accesssystem)</p>",
+                "asset": {
+                    "media": "http://helloiamchris.com/wp-content/uploads/2012/06/phpCode-640x426.png",
+                    "credit": "http://helloiamchris.com",
+                    "caption": ""
+                }
+            },
+			{
+                "startDate":"2011,2,26",
+                "endDate":"2011,4,26",
+                "headline":"Röck'n'Röll-Krew",
+                "text":"Work as stagehand. Moving speakers, laying carpets, putting LED-screens together...",
+                "asset":
+                {
+                    "media":"images/oldjob3.jpg",
+                    "credit":"",
+                    "caption":"Muse, Stade de Suisse, Bern 2013"
+                }
+            },
+			{
+                "startDate":"2012,7,2",
+                "endDate":"2013,8,2",
+                "headline":"Creative Personal/Nüssli",
+                "text":"Work on stage- and steelmontage-building. Climbing in height, montage there and all in long days - a payed fitnesscenter.",
+                "asset":
+                {
+                    "media":"./images/oldjob2.jpg",
+                    "credit":"",
+                    "caption":"Paléo, Nyon 2012"
+                }
+            }
+        ]
+    }
+}

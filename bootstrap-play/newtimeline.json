@@ -1,0 +1,332 @@
+{
+    "events": [
+        {
+            "start_date": {
+                "year":			"1995",
+                "month":		"01",
+                "day": 			"05",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2004",
+                "month":		"06",
+                "day": 			"07",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "scool.jpg"
+            },
+            "text": {
+                "headline": "Scool",
+                "text": "The 1-9 class in the usual scool."
+            },
+            "type": "overview"
+        },
+        {
+            "start_date": {
+                "year":			"1997",
+                "month":		"01",
+                "day": 			"05",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"1998",
+                "month":		"01",
+                "day": 			"05",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "win3.1.jpg"
+            },
+            "text": {
+                "headline": "First own computer",
+                "text": "20 Mb Harddrive, \"modern\" floppy-disks, Windows 3.1 and not even a megaherz of power - but it was still interessting"
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"1999",
+                "month":		"01",
+                "day": 			"05",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2005",
+                "month":		"01",
+                "day": 			"05",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "win.png"
+            },
+            "text": {
+                "headline": "Work with windows",
+                "text": "Regedit, cmd, bluescreens and the first genuine-products. Windows 95 to XP was a interessting time - there was always something to fix."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2004",
+                "month":		"07",
+                "day": 			"05",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2005",
+                "month":		"01",
+                "day": 			"05",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "scool1.jpg"
+            },
+            "text": {
+                "headline": "Additional scoolyear",
+                "text": "The 10. year of scool."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2004",
+                "month":		"01",
+                "day": 			"05",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2005",
+                "month":		"01",
+                "day": 			"05",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "helloworld.jpg"
+            },
+            "text": {
+                "headline": "The begin of developing",
+                "text": "My first \"Hello World\" was written in Perl. Soon and also because of the similiar syntax, i also explored PHP."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2004",
+                "month":		"06",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2006",
+                "month":		"06",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "helloworld.jpg"
+            },
+            "text": {
+                "headline": "Change to linux",
+                "text": "I've tried a lot of distros; Mandrivia, OpenSuse, Ubuntu, Fedora and Slack. My first really used distro was OpenSuse."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2006",
+                "month":		"06",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2014",
+                "month":		"06",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "helloworld.jpg"
+            },
+            "text": {
+                "headline": "Change to Gentoo Linux",
+                "text": "Gentoo is a quite complicated distro, but it's named after the fastest penguin and works like this (when you get it controlled ;)). <br /> In the begin of my developer-education, we tried the distro - i was helping a lot of people to surround theyr kernel-panic."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2008",
+                "month":		"06",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2018",
+                "month":		"06",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "img_parallax3.jpg"
+            },
+            "text": {
+                "headline": "Use of Kubuntu, Raspbian and other Debian-derivates",
+                "text": "For usual users, i've began early to use Kubuntu. After i had enough compiling with my Gentoo, i also changed personaly to Kubuntu. In a very short time in between i also used Arch Linux."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2007",
+                "month":		"06",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2011",
+                "month":		"06",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "helloworld.jpg"
+            },
+            "text": {
+                "headline": "Developer-education",
+                "text": "Make a swiss-approved education as software-developer at <a href='http://puzzle.ch' target='_blank'>Puzzle ITC</a>. <br /> There i had to do the common code in java and groovy & grails - this learns me object oriented thinking.<br />In my free time, i learned python and qt. Also in php i had my projects."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2012",
+                "month":		"02",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2012",
+                "month":		"04",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "oldjob3.jpg"
+            },
+            "text": {
+                "headline": "Röck'n'Röll-Krew",
+                "text": "Work as stagehand. Moving speakers, laying carpets, putting LED-screens together..."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2012",
+                "month":		"07",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2013",
+                "month":		"08",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "oldjob2.jpg"
+            },
+            "text": {
+                "headline": "Creative personal",
+                "text": "Heavier work, more climbing. A scaffolder for events, building mainly stages. Was a nice time!"
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2014",
+                "month":		"04",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2016",
+                "month":		"12",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "crypto.jpg"
+            },
+            "text": {
+                "headline": "Microcontroller-development",
+                "text": "Begin to make Stuff with Arduino's, for example i made code for home-automation, but didn't release it yet. Also, i first developed a gui with python and pyqt. After this, i made the gui with Qt for a client, which wanted performance for a testing tool - so i've learned C++ on the fly. This change allows me to compile the project for android and if needed also ipone's or windows mobile's."
+            },
+            "unique_id": ""
+        },
+        {
+            "start_date": {
+                "year":			"2017",
+                "month":		"04",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "end_date": {
+                "year":			"2017",
+                "month":		"12",
+                "millisecond": 	"",
+                "format": 		""
+            },
+            "background": {
+                "color": "#000000",
+                "opacity": 50,
+                "url":  "crypto.jpg"
+            },
+            "text": {
+                "headline": "Developing a encrypted tracking-websystem-frontend",
+                "text": "For a company, i had/have temporary jobs for the product. The whole developing of a end-to-end encrypted map was a really interessting task, which needs newer technologies as well (webcrypto for example). When other products tells about 'military grade encryption' with aes256, i can say it from my (developed) product as well :)"
+            },
+            "unique_id": ""
+        }
+    ]
+}

@@ -9,11 +9,28 @@
   <script src="popper.min.js"></script>
   <script src="bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
 <style>
+    .modal-content{
+        background-color: inherit;
+    }
+    @font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abel'), local('Abel-Regular'), url(abel.woff) format('woff');
+}
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(shadows.woff) format('woff');
+}
 body, html {
   height: 100%;
   margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
+  font: 400 15px/1.8 "Abel","Lato", sans-serif;
   color: #777;
 }
 
@@ -26,8 +43,30 @@ body {
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
-
-
+    h1,h2,h3,h4{
+        font-family: "Shadows Into Light", "Lucida Grande", "New Century Schoolbook", "Times";
+        font-weight: 600;
+    }
+    .tl-headline-date {
+        font: 400 15px/1.8 "Abel","Lato", sans-serif;
+    }
+    .tl-headline-date{
+        font-size: 0.7em !important;
+    }
+    .tl-slide-content {
+        width: auto !important;
+    }
+    .tl-text-content-container{
+        background: #343a40;
+        color: whitesmoke;
+        opacity: 0.8;
+        border-radius: 12px;
+        padding: 15px !important;
+    }
+    .tl-text{
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -147,13 +186,13 @@ body {
   min-height: 400px;
 }
 .bgimg-5 {
-  background-image: url("img_parallax5.jpg");
-  min-height: 700px;
+  background-image: url("img_parallax5_3.jpg");
+  min-height: 900px;
 }
 
 .bgimg-6 {
-  background-image: url("img_parallax6.jpg");
-  min-height: 100%;
+  background-image: url("img_parallax6_2.jpg");
+  min-height: 110%;
 }
 
 
@@ -194,7 +233,22 @@ h3 {
   src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"
 >
 </script>
+<script>
+    var timelineconf = {
+        type: 'timeline',
+        width: 'auto',
+        height: '400',
+        source: 'timeline.json',
+        lang: 'de',
+        embed_id: 'timelineinside',
+        debug: 'false'
+    };
+    $( document ).ready(function() {
+       new TL.Timeline('timelineinside', 'newtimeline.json'); 
+});
 
+    
+</script>
 <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
 <link
   rel="stylesheet"
@@ -244,49 +298,104 @@ h3 {
 </div>
 <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <p style="text-align: center;"></p><p>I am a developer from Switzerland, developing in <a data-toggle="modal" data-target="#github-popup">C/C++, Python and PHP</a>. Also i do  freelancer linux-support for over 10 years, including hacking/rooting/managing of devices and servers.</p>
- <div style="text-align: center;" ><a href="https://www.hackthebox.eu/profile/11508"><img src="https://www.hackthebox.eu/badge/image/11508" alt="Hack The Box" /></a></div><div style="text-align: right;">Security is a interessting topic. To be able to make a good defensive security, you should try how offensive security works - for this, hackthebox.eu is a cool hobby for doing this.</div>
+ <div style="text-align: center;" ><a href="https://www.hackthebox.eu/profile/11508"><img src="https://www.hackthebox.eu/badge/image/11508" alt="Hack The Box" /></a></div><div style="text-align: right;">Security is a interessting topic. To be able to make a good defensive security, you should try how offensive security works - for this, hackthebox.eu is a cool hobby!</div>
  <div>Beside this rudimentary description of tech-skills, i also like driving longboard, dogs and doing physical work.</div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Show Os's
+ <div>For more information about me, click the buttons below.</div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#languageModal">
+  Show languages
 </button>
     
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#github-popup">
   Show Github-Activity
 </button>
+     <div style="width:auto; height: 550px; margin-top: 20px;" id="timelineinside"></div>
+
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+<div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="background-color: black;">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">List of operating systems</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">List of languages</h5>
+          <div><ul>
+                <li>German (almost motherlanguage)</li>
+                <li>English (between basic and good?)</li>
+                <li>French (bad)</li>
+          </ul>
+          <hr />
+            <ul>
+                <li>C++/C/Arduino/Qt (basic)</li>
+                <li>PHP/Javascript/Html/CSS (good)</li>
+                <li>Python (good)</li>
+                <li>Bash (basic)</li>
+                <li>Java/Groovy&Grails (long time ago)</li>
+                
+          </ul>  
+          </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Hello World, this is a list
+                       
       </div>
     </div>
   </div>
 </div>
 
+<div class="modal fade" id="oldProjectsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #212529;">
+          <div>
+                  <table class="table table-dark table-hover table-striped">
+    <thead>
+    <tr><th>Projectname</th><th>Source</th><th>Docs</th><th>Description</th></tr>
+    <thead><tbody>
+
+                      
+        <tr><td>Cyanogenmod 13 for Cat B15Q</td><td></td><td></td><td>A bit hacky and buggy, but i've developed around my mobile phone, the B15Q, and had about 30-50 users which used 'my' upgrade from Android 4 to Android 6.</td></tr>
+    <tr><td>Horain</td><td></td><td></td><td>Closed yet, with microcontrollers and qt-gui, for home-assistant and live-data-analysis.</td></tr>
     
+    <tr><td>tryToxic</td><td><a href="https://github.com/hersche/tryToxic/">Src</a></td><td><a href="tryToxicDocs/index.html">Doc</a></td><td>(Suspended) <a href="http://tox.chat" target="_blank" >Tox</a> looked interessting to me, so i developed a gui for testing with pyTox.</td></tr>
+    
+    <tr><td>jobManagement</td><td><a href="https://github.com/hersche/jobManagement/">Src</a></td><td><a href="jobManagementDocs/index.html">Doc</a></td><td>(Suspended) Also when it's stable, i would do a lot of stuff in another way today. But this was the first bigger project i've made in python.</td></tr>
+    
+    <tr><td>Peta</td><td><a href="https://github.com/hersche/Peta/">Src</a></td><td><a href="petaDocs/index.html">Doc</a></td><td>(Suspended) This project could be as a simple cms, but would need a lot of improvements. Was great for learning object oriented php and dojo.</td></tr>
+    
+    <tr><td>MultiSms</td><td><a href="https://github.com/hersche/MultiSms/">Src</a></td><td><a href="petaDocs/index.html">Doc</a></td><td>(Suspended) This project contained a Kde-4-widget and ui, writen in Python with html-crawling. Since 'Kde'/plasma is in version 5.12, it's deprecated. Also it would need a rewrite from python 2.7 to 3.x.</td></tr>
+    
+    <tr><td>hersche.github.io</td><td><a href="https://github.com/hersche/hersche.github.io/">Src</a></td><td><a href="https://github.com/hersche/hersche.github.io/">Doc</a></td><td>(Suspended) Just updated</td>
+                      
+                      </tbody></table>
+          </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                       
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- Modal -->
 <div class="modal fade" id="github-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+  <div class="modal-dialog modal-lg"  role="document">
+    <div class="modal-content" style=" background-color: #343a40 ;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">List of operating systems</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-
+      <div class="modal-body" >
+    <div class="calendar" style="">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
       </div>
     </div>
   </div>
@@ -303,42 +412,61 @@ h3 {
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
      <p style="text-align: justify;">I love opensource since this more freedom than a lot of systems are able to give. With my contributions, i try to extend this kind of freedom. Visit my <a href="https://github.com/hersche">github-repo to see if something good for you is around.</a>.</p>
 <!-- Prepare a container for your calendar. -->
-
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#oldProjectsModal">
+  Show old Projects
+</button>
+    <div style="margin-top: 20px;" id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="0" ></li>
+          <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
+                    
+                    
+                    
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item" style="background-image: url(https://mycroft.ai/wp-content/uploads/2017/02/mark1.png); background-repeat: no-repeat;">
             <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Horain</h1>
-                <p>This is a project using a app for phones and desktops to control a flexible framework running on arduino- and teensy-microcontrollers</p>
-                  <p>Since this including a lot of work, i handle this closed and private at the moment</p>
-                <p><a class="btn btn-lg btn-primary" href="https://github.com/hersche/" role="button">Visit on github</a></p>
+              <div style="background-color: gray; opacity: 0.9; padding: 20px; border-radius: 20px; " class="carousel-caption text-left">
+                <h1>Mycroft</h1>
+                <p>At the moment i'm inactive there, but i helped to make some translations, skills and a discussion about a wakeword-detector (which worked with massive less cpu on my raspberry pi, but the license is unclear).</p>
+                  <p>
+                  This code is written in python and is a place where i like to use this language.
+                  </p>
+                  <ul>
+                  <li><a style="color: aliceblue;" target="_blank" href="https://github.com/Skills-And-Translations/mycroft-clementine-skill" >Clementine-skill</a></li>
+                  <li><a style="color: aliceblue;" target="_blank" href="https://github.com/Skills-And-Translations/mycroft_skill-take_picture">Take picture-skill</a></li>
+                  <li><a style="color: aliceblue;" target="_blank" href="https://github.com/Skills-And-Translations/mycroft-calculate-skill">Calculate-skill</a></li>
+                   <li><a style="color: aliceblue;" target="_blank" href="https://github.com/Skills-And-Translations/mycroft-myMpd-skill">Music play daemon-skill</a></li>
+                  </ul>
+                <p><a class="btn btn-lg btn-primary" href="https://mycroft.ai" target="_blank" role="button">Mycroft homepage</a> <a class="btn btn-lg btn-primary" href="https://github.com/MycroftAI" target="_blank" role="button">Mycroft on github</a> <a class="btn btn-lg btn-primary" href="https://github.com/Skills-And-Translations" target="_blank" role="button">My personal github-group for mycroft</a></p>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item active" style="background-image: url(youphptube.jpg); background-repeat: no-repeat;background-position: center; background-size: 100%;  padding-top:10%; border-radius: 30px;  padding-left: 10%;">
             <div class="container">
-              <div class="carousel-caption">
-                <h1>Peta</h1>
-                <p>Peta stands for PHP meta. All functions are provided by plugins, except login and plugin-structure. I wrote this in my education and never got it productive, but i've learned a lot of OOP-PHP-programming. Sometimes i think about to continue there...</p>
-                <p><a class="btn btn-lg btn-primary" href="https://github.com/hersche/Peta" role="button">Project on github</a></p>
+              <div class="" style="background-color: black; opacity: 0.9; width: 60%; padding: 10px; border-radius: 30px;">
+                <h1>YouPHPTube</h1>
+                <p>This is a very cool project. It's kind of a youtube-clone, but because it's open source, i can help improving it.</p>
+                <p><ul><li>Various sort-possibilitys</li><li>Category-descriptions</li><li>Hotkey-plugin (video-shortcuts)</li><li>YouPHPFlixHybrid-Plugin (Combine YouPHPFlix- and Gallery-plugin)</li><li>Message when database-update is avaible</li></ul></p>
+
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
               <div class="carousel-caption text-right">
-                <p>        <div class="calendar" style="">
-    <!-- Loading stuff -->
-    Loading the data just for you.
-</div></p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                                  <p><a class="btn btn-lg btn-primary" href="https://github.com/hersche/YouPHPTube" target="_blank" role="button">Project on github</a>
+                                      <a class="btn btn-lg btn-primary" target="_blank" href="https://www.youphptube.com" role="button">Official website</a></p>
               </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url(crypto.jpg); background-repeat: no-repeat;background-position: center; background-size: 100%;  padding-top:5%; border-radius: 30px;  padding-left: 10%;">
+            <div class="container">
+                              <div style="background-color: black; opacity: 0.9; width: 70%; padding: 10px; border-radius: 30px;">
+                <h1>End to end encryption from uC to Browser</h1>
+                                  For a company, i had to develop a live-map, which transfer this informations encrypted. <br />
+                                  I wrote the microcontroller-part and also the whole website, where i use webcrypto to decrypt.<br />
+                                  The full idea behind is secret and therefore a demo is difficult - but it was a very interessting Job with last activity in Dec 17 (to be continued). <br />
+                                  
+                                  This isn't usefull for the public directly, but trained my knowledge, which i can use in open projects.
+                </div>
             </div>
           </div>
         </div>
@@ -351,22 +479,7 @@ h3 {
           <span class="sr-only">Next</span>
         </a>
       </div>
-    <table class="table table-dark table-hover table-striped">
-    <thead>
-    <tr><th>Projektname</th><th>Quelltext</th><th>Doku</th><th>Stabilität</th></tr>
-    <thead><tbody>
 
-    <tr><td><a href="index.html?s=horain" onclick="changeContent('horain'); return false;">horain</a></td><td><a href="">Src</a></td><td><a href="">Doc</a></td><td>Geschlossene Alphaphase.</td></tr>
-    
-    <tr><td><a href="index.html?s=tryToxic" onclick="changeContent('tryToxic'); return false;">tryToxic</a></td><td><a href="https://github.com/hersche/tryToxic/">Src</a></td><td><a href="tryToxicDocs/index.html">Doc</a></td><td>(Suspended) Der Kern befindet sich in der Alpha-Phase (offen für Veränderungen). Durch Änderungen an der API können Teile 'aufhören zu funktionieren'.</td></tr>
-    
-    <tr><td><a href="index.html?s=jobManagement" onclick="changeContent('jobManagement'); return false;">jobManagement</a></td><td><a href="https://github.com/hersche/jobManagement/">Src</a></td><td><a href="jobManagementDocs/index.html">Doc</a></td><td>(Suspended) Funktioniert stabil.</td></tr>
-    
-    <tr><td><a href="index.html?s=peta" onclick="changeContent('peta'); return false;">Peta</a></td><td><a href="https://github.com/hersche/Peta/">Src</a></td><td><a href="petaDocs/index.html">Doc</a></td><td>(Suspended) Funktioniert stabil, benötigt noch ein paar grundlegende Features.</td></tr>
-    
-    <tr><td><a href="index.html?s=multisms" onclick="changeContent('multisms'); return false;">MultiSms</a></td><td><a href="https://github.com/hersche/MultiSms/">Src</a></td><td><a href="petaDocs/index.html">Doc</a></td><td>(Suspended) Funktioniert derzeit nicht, benötigt ein umschreiben von Python 2.7 auf 3.x.</td></tr>
-    
-    <tr><td><a href="index.html?s=hersche.github.io" onclick="changeContent('hersche.github.io'); return false;">hersche.github.io</a></td><td><a href="https://github.com/hersche/hersche.github.io/">Src</a></td><td><a href="https://github.com/hersche/hersche.github.io/">Doc</a></td><td>(Suspended) Fertig</td></tbody></table>
   </div>
 </div>
 
