@@ -24,11 +24,11 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "scool.jpg"
+                "url":  "img/scool.jpg"
             },
             "text": {
                 "headline": "Scool",
-                "text": "The 1-9 class in the usual scool."
+                "text": "The 1-9 class in the usual scool.<br />What should i say here? The computer-course was a bit boring, and \"blackscreen-viruses\" i've supported where often stuff like no power-cable for the screen. In the 8. year, i had fun with the OptixPro-Trojan. I made computers crazy and deleted porno-folders, but i also told this to my victims (and friends) and they took it easy :)"
             },
             "type": "overview"
         },
@@ -50,11 +50,11 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "win3.1.jpg"
+                "url":  "img/win3.1.jpg"
             },
             "text": {
                 "headline": "First own computer",
-                "text": "20 Mb Harddrive, \"modern\" floppy-disks, Windows 3.1 and not even a megaherz of power - but it was still interessting"
+                "text": "20 Mb Harddrive, \"modern\" floppy-disks, Windows 3.1 and not even a megaherz of power - but it was still interessting.<br /> My parents made me the restriction, that i had to disassemble and assemble the computer again with my bigger half-brother, before i get it - this was something, what interessted me anyway.. ;)"
             },
             "unique_id": ""
         },
@@ -76,7 +76,7 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "win.png"
+                "url":  "img/win.png"
             },
             "text": {
                 "headline": "Work with windows",
@@ -102,11 +102,11 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "scool1.jpg"
+                "url":  "img/scool1.jpg"
             },
             "text": {
                 "headline": "Additional scoolyear",
-                "text": "The 10. year of scool."
+                "text": "The 10. year of scool. <br /> This was extending my basic knowledge, also when i extended it may more for php and perl instead of the office-course.e"
             },
             "unique_id": ""
         },
@@ -128,7 +128,7 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "helloworld.jpg"
+                "url":  "img/helloworld.jpg"
             },
             "text": {
                 "headline": "The begin of developing",
@@ -152,11 +152,11 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "linux.jpg"
+                "url":  "img/linux.jpg"
             },
             "text": {
                 "headline": "Change to linux",
-                "text": "I've tried a lot of distros; Mandrivia, OpenSuse, Ubuntu, Fedora and Slack. My first really used distro was OpenSuse."
+                "text": "With Windows XP, i gave up Microsoft's world and changed to something, that i like by it's friendly philosophie - Linux! <br />I've tried a lot of distros; Mandrivia, OpenSuse, Ubuntu, Fedora and Slack. My first really used distro was OpenSuse. <br />A main-change for me was, that some stuff, that works not out of the box, can hard to fix (in this time, wlan with Windows-drivers, for example), but when you get it working stable once, it will work all time the same.<br /> With Windows, i had expiriences like a bluescreen of death on every boot, without any changes to other times it booted.<br />Also the complete update-system from linux was something new and positive to me."
             },
             "unique_id": ""
         },
@@ -176,7 +176,7 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "gentoo.png"
+                "url":  "img/gentoo.png"
             },
             "text": {
                 "headline": "Change to Gentoo Linux",
@@ -200,11 +200,11 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "img_parallax3.jpg"
+                "url":  "img/img_parallax3.jpg"
             },
             "text": {
                 "headline": "Use of Kubuntu, Raspbian and other Debian-derivates",
-                "text": "For usual users, i've began early to use Kubuntu. After i had enough compiling with my Gentoo, i also changed personaly to Kubuntu. In a very short time in between i also used Arch Linux."
+                "text": "For usual users, i began early to use Kubuntu, because it have new Software and is easy to support. Also i love KDE since Version 3, so not Ubuntu (Kde just looks more like Windows by default. This helps to change). After i had enough compiling with my Gentoo, i also changed personaly to Kubuntu. In a short time (~6 months) in between i also used Arch Linux."
             },
             "unique_id": ""
         },
@@ -224,11 +224,11 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "helloworld.jpg"
+                "url":  "img/helloworld.jpg"
             },
             "text": {
                 "headline": "Developer-education",
-                "text": "Make a swiss-approved education as software-developer at <a href='http://puzzle.ch' target='_blank'>Puzzle ITC</a>. <br /> There i had to do the common code in java and groovy & grails - this learns me object oriented thinking.<br />In my free time, i learned python and qt. Also in php i had my projects."
+                "text": "I made a swiss-approved education as software-developer at <a href='http://puzzle.ch' target='_blank'>Puzzle ITC</a>. <br /> There i had to do the common code in java and groovy & grails - this learns me object oriented thinking.<br />In my free time, i learned python and qt. Also in php i had my projects."
             },
             "unique_id": ""
         },
@@ -248,11 +248,11 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "oldjob3.jpg"
+                "url":  "img/oldjob3.jpg"
             },
             "text": {
                 "headline": "Röck'n'Röll-Krew",
-                "text": "Work as stagehand. Moving speakers, laying carpets, putting LED-screens together..."
+                "text": "Work as stagehand. Moving speakers, laying carpets, putting LED-screens together... <br /> The various tasks and to see, what happens behind the stage before (sometimes even while) it goes rock n'roll, was interessting."
             },
             "unique_id": ""
         },
@@ -272,7 +272,7 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "oldjob2.jpg"
+                "url":  "img/oldjob2.jpg"
             },
             "text": {
                 "headline": "Creative personal",
@@ -296,7 +296,7 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "crypto.jpg"
+                "url":  "img/crypto.jpg"
             },
             "text": {
                 "headline": "Microcontroller-development",
@@ -320,7 +320,7 @@
             "background": {
                 "color": "#000000",
                 "opacity": 50,
-                "url":  "crypto.jpg"
+                "url":  "img/crypto.jpg"
             },
             "text": {
                 "headline": "Developing a encrypted tracking-websystem-frontend",

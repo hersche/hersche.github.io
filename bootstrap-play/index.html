@@ -4,36 +4,35 @@
   <title>hersche.github.io</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <script src="jquery.min.js"></script>
-    <script src="jquery-ui.min.js"></script>
-  <script src="popper.min.js"></script>
-  <script src="bootstrap.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
-    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-<style>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link title="timeline-styles" rel="stylesheet" href="css/timeline.css">
+  <script src="js/timeline.js"></script>
+  <style>
     .modal-content{
         background-color: inherit;
     }
     @font-face {
-  font-family: 'Abel';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Abel'), local('Abel-Regular'), url(abel.woff) format('woff');
-}
-@font-face {
-  font-family: 'Shadows Into Light';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(shadows.woff) format('woff');
-}
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Abel","Lato", sans-serif;
-  color: #777;
-}
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Abel'), local('fonts/Abel-Regular'), url(abel.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'Shadows Into Light';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Shadows Into Light'), local('fonts/ShadowsIntoLight'), url(shadows.woff) format('woff');
+    }
+    body, html {
+        height: 100%;
+        margin: 0;
+        font: 400 15px/1.8 "Abel","Lato", sans-serif;
+        color: #777;
+    }
 
     /* GLOBAL STYLES
 -------------------------------------------------- */
@@ -168,31 +167,31 @@ body {
 
 }
 .bgimg-1 {
-  background-image: url("img_parallax.jpg");
+  background-image: url("img/img_parallax.jpg");
   min-height: 110%;
 }
 
 .bgimg-2 {
-  background-image: url("img_parallax2.jpg");
+  background-image: url("img/img_parallax2.jpg");
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("img_parallax3.jpg");
+  background-image: url("img/img_parallax3.jpg");
   min-height: 400px;
 }
 
 .bgimg-4 {
-  background-image: url("img_parallax4.jpg");
+  background-image: url("img/img_parallax4.jpg");
   min-height: 400px;
 }
 .bgimg-5 {
-  background-image: url("img_parallax5_3.jpg");
+  background-image: url("img/img_parallax5_3.jpg");
   min-height: 900px;
 }
 
 .bgimg-6 {
-  background-image: url("img_parallax6_2.jpg");
+  background-image: url("img/img_parallax6_2.jpg");
   min-height: 110%;
 }
 
@@ -253,46 +252,37 @@ h3 {
 </style>
 
 <!-- Prepare a container for your calendar. -->
-<script
-  src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"
->
-</script>
+<script src="js/github-calendar.min.js"></script>
 <script>
     $( document ).ready(function() {
        new TL.Timeline('timelineinside', 'newtimeline.json'); 
 });
 
     $(window).on('activate.bs.scrollspy', function (event) {
-   // console.log('activate.bs.scrollspy', event);
-           var activeSection = $("#navbarCollapse").find(".nav-link.active").attr("href");
-console.log(activeSection);
-   if((activeSection === "#donations")||(activeSection === "#contact"))
-   {
-       $("#donationsTitle").show("slide" , { direction: "right" },1500);
-       $("#donationsContent").show("slide" , { direction: "left" },1500);
-       //alert("I have reached to the top.");
-   }
-        else {
-               $("#donationsTitle").hide("slide" , { direction: "left" },1500);
-       $("#donationsContent").hide("slide" , { direction: "right" },1500);    
-            
-        }
-    if(activeSection === "#about")
-   {
-       $("#aboutTitle").show("slide" , { direction: "right" },1000);
-       $("#face").show("slide" , { direction: "left" },1000);
-   } else {
-      // $("#face").hide();
-    //   $("#aboutTitle").hide();
-       
-              $("#aboutTitle").hide("slide" , { direction: "right" },1500);
-       $("#face").hide("slide" , { direction: "left" },1500);
-   }
+            // console.log('activate.bs.scrollspy', event);
+            var activeSection = $("#navbarCollapse").find(".nav-link.active").attr("href");
+            console.log("Active section: "+activeSection);
+            if((activeSection === "#donations")||(activeSection === "#contact"))
+            {
+                $("#donationsTitle").show("slide" , { direction: "right" },1500);
+                $("#donationsContent").show("slide" , { direction: "left" },1500);
+            }
+            else {
+                $("#donationsTitle").hide("slide" , { direction: "left" },1500);
+                $("#donationsContent").hide("slide" , { direction: "right" },1500);        
+            }
+            if(activeSection === "#about")
+            {
+                $("#aboutTitle").show("slide" , { direction: "right" },1000);
+                $("#face").show("slide" , { direction: "left" },1000);
+            } else {
+                $("#aboutTitle").hide("slide" , { direction: "right" },1500);
+                $("#face").hide("slide" , { direction: "left" },1500);
+            }
 })
 
 $(document).ready(function(){ 
- $("#aboutTitle").hide();
-
+    $("#aboutTitle").hide();
     $("#donationsTitle").hide();
     $("#donationsContent").hide();
     $("#face").hide();
@@ -362,12 +352,12 @@ $(document).ready(function(){
   <div class="caption">
     <span id="aboutTitle"  class="border">About me</span>
   
-      <p><img src="me.jpg" id="face" style="border-radius: 100px; text-align: center; height: 150px;margin-top: 30px;" /></p>
+      <p><img alt="Me" src="img/me.jpg" id="face" style="border-radius: 100px; text-align: center; height: 150px;margin-top: 30px;" /></p>
       </div>
 </div>
 <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
   <p style="text-align: center;"></p><p>I am a developer from Switzerland, developing in <a data-toggle="modal" data-target="#github-popup">C/C++, Python and PHP</a>. Also i do  freelancer linux-support for over 10 years, including hacking/rooting/managing of devices and servers.</p>
- <div style="text-align: center;" ><a href="https://www.hackthebox.eu/profile/11508"><img src="https://www.hackthebox.eu/badge/image/11508" alt="Hack The Box" /></a></div><div style="text-align: right;">Security is a interessting topic. To be able to make a good defensive security, you should try how offensive security works - for this, hackthebox.eu is a cool hobby!</div>
+ <div style="text-align: center;" ><a href="https://www.hackthebox.eu/profile/11508" target="_blank"><img alt="Hack the box-badge" src="https://www.hackthebox.eu/badge/image/11508" /></a></div><div style="text-align: right;">Security is a interessting topic. To be able to make a good defensive security, you should try how offensive security works - for this, hackthebox.eu is a cool hobby!</div>
  <div>Beside this rudimentary description of tech-skills, i also like driving longboard, dogs and doing physical work.</div>
  <div>For more information about me, click the buttons below.</div>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#languageModal">
@@ -378,14 +368,14 @@ $(document).ready(function(){
   Show Github-Activity
 </button>
      <div style="width:auto; height: 800px; margin-top: 20px;" id="timelineinside"></div>
-
+</div>
 
 <!-- Modal -->
-<div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="languageModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content" style="background-color: black;">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">List of languages</h5>
+        <h5 class="modal-title" id="languageModalTitle">List of languages</h5>
           <div><ul>
                 <li>German (almost motherlanguage)</li>
                 <li>English (between basic and good?)</li>
@@ -412,7 +402,7 @@ $(document).ready(function(){
   </div>
 </div>
 
-<div class="modal fade" id="oldProjectsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="oldProjectsModal" tabindex="-1" role="dialog" aria-labelledby="oldProjectsModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #212529;">
@@ -420,7 +410,7 @@ $(document).ready(function(){
                   <table class="table table-dark table-hover table-striped">
     <thead>
     <tr><th>Projectname</th><th>Source</th><th>Docs</th><th>Description</th></tr>
-    <thead><tbody>
+    </thead><tbody>
 
                       
         <tr><td>Cyanogenmod 13 for Cat B15Q</td><td></td><td></td><td>A bit hacky and buggy, but i've developed around my mobile phone, the B15Q, and had about 30-50 users which used 'my' upgrade from Android 4 to Android 6.</td></tr>
@@ -451,11 +441,11 @@ $(document).ready(function(){
 
 
 <!-- Modal -->
-<div class="modal fade" id="github-popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="github-popup" tabindex="-1" role="dialog" aria-labelledby="githubPopupModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg"  role="document">
     <div class="modal-content" style=" background-color: #343a40 ;">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">List of operating systems</h5>
+        <h5 class="modal-title" id="githubPopupModalTitle">List of operating systems</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -469,7 +459,7 @@ $(document).ready(function(){
     </div>
   </div>
 </div>
-</div>
+
 
 <div class="bgimg-4" id="projects">
   <div class="caption">
@@ -494,7 +484,7 @@ $(document).ready(function(){
                     
                     
         <div class="carousel-inner">
-          <div class="carousel-item" style="background-image: url(https://mycroft.ai/wp-content/uploads/2017/02/mark1.png); background-repeat: no-repeat;">
+          <div class="carousel-item" style="background-image: url(img/mark1.png); background-repeat: no-repeat;">
             <div class="container">
               <div style="background-color: gray; opacity: 0.9; padding: 20px; border-radius: 20px; " class="carousel-caption text-left">
                 <h1>Mycroft</h1>
@@ -512,7 +502,7 @@ $(document).ready(function(){
               </div>
             </div>
           </div>
-          <div class="carousel-item active" style="background-image: url(youphptube.jpg); background-repeat: no-repeat;background-position: center; background-size: 100%;  padding-top:10%; border-radius: 30px;  padding-left: 10%;">
+          <div class="carousel-item active" style="background-image: url(img/youphptube.jpg); background-repeat: no-repeat;background-position: center; background-size: 100%;  padding-top:10%; border-radius: 30px;  padding-left: 10%;">
             <div class="container">
               <div class="" style="background-color: black; opacity: 0.9; width: 60%; padding: 10px; border-radius: 30px;">
                 <h1>YouPHPTube</h1>
@@ -526,7 +516,7 @@ $(document).ready(function(){
               </div>
             </div>
           </div>
-          <div class="carousel-item" style="background-image: url(crypto.jpg); background-repeat: no-repeat;background-position: center; background-size: 100%;  padding-top:5%; border-radius: 30px;  padding-left: 10%;">
+          <div class="carousel-item" style="background-image: url(img/crypto.jpg); background-repeat: no-repeat;background-position: center; background-size: 100%;  padding-top:5%; border-radius: 30px;  padding-left: 10%;">
             <div class="container">
                               <div style="background-color: black; opacity: 0.9; width: 70%; padding: 10px; border-radius: 30px;">
                 <h1>End to end encryption from uC to Browser</h1>
